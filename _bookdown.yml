@@ -1,0 +1,5 @@
+book_filename: "WPWW_magistrat"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Rozdział "

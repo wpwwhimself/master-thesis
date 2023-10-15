@@ -1,0 +1,5 @@
+bookdown::pdf_book:
+  latex_engine: lualatex
+  toc: False
+  includes:
+    in_header: preamble.tex

@@ -1,0 +1,135 @@
+--- 
+site: bookdown::bookdown_site
+documentclass: book
+classoption: oneside
+fontsize: 12pt
+geometry: left=3cm,right=2cm,top=2.5cm,bottom=2.5cm
+lang: pl
+output:
+  pdf_document:
+    citation_package: biblatex
+bibliography: ["book.bib"]
+biblio-style: "apalike"
+link-citations: true
+---
+
+```{r global_settings, echo = F}
+library(knitr)
+opts_chunk$set(echo = FALSE)
+opts_chunk$set(message = FALSE)
+opts_chunk$set(warning = FALSE)
+```
+
+```{=latex}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand*{\tablename}{Tabela}
+\thispagestyle{empty}
+\fancyhead[RO]{\thepage}
+
+\begin{center}
+  \begin{large}
+    Uniwersytet Ekonomiczny w~Poznaniu\\
+    TODO KATEDRA XYZ\\
+    \vspace{2.4cm}
+  \end{large}  
+    
+  \begin{LARGE}
+    \leftskip=-3cm plus 1fil\rightskip=-3cm plus 1fil
+    \LARGE {\textbf{TODO TITLE}}\par
+    \vspace{0.5cm}
+    \LARGE {\textbf{TODO TITLE ENG}}\par
+  \end{LARGE}% uwaga na spacje!!!
+  
+  \vspace{2.0cm}
+  \begin{Large}
+    \textbf{Wojciech Przybyła}
+  \end{Large}  
+    
+  \begin{Large}  
+Kierunek: Informatyka i Ekonometria\\
+Nr albumu: 129522
+  \end{Large}
+    
+  \vspace{2.0cm}
+  
+  \begin{Large}  
+    Praca magisterska\\
+    napisana pod kierunkiem\\
+    dr hab. Pawła TODO ODMIANA NAZWISKA, prof. UEP\\
+    \vspace{2.8cm}
+    Poznań 2024
+  \end{Large}  
+\end{center}
+
+\newpage
+
+\thispagestyle{empty}
+\fancyhead[LO]{\textbf{\small{}}}
+\renewcommand{\headrulewidth}{0.0pt}
+
+\vspace{20pt}
+
+\begin{flushright}
+Poznań, dnia TODO DATA r.
+\end{flushright}
+
+\vspace{40pt}
+
+\begin{center}
+\textbf{OŚWIADCZENIE}
+\end{center}
+```
+
+Zdając sobie sprawę z odpowiedzialności prawnej, że przypisanie sobie w pracy dyplomowej autorstwa istotnego fragmentu lub innych elementów cudzego utworu lub ustalenia naukowego stanowi podstawę stwierdzenia nieważności postępowania administracyjnego w sprawie nadania tytułu zawodowego oświadczam, że przedkładana praca dyplomowa została napisana przeze mnie samodzielnie i nie zawiera ona treści uzyskanych w sposób niezgodny z obowiązującymi przepisami, a przy jej pisaniu, poza niezbędnymi konsultacjami, nie korzystano z pomocy innych osób.
+
+```{=latex}
+\vspace{30pt}
+
+%\vspace{30pt}
+
+\begin{flushright}
+Wojciech Przybyła 
+\end{flushright}
+```
+
+\newpage
+
+```{=latex}
+\thispagestyle{empty}
+\fancyhead[LO]{\textbf{\small{}}}
+\renewcommand{\headrulewidth}{0.0pt}
+
+\begin{center}
+\textbf{STRESZCZENIE}
+\end{center}
+
+\vspace{30pt}
+```
+
+TODO STRESZCZENIE
+
+**Słowa kluczowe**: TODO KEYWORDS
+
+```{=latex}
+\vspace{40pt}
+
+\begin{center}
+\textbf{ABSTRACT}
+\end{center}
+
+\vspace{30pt}
+```
+
+TODO STRESZCZENIE ENG
+
+**Key words**: TODO KEYWORDS ENG
+
+\newpage
+
+```{=latex}
+\setcounter{page}{1}
+\fancyhead[LO]{\textbf{\small{Spis treści}}}
+\renewcommand{\headrulewidth}{0.5pt}
+\tableofcontents
+```

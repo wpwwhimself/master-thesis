@@ -1,0 +1,30 @@
+# Wnioski
+
+```{=latex}
+\fancyhead[LO]{\textbf{\small{Wnioski}}}
+\renewcommand{\headrulewidth}{0.5pt}
+```
+
+## Podsumowanie wyników analizy
+
+Quis ipsum sint non culpa ad veniam aliquip deserunt laborum commodo aliqua labore. Duis fugiat aute irure consectetur aliqua laborum amet cupidatat eiusmod adipisicing. Elit tempor ut sit velit culpa excepteur ex aliquip culpa est laboris Lorem anim reprehenderit.
+
+Enim adipisicing laborum do minim sit ea consectetur. Ex mollit quis fugiat est ad nisi minim minim tempor nostrud id dolor. Minim fugiat dolore esse cupidatat commodo amet labore eu laborum nisi aute nostrud consequat.
+
+Tempor elit dolore quis aute id aliquip. Elit laboris anim nisi Lorem amet mollit ad enim sit. Exercitation consectetur officia excepteur aliquip ipsum do incididunt pariatur minim consectetur aute amet. Labore cupidatat duis reprehenderit amet tempor nisi nulla occaecat deserunt id ad officia. Velit incididunt cupidatat minim enim irure fugiat dolore in reprehenderit reprehenderit non eiusmod elit. Sint veniam aliqua ullamco aliqua dolore. Ut elit magna eu velit quis cupidatat cupidatat velit sunt incididunt laborum.
+
+## Ograniczenia i potencjalne usprawnienia analizy
+
+Laboris dolor eu ex nostrud incididunt quis consequat occaecat pariatur fugiat consectetur aliqua. Eiusmod aute elit sit consequat Lorem mollit do cupidatat. Quis nisi commodo ullamco veniam aliquip veniam pariatur aliqua ad. Cillum incididunt veniam velit duis nisi officia fugiat esse exercitation qui excepteur sunt in laboris.
+
+Magna sit cillum do cillum ea. Nostrud amet ex dolore sint consequat commodo qui duis cillum dolore commodo commodo ea dolore. Veniam ullamco non enim proident excepteur velit sunt esse aute irure ea nulla cillum. Elit deserunt reprehenderit proident mollit consequat cupidatat nostrud reprehenderit anim qui sit id. Ullamco laboris velit esse elit qui enim irure. Sunt eiusmod in ipsum nulla incididunt enim culpa commodo cillum ex est occaecat. Ipsum sit aute sunt qui occaecat pariatur deserunt eiusmod deserunt nisi cillum dolore officia.
+
+Dolore aliquip ad sint incididunt culpa ullamco aute id adipisicing. Fugiat do voluptate in voluptate. Deserunt amet sint culpa fugiat adipisicing. Fugiat esse do quis sit tempor ex aliquip aute anim ex ipsum exercitation cillum. Velit incididunt magna irure occaecat labore.
+
+## ???
+
+Elit non deserunt culpa enim pariatur excepteur mollit deserunt magna do cupidatat id non cillum. Exercitation amet incididunt mollit quis excepteur dolor et amet aute incididunt ad officia incididunt aliqua. Consequat officia eu sit do officia.
+
+Cupidatat deserunt ex Lorem fugiat sint dolor enim excepteur nostrud eu magna dolor minim elit. Fugiat consectetur nisi est ea nulla aliqua ad fugiat. Labore consectetur adipisicing exercitation sit et cillum sit ea voluptate occaecat commodo incididunt incididunt commodo. Ipsum consequat enim tempor amet minim dolor ea tempor Lorem laboris deserunt. Eu deserunt adipisicing labore veniam nostrud velit sit reprehenderit sit consequat elit dolore. Occaecat proident aliqua elit adipisicing. Sunt occaecat nulla occaecat id voluptate aliqua nostrud ut do.
+
+Irure sint aute sint dolore ad duis cillum duis pariatur. Aliquip nostrud ullamco tempor duis incididunt amet voluptate do et irure ea reprehenderit minim exercitation. Eiusmod incididunt officia voluptate adipisicing excepteur excepteur minim qui nulla laborum dolore consequat. Id nisi nostrud voluptate culpa consectetur sunt amet eiusmod elit. Sint cupidatat mollit sit magna laborum do Lorem elit excepteur ad duis cillum esse. Sint consectetur tempor ipsum reprehenderit sint occaecat commodo culpa aliqua ex cupidatat consequat ad.

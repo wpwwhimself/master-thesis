@@ -1,0 +1,17 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+mentorship/*
+
+#śmieci kompilatora
+*.aux
+*.bcf
+*.log
+*.out
+*.run.xml
+*.toc
+
+#output
+_book
+_bookdown_files
