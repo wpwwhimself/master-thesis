@@ -1,8 +1,6 @@
+# Bibliografia {-}
+
 ```{=latex}
-\begin{thebibliography}{99}
-\addcontentsline{toc}{chapter}{Bibliografia}
 \fancyhead[LO]{\textbf{\small{Bibliografia}}}
 \renewcommand{\headrulewidth}{0.5pt}
-
-\end{thebibliography}
 ```

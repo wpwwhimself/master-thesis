@@ -17,10 +17,21 @@ W annałach można się doszukiwać wielu takich sytuacji. Przykładami mogą by
 - *tulipanowa gorączka* (1636-1637) -- lokowanie gotówki przez mieszkańców Amsterdamu w tulipanach doprowadziło do wyhodowania wyjątkowej odmiany tego kwiatu.
 Wartość jego jednej cebulki była wówczas wyceniana na równowartość 40-letniego dochodu, przez co wielu kupców zaciągało niebotyczne kredyty.
 Ceny tulipanów jednak zatrzymały się na poziomie, gdzie nikt nie był w stanie ich zakupić, a część handlujących nie wywiązywała się z dostaw.
-To z kolei doprowadziło do końca spekulacji i gwałtownych obniżek cen. [@linkTulip],
+To z kolei doprowadziło do końca spekulacji i gwałtownych obniżek cen [@linkTulip],
 
-- *wielki kryzys gospodarczy* (1929-1932),
-- *upadek Lehman Brothers* (2007-2009).
+- *Great Depression* (1929-1932) -- największy kryzys gospodarczy w dziejach kapitalizmu, który swoim zasięgiem objął cały świat, z wykluczeniem ZSRR.
+Przyjmuje się, że był on konsekwencją tzw. _czarnego czwartku_, kiedy to na nowojorskiej giełdzie gwałtownie spadły ceny niemal wszystkich notowanych akcji.
+Poza finansowymi stratami, ludzie ucierpieli również z powodu niezwykle wysokiego bezrobocia, jak na przykład około 33\% odnotowane w Stanach Zjednoczonych.
+Kryzys przedłużył się dodatkowo w wyniku możliwości wymiany walut na złoto, co w szybkim tempie redukowało jego rezerwy w bankach centralnych.
+Próbą zapobieżenia utraty kruszca, podniesiono stopy procentowe, co w konsekwewncji znacząco wpłynęło na produkcję przemysłową wielu krajów [@greatDepressionWiki],
+
+- *upadek Lehman Brothers* (2007-2009) -- firma Lehman Brothers, która swoją wczesną historię wiązała głównie z handlem bawełną, z czasem przekształcona została w bank,
+zajmujący się m.in. udzielaniem kredytów hipotecznych, emisją papierów wartościowych oraz finansowaniem nieruchomości.
+Spółka przez wiele lat osiągała najlepsze wyniki finansowe spośród spółek amerykańskich, zasługując na miano "Najlepszego Banku Inwestycyjnego" w 2005 roku.
+Zbiegło się to z tzw. _kryzysem subprime_ w Stanach Zjednoczonych, który dotyczył kredytów hipotecznych, udzielanych osobom o niskiej zdolności kredytowej.
+Praktyka ta była obarczona dużym ryzykiem, a w wyniku obniżenia stóp procentowych przez amerykański bank centralny, kredyty te znacznie staniały, a przez to wzrosła ich dostępność i sektor prywatny zwiększył swoje zadłużenie o ok. 80 p.proc. w ciągu 7 lat.
+Bank centralny wkrótce zdecydował się na podwyższenie stóp procentowych, co zaowocowało brakiem możliwości spłaty długów przez zadłużonych, oraz spadkiem cen papierów wartościowych, będącym konsekwencją ich masowym wykupywaniem.
+Tym sposobem największy bank inwestycyjny Stanów Zjednoczonych ogłosił upadłość w 2008 roku, przez co indeksy giełdowe zaczęły błyskawicznie spadać [@lehmanBros].
 
 Na przestrzeni ostatnich lat na światem wstrząsnęły również kolejne dramatyczne wydarzenia, mianowicie:
 
