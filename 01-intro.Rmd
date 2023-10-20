@@ -40,11 +40,14 @@ Na przestrzeni ostatnich lat na światem wstrząsnęły również kolejne dramat
 
 Historia pokazuje, że zdarzenia dotykające wielu ludzi nie pozostają obojętne z perspektywy świata ekonomii.
 Już wyżej wspomniane kryzysy miały znaczące podłoże finansowe i nie inaczej jest w przypadku dwóch najnowszych wydarzeń.
-Celem niniejszej pracy magisterskiej jest analiza reakcji rynku polskiego na owe kryzysy.
+Aby zapobiec ich dotkliwym w skutkach reperkusjom, ekonomiści i naukowcy stosowali różne techniki, co szczegółowo opisane zostanie w dalszej części pracy.
+Wyniki ich prac zostały opublikowane na łamach różnego rodzaju czasopism \AAA{citation needed}.
+
+Celem niniejszej pracy magisterskiej jest, podobnie jak w wyżej wspomnianych badaniach, analiza reakcji rynku polskiego na owe kryzysowe wydarzenia.
 Autor wykorzysta znane metody z obszaru modelowania finansowego.
 Idealnym narzędziem zdają się tu być modele przełącznikowe, za pomocą których możliwe będzie dopasowanie teoretycznych wartości do danych rynkowych, a także wykonanie prognozy ex-post celem sprawdzenia dopasowania tych modeli.
-
-Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+Po przeprowadzeniu badań podsumowane zostaną ich wyniki oraz wyłoniona zostanie optymalna metoda predykcji wartości wskaźników rynkowych.
+Informacje te mogą posłużyć do dalszego konstruowania modeli mających za zadanie negować skutki globalnych kryzysów i zapobiegać ich finansowym efektom.
 
 ## Teoria rynków finansowych i ich modelowania
 
@@ -95,9 +98,10 @@ Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat 
 
 Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
 
-## Przegląd literatury dotyczących modeli
+## Przegląd literatury dotyczącej niniejszej pracy
 
-> self-explainatory
+> self-explainatory;
+> literatura modeli, ale też literatura na temat innych dopasowań modeli do wahających się danych;
 
 Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
 
