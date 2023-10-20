@@ -35,15 +35,16 @@ Tym sposobem największy bank inwestycyjny Stanów Zjednoczonych ogłosił upad�
 
 Na przestrzeni ostatnich lat na światem wstrząsnęły również kolejne dramatyczne wydarzenia, mianowicie:
 
-- __epidemia SARS-CoV19__ w listopadzie 2019,
-- __inwazja Rosji na Ukrainę__ w lutym 2022.
+- __epidemia SARS-CoV19__ w listopadzie 2019 -- \AAA{kilka słów na temat covidu},
+- __inwazja Rosji na Ukrainę__ w lutym 2022 -- \AAA{kilka słów na temat wojny}.
 
 Historia pokazuje, że zdarzenia dotykające wielu ludzi nie pozostają obojętne z perspektywy świata ekonomii.
 Już wyżej wspomniane kryzysy miały znaczące podłoże finansowe i nie inaczej jest w przypadku dwóch najnowszych wydarzeń.
 Celem niniejszej pracy magisterskiej jest analiza reakcji rynku polskiego na owe kryzysy.
 Autor wykorzysta znane metody z obszaru modelowania finansowego.
-Idealnym narzędziem zdają się tu być modele przełącznikowe, za pomocą których możliwe będzie dopasowanie teoretycznych wartości do danych rynkowych,
-a także wykonanie prognozy ex-post celem sprawdzenia dopasowania tych modeli.
+Idealnym narzędziem zdają się tu być modele przełącznikowe, za pomocą których możliwe będzie dopasowanie teoretycznych wartości do danych rynkowych, a także wykonanie prognozy ex-post celem sprawdzenia dopasowania tych modeli.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
 
 ## Teoria rynków finansowych i ich modelowania
 
@@ -56,12 +57,88 @@ Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat 
 
 Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
 
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+
 ## Przegląd literatury dotyczących modeli
 
 > self-explainatory
 
-Amet commodo sint magna magna aute minim. Commodo occaecat adipisicing ex quis quis mollit id veniam incididunt veniam laborum ullamco. Consectetur aliquip laborum do enim excepteur ipsum ea consectetur excepteur amet. Cillum fugiat fugiat ex tempor sint laboris qui elit ut nulla amet. Aliqua dolore reprehenderit quis commodo laboris sint sint pariatur velit. Aute aliquip ut excepteur adipisicing id officia sint reprehenderit. Ut non tempor esse amet do in anim aute irure.
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
 
-Enim sit veniam occaecat dolor id pariatur deserunt aliquip dolore consectetur dolor id elit fugiat. Dolor esse deserunt id nulla quis nisi deserunt laboris. Ex amet amet est id magna in nulla excepteur tempor incididunt enim ut officia.
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
 
-Nulla amet velit laborum amet ipsum velit velit amet laborum qui quis exercitation. Deserunt veniam aliqua pariatur aute dolore officia magna labore sint occaecat fugiat anim cillum duis. Laborum aliquip labore nostrud id Lorem voluptate et. Culpa id laborum consectetur esse qui adipisicing mollit ipsum sint esse sint. Minim dolore eu velit ad sint ea nulla esse nisi ad consequat amet esse amet.
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.

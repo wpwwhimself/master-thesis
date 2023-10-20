@@ -9,13 +9,46 @@
 
 Za przedmiot badań obrane zostały notowania pięciu polskich spółek notowanych na Giełdzie Papierów Wartościowych:
 
-1. **PKN Orlen** -- parę słów o nich Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in,
-2. **PGE** -- parę słów o nich Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in,
-3. **PKO BP** -- parę słów o nich Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in,
-4. **Tauron Polska Energia** -- parę słów o nich Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in,
-5. **CD Projekt RED** -- parę słów o nich Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in.
+1. **PKN Orlen** -- \AAA{parę słów o nich}
+Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in,
 
-Informacje o cenach akcji pochodzą ze strony @stooq.
+2. **PKO BP** -- \AAA{parę słów o nich}
+Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in,
+
+3. **CD Projekt RED** -- \AAA{parę słów o nich}
+Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in.
+
+4. \AAA{Jeszcze ktoś} -- \AAA{parę słów o nich}
+Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in.
+
+5. \AAA{Jeszcze ktoś} -- \AAA{parę słów o nich}
+Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in.
+
+Jak można zauważyć w powyższym zestawieniu, spółki objęte badaniem obejmują różne sektory rynku, co ma dodatkowo porównać wpływ zaburzeń na świecie na każdą z dziedzin.
+Informacje o cenach akcji pochodzą ze strony @stooq. \AAA{Co to za strona? może z ich about?}
+
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
 
 ## Analiza danych
 
@@ -62,6 +95,28 @@ Magna sit cillum do cillum ea. Nostrud amet ex dolore sint consequat commodo qui
 
 Dolore aliquip ad sint incididunt culpa ullamco aute id adipisicing. Fugiat do voluptate in voluptate. Deserunt amet sint culpa fugiat adipisicing. Fugiat esse do quis sit tempor ex aliquip aute anim ex ipsum exercitation cillum. Velit incididunt magna irure occaecat labore.
 
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+
 ## Wybór odpowiedniego modelu
 
 > szukam odpowiedniego ARMA, sprawdzam kryteria informacyjne i istotności
@@ -74,3 +129,25 @@ Elit non deserunt culpa enim pariatur excepteur mollit deserunt magna do cupidat
 Cupidatat deserunt ex Lorem fugiat sint dolor enim excepteur nostrud eu magna dolor minim elit. Fugiat consectetur nisi est ea nulla aliqua ad fugiat. Labore consectetur adipisicing exercitation sit et cillum sit ea voluptate occaecat commodo incididunt incididunt commodo. Ipsum consequat enim tempor amet minim dolor ea tempor Lorem laboris deserunt. Eu deserunt adipisicing labore veniam nostrud velit sit reprehenderit sit consequat elit dolore. Occaecat proident aliqua elit adipisicing. Sunt occaecat nulla occaecat id voluptate aliqua nostrud ut do.
 
 Irure sint aute sint dolore ad duis cillum duis pariatur. Aliquip nostrud ullamco tempor duis incididunt amet voluptate do et irure ea reprehenderit minim exercitation. Eiusmod incididunt officia voluptate adipisicing excepteur excepteur minim qui nulla laborum dolore consequat. Id nisi nostrud voluptate culpa consectetur sunt amet eiusmod elit. Sint cupidatat mollit sit magna laborum do Lorem elit excepteur ad duis cillum esse. Sint consectetur tempor ipsum reprehenderit sint occaecat commodo culpa aliqua ex cupidatat consequat ad.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.
+
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
+
+Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.

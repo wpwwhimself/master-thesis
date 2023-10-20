@@ -30,15 +30,15 @@ opts_chunk$set(warning = FALSE)
 \begin{center}
   \begin{large}
     Uniwersytet Ekonomiczny w~Poznaniu\\
-    TODO KATEDRA XYZ\\
+    \AAA{KATEDRA XYZ}\\
     \vspace{2.4cm}
   \end{large}  
     
   \begin{LARGE}
     \leftskip=-3cm plus 1fil\rightskip=-3cm plus 1fil
-    \LARGE {\textbf{TODO TITLE}}\par
+    \LARGE {\textbf{\AAA{TITLE}}}\par
     \vspace{0.5cm}
-    \LARGE {\textbf{TODO TITLE ENG}}\par
+    \LARGE {\textbf{\AAA{TITLE ENG}}}\par
   \end{LARGE}% uwaga na spacje!!!
   
   \vspace{2.0cm}
@@ -56,7 +56,7 @@ Nr albumu: 129522
   \begin{Large}  
     Praca magisterska\\
     napisana pod kierunkiem\\
-    dr hab. Pawła TODO ODMIANA NAZWISKA, prof. UEP\\
+    dr hab. Pawła \AAA{ODMIANA NAZWISKA}, prof. UEP\\
     \vspace{2.8cm}
     Poznań 2024
   \end{Large}  
@@ -71,7 +71,7 @@ Nr albumu: 129522
 \vspace{20pt}
 
 \begin{flushright}
-Poznań, dnia TODO DATA r.
+Poznań, dnia \AAA{DATA} r.
 \end{flushright}
 
 \vspace{40pt}
@@ -107,9 +107,10 @@ Wojciech Przybyła
 \vspace{30pt}
 ```
 
-TODO STRESZCZENIE
+\AAA{STRESZCZENIE}
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
 
-**Słowa kluczowe**: TODO KEYWORDS
+**Słowa kluczowe**: \AAA{KEYWORDS}
 
 ```{=latex}
 \vspace{40pt}
@@ -121,9 +122,10 @@ TODO STRESZCZENIE
 \vspace{30pt}
 ```
 
-TODO STRESZCZENIE ENG
+\AAA{STRESZCZENIE ENG}
+Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.
 
-**Key words**: TODO KEYWORDS ENG
+**Key words**: \AAA{KEYWORDS ENG}
 
 \newpage
 
