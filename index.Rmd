@@ -55,6 +55,7 @@ Nr albumu: 129522
   
   \begin{Large}  
     Praca magisterska\\
+
     napisana pod kierunkiem\\
     dr hab. Pawła \AAA{ODMIANA NAZWISKA}, prof. UEP\\
     \vspace{2.8cm}
@@ -81,6 +82,7 @@ Poznań, dnia \AAA{DATA} r.
 \end{center}
 ```
 
+\AAA{Czy to konieczne?}
 Zdając sobie sprawę z odpowiedzialności prawnej, że przypisanie sobie w pracy dyplomowej autorstwa istotnego fragmentu lub innych elementów cudzego utworu lub ustalenia naukowego stanowi podstawę stwierdzenia nieważności postępowania administracyjnego w sprawie nadania tytułu zawodowego oświadczam, że przedkładana praca dyplomowa została napisana przeze mnie samodzielnie i nie zawiera ona treści uzyskanych w sposób niezgodny z obowiązującymi przepisami, a przy jej pisaniu, poza niezbędnymi konsultacjami, nie korzystano z pomocy innych osób.
 
 ```{=latex}
