@@ -9,8 +9,11 @@
 
 Za przedmiot badań obrane zostały notowania pięciu polskich spółek notowanych na Giełdzie Papierów Wartościowych:
 
-1. **PKN Orlen** -- \AAA{parę słów o nich}
-Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in,
+1. **PKN Orlen** -- polska spółka z ponad sześćdziesięcioletnią historią w branży paliwowej.
+Opisywana jako koncern wielobranżowy, opiera swoją działalność na poszukiwaniu, wydobyciu, logistyce oraz dystrybucji i sprzedaży różnego rodzaju paliw, m.in. ropy naftowej, gazu ziemnego oraz biopaliw.
+Ponadto spółka udziela się na rynkach energii elektrycznej i cieplnej, produkcji nawozów sztucznych, petrochemii, a także na rynku prasowym [@orlenWiki].
+Pod szyldem _Orlen_ działa 7 rafinerii w Polsce, Czechach oraz na Litwie, które przerabiają rocznie ponad 30 mln ton ropy naftowej.
+Spółka posiada ponad 3000 stacji benzynowych w Europie i sprzedaje 40 produktów petrochemicznych [@orlenSelf].
 
 2. **PKO BP** -- \AAA{parę słów o nich}
 Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in,
