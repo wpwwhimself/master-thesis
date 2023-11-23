@@ -1,0 +1,72 @@
+\ProvidesPackage{uepTitle}[2019/12/06 v.01]
+\RequirePackage{graphicx,eso-pic,changepage}
+
+\newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}%
+}
+\newcommand*{\major}[1]{\gdef\@major{#1}%
+}
+\newcommand*{\titleEN}[1]{\gdef\@titleEN{#1}%
+}
+\newcommand*{\thesisType}[1]{\gdef\@thesisType{#1}%
+}
+
+\renewcommand*{\maketitle}{%
+\begin{titlepage}
+
+\clearpage
+
+\AddToShipoutPicture*{%
+  \AtPageUpperLeft{%
+    \raisebox{-\height}{\includegraphics[width=\paperwidth]{config/headerUEP.jpg}}
+  }
+}
+
+\vspace*{1.85cm}
+
+\begin{center}
+{\Large \bfseries\@author\unskip\strut\par}
+\end{center}
+
+\vspace{0.8cm}
+
+%%%%%%%%% TYTUŁ PRACY PL/EN, RODZAJ %%%%%%%%%
+
+\begin{adjustwidth}{2.86cm}{} %% ustawienie wcięcia dla sekcji
+{\Large \@title\par}
+\vspace{1.2cm}
+\noindent
+{\Large \@titleEN\par }
+\end{adjustwidth}
+
+\vspace{3.2cm}
+
+\begin{center}
+{\small \bfseries\@thesisType}
+\end{center}
+
+\vspace{1.65cm}
+
+%%%%%%%%% PROMOTOR, DATA PRZYJĘCIA PRACY %%%%%%%%%
+
+\begin{adjustwidth}{9.38cm}{} %% ustawienie wcięcia dla sekcji
+{\small Promotor: \@supervisor}\par
+\vspace{0.3cm}
+\noindent
+{\small Pracę przyjęto dnia: ...................................}\par
+\end{adjustwidth}
+
+\vfill
+
+\begin{flushleft}
+{\small Kierunek: \@major\unskip\strut\par}
+\end{flushleft}
+
+\vspace{0.3cm}
+
+\begin{center}
+{\small Poznań \the\year\par}
+\end{center}
+
+\end{titlepage}
+}
+\endinput

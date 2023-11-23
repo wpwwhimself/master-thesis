@@ -27,43 +27,7 @@ opts_chunk$set(warning = FALSE)
 \thispagestyle{empty}
 \fancyhead[RO]{\thepage}
 
-\begin{center}
-  \begin{large}
-    Uniwersytet Ekonomiczny w~Poznaniu\\
-    \AAA{KATEDRA XYZ}\\
-    \vspace{2.4cm}
-  \end{large}  
-    
-  \begin{LARGE}
-    \leftskip=-3cm plus 1fil\rightskip=-3cm plus 1fil
-    \LARGE {\textbf{\AAA{TITLE}}}\par
-    \vspace{0.5cm}
-    \LARGE {\textbf{\AAA{TITLE ENG}}}\par
-  \end{LARGE}% uwaga na spacje!!!
-  
-  \vspace{2.0cm}
-  \begin{Large}
-    \textbf{Wojciech Przybyła}
-  \end{Large}  
-    
-  \begin{Large}  
-Kierunek: Informatyka i Ekonometria\\
-Nr albumu: 129522
-  \end{Large}
-    
-  \vspace{2.0cm}
-  
-  \begin{Large}  
-    Praca magisterska\\
-
-    napisana pod kierunkiem\\
-    dr hab. Pawła \AAA{ODMIANA NAZWISKA}, prof. UEP\\
-    \vspace{2.8cm}
-    Poznań 2024
-  \end{Large}  
-\end{center}
-
-\newpage
+\maketitle
 
 \thispagestyle{empty}
 \fancyhead[LO]{\textbf{\small{}}}

@@ -1,0 +1,38 @@
+\ProvidesPackage{uepThesis}[2019/12/06 v.01]
+
+\usepackage{xltxtra}
+\usepackage{mathptmx}
+\setmainfont[]{Carlito}
+
+\pagestyle{plain}
+\setlength{\parindent}{0.5cm}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{geometry}
+\geometry{top=2.5cm,bottom=2.5cm,lmargin=3cm,rmargin=2cm}
+\usepackage{indentfirst}
+\renewcommand{\thesection}{\arabic{section}}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+\usepackage[font=normal,labelfont=bf]{caption}
+
+%%% JĘZYK PRACY %%% proszę od-komentować odpowiedni język pracy
+%\usepackage[polish]{babel}
+%\usepackage{polski}
+%\usepackage[english]{babel}
+
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage[style=apa, backend=biber, alldates=year]{biblatex}
+\renewcommand\cite{\parencite}
+\renewcommand\&{\bibstring{and}}\renewcommand\&{\bibstring{and}}
+
+\DeclareCiteCommand{\citepage}[\mkbibparens]
+  {\usebibmacro{cite:init}}
+  {\usebibmacro{cite:post}}
+  {}
+  {\usebibmacro{postnote}}

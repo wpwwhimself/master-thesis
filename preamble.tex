@@ -1,3 +1,13 @@
+%formatka UEP
+\usepackage{config/uepThesis}
+\usepackage{config/uepTitle}
+	\title{Skuteczność modeli przełącznikowych w czasach kryzysów}
+	\titleEN{Effectiveness of switch models in times of crisis}
+	\thesisType{Praca magisterska}
+	\author{Wojciech Przybyła}
+	\supervisor{dr hab. Paweł Kliber, prof. UEP}
+	\major{Informatyka i Ekonometria}
+
 \usepackage{booktabs}
 \pagestyle{headings}
 \usepackage{fancyhdr} 
@@ -13,26 +23,13 @@
 	\renewcommand{\ge}{\geqslant}
 
 %technikalia
-% czcionka Calibri
-\usepackage{fontspec}
-\setmainfont{Calibri}
 % interlinia 1.5
 \usepackage{setspace}
 \setstretch{1.5}
 % wcięcia akapitu 0.5cm
 \setlength\parindent{0.5cm}
 \setlength{\headheight}{15pt}
-\usepackage{csquotes}
-\usepackage{hyperref}
-\usepackage[style=apa, backend=biber, alldates=year]{biblatex}
 \addbibresource{book.bib}
-\renewcommand\cite{\parencite}
-\renewcommand\&{\bibstring{and}}\renewcommand\&{\bibstring{and}}
-\DeclareCiteCommand{\citepage}[\mkbibparens]
-  {\usebibmacro{cite:init}}
-  {\usebibmacro{cite:post}}
-  {}
-  {\usebibmacro{postnote}}
 
 %szybkie pisanie latex
 \newcommand{\doubleC}{\mathbb{C}}
