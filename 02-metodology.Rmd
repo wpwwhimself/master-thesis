@@ -5,31 +5,56 @@
 \renewcommand{\headrulewidth}{0.5pt}
 ```
 
+```{r setup}
+library(tidyverse)
+library(ggplot2); library(gridExtra)
+theme_set(theme_minimal())
+theme_fill_uep <- function(...) {
+  scale_fill_brewer(palette = "Greens", ...)
+}
+theme_color_uep <- function(...) {
+  scale_color_brewer(palette = "Greens", ...)
+}
+options(
+  ggplot2.discrete.fill = theme_fill_uep,
+  ggplot2.discrete.colour = theme_color_uep
+)
+
+library(lubridate)
+library(knitr); library(kableExtra)
+options(
+  knitr.kable.NA = "–"
+)
+
+primary_color <- "#005322"
+update_geom_defaults("line", list(color = primary_color))
+```
+
 ## Wybór danych
 
-Za przedmiot badań obrane zostały notowania pięciu polskich spółek notowanych na Giełdzie Papierów Wartościowych:
+Za przedmiot badań obrane zostały notowania pięciu polskich spółek notowanych na Giełdzie Papierów Wartościowych.
+Spółki te zostały wybrane tak, aby reprezentowały różne sektory rynku.
+Poddano badaniu następujące firmy:
 
-1. **PKN Orlen** -- polska spółka z ponad sześćdziesięcioletnią historią w branży paliwowej.
+1. **PKN Orlen** -- polska spółka z ponad sześćdziesięcioletnią historią w **branży paliwowej**.
 Opisywana jako koncern wielobranżowy, opiera swoją działalność na poszukiwaniu, wydobyciu, logistyce oraz dystrybucji i sprzedaży różnego rodzaju paliw, m.in. ropy naftowej, gazu ziemnego oraz biopaliw.
 Ponadto spółka udziela się na rynkach energii elektrycznej i cieplnej, produkcji nawozów sztucznych, petrochemii, a także na rynku prasowym [@orlenWiki].
 Pod szyldem _Orlen_ działa 7 rafinerii w Polsce, Czechach oraz na Litwie, które przerabiają rocznie ponad 30 mln ton ropy naftowej.
 Spółka posiada ponad 3000 stacji benzynowych w Europie i sprzedaje 40 produktów petrochemicznych [@orlenSelf].
 
-2. **PKO BP** -- \AAA{parę słów o nich}
-Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in,
+2. **PKO BP** -- **finanse** \AAA{parę słów o nich}
+\ghost{Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in.}
 
-3. **CD Projekt RED** -- \AAA{parę słów o nich}
-Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in.
+3. **11 bit studios** -- **gejming** \AAA{parę słów o nich}
+\ghost{Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in.}
 
-4. \AAA{Jeszcze ktoś} -- \AAA{parę słów o nich}
-Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in.
+4. **Develia** -- **nieruchomości** \AAA{parę słów o nich}
+\ghost{Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in.}
 
-5. \AAA{Jeszcze ktoś} -- \AAA{parę słów o nich}
-Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in.
+5. **Synektik** -- **biotechnologie** \AAA{parę słów o nich}
+\ghost{Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in.}
 
-Jak można zauważyć w powyższym zestawieniu, spółki objęte badaniem obejmują różne sektory rynku, co ma dodatkowo porównać wpływ zaburzeń na świecie na każdą z dziedzin.
-Informacje o cenach akcji pochodzą ze strony @stooq. \AAA{Co to za strona? może z ich about?}
-
+Jak można zauważyć w powyższym zestawieniu, spółki objęte badaniem istotnie obejmują różne sektory rynku, co ma dodatkowo porównać wpływ zaburzeń na świecie na każdą z dziedzin.
 
 \ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
 
@@ -50,69 +75,140 @@ Informacje o cenach akcji pochodzą ze strony @stooq. \AAA{Co to za strona? moż
 \ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
 
 \ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
 
 ## Analiza danych
 
-```{r libraries}
-library(tidyverse)
-library(ggplot2); library(ggthemes)
-library(lubridate)
-```
-
 ```{r load_data}
 #### load ####
-tables <- c("wig20", "tpe", "pko", "pkn", "pge", "cdr")
+tables <- c("wig20", "pkn", "pko", "ebs", "dvl", "snt")
+tables_full_names <- setNames(
+  c("WIG20", "PKN Orlen", "PKO BP", "11 bit studios", "Develia", "Synektik"),
+  tables
+)
 for (i in seq_along(tables)) {
   assign(
     tables[i],
     read.csv(paste("sauce/data/", tables[i], ".csv", sep = ""), sep = ";") %>%
       mutate(return = log(Zamkniecie / lag(Zamkniecie)) * 100) %>%
       mutate(across(matches(c("Data")), as_date)) %>%
-      mutate(index = tables[i])
+      mutate(index = tables_full_names[i])
   )
 }
 
 #### gather ####
-data <- bind_rows(wig20, tpe, pko, pkn, pge, cdr)
+data <- bind_rows(wig20, pkn, pko, ebs, dvl, snt) %>% as_tibble()
+returns_split <-
+  data %>%
+    group_by(index) %>%
+    group_map(~.x %>% pull(return))
+names(returns_split) <- tables
 ```
 
-```{r return_plot}
+Do przeprowadzania badania wykorzystane zostaną dane o cenach akcji zebrane z serwisu @stooq.
+\AAA{Co to za strona? Mają jakiś opis?}
+
+```{r}
+#### showcase ####
 data %>%
-  ggplot(aes(Data, return, color = index)) +
-    theme_excel_new() +
-    geom_line() +
-    facet_grid(index ~ .)
+  head(5) %>%
+  select(-index) %>%
+  kable(booktabs = TRUE,
+    caption = "Przykład danych giełdowych indeksu WIG20",
+    col.names = c(
+      "Data",
+      "Otwarcie",
+      "Najwyższy",
+      "Najniższy",
+      "Zamknięcie",
+      "Wolumen",
+      "Stopa zwrotu"
+    )
+  ) %>%
+  kable_styling(latex_options = "HOLD_position")
 ```
 
-> logarytmiczne stopy zwrotu
-> statystyki opisowe?
-> normalność
+Punktem wyjścia będzie cena zamknięcia akcji.
+Aby zapewnić stacjonarność tego szeregu czasowego, obliczane są **logarytmiczne stopy zwrotu** według wzoru:
+$$
+r_{i} = \ln\left(\frac{x_{i}}{x_{i-1}}\right) \cdot 100
+$$
+gdzie $x_i$ oznacza cenę zamknięcia w momencie $i$.
+Tak utworzony szereg czasowy spełnia założenia stacjonarności i można go wykorzystać do dalszych badań.
+
+```{r fig.cap="Logarytmiczne stopy zwrotu dla badanych spółek"}
+data %>%
+  ggplot(aes(Data, return)) +
+    geom_line() +
+    facet_wrap(index ~ ., ncol = 2)
+```
+
+\AAA{Widać wzrosty wahań po 2020 i tuż po 2022, czy to faktycznie wtedy?}
+
+```{r}
+data %>%
+  group_by(index) %>%
+  na.omit() %>%
+  summarise(
+    "Średnia" = mean(return),
+    "Mediana" = median(return),
+    "Odch. kw." = sd(return),
+    "Skośność" = moments::skewness(return),
+    "Kurtoza" = moments::kurtosis(return),
+  ) %>%
+  kable(booktabs = TRUE,
+    caption = "Statystyki opisowe stóp zwrotu badanych spółek"
+  ) %>%
+  kable_styling(latex_options = "HOLD_position")
+```
+
+```{r fig.cap = "Wyniki testu Shapiro-Wilka na normalność rozkładu stóp zwrotu. W tytułach podano wartości statystyki testowej oraz p-wartość."}
+plots <- lapply(
+  seq_along(tables),
+  function(i, data) {
+    returns <- data[[i]]
+    label <- tables_full_names[names(data)[i]]
+
+    shapiro <- shapiro.test(returns)
+    test_results <-
+      paste("W:", round(shapiro$statistic, 2), "p:", round(shapiro$p.value, 4))
+    returns %>%
+      as_tibble() %>%
+      na.omit() %>%
+      ggplot(aes(value)) +
+        geom_histogram(aes(y = ..density..)) +
+        stat_function(
+          fun = dnorm,
+          args = list(
+            mean = mean(returns, na.rm = TRUE),
+            sd = sd(returns, na.rm = TRUE)
+          ),
+          col = primary_color,
+        ) +
+        labs(
+          title = label,
+          subtitle = test_results,
+          x = NULL,
+          y = NULL,
+        )
+  },
+  data = returns_split
+)
+
+grid.arrange(
+  grobs = plots,
+  ncol = 3
+)
+```
+
+\AAA{nie ma normalności, ofc}
+
 > kruskal-wallis dla podokresów
+
+\AAQ{co znaczy "dla podokresów"? jak wygląda procedura?}
+
 > dwie serie -- testy dla różnic wariancji w seriach (Levene)
+
+\AAQ{to już jak będę miał pogrupowane przez Kruskala?}
 
 \ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
 

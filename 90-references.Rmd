@@ -4,3 +4,5 @@
 \fancyhead[LO]{\textbf{\small{Bibliografia}}}
 \renewcommand{\headrulewidth}{0.5pt}
 ```
+
+\AAQ{Spis tabel i rysunków też?}

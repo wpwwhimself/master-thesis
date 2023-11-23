@@ -7,6 +7,8 @@
 
 ## Cel i znaczenie pracy magisterskiej
 
+\AAQ{Czy wstęp ma być rozdziałem 0, czy tak jest OK?}
+
 > Tutaj opiszę temat -- po co piszę o notowaniach w dobie kryzysów, czemu to w ogóle jest ciekawe
 > i jakie potencjalne ciekawe rzeczy można z tego wyciągnąć
 
