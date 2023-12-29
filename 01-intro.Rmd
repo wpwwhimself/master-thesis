@@ -7,8 +7,6 @@
 
 ## Cel i znaczenie pracy magisterskiej
 
-\AAQ{Czy wstęp ma być rozdziałem 0, czy tak jest OK?}
-
 > Tutaj opiszę temat -- po co piszę o notowaniach w dobie kryzysów, czemu to w ogóle jest ciekawe
 > i jakie potencjalne ciekawe rzeczy można z tego wyciągnąć
 
@@ -51,7 +49,7 @@ Idealnym narzędziem zdają się tu być modele przełącznikowe, za pomocą kt�
 Po przeprowadzeniu badań podsumowane zostaną ich wyniki oraz wyłoniona zostanie optymalna metoda predykcji wartości wskaźników rynkowych.
 Informacje te mogą posłużyć do dalszego konstruowania modeli mających za zadanie negować skutki globalnych kryzysów i zapobiegać ich finansowym efektom.
 
-## Teoria rynków finansowych i ich modelowania
+## Modele rynków finansowych
 
 > co to jest rynek finansowy, co się na nim dzieje
 > co to jest modelowanie, na czym mniej więcej polega i do czego służy
@@ -134,7 +132,7 @@ Wartości kryterium bliższe $0$ informują o lepszej jakości dopasowania model
 
 \ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
 
-## Przegląd literatury dotyczącej niniejszej pracy
+## Przegląd literatury
 
 > self-explainatory;
 > literatura modeli, ale też literatura na temat innych dopasowań modeli do wahających się danych;

@@ -32,31 +32,6 @@ opts_chunk$set(warning = FALSE)
 \thispagestyle{empty}
 \fancyhead[LO]{\textbf{\small{}}}
 \renewcommand{\headrulewidth}{0.0pt}
-
-\vspace{20pt}
-
-\begin{flushright}
-Poznań, dnia \AAA{DATA} r.
-\end{flushright}
-
-\vspace{40pt}
-
-\begin{center}
-\textbf{OŚWIADCZENIE}
-\end{center}
-```
-
-\AAQ{Czy to konieczne? Zachowałem ze starej pracy}
-Zdając sobie sprawę z odpowiedzialności prawnej, że przypisanie sobie w pracy dyplomowej autorstwa istotnego fragmentu lub innych elementów cudzego utworu lub ustalenia naukowego stanowi podstawę stwierdzenia nieważności postępowania administracyjnego w sprawie nadania tytułu zawodowego oświadczam, że przedkładana praca dyplomowa została napisana przeze mnie samodzielnie i nie zawiera ona treści uzyskanych w sposób niezgodny z obowiązującymi przepisami, a przy jej pisaniu, poza niezbędnymi konsultacjami, nie korzystano z pomocy innych osób.
-
-```{=latex}
-\vspace{30pt}
-
-%\vspace{30pt}
-
-\begin{flushright}
-Wojciech Przybyła 
-\end{flushright}
 ```
 
 \newpage
