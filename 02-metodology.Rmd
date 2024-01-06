@@ -77,7 +77,7 @@ names(returns_split) <- tables
 ```
 
 Do przeprowadzania badania wykorzystane zostaną dane o cenach akcji zebrane z serwisu _Stooq.pl_.
-Jest to jeden z najbardziej znanych serwisów internetowych zbierających dane finansowe spółek notowanych nie tylko na _Giełdzie Papierów Wartościowych_, ale również na innych giełdach światowych, m.in. _SP US_. \AAA{Nie potrafię wstawić ampersanda!}
+Jest to jeden z najbardziej znanych serwisów internetowych zbierających dane finansowe spółek notowanych nie tylko na _Giełdzie Papierów Wartościowych_, ale również na innych giełdach światowych, m.in. amerykański indeks _S&P US_.
 Można tam znaleźć również informacje o kursach walut, cenach towarów i inne dane finansowe.
 
 ### Wstępna inspekcja danych
