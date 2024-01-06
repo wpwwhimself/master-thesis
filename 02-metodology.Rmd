@@ -36,45 +36,39 @@ Za przedmiot badań obrane zostały notowania pięciu polskich spółek notowany
 Spółki te zostały wybrane tak, aby reprezentowały różne sektory rynku.
 Poddano badaniu następujące firmy:
 
-1. **PKN Orlen** -- polska spółka z ponad sześćdziesięcioletnią historią w **branży paliwowej**.
+1. **PKN Orlen** -- Polski Koncern Naftowy Orlen Spółka Akcyjna -- polska spółka z ponad sześćdziesięcioletnią historią w **branży paliwowej**.
 Opisywana jako koncern wielobranżowy, opiera swoją działalność na poszukiwaniu, wydobyciu, logistyce oraz dystrybucji i sprzedaży różnego rodzaju paliw, m.in. ropy naftowej, gazu ziemnego oraz biopaliw.
 Ponadto spółka udziela się na rynkach energii elektrycznej i cieplnej, produkcji nawozów sztucznych, petrochemii, a także na rynku prasowym [@orlenWiki].
 Pod szyldem _Orlen_ działa 7 rafinerii w Polsce, Czechach oraz na Litwie, które przerabiają rocznie ponad 30 mln ton ropy naftowej.
 Spółka posiada ponad 3000 stacji benzynowych w Europie i sprzedaje 40 produktów petrochemicznych [@orlenSelf].
 
-2. **PKO BP** -- **finanse** \AAA{parę słów o nich}
-\ghost{Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in.}
+2. **PKO BP** -- Powszechna Kasa Oszczędności Bank Polski Spółka Akcyjna -- największy bank uniwersalny w Polsce, reprezentujący **branżę finansową**.
+Utworzona 7.02.2019 r. jako _Pocztowa Kasa Oszczędności_, która przyczyniła się m.in. do wprowadzenia złotego polskiego do obiegu w Polsce.
+Po 1948 r. zlikwidowana i powołana ponownie, tym razem jako bank Państwowy (już pod obecną nazwą), a z dniem 1.07.1975 r. włączona w struktury _Narodowego Banku Polskiego_.
+Jako _bank uniwersalny_ obsługuje różne podmioty, od osób fizycznych, poprzez małe i średnie przedsiębiorstwa, skończywszy na wielkich korporacjach [@pkoWiki].
+Misją banku jest pozytywny wpływ na Polskę, tj. ludzi, firmy, kulturę i środowisko. Określany jako jeden z największych banków w Europie Środkowej i Wschodniej.
+W posiadaniu spółki jest również kolekcja różnego rodzaju dzieł sztuki, a pod jej szyldem funkcjonuje również _Fundacja_, realizująca m.in. projekty lokalne i indywidualne [@pkoSelf].
 
-3. **11 bit studios** -- **gejming** \AAA{parę słów o nich}
-\ghost{Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in.}
+3. **11 bit studios** -- polskie przedsiębiorstwo założone w 2009 roku z siedzibą w Warszawie, zajmującą się produkcją i wydawaniem **gier komputerowych**.
+Założone w większości przez byłych pracowników _Metropolis Software_, innego polskiego producenta gier, który w wyniku braku sukcesów na rynku zmuszony był zakończyć swoją działalność.
+Nowo utworzone studio wydało kilka produkcji, z czego szczególnym sukcesem cieszy się gra strategiczna z gatunku _city builder_: _Frostpunk_ [@11bitWiki].
+Będąc laureatem wielu wyróżnień, m.in. na najlepszą grę strategiczną podczas _Video Game Awards_ oraz najlepszą grę polską od _Digital Dragons_, studio stale rozszerza swój dorobek, pracując obecnie nad kontynuacją swojej hitowej produkcji.
+Produkcję gier traktują na równi z twórczością artystyczną, chcąc konstruować "uniwersa pełne prowokujących do myślenia powieści" [@11bitSelf].
 
-4. **Develia** -- **nieruchomości** \AAA{parę słów o nich}
-\ghost{Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in.}
+4. **Develia** -- spółka akcyjna kontrolująca grupę spółek zajmujących się nabywaniem gruntów i budowaniem, sprzedażą oraz najmem **nieruchomości** o przeznaczeniu mieszkaniowym, biurowym, handlowym i usługowym.
+Spółka giełdowa, wcześniej znana jako _LC Corp S.A._, notowana od 2007 r. na Warszawskiej Giełdzie Papierów Wartościowych.
+Koncentruje się głównie na projektach mieszkaniowych w największych miastach Polski [@develiaWiki].
+Jako czołowy polski deweloper projektuje osiedla z myślą o zaspokojeniu potrzeb mieszkańców i jednoczesnym zachowaniu minimalnego wpływu na ekosystem.
+W ciągu 16 lat działalności firma oddała do użytku ponad 17 tys. lokali, a przykładem jej projektów w Poznaniu jest _Malta Point_ przy ul. Brneńskiej [@develiaSelf].
 
-5. **Synektik** -- **biotechnologie** \AAA{parę słów o nich}
-\ghost{Deserunt qui ex voluptate incididunt pariatur sint deserunt qui in aliqua qui proident velit deserunt. Occaecat consectetur dolore ut amet. Velit ut veniam nulla nulla velit sunt deserunt elit incididunt incididunt proident sit minim dolor. Occaecat ut veniam qui sint ut mollit. Ad non minim exercitation fugiat et esse veniam ipsum in.}
+5. **Synektik** -- polska spółka akcyjna dostarczająca wiodące na rynku rozwiązania informatyczne oraz radiofarmaceutyczne, zapewniając wsparcie **medyczne** wielu placówkom.
+Firma zajmuje się m.in. sprzedażą sprzętu medycznego do diagnostyki i terapii, usługi w zakresie serwisowania sprzętu medycznego, a także produkcją radiofarmaceutyków.
+Spółka utworzona została 4.10.2001 r. jako spółka z ograniczoną odpowiedzialnością i początkowo wykonywała montaże i instalacje oraz serwis aparatury specjalistycznej.
+Po przekształceniu w spółkę akcyjną w 2011 r. firma otrzymała zezwolenie na wytwarzanie radiofarmaceutyków, czyli preparatów medycznych zawierających izotopy promieniotwórcze.
+Obecnie _Synektik_ jest krajowym liderem w produkcji i dystrybucji tego typu leków [@synektik].
 
 Jak można zauważyć w powyższym zestawieniu, spółki objęte badaniem istotnie obejmują różne sektory rynku, co ma dodatkowo porównać wpływ zaburzeń na świecie na każdą z dziedzin.
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
+Dodatkowo, jako krajowych liderów w swoich branżach, wyniki finansowe objętych badaniem firm są dobrym wyznacznikiem kondycji całego polskiego rynku.
 
 ## Analiza danych
 
