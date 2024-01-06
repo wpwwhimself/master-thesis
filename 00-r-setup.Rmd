@@ -1,0 +1,24 @@
+```{r setup}
+library(tidyverse)
+library(ggplot2); library(gridExtra)
+theme_set(theme_minimal())
+theme_fill_uep <- function(...) {
+  scale_fill_brewer(palette = "Greens", ...)
+}
+theme_color_uep <- function(...) {
+  scale_color_brewer(palette = "Greens", ...)
+}
+options(
+  ggplot2.discrete.fill = theme_fill_uep,
+  ggplot2.discrete.colour = theme_color_uep
+)
+
+library(lubridate)
+library(knitr); library(kableExtra)
+options(
+  knitr.kable.NA = "–"
+)
+
+primary_color <- "#005322"
+update_geom_defaults("line", list(color = primary_color))
+```

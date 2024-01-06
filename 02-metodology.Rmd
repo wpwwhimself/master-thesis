@@ -5,31 +5,6 @@
 \renewcommand{\headrulewidth}{0.5pt}
 ```
 
-```{r setup}
-library(tidyverse)
-library(ggplot2); library(gridExtra)
-theme_set(theme_minimal())
-theme_fill_uep <- function(...) {
-  scale_fill_brewer(palette = "Greens", ...)
-}
-theme_color_uep <- function(...) {
-  scale_color_brewer(palette = "Greens", ...)
-}
-options(
-  ggplot2.discrete.fill = theme_fill_uep,
-  ggplot2.discrete.colour = theme_color_uep
-)
-
-library(lubridate)
-library(knitr); library(kableExtra)
-options(
-  knitr.kable.NA = "–"
-)
-
-primary_color <- "#005322"
-update_geom_defaults("line", list(color = primary_color))
-```
-
 ## Wybór danych
 
 Za przedmiot badań obrane zostały notowania pięciu polskich spółek notowanych na Giełdzie Papierów Wartościowych.
@@ -70,6 +45,9 @@ Obecnie _Synektik_ jest krajowym liderem w produkcji i dystrybucji tego typu lek
 Jak można zauważyć w powyższym zestawieniu, spółki objęte badaniem istotnie obejmują różne sektory rynku, co ma dodatkowo porównać wpływ zaburzeń na świecie na każdą z dziedzin.
 Dodatkowo, jako krajowych liderów w swoich branżach, wyniki finansowe objętych badaniem firm są dobrym wyznacznikiem kondycji całego polskiego rynku.
 
+Celem zróżnicowania badania, procedura badawcza zostanie zastosowana również dla **indeksu WIG20**.
+Indeks ten jest indeksem cenowym 20 największych spółek na _Giełdzie Papierów Wartościowych_, obliczanym na podstawie ich obrotów i cen akcji [@wig20stat].
+
 ## Analiza danych
 
 ```{r load_data}
@@ -98,8 +76,11 @@ returns_split <-
 names(returns_split) <- tables
 ```
 
-Do przeprowadzania badania wykorzystane zostaną dane o cenach akcji zebrane z serwisu @stooq.
-\AAA{Co to za strona? Mają jakiś opis?}
+Do przeprowadzania badania wykorzystane zostaną dane o cenach akcji zebrane z serwisu _Stooq.pl_.
+Jest to jeden z najbardziej znanych serwisów internetowych zbierających dane finansowe spółek notowanych nie tylko na _Giełdzie Papierów Wartościowych_, ale również na innych giełdach światowych, m.in. _SP US_. \AAA{Nie potrafię wstawić ampersanda!}
+Można tam znaleźć również informacje o kursach walut, cenach towarów i inne dane finansowe.
+
+### Wstępna inspekcja danych
 
 ```{r}
 #### showcase ####
@@ -129,16 +110,24 @@ $$
 gdzie $x_i$ oznacza cenę zamknięcia w momencie $i$.
 Tak utworzony szereg czasowy spełnia założenia stacjonarności i można go wykorzystać do dalszych badań.
 
-```{r fig.cap="Logarytmiczne stopy zwrotu dla badanych spółek"}
+```{r returns-plot, fig.cap="Logarytmiczne stopy zwrotu dla badanych spółek", fig.height=8, fig.width=6.5}
 data %>%
   ggplot(aes(Data, return)) +
     geom_line() +
-    facet_wrap(index ~ ., ncol = 2)
+    ylab("Wartość stopy zwrotu") +
+    scale_x_date(
+      date_breaks = "6 months",
+      date_labels = "%m.%y"
+    ) +
+    facet_wrap(index ~ ., ncol = 1)
 ```
 
-\AAA{Widać wzrosty wahań po 2020 i tuż po 2022, czy to faktycznie wtedy?}
+Na Rysunku \@ref(fig:returns-plot) opracowane są wykresy logarytmicznych stóp zwrotu dla spółek wykorzystanych w badaniu.
+Można zauważyć wyraźnie podwyższoną zmienność w marcu 2020 r., a także na końcu lutego 2022 r.
+Pierwszy z tych wstrząsów bez wątpienia można przypisać początkowi pandemii koronawirusa w Polsce i pierwszym wprowadzonym restrykcjom sanitarnym [@covidBeginnings].
+Drugi z kolei jest związany z początkiem agresji rosyjskiej na Ukrainie, kiedy to 24.02 agresor rozpoczął swoją ofensywę [@ukrWiki].
 
-```{r}
+```{r desc-stats-table}
 data %>%
   group_by(index) %>%
   na.omit() %>%
@@ -155,7 +144,7 @@ data %>%
   kable_styling(latex_options = "HOLD_position")
 ```
 
-```{r fig.cap = "Wyniki testu Shapiro-Wilka na normalność rozkładu stóp zwrotu. W tytułach podano wartości statystyki testowej oraz p-wartość."}
+```{r histograms-plot, fig.cap = "Wyniki testu Shapiro-Wilka na normalność rozkładu stóp zwrotu. W tytułach podano wartości statystyki testowej oraz p-wartość."}
 plots <- lapply(
   seq_along(tables),
   function(i, data) {
@@ -169,7 +158,7 @@ plots <- lapply(
       as_tibble() %>%
       na.omit() %>%
       ggplot(aes(value)) +
-        geom_histogram(aes(y = ..density..)) +
+        geom_histogram(aes(y = ..density..), fill = primary_color, alpha = 0.5) +
         stat_function(
           fun = dnorm,
           args = list(
@@ -194,9 +183,14 @@ grid.arrange(
 )
 ```
 
-\AAA{nie ma normalności, ofc}
+W dalszej kolejności dane giełdowe zostały zbadane pod kątem ich podobieństwa do rozkładu normalnego.
+W tym celu obliczone zostały statystyki opisowe szeregów czasowych, a także przeprowadzono test Shapiro-Wilka na normalność rozkładu zmiennej losowej.
+Wyniki tych działań przedstawiono w Tabeli \@ref(tab:desc-stats-table) oraz na Rysunku \@ref(fig:histograms-plot).
 
-> kruskal-wallis dla podokresów
+Na podstawie tak przeprowadzonych testów można stwierdzić, że wzięte w badaniu dane **nie cechują się normalnością**, o czym świadczy niska (bliska wartości 0) p-wartość testów.
+Uzasadnia to użycie testu Kruskala-Wallisa do dalszych badań, w odróżnieniu od analizy ANOVA, która wymaga założenia o normalności danych.
+
+### Test Kruskala-Wallisa
 
 \AAQ{co znaczy "dla podokresów"? jak wygląda procedura?}
 
