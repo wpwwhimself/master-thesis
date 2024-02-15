@@ -3,6 +3,7 @@
 .RData
 .Ruserdata
 mentorship/*
+desktop.ini
 
 #śmieci kompilatora
 *.aux
