@@ -190,57 +190,6 @@ Wyniki tych działań przedstawiono w Tabeli \@ref(tab:desc-stats-table) oraz na
 Na podstawie tak przeprowadzonych testów można stwierdzić, że wzięte w badaniu dane **nie cechują się normalnością**, o czym świadczy niska (bliska wartości 0) p-wartość testów.
 Uzasadnia to użycie testu Kruskala-Wallisa do dalszych badań, w odróżnieniu od analizy ANOVA, która wymaga założenia o normalności danych.
 
-### Test Kruskala-Wallisa
-
-\AAQ{co znaczy "dla podokresów"? jak wygląda procedura?}
-
-> dwie serie -- testy dla różnic wariancji w seriach (Levene)
-
-\AAQ{to już jak będę miał pogrupowane przez Kruskala?}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
 
 ## Wybór odpowiedniego modelu
 
@@ -248,47 +197,3 @@ Uzasadnia to użycie testu Kruskala-Wallisa do dalszych badań, w odróżnieniu 
 > puszczam garcha z jakimiś parametrami
 > sprawdzam, czy parametry istotne
 > bla bla...
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Mollit in eu ex nulla velit non ullamco proident id. Do amet quis pariatur anim incididunt. Est nostrud labore enim duis ipsum nisi nostrud reprehenderit sint aliquip dolor anim exercitation.}
-
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
-
-\ghost{Ullamco eu in occaecat quis enim sit magna incididunt. Consequat sit aliquip ut esse sit laborum. Amet aliqua elit id amet culpa Lorem irure deserunt laboris. Consequat culpa duis eu minim ipsum elit amet magna excepteur voluptate dolore non laborum. Sit exercitation ex Lorem pariatur dolore adipisicing. Aute enim ullamco culpa duis ut. Qui ullamco veniam aute et sint aute aute dolore laboris voluptate.}

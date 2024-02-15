@@ -49,7 +49,6 @@ opts_chunk$set(warning = FALSE)
 ```
 
 \AAA{STRESZCZENIE}
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
 
 **Słowa kluczowe**: \AAA{KEYWORDS}
 
@@ -64,7 +63,6 @@ opts_chunk$set(warning = FALSE)
 ```
 
 \AAA{STRESZCZENIE ENG}
-\ghost{Aliquip adipisicing commodo est Lorem. Duis eu est pariatur duis quis cupidatat exercitation cillum labore quis mollit ipsum ullamco elit. Consequat pariatur labore incididunt exercitation irure qui. Ex cupidatat irure in occaecat irure veniam aliqua non culpa voluptate in dolor laborum ad.}
 
 **Key words**: \AAA{KEYWORDS ENG}
 
