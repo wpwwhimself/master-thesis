@@ -188,11 +188,12 @@ W tym celu obliczone zostały statystyki opisowe szeregów czasowych, a także p
 Wyniki tych działań przedstawiono w Tabeli \@ref(tab:desc-stats-table) oraz na Rysunku \@ref(fig:histograms-plot).
 
 Na podstawie tak przeprowadzonych testów można stwierdzić, że wzięte w badaniu dane **nie cechują się normalnością**, o czym świadczy niska (bliska wartości 0) p-wartość testów.
-Uzasadnia to użycie testu Kruskala-Wallisa do dalszych badań, w odróżnieniu od analizy ANOVA, która wymaga założenia o normalności danych.
-
 
 ## Wybór odpowiedniego modelu
 
+### Model przełącznikowy Markowa
+
+### GARCHX
 > szukam odpowiedniego ARMA, sprawdzam kryteria informacyjne i istotności
 > puszczam garcha z jakimiś parametrami
 > sprawdzam, czy parametry istotne
