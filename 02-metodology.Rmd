@@ -135,8 +135,8 @@ data %>%
     "Średnia" = mean(return),
     "Mediana" = median(return),
     "Odch. kw." = sd(return),
-    "Skośność" = moments::skewness(return),
-    "Kurtoza" = moments::kurtosis(return),
+    "Skośność" = skewness(return),
+    "Kurtoza" = kurtosis(return),
   ) %>%
   kable(booktabs = TRUE,
     caption = "Statystyki opisowe stóp zwrotu badanych spółek"
