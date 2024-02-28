@@ -192,7 +192,7 @@ Na podstawie tak przeprowadzonych testów można stwierdzić, że wzięte w bada
 ## Wybór odpowiedniego modelu
 
 ### Model przełącznikowy Markowa
-W celu dopasowania modelu Markowa do danych zastosowano pakiet `MSwM` [@packageMSwM]
+W celu dopasowania modelu Markowa do danych zastosowano pakiet
 
 ### GARCHX
 > szukam odpowiedniego ARMA, sprawdzam kryteria informacyjne i istotności

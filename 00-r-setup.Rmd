@@ -8,6 +8,7 @@ library(moments)
 
 # switching models
 library(MSwM)
+library(MSGARCH)
 
 # plotting
 library(ggplot2)
