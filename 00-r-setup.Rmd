@@ -34,3 +34,16 @@ options(
   knitr.kable.NA = "–"
 )
 ```
+
+```{r custom-functions}
+custom_markov_plot <- function(data, probs) {
+  data %>%
+    mutate(probs = probs) %>%
+    as_tibble() %>%
+    select(Data, return, probs) %>%
+    pivot_longer(c(return, probs), names_to = "type") %>%
+    ggplot(aes(Data, value)) +
+      geom_line() +
+      facet_grid(rows = vars(type), scales = "free")
+}
+```

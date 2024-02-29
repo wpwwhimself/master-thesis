@@ -192,7 +192,25 @@ Na podstawie tak przeprowadzonych testów można stwierdzić, że wzięte w bada
 ## Wybór odpowiedniego modelu
 
 ### Model przełącznikowy Markowa
-W celu dopasowania modelu Markowa do danych zastosowano pakiet
+W celu dopasowania modelu Markowa do danych zastosowano pakiet `MSGARCH` [@packageMSGARCH].
+
+```{r markov, fig.cap="Dopasowanie modelu Markowa do danych WIG20"}
+fit <- FitML(
+  CreateSpec(
+    variance.spec = list(model = c("sGARCH", "sGARCH")),
+    distribution.spec = list(distribution = c("norm", "norm")),
+    switch.spec = list(do.mix = FALSE, K = NULL)
+  ),
+  wig20 %>% pull(return) %>% na.omit()
+)
+
+State(fit) %>% plot()
+
+custom_markov_plot(
+  wig20 %>% select(Data, return),
+  State(fit)$SmoothProb[, 1, 2]
+)
+```
 
 ### GARCHX
 > szukam odpowiedniego ARMA, sprawdzam kryteria informacyjne i istotności
