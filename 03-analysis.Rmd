@@ -7,6 +7,14 @@
 
 ## Ocena jakości predykcji
 
+> - porównanie prognoz z faktycznymi wartościami indeksu
+> - ...
+
 ## Analiza wpływu pandemii i wojny na notowania giełdowe
 
+> - dogłębne spojrzenie na te momenty zwiększonej wahliwości
+> - jakie straty na rynku w tym czasie się stały
+
 ## Porównanie wyników z innymi modelami
+
+\AAQ{jakimi modelami?}

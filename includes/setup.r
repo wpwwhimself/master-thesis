@@ -7,7 +7,6 @@ library(purrr)
 library(moments)
 
 #### switching models ####
-library(MSwM)
 library(MSGARCH)
 
 #### plotting ####

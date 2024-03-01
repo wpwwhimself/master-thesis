@@ -7,7 +7,7 @@ source("includes/data.r")
 # tworzy wszystkie kombinacje modeli dla jednego wariantu
 models_for_testing <-
   list(
-    volatility = c("sGARCH", "eGARCH"),
+    volatility = c("sGARCH", "eGARCH", "gjrGARCH"),
     distribution = c("norm", "ged", "std", "sstd")
   ) %>%
   expand.grid(stringsAsFactors = FALSE) %>%

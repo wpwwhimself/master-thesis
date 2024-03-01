@@ -11,10 +11,10 @@
 > i jakie potencjalne ciekawe rzeczy można z tego wyciągnąć
 
 W historii ludzkości można odnotować wiele kryzysów, które dotknęły ogromnej liczby ludzi.
-Wydarzenia te najczęściej miały dotkliwe konsekwencje finansowe, doprowadzając do biedy i bankructwa całe państwa.
+Wydarzenia te najczęściej miały dotkliwe konsekwencje finansowe, doprowadzając do biedy i&nbsp;bankructwa całe państwa.
 W annałach historii można się doszukiwać wielu takich sytuacji, a ich przykładami mogą być:
 
-- *tulipanowa gorączka* (1636-1637) -- lokowanie gotówki przez mieszkańców Amsterdamu w tulipanach doprowadziło do wyhodowania wyjątkowej odmiany tego kwiatu.
+- *tulipanowa gorączka* (1636-1637) -- lokowanie gotówki przez mieszkańców Amsterdamu w&nbsp;tulipanach doprowadziło do wyhodowania wyjątkowej odmiany tego kwiatu.
 Wartość jego jednej cebulki była wówczas wyceniana na równowartość 40-letniego dochodu, przez co wielu kupców zaciągało niebotyczne kredyty.
 Ceny tulipanów jednak zatrzymały się na poziomie, gdzie nikt nie był w stanie ich zakupić, a część handlujących nie wywiązywała się z dostaw.
 To z kolei doprowadziło do końca spekulacji i gwałtownych obniżek cen [@linkTulip],

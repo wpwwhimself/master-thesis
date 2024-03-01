@@ -60,6 +60,15 @@ Można tam znaleźć również informacje o kursach walut, cenach towarów i inn
 
 ### Wstępna inspekcja danych
 
+Punktem wyjścia będzie cena zamknięcia akcji.
+Aby zapewnić stacjonarność tego szeregu czasowego, obliczane są **logarytmiczne stopy zwrotu** według wzoru:
+$$
+r_{i} = \ln\left(\frac{x_{i}}{x_{i-1}}\right) \cdot 100
+$$
+gdzie $x_i$ oznacza cenę zamknięcia w momencie $i$.
+Tak utworzony szereg czasowy spełnia założenia stacjonarności i można go wykorzystać do dalszych badań.
+W Tabeli \@ref(tab:showcase) zamieszczone zostały przykładowe dane dotyczące indeksu WIG20 wraz z obliczonymi stopami zwrotu.
+
 ```{r showcase}
 data %>%
   head(5) %>%
@@ -78,14 +87,6 @@ data %>%
   ) %>%
   kable_styling(latex_options = "HOLD_position")
 ```
-
-Punktem wyjścia będzie cena zamknięcia akcji.
-Aby zapewnić stacjonarność tego szeregu czasowego, obliczane są **logarytmiczne stopy zwrotu** według wzoru:
-$$
-r_{i} = \ln\left(\frac{x_{i}}{x_{i-1}}\right) \cdot 100
-$$
-gdzie $x_i$ oznacza cenę zamknięcia w momencie $i$.
-Tak utworzony szereg czasowy spełnia założenia stacjonarności i można go wykorzystać do dalszych badań.
 
 ```{r returns-plot, fig.cap="Logarytmiczne stopy zwrotu dla badanych spółek", fig.height=8, fig.width=6.5}
 data %>%
@@ -168,8 +169,25 @@ Na podstawie tak przeprowadzonych testów można stwierdzić, że wzięte w bada
 
 ## Wybór odpowiedniego modelu
 
+W myśl badania, do omawianych danych finansowych zostały dopasowane różne modele wariancji warunkowej.
+Zanim to jednak nastąpi, do danych szeregów czasowych dopasowany zostanie właściwy model średniej warunkowej ARMA oraz przetestowana zostanie obecność efektu ARCH.
+
+> - ACF, PACF
+> - kilka ARMA
+> - porównanie po kryteriach
+> - jeszcze raz korelogram dla najlepszego modelu, test Engle'a, KPSS
+
+W kolejnych podrozdziałach znajduje się opis przeprowadzonych badań oraz zestawienie ich wyników.
+
 ### Model przełącznikowy Markowa
+
+W testach wzięto pod uwagę modele wariancji warunkowej GARCH, EGARCH oraz GJR, a&nbsp;także różne rozkłady innowacji: normalny, GED, Studenta oraz skośny Studenta.
+Daje to 12 kombinacji dla każdego z reżimów, wobec czego w toku badań przetestowano dopasowanie 144 kombinacji modeli.
+Zostały one przeanalizowane pod kątem kryteriów informacyjnych Akaike oraz Schwarza, a także pod względem istotności parametrów.
+Dla najlepiej dopasowanych modeli przygotowano wizualizacje prawdopodobieństwa przebywania szeregu czasowego w danym reżimie.
+
 W celu dopasowania modelu Markowa do danych zastosowano pakiet `MSGARCH` [@packageMSGARCH].
+Oferuje on szeroki wachlarz modeli wariancji warunkowej, w tym dopasowanie odrębnych modeli do poszczególnych reżimów.
 
 ```{r markov-wig20}
 models <- readRDS("includes/calculations/markov_wig20.rds")
@@ -209,7 +227,26 @@ custom_markov_plot(
 ```
 
 ### GARCHX
-> szukam odpowiedniego ARMA, sprawdzam kryteria informacyjne i istotności
-> puszczam garcha z jakimiś parametrami
-> sprawdzam, czy parametry istotne
-> bla bla...
+
+W celu dopasowania modelu GARCHX koniecznym jest przygotowanie dodatkowych zmiennych, mających na celu objaśnienie wpływu czynników zewnętrznych na zmiennośc wariancji warunkowej.
+
+> - na podstawie czego mógłbym to zbudować?
+> - może dla każdej branży coś innego dodatkowego? jakieś specyficzne wydarzenia?
+
+Podobnie jak w poprzednim podrozdziale, dla każdego z badanych szeregów czasowych dopasowano model GARCHX z uwzględnieniem dodatkowych zmiennych.
+Następnie, na podstawie kryteriów informacyjnych Akaike i Schwarza, a także instotności parametrów modelu, wyłonione zostały te najlepiej dopasowane.
+Dla nich sporządzone zostały odpowiednie wizualizacje.
+
+Pakietem wykorzystanym do tej części badań jest pakiet
+
+> `garchx`? chyba ten jest najpopularniejszy
+
+## Predykcje
+
+Posiadając odpowiednie modele dopasowane do danych, możliwym jest wykonanie prognoz ex-post i porównanie ich z rzeczywistym kształtowaniem się wartości odpowiadających indeksów giełdowych.
+\AAA{jak daleka ta prognoza?}
+
+> - prognozy stóp zwrotu
+> - reverse-engineering tych stóp na wartości akcji
+> - wykresy dla każdego indeksu
+ 
