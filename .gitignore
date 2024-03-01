@@ -8,10 +8,15 @@ desktop.ini
 #śmieci kompilatora
 *.aux
 *.bcf
+*.lof
 *.log
+*.lot
 *.out
 *.run.xml
 *.toc
+WPWW_magistrat.Rmd
+WPWW_magistrat.knit.md
+WPWW_magistrat.tex
 
 #output
 _book
