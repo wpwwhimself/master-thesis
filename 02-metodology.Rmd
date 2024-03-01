@@ -51,29 +51,7 @@ Indeks ten jest indeksem cenowym 20 największych spółek na _Giełdzie Papier�
 ## Analiza danych
 
 ```{r load_data}
-#### load ####
-tables <- c("wig20", "pkn", "pko", "ebs", "dvl", "snt")
-tables_full_names <- setNames(
-  c("WIG20", "PKN Orlen", "PKO BP", "11 bit studios", "Develia", "Synektik"),
-  tables
-)
-for (i in seq_along(tables)) {
-  assign(
-    tables[i],
-    read.csv(paste("sauce/data/", tables[i], ".csv", sep = ""), sep = ";") %>%
-      mutate(return = log(Zamkniecie / lag(Zamkniecie)) * 100) %>%
-      mutate(across(matches(c("Data")), as_date)) %>%
-      mutate(index = tables_full_names[i])
-  )
-}
-
-#### gather ####
-data <- bind_rows(wig20, pkn, pko, ebs, dvl, snt) %>% as_tibble()
-returns_split <-
-  data %>%
-    group_by(index) %>%
-    group_map(~.x %>% pull(return))
-names(returns_split) <- tables
+source("includes/data.r")
 ```
 
 Do przeprowadzania badania wykorzystane zostaną dane o cenach akcji zebrane z serwisu _Stooq.pl_.
@@ -82,12 +60,11 @@ Można tam znaleźć również informacje o kursach walut, cenach towarów i inn
 
 ### Wstępna inspekcja danych
 
-```{r}
-#### showcase ####
+```{r showcase}
 data %>%
   head(5) %>%
   select(-index) %>%
-  kable(booktabs = TRUE,
+  kable(booktabs = TRUE, format = "latex",
     caption = "Przykład danych giełdowych indeksu WIG20",
     col.names = c(
       "Data",
@@ -138,7 +115,7 @@ data %>%
     "Skośność" = skewness(return),
     "Kurtoza" = kurtosis(return),
   ) %>%
-  kable(booktabs = TRUE,
+  kable(booktabs = TRUE, format = "latex",
     caption = "Statystyki opisowe stóp zwrotu badanych spółek"
   ) %>%
   kable_styling(latex_options = "HOLD_position")
@@ -194,7 +171,28 @@ Na podstawie tak przeprowadzonych testów można stwierdzić, że wzięte w bada
 ### Model przełącznikowy Markowa
 W celu dopasowania modelu Markowa do danych zastosowano pakiet `MSGARCH` [@packageMSGARCH].
 
-```{r markov, fig.cap="Dopasowanie modelu Markowa do danych WIG20"}
+```{r markov-wig20}
+models <- readRDS("includes/calculations/markov_wig20.rds")
+
+models_for_testing_indices %>%
+  mutate(
+    model1 = models_for_testing_names[Var1],
+    model2 = models_for_testing_names[Var2],
+    aic = lapply(models, AIC) %>% unlist(),
+    bic = lapply(models, BIC) %>% unlist()
+  ) %>%
+  arrange(bic) %>%
+  select(-Var1, -Var2) %>%
+  head(7) %>%
+  kable(booktabs = TRUE, format = "latex",
+    caption = "Porównanie kryteriów informacyjnych dla modeli Markowa dopasowanych do stóp zwrotu WIG20"
+  ) %>%
+  kable_styling(latex_options = "HOLD_position")
+```
+
+\AAA{ten wykres się jeszcze przyda}
+
+```{r markov, fig.cap="Dopasowanie modelu Markowa do danych WIG 20", fig.height=4}
 fit <- FitML(
   CreateSpec(
     variance.spec = list(model = c("sGARCH", "sGARCH")),
@@ -203,8 +201,6 @@ fit <- FitML(
   ),
   wig20 %>% pull(return) %>% na.omit()
 )
-
-State(fit) %>% plot()
 
 custom_markov_plot(
   wig20 %>% select(Data, return),

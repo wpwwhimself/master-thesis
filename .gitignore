@@ -18,6 +18,9 @@ WPWW_magistrat.Rmd
 WPWW_magistrat.knit.md
 WPWW_magistrat.tex
 
+#calculations
+includes/calculations/*.rds
+
 #output
 _book
 _bookdown_files
