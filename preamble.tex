@@ -128,3 +128,8 @@
 }
 \makeatother
 \renewcommand\qedsymbol{$\blacksquare$} % znak końca dowodu
+
+\renewenvironment{quote}
+	{\list{}{\rightmargin\leftmargin}%
+	\item\color{red}}
+	{\endlist}
