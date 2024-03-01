@@ -7,7 +7,7 @@ tables_full_names <- setNames(
 for (i in seq_along(tables)) {
   assign(
     tables[i],
-    read.csv(paste("sauce/data/", tables[i], ".csv", sep = ""), sep = ";") %>%
+    read.csv(paste("data/", tables[i], ".csv", sep = ""), sep = ";") %>%
       mutate(return = log(Zamkniecie / lag(Zamkniecie)) * 100) %>%
       mutate(across(matches(c("Data")), as_date)) %>%
       mutate(index = tables_full_names[i])
