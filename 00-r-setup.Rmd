@@ -38,12 +38,22 @@ options(
 ```{r custom-functions}
 custom_markov_plot <- function(data, probs) {
   data %>%
-    mutate(probs = probs) %>%
+    mutate(
+      probs = probs,
+      return = abs(return) / max(abs(return), na.rm = TRUE)
+    ) %>%
     as_tibble() %>%
     select(Data, return, probs) %>%
-    pivot_longer(c(return, probs), names_to = "type") %>%
-    ggplot(aes(Data, value)) +
-      geom_line() +
-      facet_grid(rows = vars(type), scales = "free")
+    ggplot(aes(Data)) +
+      geom_line(aes(y = return), col = "black", alpha = 0.25) +
+      geom_area(aes(y = probs), fill = primary_color, alpha = 0.5) +
+      labs(
+        x = "Data",
+        y = "Prawdopodobieństwo reżimu 2"
+      ) +
+        scale_x_date(
+        date_breaks = "6 months",
+        date_labels = "%m.%y"
+      )
 }
 ```
