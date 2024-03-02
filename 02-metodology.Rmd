@@ -175,11 +175,6 @@ W kolejnych podrozdziałach znajduje się opis przeprowadzonych badań oraz zest
 
 ### Dopasowanie modelu średniej warunkowej ARMA
 
-> - ACF, PACF
-> - kilka ARMA
-> - porównanie po kryteriach
-> - jeszcze raz korelogram dla najlepszego modelu, test Engle'a, KPSS
-
 Celem dopasowania modelu średniej warunkowej do badanych danych przygotowano korelogramy ilustrujące funkcje ACF i PACF, przedstawione na Rysunku \@ref(fig:arma-acfs).
 
 ```{r arma-acfs, fig.height=8, fig.cap="Korelogramy przedstawiające funkcje ACF i PACF dla badanych szeregów czasowych"}
@@ -194,6 +189,79 @@ Wyjątek stanowią stopy zwrotu indeksów:
 - 11 bit studios -- autokorelacja w opóźnieniach 1. i 5..
 
 Na tej podstawie do wyżej wymienionych danych zbadano dopasowanie modeli ARMA wyższych rzędów.
+Modele ARMA zostały wybrane na podstawie kryteriów informacyjnych Akaike i Schwarza.
+Do tego celu wykorzystano pakiet `forecast` [@packageForecast1;@packageForecast2].
+
+```{r arma-fitting}
+table <- tibble(series = tables_full_names)
+
+arma <- custom_read_rds("arma_aic")
+coefs <- map(arma, coef)
+aic <- map(arma, ~ .x %>% AIC %>% round)
+bic <- map(arma, ~ .x %>% BIC %>% round)
+
+table <- table %>% mutate(
+  aic_model = c(
+    "biały szum",
+    "ARMA(2, 2)",
+    "ARMA(2, 1)",
+    "MA(2)",
+    "biały szum",
+    "biały szum"
+  ),
+  aic_aic = aic,
+  aic_bic = bic
+)
+
+arma <- custom_read_rds("arma_bic")
+coefs <- map(arma, coef)
+aic <- map(arma, ~ .x %>% AIC %>% round)
+bic <- map(arma, ~ .x %>% BIC %>% round)
+
+table <- table %>% mutate(
+  bic_model = rep("biały szum", 6),
+  aic = aic,
+  bic = bic
+)
+
+table %>%
+  custom_kable(
+    "Zestawienie dopasowanych modeli średniej warunkowej
+    do badanych szeregów czasowych,
+    wraz z ich kryteriami informacyjnymi",
+    col.names = c(
+      "Szereg czasowy",
+      rep(c(
+      "Wybrany model",
+      "AIC",
+      "BIC"
+      ), 2)
+    )
+  ) %>%
+  add_header_above(c(
+    " " = 1,
+    "Na podst. AIC" = 3,
+    "Na podst. BIC" = 3
+  ))
+```
+
+Tabela \@ref(tab:arma-fitting) pokazuje wyniki przeprowadzonego dopasowania modeli średniej warunkowej do badanych szeregów czasowych na podstawie kryterium informacyjnego Akaike.
+Próby dopasowania różnych modeli ARMA w dużej mierze pokrywają się z obserwacjami poczynionymi na podstawie korelogramów na Rysunku \@ref(fig:arma-acfs):
+dla danych spółek _PKN Orlen_, _PKO BP_ oraz _11 bit studios_ autokorelacja została uwzględniona w modelach ARMA oraz MA,
+z opóźnieniami w dużej mierze zgodnymi z oczekiwaniami.
+Dla pozostałych szeregów czasowych model białego szumu jest również adekwatny do braku zaobserwowanych autokorelacji.
+
+Interesującym wynikiem badań jest fakt, że pomimo istotnej autokorelacji występującej w niektórych z badanych szeregów,
+jeśli by brać pod uwagę kryterium informacyjne Schwarza do wyłonienia najlepiej dopasowanego modelu,
+każdemu z szeregów przypisany zostaje model białego szumu, tj. czysto losowych innowacji.
+Najprawdopodobniej powodem takiego wyniku jest bardziej konserwatywne zachowanie się tego kryterium w stosunku do AIC,
+które to przypisuje modelowi mniejszą karę za jego skomplikowanie, będące konsekwencją liczby parametrów.
+Może to sugerować, że modele wyłonione pod kątem kryterium Akaike są bliskie swojej skuteczności modelom wyłonionym przez kryterium Schwarza.
+
+W świetle tych wniosków w dalszej części badania modelem średniej warunkowej dopasowanym do badanych szeregów czasowych będzie **model białego szumu**,
+z uwagi na jego mniej skomplikowaną budowę, co ma uprościć dalsze obliczenia.
+
+\AAA{Dokończyć testy na efekt ARCH}
 
 ### Model przełącznikowy Markowa
 
@@ -206,7 +274,7 @@ W celu dopasowania modelu Markowa do danych zastosowano pakiet `MSGARCH` [@packa
 Oferuje on szeroki wachlarz modeli wariancji warunkowej, w tym dopasowanie odrębnych modeli do poszczególnych reżimów.
 
 ```{r markov-wig20, eval = F}
-models <- readRDS("includes/calculations/markov_wig20.rds")
+models <- custom_read_rds("markov_wig20")
 
 models_for_testing_indices %>%
   mutate(

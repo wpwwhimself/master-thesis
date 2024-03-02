@@ -3,7 +3,16 @@ source("includes/setup.r")
 source("includes/data.r")
 
 #### ARMA ####
-
+map(
+  returns_split,
+  ~ custom_auto_arima(.x)
+) %>%
+  custom_save_rds("arma_aic")
+map(
+  returns_split,
+  ~ custom_auto_arima(.x, ic = "bic")
+) %>%
+  custom_save_rds("arma_bic")
 
 #### markov ####
 # tworzy wszystkie kombinacje modeli dla jednego wariantu
