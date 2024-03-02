@@ -5,12 +5,14 @@ library(purrr)
 
 #### statistics ####
 library(moments)
+library(forecast)
 
 #### switching models ####
 library(MSGARCH)
 
 #### plotting ####
 library(ggplot2)
+library(grid)
 library(gridExtra)
 theme_set(theme_minimal())
 theme_fill_uep <- function(...) {
@@ -39,6 +41,46 @@ options(
 )
 
 #### custom functions ####
+custom_acf_plot <- function(return_list) {
+  plots <- lapply(
+    seq_along(return_list),
+    function(i, data) {
+      returns <- data[[i]]
+
+      return(list(
+        returns %>%
+          ggAcf(20, size = 2.5) +
+          labs(
+            title = element_blank(),
+            y = element_blank(),
+            x = element_blank()
+          ),
+        returns %>%
+          ggPacf(20, size = 2.5) +
+          labs(
+            title = element_blank(),
+            y = element_blank(),
+            x = element_blank()
+          )
+      ))
+    },
+    data = return_list
+  ) %>% unlist(recursive = FALSE)
+
+  row_titles <- tables_full_names
+  column_titles <- c("ACF", "PACF")
+
+  grid.draw(rbind(
+    tableGrob(t(column_titles), rows = ""),
+    cbind(
+      tableGrob(row_titles),
+      arrangeGrob(grobs = plots, ncol = 2),
+      size = "last"
+    ),
+    size = "last"
+  ))
+}
+
 custom_markov_plot <- function(data, probs) {
   data %>%
     mutate(

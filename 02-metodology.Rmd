@@ -171,13 +171,29 @@ Na podstawie tak przeprowadzonych testów można stwierdzić, że wzięte w bada
 
 W myśl badania, do omawianych danych finansowych zostały dopasowane różne modele wariancji warunkowej.
 Zanim to jednak nastąpi, do danych szeregów czasowych dopasowany zostanie właściwy model średniej warunkowej ARMA oraz przetestowana zostanie obecność efektu ARCH.
+W kolejnych podrozdziałach znajduje się opis przeprowadzonych badań oraz zestawienie ich wyników.
+
+### Dopasowanie modelu średniej warunkowej ARMA
 
 > - ACF, PACF
 > - kilka ARMA
 > - porównanie po kryteriach
 > - jeszcze raz korelogram dla najlepszego modelu, test Engle'a, KPSS
 
-W kolejnych podrozdziałach znajduje się opis przeprowadzonych badań oraz zestawienie ich wyników.
+Celem dopasowania modelu średniej warunkowej do badanych danych przygotowano korelogramy ilustrujące funkcje ACF i PACF, przedstawione na Rysunku \@ref(fig:arma-acfs).
+
+```{r arma-acfs, fig.height=8, fig.cap="Korelogramy przedstawiające funkcje ACF i PACF dla badanych szeregów czasowych"}
+custom_acf_plot(returns_split)
+```
+
+Większość z badanych szeregów czasowych przejawia brak autokorelacji w pierwszych opóźnieniach szeregu.
+Wyjątek stanowią stopy zwrotu indeksów:
+
+- WIG20 -- wyraźna autokorelacja w opóźnieniach 1., 2. i 5.,
+- PKO BP -- istotna autokorelacja w opóźnieniu 4.,
+- 11 bit studios -- autokorelacja w opóźnieniach 1. i 5..
+
+Na tej podstawie do wyżej wymienionych danych zbadano dopasowanie modeli ARMA wyższych rzędów.
 
 ### Model przełącznikowy Markowa
 
@@ -189,7 +205,7 @@ Dla najlepiej dopasowanych modeli przygotowano wizualizacje prawdopodobieństwa 
 W celu dopasowania modelu Markowa do danych zastosowano pakiet `MSGARCH` [@packageMSGARCH].
 Oferuje on szeroki wachlarz modeli wariancji warunkowej, w tym dopasowanie odrębnych modeli do poszczególnych reżimów.
 
-```{r markov-wig20}
+```{r markov-wig20, eval = F}
 models <- readRDS("includes/calculations/markov_wig20.rds")
 
 models_for_testing_indices %>%

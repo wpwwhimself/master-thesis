@@ -2,6 +2,8 @@
 source("includes/setup.r")
 source("includes/data.r")
 
+#### ARMA ####
+
 
 #### markov ####
 # tworzy wszystkie kombinacje modeli dla jednego wariantu
