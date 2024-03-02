@@ -17,7 +17,7 @@ for (i in seq_along(tables)) {
     read.csv(paste("data/", tables[i], ".csv", sep = ""), sep = ";") %>%
       mutate(return = log(Zamkniecie / lag(Zamkniecie)) * 100) %>%
       mutate(across(matches(c("Data")), as_date)) %>%
-      mutate(index = tables_full_names[i])
+      mutate(index = tables[i])
   )
 }
 
@@ -26,5 +26,7 @@ data <- bind_rows(wig20, pkn, pko, ebs, dvl, snt) %>% as_tibble()
 returns_split <-
   data %>%
     group_by(index) %>%
-    group_map(~.x %>% pull(return))
-names(returns_split) <- tables
+    nest() %>%
+    mutate(data = map(data, ~.x %>% pull(return))) %>%
+    deframe()
+# names(returns_split) <- tables
