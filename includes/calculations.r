@@ -31,19 +31,31 @@ models_for_testing_indices <-
   expand.grid() %>%
   as_tibble()
 
-pmap(
-  models_for_testing_indices,
-  ~ CreateSpec(
-    variance.spec = list(model = c(
-      models_for_testing[..1, ]$volatility,
-      models_for_testing[..2, ]$volatility
-    )),
-    distribution.spec = list(distribution = c(
-      models_for_testing[..1, ]$distribution,
-      models_for_testing[..2, ]$distribution
-    )),
-    switch.spec = list(do.mix = FALSE, K = NULL)
+#### ! HEAVY FUNCTION ! ####
+for (i in seq_along(tables)) {
+  pmap(
+    models_for_testing_indices,
+    ~ CreateSpec(
+      variance.spec = list(model = c(
+        models_for_testing[..1, ]$volatility,
+        models_for_testing[..2, ]$volatility
+      )),
+      distribution.spec = list(distribution = c(
+        models_for_testing[..1, ]$distribution,
+        models_for_testing[..2, ]$distribution
+      )),
+      switch.spec = list(do.mix = FALSE, K = NULL)
+    ) %>%
+      FitML(
+        get(tables[i]) %>%
+          pull(return) %>%
+          na.omit()
+      )
   ) %>%
-    FitML(wig20 %>% pull(return) %>% na.omit()) #TODO przeprowadzić dla wszystkich serii
-) %>%
-  saveRDS(models, "includes/calculations/markov_wig20.rds")
+    saveRDS(paste(
+      "includes/calculations/markov_",
+      tables[i],
+      ".rds",
+      collapse = ""
+    ))
+}
