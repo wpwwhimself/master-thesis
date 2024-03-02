@@ -7,7 +7,7 @@ library(purrr)
 library(moments)
 library(forecast)
 
-#### switching models ####
+#### models ####
 library(MSGARCH)
 
 #### plotting ####
@@ -39,6 +39,10 @@ library(kableExtra)
 options(
   knitr.kable.NA = "–"
 )
+
+#### other globals ####
+CALCULATIONS_PATH <- "includes/calculations/"
+ROUND_DIGITS <- 4
 
 #### custom functions ####
 custom_acf_plot <- function(return_list) {
@@ -81,6 +85,32 @@ custom_acf_plot <- function(return_list) {
   ))
 }
 
+custom_auto_arima <- function(ts, ...) {
+  auto.arima(
+    ts,
+    stationary = TRUE,
+    seasonal = FALSE,
+    ...
+  )
+}
+
+custom_kable <- function(
+  data, caption,
+  escape = FALSE, digits = ROUND_DIGITS,
+  ...
+) {
+  kable(
+    data,
+    format = "latex",
+    booktabs = TRUE,
+    caption = caption,
+    escape = escape,
+    digits = digits,
+    ...
+  ) %>%
+    kable_styling(latex_options = "HOLD_position")
+}
+
 custom_markov_plot <- function(data, probs) {
   data %>%
     mutate(
@@ -100,4 +130,36 @@ custom_markov_plot <- function(data, probs) {
         date_breaks = "6 months",
         date_labels = "%m.%y"
       )
+}
+
+custom_paste_tight <- function(...) {
+  paste(..., sep = "")
+}
+
+custom_paste_math_assoc <- function(
+  labels, values,
+  round = ROUND_DIGITS
+) {
+  values <- values %>% round(round) %>% unname()
+  output <- paste(labels, values, sep = " = ", collapse = ",\\:")
+  paste("$", output, "$", sep = "")
+}
+
+custom_read_rds <- function(name) {
+  readRDS(
+    paste(
+      CALCULATIONS_PATH, name, ".rds",
+      sep = ""
+    )
+  )
+}
+
+custom_save_rds <- function(data, name) {
+  saveRDS(
+    data,
+    paste(
+      CALCULATIONS_PATH, name, ".rds",
+      sep = ""
+    )
+  )
 }
