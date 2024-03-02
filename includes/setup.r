@@ -24,7 +24,12 @@ options(
   ggplot2.discrete.colour = theme_color_uep
 )
 primary_color <- "#005322"
-update_geom_defaults("line", list(color = primary_color))
+update_geom_defaults(
+  "line",
+  list(
+    color = primary_color
+  )
+)
 
 #### tables and export ####
 library(knitr)

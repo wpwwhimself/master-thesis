@@ -1,7 +1,14 @@
 #### load ####
 tables <- c("wig20", "pkn", "pko", "ebs", "dvl", "snt")
 tables_full_names <- setNames(
-  c("WIG20", "PKN Orlen", "PKO BP", "11 bit studios", "Develia", "Synektik"),
+  c(
+    "WIG20",
+    "PKN Orlen",
+    "PKO BP",
+    "11 bit studios",
+    "Develia",
+    "Synektik"
+  ),
   tables
 )
 for (i in seq_along(tables)) {

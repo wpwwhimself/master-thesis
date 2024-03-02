@@ -54,7 +54,7 @@ Indeks ten jest indeksem cenowym 20 największych spółek na _Giełdzie Papier�
 source("includes/data.r")
 ```
 
-Do przeprowadzania badania wykorzystane zostaną dane o cenach akcji zebrane z serwisu _Stooq.pl_.
+Do przeprowadzania badania wykorzystane zostaną dane o cenach akcji zebrane z serwisu [Stooq.pl](https://stooq.pl/).
 Jest to jeden z najbardziej znanych serwisów internetowych zbierających dane finansowe spółek notowanych nie tylko na _Giełdzie Papierów Wartościowych_, ale również na innych giełdach światowych, m.in. amerykański indeks _S&P US_.
 Można tam znaleźć również informacje o kursach walut, cenach towarów i inne dane finansowe.
 
