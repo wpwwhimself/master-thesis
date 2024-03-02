@@ -8,6 +8,7 @@ desktop.ini
 #śmieci kompilatora
 *.aux
 *.bcf
+*.fdb_latexmk
 *.lof
 *.log
 *.lot
