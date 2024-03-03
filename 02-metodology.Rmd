@@ -398,6 +398,10 @@ Dla najlepiej dopasowanych modeli przygotowano wizualizacje prawdopodobieństwa 
 W celu dopasowania modelu Markowa do danych zastosowano pakiet `MSGARCH` [@packageMSGARCH].
 Oferuje on szeroki wachlarz modeli wariancji warunkowej, w tym dopasowanie odrębnych modeli do poszczególnych reżimów.
 
+\AAQ{msgarch nie potrafi obsługiwać modeli średniej -- w dokumentacji jest napisane, że trzeba zrobić "prefilter" -- co to znaczy?}
+
+[link](https://cran.r-project.org/web/packages/MSGARCH/MSGARCH.pdf) -- strona 2
+
 ```{r markov-wig20, eval = F}
 models <- custom_read_rds("markov_wig20")
 
