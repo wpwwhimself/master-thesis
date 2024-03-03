@@ -24,10 +24,9 @@ arma <- custom_read_rds("arma_aic")
 # 3. ...
 # 4. profit?
 for (table_name in tables) {
-  message(paste("Now processing:", table_name))
   pb <- progress_bar$new(
     total = nrow(markov_models_for_testing_indices),
-    format = "combinations [:bar] :percent eta :eta",
+    format = paste("Fitting", table_name, "[:bar] :percent eta :eta"),
     clear = FALSE
   )
 
