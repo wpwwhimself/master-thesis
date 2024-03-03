@@ -310,10 +310,83 @@ Należą do nich testy:
 - Engle'a,
 - KPSS.
 
-```{r arma-arch, fig.height=8, fig.cap="Korelogramy ilustrujące testy Ljunga-Boxa dla reszt z modelu średniej warunkowej"}
+Do obliczenia dwóch ostatnich testów wykorzystane zostaną pakiedy `rugarch` [@packageRugarch] oraz `tseries` [@packageTseries].
+Wyniki tych testów ilustruje Rysunek \@ref(fig:arma-arch-acf) oraz Tabela \@ref(tab:arma-arch-tests).
+
+```{r arma-arch-acf, fig.height=8, fig.cap="Korelogramy ilustrujące testy Ljunga-Boxa dla reszt z modelu średniej warunkowej"}
 map(arma, residuals) %>%
   custom_acf_plot()
 ```
+
+Test Ljunga-Boxa, który został przedstawiony na korelogramach, wskazuje na brak autokorelacji w szeregach reszt z modelu.
+Dla szeregów kwadratów reszt nadal wyraźnie widoczne są zależności kwadratowe, co pozwala na dalsze rozważanie modelów objaśniających te zależności.
+
+```{r arma-arch-tests}
+group_names <- rep(4, 6)
+names(group_names) <- tables_full_names
+
+map(
+  names(arma),
+  function(series){
+    model <- arma[[series]]
+
+    arch_test <-
+      map(
+        c(2, 5, 10),
+        ~ model %>%
+          residuals() %>%
+          rugarch:::.archlmtest(.x)
+      ) %>%
+      sapply(c) %>%
+      t() %>%
+      as_tibble() %>%
+      mutate(
+        across(everything(), unlist),
+        test = "Engle'a"
+      ) %>%
+      relocate(test, parameter, .before = statistic) %>%
+      select(-method)
+
+    kpss_test <-
+      model$x %>%
+      kpss.test() %>%
+      c() %>%
+      as_tibble() %>%
+      select(statistic, p.value) %>%
+      mutate(
+        test = "KPSS",
+        parameter = NA
+      ) %>%
+      relocate(test, parameter, .before = statistic)
+
+    arch_test %>%
+      bind_rows(kpss_test)
+  }
+) %>%
+  bind_rows() %>%
+  mutate(
+    statistic = round(statistic, 2)
+  ) %>%
+  custom_kable(
+    "Wyniki testu Engle'a i KPSS dla badanych szeregów czasowych.
+    Dla testów KPSS wartość 0.1 w kolumnie p-wartość oznacza,
+    że rzeczywista p-wartość jest wyższa od wskazanej.",
+    col.names = c(
+      "Test",
+      "Opóźnienie",
+      "Wart. stat. test.",
+      "p-wartość"
+    )
+  ) %>%
+  pack_rows(index = group_names)
+```
+
+Wyniki testów Engle'a oraz KPSS również sprzyjają dalszym rozważaniom.
+Niskie p-wartości dla pierwszego z nich nakazują odrzucenie hipotezy o braku autokorelacji w kwadratach reszt,
+natomiast wysokie (>0.1) p-wartości testu KPSS pozwalają przyjąć hipotezę o heteroskedastyczności zachodzącej w szeregach czasowych.
+
+Wobec tak przeprowadzonego badania dotyczącego modelu średniej warunkowej
+możliwym jest przejście do dalszej analizy uwzględniającej dopasowanie modelu wariancji warunkowej.
 
 ### Model przełącznikowy Markowa
 
