@@ -15,70 +15,48 @@ map(
   custom_save_rds("arma_bic")
 
 #### markov ####
-# tworzy wszystkie kombinacje modeli dla jednego wariantu
-models_for_testing <-
-  list(
-    volatility = c("sGARCH", "eGARCH", "gjrGARCH"),
-    distribution = c("norm", "ged", "std", "sstd")
-  ) %>%
-  expand.grid(stringsAsFactors = FALSE) %>%
-  split(seq_len(nrow(.))) %>%
-  bind_rows() %>%
-  as_tibble()
-
-models_for_testing_names <-
-  models_for_testing %>%
-  mutate(model_name = paste(volatility, distribution)) %>%
-  select(model_name) %>%
-  c() %>%
-  unlist() %>%
-  unname()
-
-# indeksuje w/w warianty i tworzy pary tych modeli
-models_for_testing_indices <-
-  models_for_testing_names %>%
-  seq_along() %>%
-  replicate(2, ., simplify = FALSE) %>%
-  expand.grid() %>%
-  as_tibble()
-
 arma <- custom_read_rds("arma_aic")
 
 #### ! HEAVY FUNCTION ! ####
 # gameplan
-# 1. wyciągnąć współczynniki z arma
-# 2. wstawić je do createspec
+# 1. wyciągnąć reszty z modelu średniej
+# 2. wstawić je do garcha
 # 3. ...
 # 4. profit?
-for (i in seq_along(tables)) {
-  message(paste("Now processing:", tables[i]))
+for (table_name in tables) {
+  message(paste("Now processing:", table_name))
+  pb <- progress_bar$new(
+    total = nrow(markov_models_for_testing_indices),
+    format = "combinations [:bar] :percent eta :eta",
+    clear = FALSE
+  )
 
-  arma_coefs <-
-    arma[[tables[i]]] %>%
-    coef()
-    
-  # pmap(
-  #   models_for_testing_indices,
-  #   ~ CreateSpec(
-  #     variance.spec = list(model = c(
-  #       models_for_testing[..1, ]$volatility,
-  #       models_for_testing[..2, ]$volatility
-  #     )),
-  #     distribution.spec = list(distribution = c(
-  #       models_for_testing[..1, ]$distribution,
-  #       models_for_testing[..2, ]$distribution
-  #     )),
-  #     switch.spec = list(do.mix = FALSE, K = NULL)
-  #   ) %>%
-  #     FitML(
-  #       get(tables[i]) %>%
-  #         pull(return) %>%
-  #         na.omit()
-  #     )
-  # ) %>%
-  #   saveRDS(custom_paste_tight(
-  #     "includes/calculations/markov_",
-  #     tables[i],
-  #     ".rds"
-  #   ))
+  series <-
+    arma[[table_name]] %>%
+    residuals()
+
+  pmap(
+    markov_models_for_testing_indices,
+    function(Var1, Var2){
+      pb$tick()
+
+      CreateSpec(
+        variance.spec = list(model = c(
+          markov_models_for_testing[Var1, ]$volatility,
+          markov_models_for_testing[Var2, ]$volatility
+        )),
+        distribution.spec = list(distribution = c(
+          markov_models_for_testing[Var1, ]$distribution,
+          markov_models_for_testing[Var2, ]$distribution
+        )),
+        switch.spec = list(do.mix = FALSE, K = NULL)
+      ) %>%
+        FitML(series)
+    }
+  ) %>%
+    custom_save_rds(
+      custom_paste_tight(
+        "markov_", table_name
+      )
+    )
 }

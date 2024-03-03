@@ -2,6 +2,7 @@
 library(tidyverse)
 library(lubridate)
 library(purrr)
+library(progress)
 
 #### statistics ####
 library(moments)
@@ -11,6 +12,33 @@ library(forecast)
 library(rugarch)
 library(tseries)
 library(MSGARCH)
+
+# tworzy wszystkie kombinacje modeli dla jednego wariantu
+markov_models_for_testing <-
+  list(
+    volatility = c("sGARCH", "eGARCH", "gjrGARCH"),
+    distribution = c("norm", "ged", "std", "sstd")
+  ) %>%
+  expand.grid(stringsAsFactors = FALSE) %>%
+  split(seq_len(nrow(.))) %>%
+  bind_rows() %>%
+  as_tibble()
+
+markov_models_for_testing_names <-
+  markov_models_for_testing %>%
+  mutate(model_name = paste(volatility, distribution)) %>%
+  select(model_name) %>%
+  c() %>%
+  unlist() %>%
+  unname()
+
+# indeksuje w/w warianty i tworzy pary tych modeli
+markov_models_for_testing_indices <-
+  markov_models_for_testing_names %>%
+  seq_along() %>%
+  replicate(2, ., simplify = FALSE) %>%
+  expand.grid() %>%
+  as_tibble()
 
 #### plotting ####
 library(ggplot2)

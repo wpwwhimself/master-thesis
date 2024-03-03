@@ -322,7 +322,7 @@ Test Ljunga-Boxa, który został przedstawiony na korelogramach, wskazuje na bra
 Dla szeregów kwadratów reszt nadal wyraźnie widoczne są zależności kwadratowe, co pozwala na dalsze rozważanie modelów objaśniających te zależności.
 
 ```{r arma-arch-tests}
-group_names <- rep(4, 6)
+group_names <- rep(4, length(tables))
 names(group_names) <- tables_full_names
 
 map(
@@ -398,27 +398,51 @@ Dla najlepiej dopasowanych modeli przygotowano wizualizacje prawdopodobieństwa 
 W celu dopasowania modelu Markowa do danych zastosowano pakiet `MSGARCH` [@packageMSGARCH].
 Oferuje on szeroki wachlarz modeli wariancji warunkowej, w tym dopasowanie odrębnych modeli do poszczególnych reżimów.
 
-\AAQ{msgarch nie potrafi obsługiwać modeli średniej -- w dokumentacji jest napisane, że trzeba zrobić "prefilter" -- co to znaczy?}
+Istotnym problemem, jaki należy rozwiązać w przypadku bieżącego badania i wykorzystania wyżej wymienionego pakietu, jest fakt,
+że nie obsługuje on specyfikacji modelu średniej warunkowej.
+Aby zastosować model przełącznikowy do tego typu danych, konieczne jest dodatkowe przetworzenie danych [@packageMSGARCHDocs, p. 2].
+Wobec tego szeregami czasowymi wykorzystywanymi do modelowania wariancji warunkowej są **szeregi czasowe reszt z modelu** średniej warunkowej. \AAQ{czy to dobra droga?}
 
-[link](https://cran.r-project.org/web/packages/MSGARCH/MSGARCH.pdf) -- strona 2
+```{r markov-models}
+models_in_list <- 3
 
-```{r markov-wig20, eval = F}
-models <- custom_read_rds("markov_wig20")
+group_names <- rep(models_in_list, length(tables))
+names(group_names) <- tables_full_names
 
-models_for_testing_indices %>%
-  mutate(
-    model1 = models_for_testing_names[Var1],
-    model2 = models_for_testing_names[Var2],
-    aic = lapply(models, AIC) %>% unlist(),
-    bic = lapply(models, BIC) %>% unlist()
+map(
+  tables,
+  function(table_name) {
+    models <- custom_read_rds(
+      custom_paste_tight(
+        "markov_", table_name
+      )
+    )
+
+    markov_models_for_testing_indices %>%
+      mutate(
+        model1 = markov_models_for_testing_names[Var1],
+        model2 = markov_models_for_testing_names[Var2],
+        aic = lapply(models, AIC) %>% unlist(),
+        bic = lapply(models, BIC) %>% unlist()
+      ) %>%
+      arrange(aic) %>%
+      select(-Var1, -Var2) %>%
+      head(models_in_list)
+  }
+) %>%
+  bind_rows() %>%
+  custom_kable(
+    "Porównanie kryteriów informacyjnych dla modeli Markowa
+    dopasowanych do stóp zwrotu badanych spółek",
+    col.names = c(
+      "Model reżimu 1",
+      "Model reżimu 2",
+      "AIC",
+      "BIC"
+    )
   ) %>%
-  arrange(bic) %>%
-  select(-Var1, -Var2) %>%
-  head(7) %>%
-  kable(booktabs = TRUE, format = "latex",
-    caption = "Porównanie kryteriów informacyjnych dla modeli Markowa dopasowanych do stóp zwrotu WIG20"
-  ) %>%
-  kable_styling(latex_options = "HOLD_position")
+  add_header_above(c(" " = 2, "Kryterium informacyjne" = 2)) %>%
+  pack_rows(index = group_names)
 ```
 
 \AAA{ten wykres się jeszcze przyda}
