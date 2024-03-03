@@ -8,6 +8,8 @@ library(moments)
 library(forecast)
 
 #### models ####
+library(rugarch)
+library(tseries)
 library(MSGARCH)
 
 #### plotting ####
