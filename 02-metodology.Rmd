@@ -177,7 +177,7 @@ W kolejnych podrozdziałach znajduje się opis przeprowadzonych badań oraz zest
 
 Celem dopasowania modelu średniej warunkowej do badanych danych przygotowano korelogramy ilustrujące funkcje ACF i PACF, przedstawione na Rysunku \@ref(fig:arma-acfs).
 
-```{r arma-acfs, fig.height=8, fig.cap="Korelogramy przedstawiające funkcje ACF i PACF dla badanych szeregów czasowych"}
+```{r arma-acfs, fig.height=8, fig.cap="Korelogramy przedstawiające funkcje ACF i PACF dla badanych szeregów czasowych oraz ich kwadratów"}
 custom_acf_plot(returns_split)
 ```
 
@@ -189,6 +189,11 @@ Wyjątek stanowią stopy zwrotu indeksów:
 - 11 bit studios -- autokorelacja w opóźnieniach 1. i 5..
 
 Na tej podstawie do wyżej wymienionych danych zbadano dopasowanie modeli ARMA wyższych rzędów.
+
+W przypadku kwadratów szeregów stóp zwrotu wszystkie przejawiają autokorelację co najmniej w pierwszym opóźnieniu.
+Występowanie tego typu zależnosci kwadratowych sugeruje zasadność wykorzystania modeli klasy GARCH,
+co zostanie dokładniej przetestowane w dalszej części pracy.
+
 Modele ARMA zostały wybrane na podstawie kryteriów informacyjnych Akaike i Schwarza.
 Do tego celu wykorzystano pakiet `forecast` [@packageForecast1;@packageForecast2].
 

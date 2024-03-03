@@ -50,35 +50,44 @@ custom_acf_plot <- function(return_list) {
     seq_along(return_list),
     function(i, data) {
       returns <- data[[i]]
+      lags <- 20
+      size <- 1
 
       return(list(
         returns %>%
-          ggAcf(20, size = 2.5) +
+          ggAcf(lags, size = size) +
           labs(
             title = element_blank(),
             y = element_blank(),
             x = element_blank()
           ),
         returns %>%
-          ggPacf(20, size = 2.5) +
+          ggPacf(lags, size = size) +
           labs(
             title = element_blank(),
             y = element_blank(),
             x = element_blank()
-          )
+          ),
+        returns^2 %>%
+          ggAcf(lags, size = size) +
+            labs(
+              title = element_blank(),
+              y = element_blank(),
+              x = element_blank()
+            )
       ))
     },
     data = return_list
   ) %>% unlist(recursive = FALSE)
 
   row_titles <- tables_full_names
-  column_titles <- c("ACF", "PACF")
+  column_titles <- c("ACF", "PACF", "ACF (x²)")
 
   grid.draw(rbind(
     tableGrob(t(column_titles), rows = ""),
     cbind(
       tableGrob(row_titles),
-      arrangeGrob(grobs = plots, ncol = 2),
+      arrangeGrob(grobs = plots, ncol = length(column_titles)),
       size = "last"
     ),
     size = "last"
