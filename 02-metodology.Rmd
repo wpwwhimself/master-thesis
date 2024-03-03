@@ -251,7 +251,7 @@ table %>%
 Tabela \@ref(tab:arma-fitting) pokazuje wyniki przeprowadzonego dopasowania modeli średniej warunkowej do badanych szeregów czasowych na podstawie kryterium informacyjnego Akaike.
 Próby dopasowania różnych modeli ARMA w dużej mierze pokrywają się z obserwacjami poczynionymi na podstawie korelogramów na Rysunku \@ref(fig:arma-acfs):
 dla danych spółek _PKN Orlen_, _PKO BP_ oraz _11 bit studios_ autokorelacja została uwzględniona w modelach ARMA oraz MA,
-z opóźnieniami w dużej mierze zgodnymi z&nbsp;oczekiwaniami.
+z opóźnieniami w dużej mierze zgodnymi z oczekiwaniami.
 Dla pozostałych szeregów czasowych model białego szumu jest również adekwatny do braku zaobserwowanych autokorelacji.
 
 Interesującym wynikiem badań jest fakt, że pomimo istotnej autokorelacji występującej w niektórych z badanych szeregów,
@@ -261,63 +261,65 @@ Najprawdopodobniej powodem takiego wyniku jest bardziej konserwatywne zachowanie
 które to przypisuje modelowi mniejszą karę za jego skomplikowanie, będące konsekwencją liczby parametrów.
 Może to sugerować, że modele wyłonione pod kątem kryterium Akaike są bliskie swojej skuteczności modelom wyłonionym przez kryterium Schwarza.
 
-W świetle tych wniosków w dalszej części badania modelem średniej warunkowej dopasowanym do badanych szeregów czasowych będzie **model białego szumu**,
-z uwagi na jego mniej skomplikowaną budowę, co ma uprościć dalsze obliczenia.
-
-<!-- Mimo to, celem zapewnienia sobie odpowiednich (niezaburzonych) wyników testów na występowanie efektu ARCH,
+Mimo to, celem zapewnienia sobie odpowiednich (niezaburzonych) wyników testów na występowanie efektu ARCH,
 do dalszych rozważań wybrane zostały modele na podstawie kryterium informacyjnego Akaike,
-których specyfikację przedstawia Tabela \@ref(tab:arma-fitting-choice). -->
+których specyfikację przedstawia Tabela \@ref(tab:arma-fitting-choice).
 
 ```{r arma-fitting-choice}
-arma <- custom_read_rds("arma_bic")
-# coefs <- map(arma, coef)
+arma <- custom_read_rds("arma_aic")
+coefs <- map(arma, coef)
 
-# tibble(
-#   series = tables_full_names,
-#   aic_model = c(
-#     "biały szum",
-#     "ARMA(2, 2)",
-#     "ARMA(2, 1)",
-#     "MA(2)",
-#     "biały szum",
-#     "biały szum"
-#   ),
-#   ar1 = c(NA, coefs$pkn["ar1"], coefs$pko["ar1"], NA, NA, NA),
-#   ar2 = c(NA, coefs$pkn["ar2"], coefs$pko["ar2"], NA, NA, NA),
-#   ma1 = c(NA, coefs$pkn["ma1"], coefs$pko["ma1"], coefs$ebs["ma1"], NA, NA),
-#   ma2 = c(NA, coefs$pkn["ma2"], NA, coefs$ebs["ma2"], NA, NA)
-# ) %>%
-#   custom_kable(
-#     "Zestawienie modeli średniej warunkowej,
-#     wybranych na podstawie kryterium informacyjnego Akaike,
-#     wraz z wartościami poszczególnych parametrów",
-#     col.names = c(
-#       "Szereg czasowy",
-#       "Model",
-#       "$a_1$",
-#       "$a_2$",
-#       "$b_1$",
-#       "$b_2$"
-#     )
-#   ) %>%
-#   add_header_above(c(
-#     " " = 2,
-#     "Parametry modelu" = 4
-#   ))
+tibble(
+  series = tables_full_names,
+  aic_model = c(
+    "biały szum",
+    "ARMA(2, 2)",
+    "ARMA(2, 1)",
+    "MA(2)",
+    "biały szum",
+    "biały szum"
+  ),
+  ar1 = c(NA, coefs$pkn["ar1"], coefs$pko["ar1"], NA, NA, NA),
+  ar2 = c(NA, coefs$pkn["ar2"], coefs$pko["ar2"], NA, NA, NA),
+  ma1 = c(NA, coefs$pkn["ma1"], coefs$pko["ma1"], coefs$ebs["ma1"], NA, NA),
+  ma2 = c(NA, coefs$pkn["ma2"], NA, coefs$ebs["ma2"], NA, NA)
+) %>%
+  custom_kable(
+    "Zestawienie modeli średniej warunkowej,
+    wybranych na podstawie kryterium informacyjnego Akaike,
+    wraz z wartościami poszczególnych parametrów",
+    col.names = c(
+      "Szereg czasowy",
+      "Model",
+      "$a_1$",
+      "$a_2$",
+      "$b_1$",
+      "$b_2$"
+    )
+  ) %>%
+  add_header_above(c(
+    " " = 2,
+    "Parametry modelu" = 4
+  ))
 ```
 
 Aby potwierdzić zasadność wykorzystania modeli GARCH przeprowadzone zostały testy na występowanie efektu ARCH.
-Należą do nich testy <!-- - Ljunga-Boxa dla reszt z modelu, --> Engle'a oraz KPSS.
-Do ich obliczenia wykorzystane zostaną pakiedy `rugarch` [@packageRugarch] oraz `tseries` [@packageTseries].
-Wyniki tych testów ilustruje <!-- Rysunek \@ref(fig:arma-arch-acf) oraz --> Tabela \@ref(tab:arma-arch-tests).
+Należą do nich testy:
 
-```{r arma-arch-acf, fig.height=8, fig.cap="Korelogramy ilustrujące testy Ljunga-Boxa dla reszt z modelu średniej warunkowej", eval = F}
+- Ljunga-Boxa dla reszt z modelu,
+- Engle'a,
+- KPSS.
+
+Do obliczenia dwóch ostatnich testów wykorzystane zostaną pakiedy `rugarch` [@packageRugarch] oraz `tseries` [@packageTseries].
+Wyniki tych testów ilustruje Rysunek \@ref(fig:arma-arch-acf) oraz Tabela \@ref(tab:arma-arch-tests).
+
+```{r arma-arch-acf, fig.height=8, fig.cap="Korelogramy ilustrujące testy Ljunga-Boxa dla reszt z modelu średniej warunkowej"}
 map(arma, residuals) %>%
   custom_acf_plot()
 ```
 
-<!-- Test Ljunga-Boxa, który został przedstawiony na korelogramach, wskazuje na brak autokorelacji w szeregach reszt z modelu.
-Dla szeregów kwadratów reszt nadal wyraźnie widoczne są zależności kwadratowe, co pozwala na dalsze rozważanie modelów objaśniających te zależności. -->
+Test Ljunga-Boxa, który został przedstawiony na korelogramach, wskazuje na brak autokorelacji w szeregach reszt z modelu.
+Dla szeregów kwadratów reszt nadal wyraźnie widoczne są zależności kwadratowe, co pozwala na dalsze rozważanie modelów objaśniających te zależności.
 
 ```{r arma-arch-tests}
 group_names <- rep(4, 6)
@@ -379,9 +381,9 @@ map(
   pack_rows(index = group_names)
 ```
 
-Wyniki testów Engle'a oraz KPSS sprzyjają dalszym rozważaniom;
-niskie p-wartości dla pierwszego z nich nakazują odrzucenie hipotezy o braku autokorelacji w kwadratach reszt,
-natomiast wysokie (>0.1) p-wartości testu KPSS pozwalają przyjąć hipotezę o heteroskedastyczności zachodzącej w&nbsp;szeregach czasowych.
+Wyniki testów Engle'a oraz KPSS również sprzyjają dalszym rozważaniom.
+Niskie p-wartości dla pierwszego z nich nakazują odrzucenie hipotezy o braku autokorelacji w kwadratach reszt,
+natomiast wysokie (>0.1) p-wartości testu KPSS pozwalają przyjąć hipotezę o heteroskedastyczności zachodzącej w szeregach czasowych.
 
 Wobec tak przeprowadzonego badania dotyczącego modelu średniej warunkowej
 możliwym jest przejście do dalszej analizy uwzględniającej dopasowanie modelu wariancji warunkowej.
