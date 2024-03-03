@@ -92,3 +92,5 @@ Wartości kryterium bliższe $0$ informują o lepszej jakości dopasowania model
 
 > self-explainatory;
 > literatura modeli, ale też literatura na temat innych dopasowań modeli do wahających się danych;
+
+## Zastosowane pakiety środowiska R
