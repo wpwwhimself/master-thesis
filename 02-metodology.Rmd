@@ -184,9 +184,9 @@ custom_acf_plot(returns_split)
 Większość z badanych szeregów czasowych przejawia brak autokorelacji w pierwszych opóźnieniach szeregu.
 Wyjątek stanowią stopy zwrotu indeksów:
 
-- WIG20 -- wyraźna autokorelacja w opóźnieniach 1., 2. i 5.,
-- PKO BP -- istotna autokorelacja w opóźnieniu 4.,
-- 11 bit studios -- autokorelacja w opóźnieniach 1. i 5..
+- 11 bit studios -- wyraźna autokorelacja w opóźnieniach 1., 2. i 5.,
+- PKN Orlen -- istotna autokorelacja w opóźnieniu 4.,
+- PKO BP -- autokorelacja w opóźnieniach 1. i 5..
 
 Na tej podstawie do wyżej wymienionych danych zbadano dopasowanie modeli ARMA wyższych rzędów.
 
@@ -201,7 +201,6 @@ Do tego celu wykorzystano pakiet `forecast` [@packageForecast1;@packageForecast2
 table <- tibble(series = tables_full_names)
 
 arma <- custom_read_rds("arma_aic")
-coefs <- map(arma, coef)
 aic <- map(arma, ~ .x %>% AIC %>% round)
 bic <- map(arma, ~ .x %>% BIC %>% round)
 
@@ -219,7 +218,6 @@ table <- table %>% mutate(
 )
 
 arma <- custom_read_rds("arma_bic")
-coefs <- map(arma, coef)
 aic <- map(arma, ~ .x %>% AIC %>% round)
 bic <- map(arma, ~ .x %>% BIC %>% round)
 
@@ -263,10 +261,59 @@ Najprawdopodobniej powodem takiego wyniku jest bardziej konserwatywne zachowanie
 które to przypisuje modelowi mniejszą karę za jego skomplikowanie, będące konsekwencją liczby parametrów.
 Może to sugerować, że modele wyłonione pod kątem kryterium Akaike są bliskie swojej skuteczności modelom wyłonionym przez kryterium Schwarza.
 
-W świetle tych wniosków w dalszej części badania modelem średniej warunkowej dopasowanym do badanych szeregów czasowych będzie **model białego szumu**,
-z uwagi na jego mniej skomplikowaną budowę, co ma uprościć dalsze obliczenia.
+Mimo to, celem zapewnienia sobie odpowiednich (niezaburzonych) wyników testów na występowanie efektu ARCH,
+do dalszych rozważań wybrane zostały modele na podstawie kryterium informacyjnego Akaike,
+których specyfikację przedstawia Tabela \@ref(tab:arma-fitting-choice).
 
-\AAA{Dokończyć testy na efekt ARCH}
+```{r arma-fitting-choice}
+arma <- custom_read_rds("arma_aic")
+coefs <- map(arma, coef)
+
+tibble(
+  series = tables_full_names,
+  aic_model = c(
+    "biały szum",
+    "ARMA(2, 2)",
+    "ARMA(2, 1)",
+    "MA(2)",
+    "biały szum",
+    "biały szum"
+  ),
+  ar1 = c(NA, coefs$pkn["ar1"], coefs$pko["ar1"], NA, NA, NA),
+  ar2 = c(NA, coefs$pkn["ar2"], coefs$pko["ar2"], NA, NA, NA),
+  ma1 = c(NA, coefs$pkn["ma1"], coefs$pko["ma1"], coefs$ebs["ma1"], NA, NA),
+  ma2 = c(NA, coefs$pkn["ma2"], NA, coefs$ebs["ma2"], NA, NA)
+) %>%
+  custom_kable(
+    "Zestawienie modeli średniej warunkowej,
+    wybranych na podstawie kryterium informacyjnego Akaike,
+    wraz z wartościami poszczególnych parametrów",
+    col.names = c(
+      "Szereg czasowy",
+      "Model",
+      "$a_1$",
+      "$a_2$",
+      "$b_1$",
+      "$b_2$"
+    )
+  ) %>%
+  add_header_above(c(
+    " " = 2,
+    "Parametry modelu" = 4
+  ))
+```
+
+Aby potwierdzić zasadność wykorzystania modeli GARCH przeprowadzone zostały testy na występowanie efektu ARCH.
+Należą do nich testy:
+
+- Ljunga-Boxa dla reszt z modelu,
+- Engle'a,
+- KPSS.
+
+```{r arma-arch, fig.height=8, fig.cap="Korelogramy ilustrujące testy Ljunga-Boxa dla reszt z modelu średniej warunkowej"}
+map(arma, residuals) %>%
+  custom_acf_plot()
+```
 
 ### Model przełącznikowy Markowa
 

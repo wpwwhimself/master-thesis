@@ -99,6 +99,8 @@ custom_auto_arima <- function(ts, ...) {
     ts,
     stationary = TRUE,
     seasonal = FALSE,
+    max.p = 9,
+    max.q = 9,
     ...
   )
 }
@@ -117,7 +119,7 @@ custom_kable <- function(
     digits = digits,
     ...
   ) %>%
-    kable_styling(latex_options = "HOLD_position")
+    kable_styling()
 }
 
 custom_markov_plot <- function(data, probs) {
