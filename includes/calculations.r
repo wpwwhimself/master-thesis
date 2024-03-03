@@ -42,31 +42,43 @@ models_for_testing_indices <-
   expand.grid() %>%
   as_tibble()
 
+arma <- custom_read_rds("arma_aic")
+
 #### ! HEAVY FUNCTION ! ####
+# gameplan
+# 1. wyciągnąć współczynniki z arma
+# 2. wstawić je do createspec
+# 3. ...
+# 4. profit?
 for (i in seq_along(tables)) {
-  pmap(
-    models_for_testing_indices,
-    ~ CreateSpec(
-      variance.spec = list(model = c(
-        models_for_testing[..1, ]$volatility,
-        models_for_testing[..2, ]$volatility
-      )),
-      distribution.spec = list(distribution = c(
-        models_for_testing[..1, ]$distribution,
-        models_for_testing[..2, ]$distribution
-      )),
-      switch.spec = list(do.mix = FALSE, K = NULL)
-    ) %>%
-      FitML(
-        get(tables[i]) %>%
-          pull(return) %>%
-          na.omit()
-      )
-  ) %>%
-    saveRDS(paste(
-      "includes/calculations/markov_",
-      tables[i],
-      ".rds",
-      collapse = ""
-    ))
+  message(paste("Now processing:", tables[i]))
+
+  arma_coefs <-
+    arma[[tables[i]]] %>%
+    coef()
+    
+  # pmap(
+  #   models_for_testing_indices,
+  #   ~ CreateSpec(
+  #     variance.spec = list(model = c(
+  #       models_for_testing[..1, ]$volatility,
+  #       models_for_testing[..2, ]$volatility
+  #     )),
+  #     distribution.spec = list(distribution = c(
+  #       models_for_testing[..1, ]$distribution,
+  #       models_for_testing[..2, ]$distribution
+  #     )),
+  #     switch.spec = list(do.mix = FALSE, K = NULL)
+  #   ) %>%
+  #     FitML(
+  #       get(tables[i]) %>%
+  #         pull(return) %>%
+  #         na.omit()
+  #     )
+  # ) %>%
+  #   saveRDS(custom_paste_tight(
+  #     "includes/calculations/markov_",
+  #     tables[i],
+  #     ".rds"
+  #   ))
 }
