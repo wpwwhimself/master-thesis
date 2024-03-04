@@ -422,8 +422,19 @@ map(
       mutate(
         model1 = markov_models_for_testing_names[Var1],
         model2 = markov_models_for_testing_names[Var2],
-        aic = lapply(models, AIC) %>% unlist(),
-        bic = lapply(models, BIC) %>% unlist()
+        aic = map(
+          models,
+          ~ if(class(.x) == "NULL")
+            NA
+          else
+            AIC(.x)
+        ) %>% unlist(),
+        bic = map(
+          models,
+          ~ if(class(.x) == "NULL")
+            NA
+          else BIC(.x)
+        ) %>% unlist()
       ) %>%
       arrange(aic) %>%
       select(-Var1, -Var2) %>%
@@ -432,7 +443,7 @@ map(
 ) %>%
   bind_rows() %>%
   custom_kable(
-    "Porównanie kryteriów informacyjnych dla modeli Markowa
+    "Porównanie najlepszych wartości kryteriów informacyjnych dla modeli Markowa
     dopasowanych do stóp zwrotu badanych spółek",
     col.names = c(
       "Model reżimu 1",
@@ -441,7 +452,9 @@ map(
       "BIC"
     )
   ) %>%
-  add_header_above(c(" " = 2, "Kryterium informacyjne" = 2)) %>%
+  add_header_above(
+    c(" " = 2, "Kryterium informacyjne" = 2)
+  ) %>%
   pack_rows(index = group_names)
 ```
 
