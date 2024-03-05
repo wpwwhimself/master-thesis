@@ -404,10 +404,7 @@ Aby zastosować model przełącznikowy do tego typu danych, konieczne jest dodat
 Wobec tego szeregami czasowymi wykorzystywanymi do modelowania wariancji warunkowej są **szeregi czasowe reszt z modelu** średniej warunkowej. \AAQ{czy to dobra droga?}
 
 ```{r markov-models}
-models_in_list <- 3
-
-group_names <- rep(models_in_list, length(tables))
-names(group_names) <- tables_full_names
+models_in_list <- 1
 
 map(
   tables,
@@ -420,6 +417,7 @@ map(
 
     markov_models_for_testing_indices %>%
       mutate(
+        series = tables_full_names[table_name],
         model1 = markov_models_for_testing_names[Var1],
         model2 = markov_models_for_testing_names[Var2],
         aic = map(
@@ -443,9 +441,10 @@ map(
 ) %>%
   bind_rows() %>%
   custom_kable(
-    "Porównanie najlepszych wartości kryteriów informacyjnych dla modeli Markowa
+    "Najlepsze wartości kryteriów informacyjnych dla modeli Markowa
     dopasowanych do stóp zwrotu badanych spółek",
     col.names = c(
+      "Szereg czasowy",
       "Model reżimu 1",
       "Model reżimu 2",
       "AIC",
@@ -453,9 +452,8 @@ map(
     )
   ) %>%
   add_header_above(
-    c(" " = 2, "Kryterium informacyjne" = 2)
-  ) %>%
-  pack_rows(index = group_names)
+    c(" " = 3, "Kryterium informacyjne" = 2)
+  )
 ```
 
 \AAA{ten wykres się jeszcze przyda}
