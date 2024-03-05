@@ -456,6 +456,12 @@ map(
   )
 ```
 
+Tabela \@ref(tab:markov-models) zawiera informacje na temat modeli dopasowanych do badanych szeregów czasowych.
+Najlepsze z nich zostały wyłonione na podstawie kryterium informacyjnego Akaike, konsekwentnie z wyborem poczynionym w poprzednim rozdziale.
+Można zauważyć, że dla reżimu pierwszego (niska wariancja warunkowa) często najlepsze wyniki wykazuje standardowy model GARCH (`sGARCH`),
+natomiast w przypadku drugiego reżimu, gdzie wahania stóp zwrotu są większe, częściej wybierany jest model EGARCH, uwzględniający asymetrię.
+Badanie wykazało też brak konsensusu dotyczącego przyjętego rozkładu innowacji -- każdy z testowanych rozkładów pojawia się minimum dwukrotnie na liście najlepiej dopasowanych modeli.
+
 \AAA{ten wykres się jeszcze przyda}
 
 ```{r markov, fig.cap="Dopasowanie modelu Markowa do danych WIG 20", fig.height=4}
