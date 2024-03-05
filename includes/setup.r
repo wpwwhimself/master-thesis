@@ -108,6 +108,35 @@ c_kable <- function(
     kable_styling()
 }
 
+c_list_with_names <- function(names, values) {
+  setNames(
+    as.list(values),
+    names
+  )
+}
+
+c_markov_get_insignif <- function(model, pull = TRUE) {
+  output <-
+    model$Inference$MatCoef %>%
+    as_tibble(rownames = "param") %>%
+    filter(
+      `Pr(>|t|)` >= 0.05,
+      substr(param, 1, 6) != "alpha1",
+      substr(param, 1, 1) != "P"
+    )
+
+  if (pull) return(output %>% pull(param))
+  else return(output)
+}
+
+c_markov_get_params <- function(model) {
+  model$Inference$MatCoef %>%
+    as_tibble(rownames = "param") %>%
+    filter(
+      substr(param, 1, 1) != "P"
+    )
+}
+
 c_markov_plot <- function(data, probs) {
   data %>%
     mutate(
@@ -140,6 +169,14 @@ c_paste_math_assoc <- function(
   values <- values %>% round(round) %>% unname()
   output <- paste(labels, values, sep = " = ", collapse = ",\\:")
   paste("$", output, "$", sep = "")
+}
+
+c_progress_setup <- function(label, total) {
+  progress_bar$new(
+    total = total,
+    format = paste(label, "[:bar] :percent eta :eta"),
+    clear = FALSE
+  )
 }
 
 c_read_rds <- function(name) {

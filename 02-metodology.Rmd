@@ -400,7 +400,7 @@ Oferuje on szeroki wachlarz modeli wariancji warunkowej, w tym dopasowanie odrę
 
 Istotnym problemem, jaki należy rozwiązać w przypadku bieżącego badania i wykorzystania wyżej wymienionego pakietu, jest fakt,
 że nie obsługuje on specyfikacji modelu średniej warunkowej.
-Aby zastosować model przełącznikowy do tego typu danych, konieczne jest dodatkowe przetworzenie danych [@packageMSGARCHDocs, p. 2].
+Aby zastosować model przełącznikowy do tego typu danych, konieczne jest dodatkowe przetworzenie danych [@packageMSGARCHDocs, str. 2].
 Wobec tego szeregami czasowymi wykorzystywanymi do modelowania wariancji warunkowej są **szeregi czasowe reszt z modelu** średniej warunkowej. \AAQ{czy to dobra droga?}
 
 ```{r markov-models}
@@ -461,6 +461,59 @@ Najlepsze z nich zostały wyłonione na podstawie kryterium informacyjnego Akaik
 Można zauważyć, że dla reżimu pierwszego (niska wariancja warunkowa) często najlepsze wyniki wykazuje standardowy model GARCH (`sGARCH`),
 natomiast w przypadku drugiego reżimu, gdzie wahania stóp zwrotu są większe, częściej wybierany jest model EGARCH, uwzględniający asymetrię.
 Badanie wykazało też brak konsensusu dotyczącego przyjętego rozkładu innowacji -- każdy z testowanych rozkładów pojawia się minimum dwukrotnie na liście najlepiej dopasowanych modeli.
+
+Tak wybrane modele zostały sprawdzone pod kątem istotności ich parametrów: parametry nieistotnie różne od zera zostały z góry ustalone jako równe 0.
+Proces przeprowadzono dla parametrów, dla których można taką operację wykonać, tj. wszystkich poza $\alpha_1$ w modelu GARCH, z uwagi na konieczność jego wystąpienia.
+Ma to na celu optymalizację modeli i poprawę wyników prognoz wykonywanych na dalszych etapach badania.
+
+```{r markov-optimizing}
+markov <- c_read_rds("markov")
+
+map(
+  tables,
+  function(table_name) {
+    markov[[table_name]] %>%
+      c_markov_get_params() %>%
+      select(param, Estimate) %>%
+      mutate(series = tables_full_names[table_name])
+  }
+) %>%
+  bind_rows() %>%
+  pivot_wider(
+    names_from = param,
+    values_from = Estimate
+  ) %>%
+  relocate(nu_1, xi_1, .before = alpha0_2) %>%
+  c_kable(
+    "Parametry modeli Markowa dopasowanych do stóp zwrotu badanych spółek",
+    col.names = c(
+      "Szereg czas.",
+      "$\\omega$",
+      "$\\alpha_1$",
+      "$\\alpha_2$",
+      "$\\beta$",
+      "$\\nu$",
+      "$\\xi$",
+      "$\\omega$",
+      "$\\alpha_1$",
+      "$\\alpha_2$",
+      "$\\beta$",
+      "$\\nu$"
+    ),
+    digits = 2
+  ) %>%
+  add_header_above(c(
+    " " = 1,
+    "Reżim 1" = 6,
+    "Reżim 2" = 5
+  ))
+```
+
+Jedynym modelem, który potrzebowałby takiej operacji okazał się być model dla szeregu czasowego stóp zwrotu indeksu WIG20,
+gdzie wyestymowane wartości parametrów $\omega$ dla obu reżimów były nieistotnie różne od zera.
+Jednakże po zablokowaniu ich wartości do 0 i ponownym procesie dopasowania modelu, wzrosły wartości jego kryteriów informacyjnych.
+\AAQ{lepsze gorsze kryteria czy nieistotne parametry w modelu? Na razie zakładam, że to drugie}
+Wobec tego ostateczne wartości wyestymowanych parametrów wybranych modeli przedstawia Tabela \@ref(tab:markov-optimizing).
 
 \AAA{ten wykres się jeszcze przyda}
 
