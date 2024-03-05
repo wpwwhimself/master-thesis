@@ -73,8 +73,8 @@ W Tabeli \@ref(tab:showcase) zamieszczone zostały przykładowe dane dotyczące 
 data %>%
   head(5) %>%
   select(-index) %>%
-  kable(booktabs = TRUE, format = "latex",
-    caption = "Przykład danych giełdowych indeksu WIG20",
+  c_kable(
+    "Przykład danych giełdowych indeksu WIG20",
     col.names = c(
       "Data",
       "Otwarcie",
@@ -84,12 +84,12 @@ data %>%
       "Wolumen",
       "Stopa zwrotu"
     )
-  ) %>%
-  kable_styling(latex_options = "HOLD_position")
+  )
 ```
 
 ```{r returns-plot, fig.cap="Logarytmiczne stopy zwrotu dla badanych spółek", fig.height=8, fig.width=6.5}
 data %>%
+  mutate(index = tables_full_names[index]) %>%
   ggplot(aes(Data, return)) +
     geom_line() +
     ylab("Wartość stopy zwrotu") +
@@ -107,19 +107,27 @@ Drugi z kolei jest związany z początkiem agresji rosyjskiej na Ukrainie, kiedy
 
 ```{r desc-stats-table}
 data %>%
+  mutate(index = tables_full_names[index]) %>%
   group_by(index) %>%
   na.omit() %>%
   summarise(
-    "Średnia" = mean(return),
-    "Mediana" = median(return),
-    "Odch. kw." = sd(return),
-    "Skośność" = skewness(return),
-    "Kurtoza" = kurtosis(return),
+    mean(return),
+    median(return),
+    sd(return),
+    skewness(return),
+    kurtosis(return),
   ) %>%
-  kable(booktabs = TRUE, format = "latex",
-    caption = "Statystyki opisowe stóp zwrotu badanych spółek"
-  ) %>%
-  kable_styling(latex_options = "HOLD_position")
+  c_kable(
+    "Statystyki opisowe stóp zwrotu badanych spółek",
+    col.names = c(
+      "Szereg czasowy",
+      "Średnia",
+      "Mediana",
+      "Odch. kw.",
+      "Skośność",
+      "Kurtoza"
+    )
+  )
 ```
 
 ```{r histograms-plot, fig.cap = "Wyniki testu Shapiro-Wilka na normalność rozkładu stóp zwrotu. W tytułach podano wartości statystyki testowej oraz p-wartość."}
