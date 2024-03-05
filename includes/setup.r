@@ -30,52 +30,6 @@ primary_color <- "#005322"
 calculations_path <- "includes/calculations/"
 round_digits <- 4
 
-################# configurations #################
-
-# models
-markov_models_for_testing <-
-  list(
-    volatility = c("sGARCH", "eGARCH", "gjrGARCH"),
-    distribution = c("norm", "ged", "std", "sstd")
-  ) %>%
-  expand.grid(stringsAsFactors = FALSE) %>%
-  split(seq_len(nrow(.))) %>%
-  bind_rows() %>%
-  as_tibble()
-markov_models_for_testing_names <-
-  markov_models_for_testing %>%
-  mutate(model_name = paste(volatility, distribution)) %>%
-  select(model_name) %>%
-  c() %>%
-  unlist() %>%
-  unname()
-markov_models_for_testing_indices <-
-  markov_models_for_testing_names %>%
-  seq_along() %>%
-  replicate(2, ., simplify = FALSE) %>%
-  expand.grid() %>%
-  as_tibble()
-
-# plotting
-theme_set(theme_minimal())
-theme_fill_uep <- function(...) scale_fill_brewer(palette = "Greens", ...)
-theme_color_uep <- function(...) scale_color_brewer(palette = "Greens", ...)
-options(
-  ggplot2.discrete.fill = theme_fill_uep,
-  ggplot2.discrete.colour = theme_color_uep
-)
-update_geom_defaults(
-  "line",
-  list(
-    color = primary_color
-  )
-)
-
-# tables
-options(
-  knitr.kable.NA = "–"
-)
-
 ################# custom functions #################
 c_acf_plot <- function(return_list) {
   plots <- lapply(
@@ -206,3 +160,49 @@ c_save_rds <- function(data, name) {
     )
   )
 }
+
+################# configurations #################
+
+# models
+markov_models_for_testing <-
+  list(
+    volatility = c("sGARCH", "eGARCH", "gjrGARCH"),
+    distribution = c("norm", "ged", "std", "sstd")
+  ) %>%
+  expand.grid(stringsAsFactors = FALSE) %>%
+  split(seq_len(nrow(.))) %>%
+  bind_rows() %>%
+  as_tibble()
+markov_models_for_testing_names <-
+  markov_models_for_testing %>%
+  mutate(model_name = c_paste_tight(volatility, " (", distribution, ")")) %>%
+  select(model_name) %>%
+  c() %>%
+  unlist() %>%
+  unname()
+markov_models_for_testing_indices <-
+  markov_models_for_testing_names %>%
+  seq_along() %>%
+  replicate(2, ., simplify = FALSE) %>%
+  expand.grid() %>%
+  as_tibble()
+
+# plotting
+theme_set(theme_minimal())
+theme_fill_uep <- function(...) scale_fill_brewer(palette = "Greens", ...)
+theme_color_uep <- function(...) scale_color_brewer(palette = "Greens", ...)
+options(
+  ggplot2.discrete.fill = theme_fill_uep,
+  ggplot2.discrete.colour = theme_color_uep
+)
+update_geom_defaults(
+  "line",
+  list(
+    color = primary_color
+  )
+)
+
+# tables
+options(
+  knitr.kable.NA = "–"
+)
