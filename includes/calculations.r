@@ -5,17 +5,17 @@ source("includes/data.r")
 #### ARMA ####
 map(
   returns_split,
-  ~ custom_auto_arima(.x)
+  ~ c_auto_arima(.x)
 ) %>%
-  custom_save_rds("arma_aic")
+  c_save_rds("arma_aic")
 map(
   returns_split,
-  ~ custom_auto_arima(.x, ic = "bic")
+  ~ c_auto_arima(.x, ic = "bic")
 ) %>%
-  custom_save_rds("arma_bic")
+  c_save_rds("arma_bic")
 
 #### markov ####
-arma <- custom_read_rds("arma_aic")
+arma <- c_read_rds("arma_aic")
 
 for (table_name in tables) {
   pb <- progress_bar$new(
@@ -50,8 +50,8 @@ for (table_name in tables) {
       otherwise = NULL
     )
   ) %>%
-    custom_save_rds(
-      custom_paste_tight(
+    c_save_rds(
+      c_paste_tight(
         "markov_", table_name
       )
     )

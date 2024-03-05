@@ -178,7 +178,7 @@ W kolejnych podrozdziałach znajduje się opis przeprowadzonych badań oraz zest
 Celem dopasowania modelu średniej warunkowej do badanych danych przygotowano korelogramy ilustrujące funkcje ACF i PACF, przedstawione na Rysunku \@ref(fig:arma-acfs).
 
 ```{r arma-acfs, fig.height=8, fig.cap="Korelogramy przedstawiające funkcje ACF i PACF dla badanych szeregów czasowych oraz ich kwadratów"}
-custom_acf_plot(returns_split)
+c_acf_plot(returns_split)
 ```
 
 Większość z badanych szeregów czasowych przejawia brak autokorelacji w pierwszych opóźnieniach szeregu.
@@ -200,7 +200,7 @@ Do tego celu wykorzystano pakiet `forecast` [@packageForecast1;@packageForecast2
 ```{r arma-fitting}
 table <- tibble(series = tables_full_names)
 
-arma <- custom_read_rds("arma_aic")
+arma <- c_read_rds("arma_aic")
 aic <- map(arma, ~ .x %>% AIC %>% round)
 bic <- map(arma, ~ .x %>% BIC %>% round)
 
@@ -217,7 +217,7 @@ table <- table %>% mutate(
   aic_bic = bic
 )
 
-arma <- custom_read_rds("arma_bic")
+arma <- c_read_rds("arma_bic")
 aic <- map(arma, ~ .x %>% AIC %>% round)
 bic <- map(arma, ~ .x %>% BIC %>% round)
 
@@ -228,7 +228,7 @@ table <- table %>% mutate(
 )
 
 table %>%
-  custom_kable(
+  c_kable(
     "Zestawienie dopasowanych modeli średniej warunkowej
     do badanych szeregów czasowych,
     wraz z ich kryteriami informacyjnymi",
@@ -266,7 +266,7 @@ do dalszych rozważań wybrane zostały modele na podstawie kryterium informacyj
 których specyfikację przedstawia Tabela \@ref(tab:arma-fitting-choice).
 
 ```{r arma-fitting-choice}
-arma <- custom_read_rds("arma_aic")
+arma <- c_read_rds("arma_aic")
 coefs <- map(arma, coef)
 
 tibble(
@@ -284,7 +284,7 @@ tibble(
   ma1 = c(NA, coefs$pkn["ma1"], coefs$pko["ma1"], coefs$ebs["ma1"], NA, NA),
   ma2 = c(NA, coefs$pkn["ma2"], NA, coefs$ebs["ma2"], NA, NA)
 ) %>%
-  custom_kable(
+  c_kable(
     "Zestawienie modeli średniej warunkowej,
     wybranych na podstawie kryterium informacyjnego Akaike,
     wraz z wartościami poszczególnych parametrów",
@@ -315,7 +315,7 @@ Wyniki tych testów ilustruje Rysunek \@ref(fig:arma-arch-acf) oraz Tabela \@ref
 
 ```{r arma-arch-acf, fig.height=8, fig.cap="Korelogramy ilustrujące testy Ljunga-Boxa dla reszt z modelu średniej warunkowej"}
 map(arma, residuals) %>%
-  custom_acf_plot()
+  c_acf_plot()
 ```
 
 Test Ljunga-Boxa, który został przedstawiony na korelogramach, wskazuje na brak autokorelacji w szeregach reszt z modelu.
@@ -367,7 +367,7 @@ map(
   mutate(
     statistic = round(statistic, 2)
   ) %>%
-  custom_kable(
+  c_kable(
     "Wyniki testu Engle'a i KPSS dla badanych szeregów czasowych.
     Dla testów KPSS wartość 0.1 w kolumnie p-wartość oznacza,
     że rzeczywista p-wartość jest wyższa od wskazanej.",
@@ -409,8 +409,8 @@ models_in_list <- 1
 map(
   tables,
   function(table_name) {
-    models <- custom_read_rds(
-      custom_paste_tight(
+    models <- c_read_rds(
+      c_paste_tight(
         "markov_", table_name
       )
     )
@@ -440,7 +440,7 @@ map(
   }
 ) %>%
   bind_rows() %>%
-  custom_kable(
+  c_kable(
     "Najlepsze wartości kryteriów informacyjnych dla modeli Markowa
     dopasowanych do stóp zwrotu badanych spółek",
     col.names = c(
@@ -468,7 +468,7 @@ fit <- FitML(
   wig20 %>% pull(return) %>% na.omit()
 )
 
-custom_markov_plot(
+c_markov_plot(
   wig20 %>% select(Data, return),
   State(fit)$SmoothProb[, 1, 2]
 )

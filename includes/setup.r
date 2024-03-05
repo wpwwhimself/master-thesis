@@ -1,19 +1,38 @@
-#### data manipulation ####
+################# libraries #################
+
+# data manipulation
 library(tidyverse)
 library(lubridate)
 library(purrr)
 library(progress)
 
-#### statistics ####
+# statistics
 library(moments)
 library(forecast)
 
-#### models ####
+# models
 library(rugarch)
 library(tseries)
 library(MSGARCH)
 
-# tworzy wszystkie kombinacje modeli dla jednego wariantu
+# plotting
+library(ggplot2)
+library(grid)
+library(gridExtra)
+
+# tables and export
+library(knitr)
+library(kableExtra)
+
+################# globals #################
+
+primary_color <- "#005322"
+calculations_path <- "includes/calculations/"
+round_digits <- 4
+
+################# configurations #################
+
+# models
 markov_models_for_testing <-
   list(
     volatility = c("sGARCH", "eGARCH", "gjrGARCH"),
@@ -23,7 +42,6 @@ markov_models_for_testing <-
   split(seq_len(nrow(.))) %>%
   bind_rows() %>%
   as_tibble()
-
 markov_models_for_testing_names <-
   markov_models_for_testing %>%
   mutate(model_name = paste(volatility, distribution)) %>%
@@ -31,8 +49,6 @@ markov_models_for_testing_names <-
   c() %>%
   unlist() %>%
   unname()
-
-# indeksuje w/w warianty i tworzy pary tych modeli
 markov_models_for_testing_indices <-
   markov_models_for_testing_names %>%
   seq_along() %>%
@@ -40,22 +56,14 @@ markov_models_for_testing_indices <-
   expand.grid() %>%
   as_tibble()
 
-#### plotting ####
-library(ggplot2)
-library(grid)
-library(gridExtra)
+# plotting
 theme_set(theme_minimal())
-theme_fill_uep <- function(...) {
-  scale_fill_brewer(palette = "Greens", ...)
-}
-theme_color_uep <- function(...) {
-  scale_color_brewer(palette = "Greens", ...)
-}
+theme_fill_uep <- function(...) scale_fill_brewer(palette = "Greens", ...)
+theme_color_uep <- function(...) scale_color_brewer(palette = "Greens", ...)
 options(
   ggplot2.discrete.fill = theme_fill_uep,
   ggplot2.discrete.colour = theme_color_uep
 )
-primary_color <- "#005322"
 update_geom_defaults(
   "line",
   list(
@@ -63,19 +71,13 @@ update_geom_defaults(
   )
 )
 
-#### tables and export ####
-library(knitr)
-library(kableExtra)
+# tables
 options(
   knitr.kable.NA = "–"
 )
 
-#### other globals ####
-CALCULATIONS_PATH <- "includes/calculations/"
-ROUND_DIGITS <- 4
-
-#### custom functions ####
-custom_acf_plot <- function(return_list) {
+################# custom functions #################
+c_acf_plot <- function(return_list) {
   plots <- lapply(
     seq_along(return_list),
     function(i, data) {
@@ -124,7 +126,7 @@ custom_acf_plot <- function(return_list) {
   ))
 }
 
-custom_auto_arima <- function(ts, ...) {
+c_auto_arima <- function(ts, ...) {
   auto.arima(
     ts,
     stationary = TRUE,
@@ -135,9 +137,9 @@ custom_auto_arima <- function(ts, ...) {
   )
 }
 
-custom_kable <- function(
+c_kable <- function(
   data, caption,
-  escape = FALSE, digits = ROUND_DIGITS,
+  escape = FALSE, digits = round_digits,
   ...
 ) {
   kable(
@@ -152,7 +154,7 @@ custom_kable <- function(
     kable_styling()
 }
 
-custom_markov_plot <- function(data, probs) {
+c_markov_plot <- function(data, probs) {
   data %>%
     mutate(
       probs = probs,
@@ -173,33 +175,33 @@ custom_markov_plot <- function(data, probs) {
       )
 }
 
-custom_paste_tight <- function(...) {
+c_paste_tight <- function(...) {
   paste(..., sep = "")
 }
 
-custom_paste_math_assoc <- function(
+c_paste_math_assoc <- function(
   labels, values,
-  round = ROUND_DIGITS
+  round = round_digits
 ) {
   values <- values %>% round(round) %>% unname()
   output <- paste(labels, values, sep = " = ", collapse = ",\\:")
   paste("$", output, "$", sep = "")
 }
 
-custom_read_rds <- function(name) {
+c_read_rds <- function(name) {
   readRDS(
     paste(
-      CALCULATIONS_PATH, name, ".rds",
+      calculations_path, name, ".rds",
       sep = ""
     )
   )
 }
 
-custom_save_rds <- function(data, name) {
+c_save_rds <- function(data, name) {
   saveRDS(
     data,
     paste(
-      CALCULATIONS_PATH, name, ".rds",
+      calculations_path, name, ".rds",
       sep = ""
     )
   )
