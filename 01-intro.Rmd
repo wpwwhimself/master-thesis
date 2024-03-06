@@ -94,3 +94,25 @@ Wartości kryterium bliższe $0$ informują o lepszej jakości dopasowania model
 > literatura modeli, ale też literatura na temat innych dopasowań modeli do wahających się danych;
 
 ## Zastosowane pakiety środowiska R
+
+Do przeprowadzenia wszelkich obliczeń i symulacji w niniejszej pracy wykorzystano środowisko **R**.
+Jest to otwartoźródłowy język programowania i środowisko do analizy danych oraz tworzenia grafik,
+powszechnie używane w statystyce, analizie danych, uczeniu maszynowych oraz badaniach operacyjnych.
+Charakteryzuje się bogatym zestawem bibliotek (pakietów), które umożliwiają wykonywanie różnorodnych analiz i wizualizacji danych [@R].
+
+Na potrzeby tej pracy użyte zostały pakiety zaprojektowane do pracy z szeregami czasowymi oraz modelami ekonometrycznymi, w szczególności:
+
+- `rugarch` -- pakiet, którego celem jest zapewnienie elastycznego i bogatego środowiska do modelowania i testowania modeli GARCH.
+Implementuje różnego rodzaju testy statystyczne i metody tworzące wykresy, a także narzędzia do prognozowania i symulowania wartości modeli
+[@packageRugarch, str. 3],
+- `MSGARCH` -- implementacja kompleksowego zestawu funkcjonalności na potrzeby modelu przełącznikowego Markowa z zastosowaniem modeli GARCH,
+w szczególności dopasowywania, filtrowania, prognoz i symulacji.
+Udostępnia również funkcje związane z obliczaniem wartości zagrożonej $VaR$ oraz _Expected Shortfall_.
+Jest skoncentrowany na modelowaniu wariancji warunkowej, wobec czego nie implementuje równania średniej warunkowej
+[@packageMSGARCHDocs, str. 2],
+- `garchx` -- \AAA{dokończyć}
+
+Podczas badania wykorzystano również różne inne pakiety pozwalające na generowanie wykresów i tabel, a także płynnego przetwarzania danych
+[@packageGgplot2;@packageKnitr].
+
+\AAQ{cytować wszystko, z czego korzystam? pewnie tak}
