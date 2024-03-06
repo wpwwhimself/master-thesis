@@ -10,3 +10,28 @@
 ## Ograniczenia i potencjalne usprawnienia analizy
 
 ## Po co nam to wszystko?
+
+Wyniki niniejszej pracy koncentrują się jedynie na małej części rynku oraz stosunkowo krótkim horyzoncie czasowym.
+Jednak modele zbudowane w przedstawiony sposób i odpowiednio usprawnione mogą mieć zastosowanie w różnych sytuacjach i mogą służyć do prognozowania zróżnicowanych szeregów czasowych.
+
+Sytuacja na świecie zmienia się bardzo dynamicznie.
+Zmiany na tle politycznym, ekonomicznym, a nawet klimatycznym, są nieodzownym jej elementem i będziemy odczuwać ich wpływ przez długi czas.
+Z tego też powodu warto odpowiednio przygotowywać się na takie sytuacje, jak te przedstawione w ramach tej pracy.
+Symulacje indeksów giełdowych pozwalają na maksymalizację zysków oraz minimalizację strat z podjętych inwestycji w obliczu nagłego zachwiania się cyklu koniunkturalnego.
+
+Warto też wspomnieć, że modelowanie szeregów czasowych nie jest wyłącznie domeną ekonomii:
+tego typu dane mogą być również użyte w naukach takich jak:
+
+- meteorologia i klimatologia -- analiza danych meteorologicznych, np. zmian temperatury, intensywności opadów lub ciśnienia atmosferycznego,
+pozwala na lepsze zrozumienie i prognozowanie zmian klimatycznych oraz opracowywanie sprawniejszych modeli pogodowych.
+Jest to pomocne m.in. w rolnictwie, w celu optymalizacji plonów i zapobieganiu klęskom żywiołowym,
+- medycyna i epidemiologia -- jednym z poruszonych w niniejszej pracy tematów jest pandemia wysoce zaraźliwego wirusa i jej wpływ na polski rynek.
+Jednakże można na tego typu wydarzenia spojrzeć również od strony samej epidemii:
+mierzenie liczby zachorowań oraz prognozowanie trendów zdrowotnych pozwala na monitorowanie rozprzestrzeniania się chorób zakaźnych oraz przewidywanie ich przebiegu,
+- inżynieria -- zbieranie danych o stanach maszyn pozwala na przewidywanie ich awaryjności, co pozwala na ulepszanie ich konstrukcji,
+- biologia -- prognozowanie populacji różnych gatunków zwierząt i roślin może być bardziej skuteczne dzięki dokładniejszym narzędziom modelującym ich obecną liczbę.
+Może to pomóc w kontrolowaniu liczebności zagrożonych, ale także inwazyjnych gatunków.
+
+Wszystko to jest oparte na dokładnych i rzetelnych modelach danych.
+Z tego względu rozwój narzędzi służących do dopasowywania modeli, opracowywanie nowych rozwiązań matematycznych i technicznych, a także kształcenie specjalistów w tych dziedzinach,
+przyczyniają się do poprawy jakości życia w różnych jego aspektach, często pozornie niezwiązanych ze sobą.
