@@ -541,7 +541,7 @@ markov <-
 ```
 
 Tak wybrane modele zostały sprawdzone pod kątem istotności ich parametrów: parametry nieistotnie różne od zera zostały z góry ustalone jako równe 0.
-Proces przeprowadzono dla parametrów, dla których można taką operację wykonać. \AAQ{Jak to jest z wymagalnością tych parametrów? Patrz (@packageMSGARCH, str. 8)}
+Proces przeprowadzono dla parametrów, dla których można taką operację wykonać. \AAQ{Jak to jest z wymagalnością tych parametrów? Patrz} [@packageMSGARCH, str. 8]
 Ma to na celu optymalizację modeli i poprawę wyników prognoz wykonywanych na dalszych etapach badania.
 
 ```{r markov-optimizing}
@@ -590,6 +590,7 @@ Ta analiza jednak przyniosła obiecujące rezultaty, mówiące o istotnie niezer
 Wobec tego ostateczne wartości wyestymowanych parametrów wybranych modeli przedstawia Tabela \@ref(tab:markov-post-optimizing),
 a wizualizację prawdopodobieństw zachodzenia poszczególnych reżimów dla każdego z szeregów czasowych prezentuje Rysunek \@ref(fig:markov-plots).
 
+\AAA{mam spore problemy znaleźć modele, które dostatecznie dobrze trzymają reżimy}
 ```{r markov-post-optimizing}
 map(
   tables,
