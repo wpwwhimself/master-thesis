@@ -412,41 +412,70 @@ Aby zastosować model przełącznikowy do tego typu danych, konieczne jest dodat
 Wobec tego szeregami czasowymi wykorzystywanymi do modelowania wariancji warunkowej są **szeregi czasowe reszt z modelu** średniej warunkowej. \AAQ{czy to dobra droga?}
 
 ```{r markov-models}
-models_in_list <- 1
-
-map(
-  tables,
-  function(table_name) {
-    models <- c_read_rds(
-      c_paste_tight(
-        "markov_", table_name
+stats <-
+  map(
+    tables,
+    function(table_name) {
+      models <- c_read_rds(
+        c_paste_tight(
+          "markov_", table_name
+        )
       )
-    )
 
-    markov_models_for_testing_indices %>%
-      mutate(
-        series = tables_full_names[table_name],
-        model1 = markov_models_for_testing_names[Var1],
-        model2 = markov_models_for_testing_names[Var2],
-        aic = map(
-          models,
-          ~ if(class(.x) == "NULL")
-            NA
-          else
-            AIC(.x)
-        ) %>% unlist(),
-        bic = map(
-          models,
-          ~ if(class(.x) == "NULL")
-            NA
-          else BIC(.x)
-        ) %>% unlist()
-      ) %>%
-      arrange(aic) %>%
-      select(-Var1, -Var2) %>%
-      head(models_in_list)
-  }
-) %>%
+      pb <- c_progress_setup(paste("Checking", table_name), length(models))
+
+      calculated <-
+        models %>%
+        map(function(model) {
+          pb$tick()
+
+          if (class(model) == "NULL") {
+            return(list(aic = NA, bic = NA, p1 = NA, p2 = NA))
+          }
+
+          list(
+            aic = AIC(model),
+            bic = BIC(model),
+            p1 = c_markov_get_params(model) %>%
+              filter(param == "P_1_1") %>%
+              pull(Estimate),
+            p2 = c_markov_get_params(model) %>%
+              filter(param == "P_2_1") %>%
+              pull(Estimate)
+          )
+        }) %>%
+        list_transpose()
+
+      markov_models_for_testing_indices %>%
+        mutate(
+          series = tables_full_names[table_name],
+          model1 = markov_models_for_testing_names[Var1],
+          model2 = markov_models_for_testing_names[Var2],
+          aic = calculated$aic,
+          bic = calculated$bic,
+          p1 = calculated$p1,
+          p2 = calculated$p2
+        ) %>%
+        select(-Var1, -Var2)
+    }
+  )
+
+best <-
+  stats %>%
+  map(~ .x %>%
+    mutate(id = seq_len(nrow(.x))) %>%
+    arrange(aic) %>%
+    head(1) %>%
+    pull(id)
+  ) %>%
+  setNames(tables)
+
+seq_along(stats) %>%
+  map(function(stat_id) {
+    stats[[stat_id]][
+      best[[stat_id]],
+    ]
+  }) %>%
   bind_rows() %>%
   c_kable(
     "Najlepsze wartości kryteriów informacyjnych dla modeli Markowa
@@ -456,7 +485,9 @@ map(
       "Model reżimu 1",
       "Model reżimu 2",
       "AIC",
-      "BIC"
+      "BIC",
+      "$p_{11}$",
+      "$p_{21}$"
     )
   ) %>%
   add_header_above(
@@ -465,25 +496,111 @@ map(
 ```
 
 Tabela \@ref(tab:markov-models) zawiera informacje na temat modeli dopasowanych do badanych szeregów czasowych.
-Najlepsze z nich zostały wyłonione na podstawie kryterium informacyjnego Akaike, konsekwentnie z wyborem poczynionym w poprzednim rozdziale.
+Najlepsze z nich zostały wyłonione na podstawie kryterium informacyjnego Akaike (konsekwentnie z wyborem poczynionym w poprzednim rozdziale),
+a także prawdopodobieństw utrzymania się i zmiany reżimu dla każdego z modeli.
+Do wyłonienia optymalnego modelu posłużono się metodą TOPSIS.
 Można zauważyć, że dla reżimu pierwszego (niska wariancja warunkowa) często najlepsze wyniki wykazuje standardowy model GARCH (`sGARCH`),
 natomiast w przypadku drugiego reżimu, gdzie wahania stóp zwrotu są większe, częściej wybierany jest model EGARCH, uwzględniający asymetrię.
 Badanie wykazało też brak konsensusu dotyczącego przyjętego rozkładu innowacji -- każdy z testowanych rozkładów pojawia się minimum dwukrotnie na liście najlepiej dopasowanych modeli.
 
+```{r markov-re-fit}
+markov_chosen_ids <-
+  best %>%
+  map(
+    ~ markov_models_for_testing_indices[.x,] %>%
+      as.numeric()
+  )
+
+# ze względu na błąd przy odczycie .rds, muszę ponownie fitować szeregi
+pb <- c_progress_setup(paste("Refitting"), length(tables))
+markov <-
+  map(
+    tables,
+    function(table_name) {
+      pb$tick()
+
+      series <-
+        arma[[table_name]] %>%
+        residuals()
+
+      CreateSpec(
+        variance.spec = list(model = c(
+          markov_models_for_testing[markov_chosen_ids[[table_name]][1],]$volatility,
+          markov_models_for_testing[markov_chosen_ids[[table_name]][2],]$volatility
+        )),
+        distribution.spec = list(distribution = c(
+          markov_models_for_testing[markov_chosen_ids[[table_name]][1],]$distribution,
+          markov_models_for_testing[markov_chosen_ids[[table_name]][2],]$distribution
+        )),
+        switch.spec = list(do.mix = FALSE, K = NULL)
+      ) %>%
+        FitML(series)
+    }
+  ) %>%
+    setNames(tables)
+```
+
 Tak wybrane modele zostały sprawdzone pod kątem istotności ich parametrów: parametry nieistotnie różne od zera zostały z góry ustalone jako równe 0.
-Proces przeprowadzono dla parametrów, dla których można taką operację wykonać, tj. wszystkich poza $\alpha_1$ w modelu GARCH, z uwagi na konieczność jego wystąpienia.
+Proces przeprowadzono dla parametrów, dla których można taką operację wykonać. \AAQ{Jak to jest z wymagalnością tych parametrów? Patrz (@packageMSGARCH, str. 8)}
 Ma to na celu optymalizację modeli i poprawę wyników prognoz wykonywanych na dalszych etapach badania.
 
 ```{r markov-optimizing}
-markov <- c_read_rds("markov")
+markov <-
+  map(
+    tables,
+    function(table_name) {
+      message("Checking ", tables_full_names[table_name])
+      model <- markov[[table_name]]
 
+      params_to_remove <- c_markov_get_insignif(model)
+
+      if (length(params_to_remove) > 0) {
+        message("- Refitting: found ", paste(params_to_remove, sep = ", "))
+        model <-
+          CreateSpec(
+            variance.spec = list(model = c(
+              markov_models_for_testing[markov_chosen_ids[[table_name]][1],]$volatility,
+              markov_models_for_testing[markov_chosen_ids[[table_name]][2],]$volatility
+            )),
+            distribution.spec = list(distribution = c(
+              markov_models_for_testing[markov_chosen_ids[[table_name]][1],]$distribution,
+              markov_models_for_testing[markov_chosen_ids[[table_name]][2],]$distribution
+            )),
+            switch.spec = list(do.mix = FALSE, K = NULL),
+            constraint.spec = list(
+              fixed = c_list_with_names(
+                params_to_remove,
+                rep(0, length(params_to_remove))
+              )
+            )
+          ) %>%
+            FitML(
+              arma[[table_name]] %>%
+                residuals()
+            )
+      }
+
+      return(model)
+    }
+  ) %>%
+    setNames(tables)
+```
+
+Ta analiza jednak przyniosła obiecujące rezultaty, mówiące o istotnie niezerowych wartościach wszystkich parametrów dla każdego ze sprawdzanych modeli
+Wobec tego ostateczne wartości wyestymowanych parametrów wybranych modeli przedstawia Tabela \@ref(tab:markov-post-optimizing),
+a wizualizację prawdopodobieństw zachodzenia poszczególnych reżimów dla każdego z szeregów czasowych prezentuje Rysunek \@ref(fig:markov-plots).
+
+```{r markov-post-optimizing}
 map(
   tables,
   function(table_name) {
     markov[[table_name]] %>%
-      c_markov_get_params() %>%
+      c_markov_get_params(with_probs = FALSE) %>%
       select(param, Estimate) %>%
-      mutate(series = tables_full_names[table_name])
+      mutate(
+        series = tables_full_names[table_name],
+        model = markov[[table_name]]$spec$name[1] %>% str_replace_all("_", " ")
+      )
   }
 ) %>%
   bind_rows() %>%
@@ -494,51 +611,56 @@ map(
   relocate(nu_1, xi_1, .before = alpha0_2) %>%
   c_kable(
     "Parametry modeli Markowa dopasowanych do stóp zwrotu badanych spółek",
-    col.names = c(
-      "Szereg czas.",
-      "$\\omega$",
-      "$\\alpha_1$",
-      "$\\alpha_2$",
-      "$\\beta$",
-      "$\\nu$",
-      "$\\xi$",
-      "$\\omega$",
-      "$\\alpha_1$",
-      "$\\alpha_2$",
-      "$\\beta$",
-      "$\\nu$"
-    ),
+    # col.names = c(
+    #   "Szereg czas.",
+    #   "$\\omega$",
+    #   "$\\alpha_1$",
+    #   "$\\alpha_2$",
+    #   "$\\beta$",
+    #   "$\\nu$",
+    #   "$\\xi$",
+    #   "$\\omega$",
+    #   "$\\alpha_1$",
+    #   "$\\alpha_2$",
+    #   "$\\beta$",
+    #   "$\\nu$"
+    # ),
+    col.names = seq_along(.),
     digits = 2
   ) %>%
   add_header_above(c(
-    " " = 1,
+    " " = 2,
     "Reżim 1" = 6,
     "Reżim 2" = 5
   ))
 ```
 
-Jedynym modelem, który potrzebowałby takiej operacji okazał się być model dla szeregu czasowego stóp zwrotu indeksu WIG20,
-gdzie wyestymowane wartości parametrów $\omega$ dla obu reżimów były nieistotnie różne od zera.
-Jednakże po zablokowaniu ich wartości do 0 i ponownym procesie dopasowania modelu, wzrosły wartości jego kryteriów informacyjnych.
-\AAQ{lepsze gorsze kryteria czy nieistotne parametry w modelu? Na razie zakładam, że to drugie}
-Wobec tego ostateczne wartości wyestymowanych parametrów wybranych modeli przedstawia Tabela \@ref(tab:markov-optimizing).
-
-\AAA{ten wykres się jeszcze przyda}
-
-```{r markov, fig.cap="Dopasowanie modelu Markowa do danych WIG 20", fig.height=4}
-fit <- FitML(
-  CreateSpec(
-    variance.spec = list(model = c("sGARCH", "sGARCH")),
-    distribution.spec = list(distribution = c("norm", "norm")),
-    switch.spec = list(do.mix = FALSE, K = NULL)
-  ),
-  wig20 %>% pull(return) %>% na.omit()
-)
-
-c_markov_plot(
-  wig20 %>% select(Data, return),
-  State(fit)$SmoothProb[, 1, 2]
-)
+```{r markov-plots, fig.cap="Dopasowanie modelu Markowa do danych WIG 20", fig.height=8, fig.width=6.5}
+map(
+  tables,
+  function(table_name) {
+    get(table_name) %>%
+      select(Data, return) %>%
+      mutate(
+        return = abs(return) / max(abs(return), na.rm = TRUE),
+        series = tables_full_names[table_name],
+        probs = State(markov[[table_name]])$SmoothProb[, 1, 2]
+      )
+  }
+) %>%
+  bind_rows() %>%
+  ggplot(aes(Data)) +
+    geom_line(aes(y = return), col = "black", alpha = 0.25) +
+    geom_area(aes(y = probs), fill = primary_color, alpha = 0.5) +
+    labs(
+      x = "Data",
+      y = "Prawdopodobieństwo reżimu 2"
+    ) +
+      scale_x_date(
+      date_breaks = "6 months",
+      date_labels = "%m.%y"
+    ) +
+facet_wrap(vars(series), ncol = 1)
 ```
 
 ### GARCHX

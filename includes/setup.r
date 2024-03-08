@@ -9,6 +9,7 @@ library(progress)
 # statistics
 library(moments)
 library(forecast)
+library(topsis)
 
 # models
 library(rugarch)
@@ -115,47 +116,37 @@ c_list_with_names <- function(names, values) {
   )
 }
 
+c_markov_get_model_name <- function(model) {
+  c(
+    model$spec$name[1] %>% str_split_1("_"),
+    model$spec$name[2] %>% str_split_1("_")
+  )
+}
+
 c_markov_get_insignif <- function(model, pull = TRUE) {
   output <-
     model$Inference$MatCoef %>%
     as_tibble(rownames = "param") %>%
     filter(
       `Pr(>|t|)` >= 0.05,
-      substr(param, 1, 6) != "alpha1",
-      substr(param, 1, 1) != "P"
-    )
+      str_starts(param, "P_", negate = TRUE),
+    ) %>%
+    mutate(
+      is_unfixable = str_replace(param, "^(.*)_\\d$", "\\1") %in% c("alpha0", "alpha1", "alpha2")
+    ) %>%
+    filter(!is_unfixable)
 
   if (pull) return(output %>% pull(param))
   else return(output)
 }
 
-c_markov_get_params <- function(model) {
-  model$Inference$MatCoef %>%
-    as_tibble(rownames = "param") %>%
-    filter(
-      substr(param, 1, 1) != "P"
-    )
-}
+c_markov_get_params <- function(model, with_probs = TRUE) {
+  output <-
+    model$Inference$MatCoef %>%
+    as_tibble(rownames = "param")
 
-c_markov_plot <- function(data, probs) {
-  data %>%
-    mutate(
-      probs = probs,
-      return = abs(return) / max(abs(return), na.rm = TRUE)
-    ) %>%
-    as_tibble() %>%
-    select(Data, return, probs) %>%
-    ggplot(aes(Data)) +
-      geom_line(aes(y = return), col = "black", alpha = 0.25) +
-      geom_area(aes(y = probs), fill = primary_color, alpha = 0.5) +
-      labs(
-        x = "Data",
-        y = "Prawdopodobieństwo reżimu 2"
-      ) +
-        scale_x_date(
-        date_breaks = "6 months",
-        date_labels = "%m.%y"
-      )
+  if (with_probs) return(output)
+  else return(output %>% filter(str_starts(param, "P_", negate = TRUE))) 
 }
 
 c_paste_tight <- function(...) {
