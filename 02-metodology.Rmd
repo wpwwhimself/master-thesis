@@ -58,8 +58,6 @@ Do przeprowadzania badania wykorzystane zostaną dane o cenach akcji zebrane z s
 Jest to jeden z najbardziej znanych serwisów internetowych zbierających dane finansowe spółek notowanych nie tylko na _Giełdzie Papierów Wartościowych_, ale również na innych giełdach światowych, m.in. amerykański indeks _S&P US_.
 Można tam znaleźć również informacje o kursach walut, cenach towarów i inne dane finansowe.
 
-### Wstępna inspekcja danych
-
 Punktem wyjścia będzie cena zamknięcia akcji.
 Aby zapewnić stacjonarność tego szeregu czasowego, obliczane są **logarytmiczne stopy zwrotu** według wzoru:
 $$
