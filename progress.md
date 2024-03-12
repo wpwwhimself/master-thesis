@@ -48,8 +48,13 @@
 - [ ] porównanie kryteriów
 - [ ] wybór modeli
 - [ ] wykresy reżimów
+- [ ] showcase parametrów modeli
 #### garchx
-- [ ] wymyślić jakie szeregi externali wykorzystać
+- [x] wymyślić jakie szeregi externali wykorzystać
+- [x] dopasowanie GARCH
+- [ ] porównanie kryteriów
+- [ ] wybór modeli
+- [ ] showcase parametrów modeli
 ### predykcje
 - [ ] horyzont predykcji
 - [ ] wykonać predykcje

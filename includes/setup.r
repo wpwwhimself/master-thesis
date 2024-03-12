@@ -192,7 +192,7 @@ c_save_rds <- function(data, name) {
 ################# configurations #################
 
 # models
-markov_models_for_testing <-
+models_for_testing <-
   list(
     volatility = c("sGARCH", "eGARCH", "gjrGARCH"),
     distribution = c("norm", "ged", "std", "sstd")
@@ -201,19 +201,29 @@ markov_models_for_testing <-
   split(seq_len(nrow(.))) %>%
   bind_rows() %>%
   as_tibble()
-markov_models_for_testing_names <-
-  markov_models_for_testing %>%
+models_for_testing_names <-
+  models_for_testing %>%
   mutate(model_name = c_paste_tight(volatility, " (", distribution, ")")) %>%
   select(model_name) %>%
   c() %>%
   unlist() %>%
   unname()
 markov_models_for_testing_indices <-
-  markov_models_for_testing_names %>%
+  models_for_testing_names %>%
   seq_along() %>%
   replicate(2, ., simplify = FALSE) %>%
   expand.grid() %>%
   as_tibble()
+
+garchx_externals <-
+  wig20 %>%
+  as_tibble() %>%
+  mutate(
+    is_crisis = Data %within% interval(ymd("2020-03-04"), ymd("2021-01-01"))
+      | Data %within% interval(ymd("2022-02-24"), ymd("2022-06-01"))
+  ) %>%
+  pull(is_crisis) %>%
+  as.numeric()
 
 # plotting
 theme_set(theme_minimal())

@@ -447,8 +447,8 @@ stats <-
       markov_models_for_testing_indices %>%
         mutate(
           series = tables_full_names[table_name],
-          model1 = markov_models_for_testing_names[Var1],
-          model2 = markov_models_for_testing_names[Var2],
+          model1 = models_for_testing_names[Var1],
+          model2 = models_for_testing_names[Var2],
           aic = calculated$aic,
           bic = calculated$bic,
           p1 = calculated$p1,
@@ -523,12 +523,12 @@ markov <-
 
       CreateSpec(
         variance.spec = list(model = c(
-          markov_models_for_testing[markov_chosen_ids[[table_name]][1],]$volatility,
-          markov_models_for_testing[markov_chosen_ids[[table_name]][2],]$volatility
+          models_for_testing[markov_chosen_ids[[table_name]][1],]$volatility,
+          models_for_testing[markov_chosen_ids[[table_name]][2],]$volatility
         )),
         distribution.spec = list(distribution = c(
-          markov_models_for_testing[markov_chosen_ids[[table_name]][1],]$distribution,
-          markov_models_for_testing[markov_chosen_ids[[table_name]][2],]$distribution
+          models_for_testing[markov_chosen_ids[[table_name]][1],]$distribution,
+          models_for_testing[markov_chosen_ids[[table_name]][2],]$distribution
         )),
         switch.spec = list(do.mix = FALSE, K = NULL)
       ) %>%
@@ -557,12 +557,12 @@ markov <-
         model <-
           CreateSpec(
             variance.spec = list(model = c(
-              markov_models_for_testing[markov_chosen_ids[[table_name]][1],]$volatility,
-              markov_models_for_testing[markov_chosen_ids[[table_name]][2],]$volatility
+              models_for_testing[markov_chosen_ids[[table_name]][1],]$volatility,
+              models_for_testing[markov_chosen_ids[[table_name]][2],]$volatility
             )),
             distribution.spec = list(distribution = c(
-              markov_models_for_testing[markov_chosen_ids[[table_name]][1],]$distribution,
-              markov_models_for_testing[markov_chosen_ids[[table_name]][2],]$distribution
+              models_for_testing[markov_chosen_ids[[table_name]][1],]$distribution,
+              models_for_testing[markov_chosen_ids[[table_name]][2],]$distribution
             )),
             switch.spec = list(do.mix = FALSE, K = NULL),
             constraint.spec = list(
@@ -664,18 +664,93 @@ facet_wrap(vars(series), ncol = 1)
 
 ### GARCHX
 
-W celu dopasowania modelu GARCHX koniecznym jest przygotowanie dodatkowych zmiennych, mających na celu objaśnienie wpływu czynników zewnętrznych na zmiennośc wariancji warunkowej.
+W celu dopasowania modelu GARCHX koniecznym jest przygotowanie dodatkowych zmiennych, mających na celu objaśnienie wpływu czynników zewnętrznych na zmienność wariancji warunkowej.
+Ponieważ badanie rozważa wpływ dwóch konkretnych wydarzeń na polską gospodarkę, za zmienną objaśniającą została przyjęta zmienna indykatorowa, wyróżniająca istotne okresy z nimi związane.
+Wielkość interwałów czasowych została określona w oparciu o Rysunek \@ref(fig:returns-plot).
+Wyróżnionymi okresami są:
 
-> - na podstawie czego mógłbym to zbudować?
-> - może dla każdej branży coś innego dodatkowego? jakieś specyficzne wydarzenia?
+- 4.03.2020-1.01.2021 r. -- wybuch pandemii koronawirusa w Polsce,
+- 24.02-1.06.2022 r. -- początek inwazji rosyjskiej na Ukrainie.
 
-Podobnie jak w poprzednim podrozdziale, dla każdego z badanych szeregów czasowych dopasowano model GARCHX z uwzględnieniem dodatkowych zmiennych.
+Podobnie jak w poprzednim podrozdziale, dla każdego z badanych szeregów czasowych dopasowano model GARCH z uwzględnieniem dodatkowych zmiennych
+-- pod uwagę zostały wzięte te same modele, jak w poprzednim etapie badania, tj. GARCH, EGARCH oraz GJR, z różnymi rozkładami innowacji: normalnym, GED, Studenta i skośnym Studenta.
 Następnie, na podstawie kryteriów informacyjnych Akaike i Schwarza, a także instotności parametrów modelu, wyłonione zostały te najlepiej dopasowane.
-Dla nich sporządzone zostały odpowiednie wizualizacje.
 
-Pakietem wykorzystanym do tej części badań jest pakiet
+Pakietem wykorzystanym do tej części badań jest pakiet `rugarch` [@packageRugarch].
 
-> `garchx`? chyba ten jest najpopularniejszy
+```{r garchx-models}
+stats <-
+  map(
+    tables,
+    function(table_name) {
+      models <- c_read_rds(
+        c_paste_tight(
+          "garchx_", table_name
+        )
+      )
+
+      pb <- c_progress_setup(paste("Checking", table_name), length(models))
+
+      calculated <-
+        models %>%
+        map(function(model) {
+          pb$tick()
+
+          if (class(model) == "NULL") {
+            return(list(aic = NA, bic = NA))
+          }
+
+          (infocriteria(model) * length(fitted(model))) %>%
+            enframe() %>%
+            slice(1:2) %>%
+            deframe() %>%
+            array_branch() %>%
+            setNames(c("aic", "bic"))
+        }) %>%
+        list_transpose()
+
+      tibble(
+        series = tables_full_names[table_name],
+        model = models_for_testing_names,
+        aic = calculated$aic,
+        bic = calculated$bic
+      )
+    }
+  )
+
+best <-
+  stats %>%
+  map(~ .x %>%
+    mutate(id = seq_len(nrow(.x))) %>%
+    arrange(aic) %>%
+    head(1) %>%
+    pull(id)
+  ) %>%
+  setNames(tables)
+
+seq_along(stats) %>%
+  map(function(stat_id) {
+    stats[[stat_id]][
+      best[[stat_id]],
+    ]
+  }) %>%
+  bind_rows() %>%
+  c_kable(
+    "Najlepsze wartości kryteriów informacyjnych dla modeli GARCHX
+    dopasowanych do stóp zwrotu badanych spółek",
+    col.names = c(
+      "Szereg czasowy",
+      "Model",
+      "AIC",
+      "BIC"
+    )
+  ) %>%
+  add_header_above(
+    c(" " = 3, "Kryterium informacyjne" = 2)
+  )
+```
+
+Tabela \@ref(tab:garchx-models) przedstawia wyniki dopasowania modeli do danych spółek.
 
 ## Predykcje
 
