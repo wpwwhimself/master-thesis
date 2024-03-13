@@ -7,9 +7,6 @@
 
 ## Cel i znaczenie pracy magisterskiej
 
-> Tutaj opiszę temat -- po co piszę o notowaniach w dobie kryzysów, czemu to w ogóle jest ciekawe
-> i jakie potencjalne ciekawe rzeczy można z tego wyciągnąć
-
 W historii ludzkości można odnotować wiele kryzysów, które dotknęły ogromnej liczby ludzi.
 Wydarzenia te najczęściej miały dotkliwe konsekwencje finansowe, doprowadzając do biedy i&nbsp;bankructwa całe państwa.
 W annałach historii można się doszukiwać wielu takich sytuacji, a ich przykładami mogą być:
@@ -35,8 +32,26 @@ Tym sposobem największy bank inwestycyjny Stanów Zjednoczonych ogłosił upad�
 
 Na przestrzeni ostatnich lat na światem wstrząsnęły również kolejne dramatyczne wydarzenia, mianowicie:
 
-- __epidemia SARS-CoV19__ w listopadzie 2019 -- \AAA{kilka słów na temat covidu},
-- __inwazja Rosji na Ukrainę__ w lutym 2022 -- \AAA{kilka słów na temat wojny}.
+- __epidemia SARS-CoV-2__ w listopadzie 2019 -- pandemia wywołana chorobą _COVID-19_ jest powodowana przez koronawirusa _SARS-CoV-2_,
+a pierwszy zidentyfikowany przypadek zachorowania na tę chorobę został zidentyfikowany w grudniu 2019 roku w Wuhan (Chiny).
+Z uwagi na wysoką zaraźliwość wirusa i jego wariantów, przypadki zarażeń zaczęły się szybko mnożyć, co doprowadziło do ogłoszenia pandemii tej choroby 30 stycznia 2020 roku.
+Pacjenci z potwierdzonym zakażeniem wirusem doświadczają objawów chorobowych związanych z układem oddechowym, tj. kaszel, duszności.
+Dodatkowo zarażeni wykazywali oznaki osłabienia, nagłej utraty węchu i smaku oraz wielu innych dolegliwości.
+Szczególnie dotkliwie choroba dotyka osoby starsze, o już osłabionym układzie odpornościowym, co jest jednym z istotnych czynników wysokiej jej śmiertelności [@covidMP].
+Pandemia przyniosła znaczne skutki socjoekonomiczne, w tym szczególnie największą recesję od czasów *Great Depression* [@covidIMF].
+Do 12 marca 2024 roku pandemia spowodowała ponad 7 milionów zgonów, będąc piątą co do wielkości najbardziej śmiertelną chorobą w historii.
+[@covidWiki]
+,
+
+- __inwazja Rosji na Ukrainę__ w lutym 2022 -- eskalacja konfliktu rosyjsko-ukraińskiego, zapoczątkowanego w lutym 2014 roku poprzez aneksję Krymu oraz wojnę w Donbasie [@ukraineGenesisWiki].
+w ciągu kolejnych lat nastąpiła eskalacja wojny, w konsekwencji której Rosja ogłosiła _specjalną operację wojskową_ [@ukraineTASS] mającą na celu wojnę błyskawiczną i przejęcie kontroli nad państwem i rządem ukraińskim.
+Operacja w ciągu kolejnych miesięcy przerodziła się w brutalną wojnę dzięki silnemu oporowi wojsk ukraińskich oraz wsparciu państw europejskich oraz NATO.
+W wyniku działań wojskowych Ukrainę opuściło ponad 5 milionów osób, które szukały azylu m.in. w Polsce, Rumunii, Rosji i na Węgrzech.
+Natychmiastowym skutkiem inwazji stały się również sankcje gospodarcze nałożone przez świat na Federację Rosyjską, co spowodowało gwałtowny spadek wartości rubla rosyjskiego [@ukraineMoney].
+Rosja w odpowiedzi zakazała swoim rezydentom przelewów walut obcych na konta zagraniczne, a także wymusiła płatności w rublach za surowce sprowadzane z Rosji, np. gaz.
+Również gospodarka ogólnoświatowa doświadczyła kryzysu, powodując wzrost cen ropy i przenicy.
+[@ukraineWiki]
+.
 
 Historia pokazuje, że zdarzenia dotykające wielu ludzi nie pozostają obojętne z perspektywy świata ekonomii.
 Już wyżej wspomniane kryzysy miały znaczące podłoże finansowe i nie inaczej jest w przypadku dwóch najnowszych wydarzeń.
