@@ -30,3 +30,14 @@ returns_split <-
     mutate(data = map(data, ~.x %>% pull(return))) %>%
     deframe()
 # names(returns_split) <- tables
+
+#### externals ####
+garchx_externals <-
+  wig20 %>%
+  as_tibble() %>%
+  mutate(
+    is_crisis = Data %within% interval(ymd("2020-03-04"), ymd("2021-01-01"))
+      | Data %within% interval(ymd("2022-02-24"), ymd("2022-06-01"))
+  ) %>%
+  pull(is_crisis) %>%
+  as.numeric()

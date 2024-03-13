@@ -215,16 +215,6 @@ markov_models_for_testing_indices <-
   expand.grid() %>%
   as_tibble()
 
-garchx_externals <-
-  wig20 %>%
-  as_tibble() %>%
-  mutate(
-    is_crisis = Data %within% interval(ymd("2020-03-04"), ymd("2021-01-01"))
-      | Data %within% interval(ymd("2022-02-24"), ymd("2022-06-01"))
-  ) %>%
-  pull(is_crisis) %>%
-  as.numeric()
-
 # plotting
 theme_set(theme_minimal())
 theme_fill_uep <- function(...) scale_fill_brewer(palette = "Greens", ...)
