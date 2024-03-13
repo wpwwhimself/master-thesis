@@ -5,8 +5,8 @@
 ## Wstęp
 ### cel i znaczenie pracy
 - [x] rys historyczny
-- [ ] wydarzenia będące tłem badania
-- [ ] podsumowanie
+- [x] wydarzenia będące tłem badania
+- [x] podsumowanie
 ### modele rynków finansowych
 - [ ] rynek finansowy
     - [ ] definicja rynku finansowego
