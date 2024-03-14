@@ -208,12 +208,6 @@ models_for_testing_names <-
   c() %>%
   unlist() %>%
   unname()
-markov_models_for_testing_indices <-
-  models_for_testing_names %>%
-  seq_along() %>%
-  replicate(2, ., simplify = FALSE) %>%
-  expand.grid() %>%
-  as_tibble()
 
 # plotting
 theme_set(theme_minimal())

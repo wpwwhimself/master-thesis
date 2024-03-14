@@ -397,12 +397,15 @@ możliwym jest przejście do dalszej analizy uwzględniającej dopasowanie model
 ### Model przełącznikowy Markowa
 
 W testach wzięto pod uwagę modele wariancji warunkowej GARCH, EGARCH oraz GJR, a&nbsp;także różne rozkłady innowacji: normalny, GED, Studenta oraz skośny Studenta.
-Daje to 12 kombinacji dla każdego z reżimów, wobec czego w toku badań przetestowano dopasowanie 144 kombinacji modeli.
-Zostały one przeanalizowane pod kątem kryteriów informacyjnych Akaike oraz Schwarza, a także pod względem istotności parametrów.
+Daje to 12 różnych modeli, które zostały przeanalizowane pod kątem kryteriów informacyjnych Akaike oraz Schwarza, a także pod względem istotności parametrów.
 Dla najlepiej dopasowanych modeli przygotowano wizualizacje prawdopodobieństwa przebywania szeregu czasowego w danym reżimie.
 
 W celu dopasowania modelu Markowa do danych zastosowano pakiet `MSGARCH` [@packageMSGARCH].
 Oferuje on szeroki wachlarz modeli wariancji warunkowej, w tym dopasowanie odrębnych modeli do poszczególnych reżimów.
+
+```{r}
+#### see calculations.r ####
+```
 
 Istotnym problemem, jaki należy rozwiązać w przypadku bieżącego badania i wykorzystania wyżej wymienionego pakietu, jest fakt,
 że nie obsługuje on specyfikacji modelu średniej warunkowej.
@@ -444,17 +447,14 @@ stats <-
         }) %>%
         list_transpose()
 
-      markov_models_for_testing_indices %>%
-        mutate(
-          series = tables_full_names[table_name],
-          model1 = models_for_testing_names[Var1],
-          model2 = models_for_testing_names[Var2],
-          aic = calculated$aic,
-          bic = calculated$bic,
-          p1 = calculated$p1,
-          p2 = calculated$p2
-        ) %>%
-        select(-Var1, -Var2)
+      tibble(
+        series = tables_full_names[table_name],
+        model = models_for_testing_names,
+        aic = calculated$aic,
+        bic = calculated$bic,
+        p1 = calculated$p1,
+        p2 = calculated$p2
+      )
     }
   )
 
@@ -480,8 +480,7 @@ seq_along(stats) %>%
     dopasowanych do stóp zwrotu badanych spółek",
     col.names = c(
       "Szereg czasowy",
-      "Model reżimu 1",
-      "Model reżimu 2",
+      "Model",
       "AIC",
       "BIC",
       "$p_{11}$",
@@ -489,26 +488,16 @@ seq_along(stats) %>%
     )
   ) %>%
   add_header_above(
-    c(" " = 3, "Kryterium informacyjne" = 2)
+    c(" " = 2, "Kryterium informacyjne" = 2, "Prawdop. reżimu" = 2)
   )
 ```
 
 Tabela \@ref(tab:markov-models) zawiera informacje na temat modeli dopasowanych do badanych szeregów czasowych.
-Najlepsze z nich zostały wyłonione na podstawie kryterium informacyjnego Akaike (konsekwentnie z wyborem poczynionym w poprzednim rozdziale),
-a także prawdopodobieństw utrzymania się i zmiany reżimu dla każdego z modeli.
-Do wyłonienia optymalnego modelu posłużono się metodą TOPSIS.
-Można zauważyć, że dla reżimu pierwszego (niska wariancja warunkowa) często najlepsze wyniki wykazuje standardowy model GARCH (`sGARCH`),
-natomiast w przypadku drugiego reżimu, gdzie wahania stóp zwrotu są większe, częściej wybierany jest model EGARCH, uwzględniający asymetrię.
-Badanie wykazało też brak konsensusu dotyczącego przyjętego rozkładu innowacji -- każdy z testowanych rozkładów pojawia się minimum dwukrotnie na liście najlepiej dopasowanych modeli.
+Najlepsze z nich zostały wyłonione na podstawie kryterium informacyjnego Akaike (konsekwentnie z wyborem poczynionym w poprzednim rozdziale).
+Można zauważyć, że najlepsze wyniki wykazuje model EGARCH (`eGARCH`), uwzględniający asymetrię wartości szeregu czasowego.
+Badanie wykazało też brak konsensusu dotyczącego przyjętego rozkładu innowacji -- każdy z testowanych rozkładów pojawia się na liście najlepiej dopasowanych modeli.
 
 ```{r markov-re-fit}
-markov_chosen_ids <-
-  best %>%
-  map(
-    ~ markov_models_for_testing_indices[.x,] %>%
-      as.numeric()
-  )
-
 # ze względu na błąd przy odczycie .rds, muszę ponownie fitować szeregi
 pb <- c_progress_setup(paste("Refitting"), length(tables))
 markov <-
@@ -522,13 +511,13 @@ markov <-
         residuals()
 
       CreateSpec(
-        variance.spec = list(model = c(
-          models_for_testing[markov_chosen_ids[[table_name]][1],]$volatility,
-          models_for_testing[markov_chosen_ids[[table_name]][2],]$volatility
+        variance.spec = list(model = rep(
+          models_for_testing[best[[table_name]],]$volatility,
+          2
         )),
-        distribution.spec = list(distribution = c(
-          models_for_testing[markov_chosen_ids[[table_name]][1],]$distribution,
-          models_for_testing[markov_chosen_ids[[table_name]][2],]$distribution
+        distribution.spec = list(distribution = rep(
+          models_for_testing[best[[table_name]],]$distribution,
+          2
         )),
         switch.spec = list(do.mix = FALSE, K = NULL)
       ) %>%
@@ -539,6 +528,9 @@ markov <-
 ```
 
 Tak wybrane modele zostały sprawdzone pod kątem istotności ich parametrów: parametry nieistotnie różne od zera zostały z góry ustalone jako równe 0.
+
+\AAA{nieprawda, bo ebs refittowało dla beta2, a raczej nie powinno}
+
 Proces przeprowadzono dla parametrów, dla których można taką operację wykonać. \AAQ{Jak to jest z wymagalnością tych parametrów? Patrz} [@packageMSGARCH, str. 8]
 Ma to na celu optymalizację modeli i poprawę wyników prognoz wykonywanych na dalszych etapach badania.
 
@@ -556,13 +548,13 @@ markov <-
         message("- Refitting: found ", paste(params_to_remove, sep = ", "))
         model <-
           CreateSpec(
-            variance.spec = list(model = c(
-              models_for_testing[markov_chosen_ids[[table_name]][1],]$volatility,
-              models_for_testing[markov_chosen_ids[[table_name]][2],]$volatility
+            variance.spec = list(model = rep(
+              models_for_testing[best[[table_name]],]$volatility,
+              2
             )),
-            distribution.spec = list(distribution = c(
-              models_for_testing[markov_chosen_ids[[table_name]][1],]$distribution,
-              models_for_testing[markov_chosen_ids[[table_name]][2],]$distribution
+            distribution.spec = list(distribution = rep(
+              models_for_testing[best[[table_name]],]$distribution,
+              2
             )),
             switch.spec = list(do.mix = FALSE, K = NULL),
             constraint.spec = list(
@@ -590,6 +582,9 @@ a wizualizację prawdopodobieństw zachodzenia poszczególnych reżimów dla ka�
 
 \AAA{mam spore problemy znaleźć modele, które dostatecznie dobrze trzymają reżimy}
 ```{r markov-post-optimizing}
+group_names <- rep(2, length(tables))
+names(group_names) <- tables_full_names
+
 map(
   tables,
   function(table_name) {
@@ -603,38 +598,36 @@ map(
   }
 ) %>%
   bind_rows() %>%
+  separate_wider_delim(param, "_", names = c("param", "regime")) %>%
   pivot_wider(
     names_from = param,
     values_from = Estimate
   ) %>%
-  relocate(nu_1, xi_1, .before = alpha0_2) %>%
+  relocate(regime, .before = alpha0) %>%
+  select(-series) %>%
   c_kable(
     "Parametry modeli Markowa dopasowanych do stóp zwrotu badanych spółek",
-    # col.names = c(
-    #   "Szereg czas.",
-    #   "$\\omega$",
-    #   "$\\alpha_1$",
-    #   "$\\alpha_2$",
-    #   "$\\beta$",
-    #   "$\\nu$",
-    #   "$\\xi$",
-    #   "$\\omega$",
-    #   "$\\alpha_1$",
-    #   "$\\alpha_2$",
-    #   "$\\beta$",
-    #   "$\\nu$"
-    # ),
-    col.names = seq_along(.),
+    col.names = c(
+      "Model",
+      "Reżim",
+      "$\\omega$",
+      "$\\alpha_1$",
+      "$\\alpha_2$",
+      "$\\beta$",
+      "$\\nu$",
+      "$\\xi$"
+    ),
     digits = 2
   ) %>%
+  pack_rows(index = group_names) %>%
   add_header_above(c(
     " " = 2,
-    "Reżim 1" = 6,
-    "Reżim 2" = 5
+    "Parametry modelu" = 4,
+    "Parametry rozkł. inn." = 2
   ))
 ```
 
-```{r markov-plots, fig.cap="Dopasowanie modelu Markowa do danych WIG 20", fig.height=8, fig.width=6.5}
+```{r markov-plots, fig.cap="Prawdopodobieństwa obecności szeregów czasowych w odpowiednich reżimach dla modelu Markowa", fig.height=8, fig.width=6.5}
 map(
   tables,
   function(table_name) {
@@ -755,9 +748,3 @@ Tabela \@ref(tab:garchx-models) przedstawia wyniki dopasowania modeli do danych 
 ## Predykcje
 
 Posiadając odpowiednie modele dopasowane do danych, możliwym jest wykonanie prognoz ex-post i porównanie ich z rzeczywistym kształtowaniem się wartości odpowiadających indeksów giełdowych.
-\AAA{jak daleka ta prognoza?}
-
-> - prognozy stóp zwrotu
-> - reverse-engineering tych stóp na wartości akcji
-> - wykresy dla każdego indeksu
- 

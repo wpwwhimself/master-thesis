@@ -22,7 +22,7 @@ arma <- c_read_rds("arma_aic")
 for (table_name in tables) {
   pb <- c_progress_setup(
     paste("Fitting", table_name),
-    nrow(markov_models_for_testing_indices)
+    nrow(models_for_testing)
   )
 
   series <-
@@ -30,20 +30,14 @@ for (table_name in tables) {
     residuals()
 
   pmap(
-    markov_models_for_testing_indices,
+    models_for_testing,
     possibly(
-      function(Var1, Var2) {
+      function(volatility, distribution) {
         pb$tick()
 
         CreateSpec(
-          variance.spec = list(model = c(
-            models_for_testing[Var1, ]$volatility,
-            models_for_testing[Var2, ]$volatility
-          )),
-          distribution.spec = list(distribution = c(
-            models_for_testing[Var1, ]$distribution,
-            models_for_testing[Var2, ]$distribution
-          )),
+          variance.spec = list(model = rep(volatility, 2)),
+          distribution.spec = list(distribution = rep(distribution, 2)),
           switch.spec = list(do.mix = FALSE, K = NULL)
         ) %>%
           FitML(series)

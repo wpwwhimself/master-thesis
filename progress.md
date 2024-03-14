@@ -51,6 +51,7 @@
 - [x] dopasowanie różnych GARCH
 - [ ] porównanie kryteriów
 - [ ] wybór modeli
+    - [ ] jak to jest z tą wymagalnością parametrów?
 - [ ] wykresy reżimów
 - [ ] showcase parametrów modeli
 #### garchx
