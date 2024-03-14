@@ -746,7 +746,7 @@ seq_along(stats) %>%
     )
   ) %>%
   add_header_above(
-    c(" " = 3, "Kryterium informacyjne" = 2)
+    c(" " = 2, "Kryterium informacyjne" = 2)
   )
 ```
 
