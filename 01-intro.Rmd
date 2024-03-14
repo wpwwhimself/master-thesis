@@ -66,6 +66,8 @@ Informacje te mogą posłużyć do dalszego konstruowania modeli mających za za
 
 ## Modele rynków finansowych
 
+### Rynek finansowy
+
 Pojęcie **rynku finansowego** nie jest jednoznacznie określone i w różnych źródłach można przytoczyć różne jego formy.
 Według jednej z nich rynek finansowy jest "miejscem zawierania transakcji mających za przedmiot szeroko rozumiany kapitał finansowy".
 Z uwagi jednak na globalną naturę gospodarki we współczesnym świecie, trudno powiązać rynek finansowy z konkretnym miejscem.
@@ -75,12 +77,6 @@ Z tego też względu można powiedzieć o rynku finansowym, że jest to "ogół 
 
 Transakcje te zawierane są za pomocą **instrumentów finansowych**. Pozwalają one na transfer, wymianę lub przechowywanie środków pieniężnych [@ifirmaInstrumenty].
 \AAA{Dokończyć}
-
-### Rynek finansowy
-
-\AAA{definicja rynku finansowego, na podstawie odp. publikacji}
-\AAA{opis tego, co się dzieje na rynku finansowym}
-\AAA{podział rynku?}
 
 ### Modelowanie rynków finansowych
 

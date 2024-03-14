@@ -7,9 +7,13 @@
 - [x] rys historyczny
 - [x] wydarzenia będące tłem badania
 - [x] podsumowanie
+- [ ] zacytować jakieś badania powiązujące te cosie z ekonomią
 ### modele rynków finansowych
 - [ ] rynek finansowy
-    - [ ] definicja rynku finansowego
+    - [x] definicja rynku finansowego
+    - [ ] definicja instrumentów finansowych
+        - [ ] co to są akcje
+        - [ ] co to są indeksy giełdowe
     - [ ] opis tego, co się dzieje na rynku finansowym
     - [ ] podział rynku?
 - [ ] modelowanie rynków finansowych
