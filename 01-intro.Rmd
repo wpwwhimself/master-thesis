@@ -108,6 +108,8 @@ Wartości kryterium bliższe 0 informują o lepszej jakości dopasowania modelu.
 
 ### Modele z rodziny GARCH
 
+\AAA{do dokończenia}
+
 \begin{gather*}
 ARCH(q) \to
   \sigma_t^2 =
@@ -144,6 +146,8 @@ EGARCH(p, q) \to
 
 ### Model przełącznikowy Markowa
 
+\AAA{do ustalenia, czy taka budowa podrozdziałów ma sens}
+
 ### Rozważane rozkłady innowacji
 
 > - normalny -- $\mu$ średnia, $\sigma^2$ wariancja
@@ -153,8 +157,8 @@ EGARCH(p, q) \to
 
 ## Przegląd literatury
 
-> self-explainatory;
-> literatura modeli, ale też literatura na temat innych dopasowań modeli do wahających się danych;
+> - literatura modeli, ale też literatura na temat innych dopasowań modeli do wahających się danych;
+> - do ustalenia, czy ten rozdział ma sens
 
 ## Zastosowane pakiety środowiska R
 
