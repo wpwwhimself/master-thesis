@@ -183,7 +183,7 @@ W kolejnych podrozdziałach znajduje się opis przeprowadzonych badań oraz zest
 
 Celem dopasowania modelu średniej warunkowej do badanych danych przygotowano korelogramy ilustrujące funkcje ACF i PACF, przedstawione na Rysunku \@ref(fig:arma-acfs).
 
-```{r arma-acfs, fig.height=8, fig.cap="Korelogramy przedstawiające funkcje ACF i PACF dla badanych szeregów czasowych oraz ich kwadratów"}
+```{r arma-acfs, fig.height=8, fig.cap="Korelogramy przedstawiające funkcje ACF i PACF dla badanych szeregów czasowych"}
 c_acf_plot(returns_split)
 ```
 
@@ -312,20 +312,20 @@ tibble(
 Aby potwierdzić zasadność wykorzystania modeli GARCH przeprowadzone zostały testy na występowanie efektu ARCH.
 Należą do nich testy:
 
-- Ljunga-Boxa dla reszt z modelu,
-- Engle'a,
-- KPSS.
+- McLeoda-Li (test Ljunga-Boxa dla kwadratów reszt z modelu),
+- Engle'a -- zaimplementowany w pakiecie `rugarch` [@packageRugarch],
+- KPSS -- zaimplementowany w pakiecie `tseries` [@packageTseries].
 
-Do obliczenia dwóch ostatnich testów wykorzystane zostaną pakiedy `rugarch` [@packageRugarch] oraz `tseries` [@packageTseries].
 Wyniki tych testów ilustruje Rysunek \@ref(fig:arma-arch-acf) oraz Tabela \@ref(tab:arma-arch-tests).
 
-```{r arma-arch-acf, fig.height=8, fig.cap="Korelogramy ilustrujące testy Ljunga-Boxa dla reszt z modelu średniej warunkowej"}
-map(arma, residuals) %>%
+```{r arma-arch-acf, fig.height=8, fig.cap="Korelogramy ilustrujące testy McLeoda-Li dla rozważanych modeli średniej warunkowej"}
+arma %>%
+  map(~ .x %>%
+    residuals %>%
+    .^2
+  ) %>%
   c_acf_plot()
 ```
-
-Test Ljunga-Boxa, który został przedstawiony na korelogramach, wskazuje na brak autokorelacji w szeregach reszt z modelu.
-Dla szeregów kwadratów reszt nadal wyraźnie widoczne są zależności kwadratowe, co pozwala na dalsze rozważanie modelów objaśniających te zależności.
 
 ```{r arma-arch-tests}
 group_names <- rep(4, length(tables))
@@ -387,12 +387,11 @@ map(
   pack_rows(index = group_names)
 ```
 
-Wyniki testów Engle'a oraz KPSS również sprzyjają dalszym rozważaniom.
-Niskie p-wartości dla pierwszego z nich nakazują odrzucenie hipotezy o braku autokorelacji w kwadratach reszt,
+Test McLeoda-Li, który został przedstawiony na korelogramach na Rysunku \@ref(fig:arma-arch-acf), wskazuje na istotną autokorelację w szeregach kwadratów reszt z modelu,
+wobec czego można wnioskować o zachodzeniu efektu ARCH w rozważanych danych.
+Wyniki testów Engle'a oraz KPSS również sprzyjają dalszym rozważaniom -- niskie p-wartości dla pierwszego z nich nakazują odrzucenie hipotezy o braku autokorelacji w kwadratach reszt,
 natomiast wysokie (>0.1) p-wartości testu KPSS pozwalają przyjąć hipotezę o heteroskedastyczności zachodzącej w szeregach czasowych.
-
-Wobec tak przeprowadzonego badania dotyczącego modelu średniej warunkowej
-możliwym jest przejście do dalszej analizy uwzględniającej dopasowanie modelu wariancji warunkowej.
+Wobec tak przeprowadzonego badania dotyczącego modelu średniej warunkowej możliwym jest przejście do dalszej analizy uwzględniającej dopasowanie modelu wariancji warunkowej.
 
 ### Model przełącznikowy Markowa
 
@@ -527,14 +526,8 @@ markov <-
     setNames(tables)
 ```
 
-Tak wybrane modele zostały sprawdzone pod kątem istotności ich parametrów: parametry nieistotnie różne od zera zostały z góry ustalone jako równe 0.
-
-\AAA{nieprawda, bo ebs refittowało dla beta2, a raczej nie powinno}
-
-Proces przeprowadzono dla parametrów, dla których można taką operację wykonać. \AAQ{Jak to jest z wymagalnością tych parametrów? Patrz} [@packageMSGARCH, str. 8]
-Ma to na celu optymalizację modeli i poprawę wyników prognoz wykonywanych na dalszych etapach badania.
-
-```{r markov-optimizing}
+```{r markov-optimizing, eval = F}
+# suspended due to uselessness
 markov <-
   map(
     tables,
@@ -576,11 +569,9 @@ markov <-
     setNames(tables)
 ```
 
-Ta analiza jednak przyniosła obiecujące rezultaty, mówiące o istotnie niezerowych wartościach wszystkich parametrów dla każdego ze sprawdzanych modeli
-Wobec tego ostateczne wartości wyestymowanych parametrów wybranych modeli przedstawia Tabela \@ref(tab:markov-post-optimizing),
+Ostateczne wartości wyestymowanych parametrów wybranych modeli przedstawia Tabela \@ref(tab:markov-post-optimizing),
 a wizualizację prawdopodobieństw zachodzenia poszczególnych reżimów dla każdego z szeregów czasowych prezentuje Rysunek \@ref(fig:markov-plots).
 
-\AAA{mam spore problemy znaleźć modele, które dostatecznie dobrze trzymają reżimy}
 ```{r markov-post-optimizing}
 group_names <- rep(2, length(tables))
 names(group_names) <- tables_full_names
@@ -611,8 +602,8 @@ map(
       "Model",
       "Reżim",
       "$\\omega$",
-      "$\\alpha_1$",
-      "$\\alpha_2$",
+      "$\\alpha$",
+      "$\\gamma$",
       "$\\beta$",
       "$\\nu$",
       "$\\xi$"
@@ -623,7 +614,7 @@ map(
   add_header_above(c(
     " " = 2,
     "Parametry modelu" = 4,
-    "Parametry rozkł. inn." = 2
+    "Par. rozkł. inn." = 2
   ))
 ```
 
@@ -741,6 +732,72 @@ seq_along(stats) %>%
   add_header_above(
     c(" " = 2, "Kryterium informacyjne" = 2)
   )
+```
+
+```{r garchx-re-fit}
+pb <- c_progress_setup(paste("Refitting"), length(tables))
+garchx <-
+  map(
+    tables,
+    function(table_name) {
+      pb$tick()
+
+      ugarchspec(
+        variance.model = list(
+          model = models_for_testing[best[[table_name]], ]$volatility,
+          garchOrder = c(1, 1),
+          external.regressors = as.matrix(garchx_externals)
+        ),
+        mean.model = list(
+          armaOrder = arma[[table_name]]$arma[1:2],
+          include.mean = FALSE
+        ),
+        distribution.model = models_for_testing[best[[table_name]], ]$distribution
+      ) %>%
+        ugarchfit(returns_split[[table_name]] %>% na.omit())
+    }
+  ) %>%
+    setNames(tables)
+```
+
+```{r garchx-post-optimizing}
+map(
+  tables,
+  function(table_name) {
+    garchx[[table_name]] %>%
+      coef %>%
+      enframe("param", "Estimate") %>%
+      mutate(
+        series = tables_full_names[table_name],
+        model = models_for_testing_names[best[[table_name]]]
+      )
+  }
+) %>%
+  bind_rows() %>%
+  pivot_wider(
+    names_from = param,
+    values_from = Estimate
+  ) %>%
+  c_kable(
+    "Parametry modeli Markowa dopasowanych do stóp zwrotu badanych spółek",
+    col.names = c(
+      "Szer. czas.",
+      "Model",
+      "$\\omega$",
+      "$\\alpha$",
+      "$\\beta$",
+      "$\\gamma$",
+      "$\\a$",
+      "$\\xi$"
+    ),
+    digits = 2
+  ) %>%
+  pack_rows(index = group_names) %>%
+  add_header_above(c(
+    " " = 2,
+    "Parametry modelu" = 4,
+    "Par. rozkł. inn." = 2
+  ))
 ```
 
 Tabela \@ref(tab:garchx-models) przedstawia wyniki dopasowania modeli do danych spółek.

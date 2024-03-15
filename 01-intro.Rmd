@@ -100,11 +100,56 @@ W tym celu stosuje się _kryteria informacyjne_ -- wskaźniki opierające się n
 Podobnie jak w przypadku różnych rodzajów błędów \AAA{o ile tak jest}, istnieje kilka kryteriów informacyjnych, stosowanych przy modelowaniu danych:
 
 - kryterium informacyjne Akaike: $AIC =$ \AAA{wzory},
-- kryterium informacyjne Bayesa (najpopularniejszy): $BIC =$,
+- kryterium informacyjne Schwarza (najpopularniejszy): $BIC =$,
 - \AAA{jeszcze 2 były}.
 
 Wszystkie kryteria informacyjne opierają się na tej samej zasadzie -- na zadany model nakładają _karę za ???_ \AAA{jak to się nazywało?}, która rośnie wraz z liczbą parametrów modelu.
-Wartości kryterium bliższe $0$ informują o lepszej jakości dopasowania modelu.
+Wartości kryterium bliższe 0 informują o lepszej jakości dopasowania modelu.
+
+### Modele z rodziny GARCH
+
+\begin{gather*}
+ARCH(q) \to
+  \sigma_t^2 =
+    \omega
+    + \sum_{i=1}^{q} \alpha_i y^2_{t-i}
+\\
+GARCH(p, q) \to
+  \sigma_t^2 =
+    \omega
+    + \sum_{i=1}^{q}
+      \alpha_i y^2_{t-i}
+    + \sum_{j=1}^{p}
+      \beta_j \sigma^2_{t-j}
+\\
+GJR-GARCH(p, q) \to
+  \sigma_t^2 =
+    \omega
+    + \sum_{i=1}^{q} \left(
+      \alpha_i y^2_{t-i} + \gamma_i y^2_{t-i} \mathbb{I}(y_{t-i} < 0)
+    \right)
+    + \sum_{j=1}^{p}
+      \beta_j \sigma^2_{t-j}
+\\
+EGARCH(p, q) \to
+  \ln \sigma_t^2 =
+    \omega
+    + \sum_{i=1}^{q}
+      \alpha_i \left(
+        \left| y_{t-i} \right| - \mathbb{E}(\left| y_{t-i} \right|)
+      \right) + \gamma_i y_{t-i}
+    + \sum_{j=1}^{p}
+      \beta_j \sigma^2_{t-j}
+\end{gather*}
+
+### Model przełącznikowy Markowa
+
+### Rozważane rozkłady innowacji
+
+> - normalny -- $\mu$ średnia, $\sigma^2$ wariancja
+> - t Studenta -- $\nu$ stopnie swobody
+> - skośny t Studenta -- $\nu$ stopnie swobody, $\xi = \exp(\lambda)$ skośność
+> - GED -- $\nu$ kształt
 
 ## Przegląd literatury
 
@@ -127,8 +172,7 @@ Implementuje różnego rodzaju testy statystyczne i metody tworzące wykresy, a 
 w szczególności dopasowywania, filtrowania, prognoz i symulacji.
 Udostępnia również funkcje związane z obliczaniem wartości zagrożonej $VaR$ oraz _Expected Shortfall_.
 Jest skoncentrowany na modelowaniu wariancji warunkowej, wobec czego nie implementuje równania średniej warunkowej
-[@packageMSGARCHDocs, str. 2],
-- `garchx` -- \AAA{dokończyć}
+[@packageMSGARCHDocs, str. 2].
 
 Podczas badania wykorzystano również różne inne pakiety pozwalające na generowanie wykresów i tabel, a także płynnego przetwarzania danych
 [@packageGgplot2;@packageKnitr].

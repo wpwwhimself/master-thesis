@@ -38,7 +38,7 @@ c_acf_plot <- function(return_list) {
     function(i, data) {
       returns <- data[[i]]
       lags <- 20
-      size <- 1
+      size <- 2
 
       return(list(
         returns %>%
@@ -54,21 +54,21 @@ c_acf_plot <- function(return_list) {
             title = element_blank(),
             y = element_blank(),
             x = element_blank()
-          ),
-        returns^2 %>%
-          ggAcf(lags, size = size) +
-            labs(
-              title = element_blank(),
-              y = element_blank(),
-              x = element_blank()
-            )
+        #   ),
+        # returns^2 %>%
+        #   ggAcf(lags, size = size) +
+        #   labs(
+        #     title = element_blank(),
+        #     y = element_blank(),
+        #     x = element_blank()
+          )
       ))
     },
     data = return_list
   ) %>% unlist(recursive = FALSE)
 
   row_titles <- tables_full_names
-  column_titles <- c("ACF", "PACF", "ACF (x²)")
+  column_titles <- c("ACF", "PACF", "ACF (x²)")[1:2]
 
   grid.draw(rbind(
     tableGrob(t(column_titles), rows = ""),

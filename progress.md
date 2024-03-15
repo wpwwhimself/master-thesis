@@ -23,16 +23,18 @@
     - [ ] istotność parametrów
     - [ ] kryteria informacyjne
     - [ ] ustandaryzowanie pogrubień i pochyleń
+    - [ ] testy statystyczne
+        - [ ] ==wszystko, czego używam w pracy, muszę rozpisać wzorem?==
 ### przegląd literatury
 - [ ] znaleźć literaturę
-    - [ ] ile pozycji w literaturze?
-    - [ ] czy linki do artykułów są w porządku?
+    - [ ] ==ile pozycji w literaturze?
+    - [ ] ==czy linki do artykułów są w porządku?
 - [ ] kilka słów o pozycjach
+- [ ] ==czy tę sekcję będę mógł zastąpić opisem modeli użytych, czy to wyżej?==
 ### pakiety
-- [ ] czy wszystkie pakiety opisywać?
+- [ ] ==czy wszystkie pakiety opisywać?
 - [x] rugarch
 - [x] msgarch
-- [ ] garchx
 ## Metodologia badawcza
 ### wybór danych
 - [x] opisanie, co wybrałem
@@ -41,6 +43,7 @@
 - [x] statystyki opisowe
 - [x] testy normalności
 ### wybór odpowiedniego modelu
+- [ ] ==czy praca ma być podsumowaniem badań czy ilustrować ich przebieg?==
 #### dopasowanie modelu średniej warunkowej
 - [x] pierwsze korelogramy
 - [x] dopasowanie różnych arma
@@ -50,10 +53,10 @@
 - [x] testy ARCH
 - [x] dopasowanie różnych GARCH
 - [ ] porównanie kryteriów
-- [ ] wybór modeli
-    - [ ] jak to jest z tą wymagalnością parametrów?
-- [ ] wykresy reżimów
-- [ ] showcase parametrów modeli
+- [x] wybór modeli
+    - [ ] ==jak to jest z tą wymagalnością parametrów?==
+- [x] wykresy reżimów
+- [x] showcase parametrów modeli
 #### garchx
 - [x] wymyślić jakie szeregi externali wykorzystać
 - [x] dopasowanie GARCH
@@ -61,9 +64,10 @@
 - [ ] wybór modeli
 - [ ] showcase parametrów modeli
 ### predykcje
-- [ ] horyzont predykcji
+- [ ] ==horyzont predykcji==
 - [ ] wykonać predykcje
 - [ ] przeliczyć na wartości akcji/indeksu
+    - [ ] ==ma to sens?==
 ## Analiza wyników
 ### ocena jakości predykcji
 - [ ] porównanie prognoz z faktycznymi wartościami indeksu
@@ -71,6 +75,7 @@
 - [ ] dogłębne spojrzenie na te momenty zwiększonej wahliwości
 - [ ] jakie straty na rynku w tym czasie się stały
 ### porównanie z innymi modelami
+- [ ] zastanowić się nad sensem tego rozdziału
 - [ ] z jakimi innymi modelami?
 ## Wnioski
 ### podsumowanie wyników analizy

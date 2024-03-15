@@ -75,7 +75,8 @@ tables %>%
           mean.model = list(
             armaOrder = arma[[table_name]]$arma[1:2],
             include.mean = FALSE
-          )
+          ),
+          distribution.model = distribution
         ) %>%
           ugarchfit(returns_split[[table_name]] %>% na.omit())
       }) %>%
