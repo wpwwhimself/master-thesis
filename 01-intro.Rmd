@@ -14,7 +14,7 @@ W annałach historii można się doszukiwać wielu takich sytuacji, a ich przyk�
 - *tulipanowa gorączka* (1636-1637) -- lokowanie gotówki przez mieszkańców Amsterdamu w&nbsp;tulipanach doprowadziło do wyhodowania wyjątkowej odmiany tego kwiatu.
 Wartość jego jednej cebulki była wówczas wyceniana na równowartość 40-letniego dochodu, przez co wielu kupców zaciągało niebotyczne kredyty.
 Ceny tulipanów jednak zatrzymały się na poziomie, gdzie nikt nie był w stanie ich zakupić, a część handlujących nie wywiązywała się z dostaw.
-To z kolei doprowadziło do końca spekulacji i gwałtownych obniżek cen [@linkTulip],
+To z kolei doprowadziło do końca spekulacji i gwałtownych obniżek cen [@tulips],
 
 - *Great Depression* (1929-1932) -- największy kryzys gospodarczy w dziejach kapitalizmu, który swoim zasięgiem objął cały świat, z wykluczeniem ZSRR.
 Przyjmuje się, że był on konsekwencją tzw. _czarnego czwartku_, kiedy to na nowojorskiej giełdzie gwałtownie spadły ceny niemal wszystkich notowanych akcji.
@@ -106,17 +106,23 @@ Podobnie jak w przypadku różnych rodzajów błędów \AAA{o ile tak jest}, ist
 Wszystkie kryteria informacyjne opierają się na tej samej zasadzie -- na zadany model nakładają _karę za ???_ \AAA{jak to się nazywało?}, która rośnie wraz z liczbą parametrów modelu.
 Wartości kryterium bliższe 0 informują o lepszej jakości dopasowania modelu.
 
-### Modele z rodziny GARCH
+### Modele średniej i wariancji warunkowej
 
 \AAA{do dokończenia}
 
 \begin{gather*}
-ARCH(q) \to
+ARMA(p, q):
+  x_t =
+    \sum_{i=1}^{p} a_i x_{t-i}
+    + \sum_{j=1}^{q} b_i \epsilon_{t-i}
+    + \epsilon_{t}
+\\
+ARCH(q):
   \sigma_t^2 =
     \omega
     + \sum_{i=1}^{q} \alpha_i y^2_{t-i}
 \\
-GARCH(p, q) \to
+GARCH(p, q):
   \sigma_t^2 =
     \omega
     + \sum_{i=1}^{q}
@@ -124,7 +130,17 @@ GARCH(p, q) \to
     + \sum_{j=1}^{p}
       \beta_j \sigma^2_{t-j}
 \\
-GJR-GARCH(p, q) \to
+GARCH-X(p, q, r):
+  \sigma_t^2 =
+    \omega
+    + \sum_{i=1}^{q}
+      \alpha_i y^2_{t-i}
+    + \sum_{j=1}^{p}
+      \beta_j \sigma^2_{t-j}
+    + \sum_{k=1}^{r}
+      \lambda_k w^2_{t-k}
+\\
+GJR-GARCH(p, q):
   \sigma_t^2 =
     \omega
     + \sum_{i=1}^{q} \left(
@@ -133,7 +149,7 @@ GJR-GARCH(p, q) \to
     + \sum_{j=1}^{p}
       \beta_j \sigma^2_{t-j}
 \\
-EGARCH(p, q) \to
+EGARCH(p, q):
   \ln \sigma_t^2 =
     \omega
     + \sum_{i=1}^{q}

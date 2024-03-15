@@ -30,6 +30,7 @@ library(kableExtra)
 primary_color <- "#005322"
 calculations_path <- "includes/calculations/"
 round_digits <- 4
+arma_max_lag <- 9
 
 ################# custom functions #################
 c_acf_plot <- function(returns_split) {
@@ -76,8 +77,8 @@ c_auto_arima <- function(ts, ...) {
     ts,
     stationary = TRUE,
     seasonal = FALSE,
-    max.p = 9,
-    max.q = 9,
+    max.p = arma_max_lag,
+    max.q = arma_max_lag,
     ...
   )
 }
