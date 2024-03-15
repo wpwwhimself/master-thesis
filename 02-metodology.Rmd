@@ -124,7 +124,8 @@ data %>%
       "Odch. kw.",
       "Skośność",
       "Kurtoza"
-    )
+    ),
+    linesep = ""
   )
 ```
 
@@ -245,7 +246,8 @@ table %>%
       "AIC",
       "BIC"
       ), 2)
-    )
+    ),
+    linesep = ""
   ) %>%
   add_header_above(c(
     " " = 1,
@@ -301,7 +303,8 @@ tibble(
       "$a_2$",
       "$b_1$",
       "$b_2$"
-    )
+    ),
+    linesep = ""
   ) %>%
   add_header_above(c(
     " " = 2,
@@ -374,17 +377,19 @@ map(
     statistic = round(statistic, 2)
   ) %>%
   c_kable(
-    "Wyniki testu Engle'a i KPSS dla badanych szeregów czasowych.
-    Dla testów KPSS wartość 0.1 w kolumnie p-wartość oznacza,
-    że rzeczywista p-wartość jest wyższa od wskazanej.",
+    "Wyniki testu Engle'a i KPSS dla badanych szeregów czasowych",
     col.names = c(
       "Test",
       "Opóźnienie",
       "Wart. stat. test.",
-      "p-wartość"
+      "p-wartość*"
     )
   ) %>%
-  pack_rows(index = group_names)
+  pack_rows(index = group_names) %>%
+  add_footnote(
+    "Dla testów KPSS wartość 0.1 w kolumnie p-wartość oznacza, że rzeczywista p-wartość jest wyższa od wskazanej.",
+    notation = "symbol"
+  )
 ```
 
 Test McLeoda-Li, który został przedstawiony na korelogramach na Rysunku \@ref(fig:arma-arch-acf), wskazuje na istotną autokorelację w szeregach kwadratów reszt z modelu,
@@ -409,7 +414,7 @@ Oferuje on szeroki wachlarz modeli wariancji warunkowej, w tym dopasowanie odrę
 Istotnym problemem, jaki należy rozwiązać w przypadku bieżącego badania i wykorzystania wyżej wymienionego pakietu, jest fakt,
 że nie obsługuje on specyfikacji modelu średniej warunkowej.
 Aby zastosować model przełącznikowy do tego typu danych, konieczne jest dodatkowe przetworzenie danych [@packageMSGARCHDocs, str. 2].
-Wobec tego szeregami czasowymi wykorzystywanymi do modelowania wariancji warunkowej są **szeregi czasowe reszt z modelu** średniej warunkowej. \AAQ{czy to dobra droga?}
+Wobec tego szeregami czasowymi wykorzystywanymi do modelowania wariancji warunkowej są **szeregi czasowe reszt z modelu** średniej warunkowej.
 
 ```{r markov-models}
 stats <-
@@ -484,7 +489,8 @@ seq_along(stats) %>%
       "BIC",
       "$p_{11}$",
       "$p_{21}$"
-    )
+    ),
+    linesep = ""
   ) %>%
   add_header_above(
     c(" " = 2, "Kryterium informacyjne" = 2, "Prawdop. reżimu" = 2)
@@ -677,12 +683,8 @@ stats <-
 
       calculated <-
         models %>%
-        map(function(model) {
+        map(possibly(function(model) {
           pb$tick()
-
-          if (class(model) == "NULL") {
-            return(list(aic = NA, bic = NA))
-          }
 
           (infocriteria(model) * length(fitted(model))) %>%
             enframe() %>%
@@ -690,7 +692,7 @@ stats <-
             deframe() %>%
             array_branch() %>%
             setNames(c("aic", "bic"))
-        }) %>%
+        }, otherwise = list(aic = NA, bic = NA))) %>%
         list_transpose()
 
       tibble(
@@ -778,8 +780,9 @@ map(
     names_from = param,
     values_from = Estimate
   ) %>%
+  select(-ar1, -ar2, -ma1, -ma2) %>%
   c_kable(
-    "Parametry modeli Markowa dopasowanych do stóp zwrotu badanych spółek",
+    "Parametry modeli GARCHX dopasowanych do stóp zwrotu badanych spółek",
     col.names = c(
       "Szer. czas.",
       "Model",
@@ -787,21 +790,73 @@ map(
       "$\\alpha$",
       "$\\beta$",
       "$\\gamma$",
-      "$\\a$",
+      "$\\lambda$",
+      "$\\nu$",
       "$\\xi$"
     ),
-    digits = 2
+    digits = 2,
+    linesep = ""
   ) %>%
-  pack_rows(index = group_names) %>%
   add_header_above(c(
     " " = 2,
-    "Parametry modelu" = 4,
+    "Parametry modelu" = 5,
     "Par. rozkł. inn." = 2
   ))
 ```
 
-Tabela \@ref(tab:garchx-models) przedstawia wyniki dopasowania modeli do danych spółek.
+Tabela \@ref(tab:garchx-models) przedstawia modele GARCHX dopasowane do danych badanych spółek, wybrane na podstawie kryterium informacyjnego Akaike.
+Można zauważyć, że każdy z modeli uwzględnia asymetrię modelu, ponieważ wyłonione zostały modele EGARCH oraz GJR.
+Rozkłady innowacji dobrane do każdego z tych modeli stanowią zamienniki rozkładu normalnego, przy czym najczęściej w rankingu pojawia się rozkład GED.
+Tabela \@ref(tab:garchx-post-optimizing) zawiera z kolei wartości parametrów wyestymowane dla tych modeli.
 
 ## Predykcje
 
+```{r predictions-setup}
+n_ahead <- 7
+n_behind <- 10 * n_ahead
+```
+
 Posiadając odpowiednie modele dopasowane do danych, możliwym jest wykonanie prognoz ex-post i porównanie ich z rzeczywistym kształtowaniem się wartości odpowiadających indeksów giełdowych.
+Prognozy zostały wykonane dla wariancji warunkowej na `r n_ahead` dni naprzód.
+Przebieg prognozowanych szeregów czasowych ilustruje Rysunek \@ref(fig:predictions).
+
+```{r predictions, fig.cap="Zestawienie prognoz wariancji warunkowej dla rozważanych modeli", fig.height=8}
+past_vol <-
+  list(
+    markov = markov %>%
+      map(function(model) {
+        model %>%
+          Volatility() %>%
+          as.numeric() %>%
+          tail(n_behind)
+      }),
+    garchx = garchx %>%
+      map(function(model) {
+        model %>%
+          sigma() %>%
+          as.numeric() %>%
+          tail(n_behind)
+      })
+  )
+
+pred_vol <-
+  list(
+    markov = markov %>%
+      map(~
+        predict(.x, nahead = n_ahead)$vol %>%
+        tibble(pred_val = .) %>%
+        pull(pred_val) %>%
+        as.numeric()
+      ),
+    garchx = garchx %>%
+      map(~ .x %>%
+        ugarchforecast(n_ahead = n_ahead) %>%
+        sigma() %>%
+        tibble(pred_val = as.numeric(.)) %>%
+        pull(pred_val) %>%
+        head(n_ahead)
+      )
+  )
+
+c_pred_plot(pred_vol, past_vol)
+```

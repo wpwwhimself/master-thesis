@@ -52,22 +52,21 @@
 #### markov
 - [x] testy ARCH
 - [x] dopasowanie różnych GARCH
-- [ ] porównanie kryteriów
+- [x] porównanie kryteriów
 - [x] wybór modeli
-    - [ ] ==jak to jest z tą wymagalnością parametrów?==
+- [x] ==jak to jest z tą wymagalnością parametrów?==
 - [x] wykresy reżimów
 - [x] showcase parametrów modeli
 #### garchx
 - [x] wymyślić jakie szeregi externali wykorzystać
 - [x] dopasowanie GARCH
-- [ ] porównanie kryteriów
-- [ ] wybór modeli
-- [ ] showcase parametrów modeli
+- [x] porównanie kryteriów
+- [x] wybór modeli
+- [x] showcase parametrów modeli
 ### predykcje
 - [ ] ==horyzont predykcji==
-- [ ] wykonać predykcje
-- [ ] przeliczyć na wartości akcji/indeksu
-    - [ ] ==ma to sens?==
+- [x] wykonać predykcje
+- [ ] przeliczyć na wartości akcji/indeksu ==czy ma to sens?==
 ## Analiza wyników
 ### ocena jakości predykcji
 - [ ] porównanie prognoz z faktycznymi wartościami indeksu

@@ -32,11 +32,10 @@ calculations_path <- "includes/calculations/"
 round_digits <- 4
 
 ################# custom functions #################
-c_acf_plot <- function(return_list) {
-  plots <- lapply(
-    seq_along(return_list),
-    function(i, data) {
-      returns <- data[[i]]
+c_acf_plot <- function(returns_split) {
+  lapply(
+    returns_split,
+    function(returns, i) {
       lags <- 20
       size <- 2
 
@@ -63,22 +62,13 @@ c_acf_plot <- function(return_list) {
         #     x = element_blank()
           )
       ))
-    },
-    data = return_list
-  ) %>% unlist(recursive = FALSE)
-
-  row_titles <- tables_full_names
-  column_titles <- c("ACF", "PACF", "ACF (x²)")[1:2]
-
-  grid.draw(rbind(
-    tableGrob(t(column_titles), rows = ""),
-    cbind(
-      tableGrob(row_titles),
-      arrangeGrob(grobs = plots, ncol = length(column_titles)),
-      size = "last"
-    ),
-    size = "last"
-  ))
+    }
+  ) %>%
+    unlist(recursive = FALSE) %>%
+    c_plot(
+      tables_full_names,
+      c("ACF", "PACF", "ACF (x²)")[1:2]
+    )
 }
 
 c_auto_arima <- function(ts, ...) {
@@ -160,6 +150,63 @@ c_paste_math_assoc <- function(
   values <- values %>% round(round) %>% unname()
   output <- paste(labels, values, sep = " = ", collapse = ",\\:")
   paste("$", output, "$", sep = "")
+}
+
+c_plot <- function(plots, row_titles, column_titles) {
+  grid.draw(rbind(
+    tableGrob(t(column_titles), rows = "", theme = ttheme_minimal()),
+    cbind(
+      tableGrob(row_titles, theme = ttheme_minimal()),
+      arrangeGrob(grobs = plots, ncol = length(column_titles)),
+      size = "last"
+    ),
+    size = "last"
+  ))
+}
+
+c_pred_plot <- function(pred_vol, past_vol) {
+  join_lists <- function(.x, .y) {
+    if(is.list(.x)) map2(.x, .y, join_lists)
+    else c(.x, .y)
+  }
+
+  t <- -(n_behind - 1):(n_ahead)
+
+  lapply(
+    join_lists(
+      transpose(past_vol),
+      transpose(pred_vol)
+    ),
+    function(models, i) {
+      return(list(
+        models$markov %>%
+          tibble(t = t, value = .) %>%
+          ggplot(aes(x = t, y = value)) +
+            geom_line() +
+            geom_vline(xintercept = 0, linetype = 2, alpha = 0.5) +
+            labs(
+              title = element_blank(),
+              y = element_blank(),
+              x = element_blank()
+            ),
+        models$garchx %>%
+          tibble(t = t, value = .) %>%
+          ggplot(aes(x = t, y = value)) +
+            geom_line() +
+            geom_vline(xintercept = 0, linetype = 2, alpha = 0.5) +
+            labs(
+              title = element_blank(),
+              y = element_blank(),
+              x = element_blank()
+            )
+      ))
+    },
+  ) %>%
+    unlist(recursive = FALSE) %>%
+    c_plot(
+      tables_full_names,
+      c("m. Markowa", "GARCHX")
+    )
 }
 
 c_progress_setup <- function(label, total) {
