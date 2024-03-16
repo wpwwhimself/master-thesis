@@ -56,7 +56,9 @@ Również gospodarka ogólnoświatowa doświadczyła kryzysu, powodując wzrost 
 Historia pokazuje, że zdarzenia dotykające wielu ludzi nie pozostają obojętne z perspektywy świata ekonomii.
 Już wyżej wspomniane kryzysy miały znaczące podłoże finansowe i nie inaczej jest w przypadku dwóch najnowszych wydarzeń.
 Aby zapobiec ich dotkliwym w skutkach reperkusjom, ekonomiści i naukowcy stosowali różne techniki, co szczegółowo opisane zostanie w dalszej części pracy.
-Wyniki ich prac zostały opublikowane na łamach różnego rodzaju czasopism i publikacji. \AAA{citation needed}
+Wyniki ich prac zostały opublikowane na łamach różnego rodzaju czasopism i publikacji
+[@vanBergeijk2021pandemic;@shah2021mathematical;@fraguela2022moving;@hernandez2023mathematical]
+.
 
 Celem niniejszej pracy magisterskiej jest, podobnie jak w wyżej wspomnianych badaniach, analiza reakcji rynku polskiego na owe kryzysowe wydarzenia.
 Autor wykorzysta znane metody z obszaru modelowania finansowego.
@@ -75,8 +77,37 @@ Z tego też względu można powiedzieć o rynku finansowym, że jest to "ogół 
 [@wisla2008, str. 33]
 .
 
-Transakcje te zawierane są za pomocą **instrumentów finansowych**. Pozwalają one na transfer, wymianę lub przechowywanie środków pieniężnych [@ifirmaInstrumenty].
-\AAA{Dokończyć}
+Transakcje te zawierane są za pomocą **instrumentów finansowych**, które pozwalają na transfer, wymianę lub przechowywanie środków pieniężnych.
+Pełna lista istniejących instrumentów jest długa i można ją podzielić według różnych kryteriów [@ifirmaInstrumenty;@krzywda2005klasyfikacja].
+Na potrzeby niniejszej pracy istotnymi instrumentami finansowymi są *akcje* oraz *indeksy giełdowe*.
+
+**Akcja** jest papierem wartośiowym dającym prawo jej posiadaczowi do udziału w spółce akcyjnej, która jest jej emitentem.
+Nabywca akcji staje się _akcjonariuszem_ tej spółki, wobec czego jest współwłaścicielem jej majątku i otrzymuje prawa do:
+
+- podziału wypracowanego przez spółkę zysku -- dywidendy,
+- pobierania nowych akcji,
+- uczestnictwa w walnych zgromadzeniach innych akcjonariuszy,
+- majątku spółki, gdyby ta została zlikwidowana.
+
+Akcje mogą być imienne lub na okaziciela, a jako papier wartościowy cechują się ceną nominalną, rynkową oraz emisyjną.
+Mogą być emitowane jedynie przez spółki akcyjne i komandytowo-akcyjne
+[@akcjaEZ].
+Na rynku wtórnym (np. na giełdzie) inwestorzy mają możliwość zakupu i sprzedaży akcji różnych spółek, jakie są na nim notowane.
+W marcu 2024 roku na rynku podstawowym _Giełdy Papierów Wartościowych_ w Warszawie prowadzone są notowania 409 spółek, w tym 367 krajowych,
+o łącznej kapitalizacji 1,5 bln zł [@gpwStat].
+
+**Indeksem giełdowym** nazywa się wskaźnik, który służy do monitorowania przebiegu cen papierów wartościowych spółek notowanych na giełdzie.
+Jest to byt umożliwiający śledzenie trendów panujących na rynkach finansowych, bez konieczności monitorowania dużej liczby cen akcji poszczególnych spółek.
+Do budowy indeksu giełdowego wykorzystuje się takie informacje, jak ceny akcji i ich wartości rynkowe.
+Te wartości są porządkowane za pomocą ustalonych przez giełdę wag oraz uśredniane średnią geometryczną lub arytmetyczną.
+Na giełdzie warszawskiej funkcjonuje kilka indeksów, a największymi z nich są:
+
+- WIG -- pierwszy indeks giełdowy, obliczany od 1991 roku. Obejmuje wszystkie spółki notowane na _Głównym Rynku GPW_, spełniające kryteria uczestnictwa w indeksach,
+- WIG20 -- obliczany od 1994 roku na podstawie wartości portfela akcji 20 największych i najbardziej płynnych spółek z _Głównego Rynku GPW_. Bierze pod uwagę jedynie ceny transakcji, nie uwzględniając wartości dochodów z dywidend,
+- mWIG40 -- kontynuacja indeksu MIDWIG, obliczany od 1997 roku. Obejmuje 40 średnich spółek notowanych na _Głównym Rynku GPW_ i, podobnie jak WIG20, jest indeksem typu cenowego. Wyklucza spółki wchodzace w skład indeksów WIG20,
+- sWIG80 -- kontynuacja indeksu WIRR obliczanego od 1994 roku. W jego skład wchodzi 80 małych spółek notowanych na _Głównym Rynku GPW_. Tak jak WIG20 i mWIG40, jest indeksem typu cenowego i nie bierze pod uwagę spółek należących do tych indeksów.
+
+[@indeksBI;@wigGpwBenchmark]
 
 ### Modelowanie rynków finansowych
 

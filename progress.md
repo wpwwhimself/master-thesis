@@ -7,28 +7,27 @@
 - [x] rys historyczny
 - [x] wydarzenia będące tłem badania
 - [x] podsumowanie
-- [ ] zacytować jakieś badania powiązujące te cosie z ekonomią
+- [x] zacytować jakieś badania powiązujące te cosie z ekonomią
 ### modele rynków finansowych
-- [ ] rynek finansowy
-    - [x] definicja rynku finansowego
-    - [ ] definicja instrumentów finansowych
-        - [ ] co to są akcje
-        - [ ] co to są indeksy giełdowe
-    - [ ] opis tego, co się dzieje na rynku finansowym
-    - [ ] podział rynku?
-- [ ] modelowanie rynków finansowych
-    - [ ] co to jest dopasowanie
-    - [ ] opisanie błądzenia losowego
-    - [ ] metoda najmniejszych kwadratów
-    - [ ] istotność parametrów
-    - [ ] kryteria informacyjne
-    - [ ] ustandaryzowanie pogrubień i pochyleń
-    - [ ] testy statystyczne
-        - [ ] ==wszystko, czego używam w pracy, muszę rozpisać wzorem?==
+#### rynek finansowy
+- [x] definicja rynku finansowego
+- [x] definicja instrumentów finansowych
+- [x] co to są akcje
+- [x] co to są indeksy giełdowe
+- [ ] opis tego, co się dzieje na rynku finansowym
+- [x] podział rynku?
+#### modelowanie rynków finansowych
+- [ ] co to jest dopasowanie
+- [ ] opisanie błądzenia losowego
+- [ ] metoda najmniejszych kwadratów
+- [ ] istotność parametrów
+- [ ] kryteria informacyjne
+- [ ] ustandaryzowanie pogrubień i pochyleń
+- [ ] testy statystyczne
+- [ ] ==wszystko, czego używam w pracy, muszę rozpisać wzorem?==
 ### przegląd literatury
-- [ ] znaleźć literaturę
-    - [ ] ==ile pozycji w literaturze?
-    - [ ] ==czy linki do artykułów są w porządku?
+- [ ] ==ile pozycji w literaturze?
+- [ ] ==czy linki do artykułów są w porządku?
 - [ ] kilka słów o pozycjach
 - [ ] ==czy tę sekcję będę mógł zastąpić opisem modeli użytych, czy to wyżej?==
 ### pakiety
