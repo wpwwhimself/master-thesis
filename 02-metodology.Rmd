@@ -30,17 +30,19 @@ Nowo utworzone studio wydało kilka produkcji, z czego szczególnym sukcesem cie
 Będąc laureatem wielu wyróżnień, m.in. na najlepszą grę strategiczną podczas _Video Game Awards_ oraz najlepszą grę polską od _Digital Dragons_, studio stale rozszerza swój dorobek, pracując obecnie nad kontynuacją swojej hitowej produkcji.
 Produkcję gier traktują na równi z twórczością artystyczną, chcąc konstruować "uniwersa pełne prowokujących do myślenia powieści" [@11bitWiki;@11bitSelf].
 
-4. **Develia** -- spółka akcyjna kontrolująca grupę spółek zajmujących się nabywaniem gruntów i budowaniem, sprzedażą oraz najmem **nieruchomości** o przeznaczeniu mieszkaniowym, biurowym, handlowym i usługowym.
-Spółka giełdowa, wcześniej znana jako _LC Corp S.A._, notowana od 2007 r. na Warszawskiej Giełdzie Papierów Wartościowych.
-Koncentruje się głównie na projektach mieszkaniowych w największych miastach Polski.
-Jako czołowy polski deweloper projektuje osiedla z myślą o zaspokojeniu potrzeb mieszkańców i jednoczesnym zachowaniu minimalnego wpływu na ekosystem.
-W ciągu 16 lat działalności firma oddała do użytku ponad 17 tys. lokali, a przykładem jej projektów w Poznaniu jest _Malta Point_ przy ul. Brneńskiej [@develiaWiki;@develiaSelf].
+4. **Dom Development** -- spółka akcyjna działająca od 1996 roku, zajmująca się nabywaniem gruntów i budowaniem, sprzedażą oraz najmem **nieruchomości** o przeznaczeniu mieszkaniowym.
+Spółka jest notowana od 2006 r. na Warszawskiej Giełdzie Papierów Wartościowych.
+Jest laureatem wielu nagród i wyróżnień, m.in. _Perła Polskiej Gospodarki 2008_, _Diament Forbesa 2007_ oraz _Top 100 Najefektywniejszych Firm 2006 r_.
+W 2018 r. powołała do życia spółkę _Dom Construction Sp. z o.o._ o charakterze generalnego wykonawcy swoich inwestycji.
+Wykonuje projekty budowlane w największych miastach Polski: Warszawie, Wrocławiu, Gdańsku i Krakowie.
+W ciągu ponad 25 lat działalności firma oddała do użytku ponad 46 tys. lokali [@domSelf].
 
-5. **Synektik** -- polska spółka akcyjna dostarczająca wiodące na rynku rozwiązania informatyczne oraz radiofarmaceutyczne, zapewniając wsparcie **medyczne** wielu placówkom.
-Firma zajmuje się m.in. sprzedażą sprzętu medycznego do diagnostyki i terapii, usługi w zakresie serwisowania sprzętu medycznego, a także produkcją radiofarmaceutyków.
-Spółka utworzona została 4.10.2001 r. jako spółka z ograniczoną odpowiedzialnością i początkowo wykonywała montaże i instalacje oraz serwis aparatury specjalistycznej.
-Po przekształceniu w spółkę akcyjną w 2011 r. firma otrzymała zezwolenie na wytwarzanie radiofarmaceutyków, czyli preparatów medycznych zawierających izotopy promieniotwórcze.
-Obecnie _Synektik_ jest krajowym liderem w produkcji i dystrybucji tego typu leków [@synektik].
+1. **Synthaverse** -- polska spółka akcyjna dostarczająca wiodące na rynku rozwiązania **farmaceutyczne** z niemal stuletnią tradycją.
+Rozpoczęła działalność jako _Laboratorium Produkcji Szczepionki przeciwko Durowi Plamistemu_ oraz _Zakład Produkcji Surowic i Szczepionek przy Filii PZH w Lublinie_.
+Dostarcza swoje produkty do 50 krajów świata, a swoją działalność koncentruje na rozwijaniu immunoterapii.
+Do jej szczególnych osiągnięć należy status producenta jednego z nielicznych leków stosowanych w terapii raka pęcherza moczowego, a także powszechnie stosowana szczepionka przeciwgruźlicza.
+Opracowała również _Lakcid_ -- probiotyk, będący jednym z niewielu tego rodzaju leków dostępnych na świecie.
+Obecnie _Synthaverse_ jest krajowym liderem w produkcji i dystrybucji tego typu leków [@synthaverseSelf].
 
 Jak można zauważyć w powyższym zestawieniu, spółki objęte badaniem istotnie obejmują różne sektory rynku, co ma pomóc w porównaniu wpływu wydarzeń na świecie na każdą z dziedzin gospodarki.
 Dodatkowo, jako że mowa o krajowych liderach w swoich branżach, wyniki finansowe objętych badaniem firm są dobrym wyznacznikiem kondycji całego polskiego rynku.
