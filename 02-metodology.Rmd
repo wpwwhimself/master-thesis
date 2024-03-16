@@ -59,6 +59,7 @@ Do przeprowadzania badania wykorzystane zostaną dane o cenach akcji zebrane z s
 Jest to jeden z najbardziej znanych serwisów internetowych zbierających dane finansowe spółek notowanych nie tylko na _Giełdzie Papierów Wartościowych_, ale również na innych giełdach światowych, m.in. amerykański indeks _S&P US_.
 Można tam znaleźć również informacje o kursach walut, cenach towarów i inne dane finansowe.
 Usługi serwisu są skierowane głównie do osób biegłych w rynkach finansowych, poszukujących atrakcyjnych form lokowania kapitału, ale także menadżerów, biznesmenów oraz właścicieli firm [@stooq].
+Na potrzeby badania pobrano dane giełdowe z okresu `r data_range[1]` - `r data_range[2]` r.
 
 Punktem wyjścia do prowadzenia badań będzie utworzenie szeregu czasowego cen zamknięcia akcji.
 Aby zapewnić stacjonarność tego szeregu czasowego, obliczane są **logarytmiczne stopy zwrotu** według wzoru:
@@ -70,9 +71,9 @@ Tak utworzony szereg czasowy spełnia założenia stacjonarności i można go wy
 W celach poglądowych w Tabeli \@ref(tab:showcase) zamieszczone zostały przykładowe dane dotyczące indeksu WIG20 wraz z obliczonymi stopami zwrotu.
 
 ```{r showcase}
-data %>%
+data_split$wig %>%
   head(5) %>%
-  select(-index) %>%
+  select(-is_crisis) %>%
   c_kable(
     "Przykład danych giełdowych indeksu WIG20",
     col.names = c(
@@ -88,7 +89,8 @@ data %>%
 ```
 
 ```{r returns-plot, fig.cap="Logarytmiczne stopy zwrotu dla badanych spółek", fig.height=8, fig.width=6.5}
-data %>%
+data_split %>%
+  bind_rows(.id = "index") %>%
   mutate(index = tables_full_names[index]) %>%
   ggplot(aes(Data, return)) +
     geom_line() +
@@ -106,7 +108,8 @@ Pierwszy z tych wstrząsów bez wątpienia można przypisać początkowi pandemi
 Drugi z kolei jest związany z początkiem agresji rosyjskiej na Ukrainie, kiedy to 24.02 agresor rozpoczął swoją ofensywę [@covidBeginnings;@ukraineWiki].
 
 ```{r desc-stats-table}
-data %>%
+data_split %>%
+  bind_rows(.id = "index") %>%
   mutate(index = tables_full_names[index]) %>%
   group_by(index) %>%
   na.omit() %>%
@@ -133,14 +136,16 @@ data %>%
 
 ```{r histograms-plot, fig.cap = "Wyniki testu Shapiro-Wilka na normalność rozkładu stóp zwrotu. W tytułach podano wartości statystyki testowej oraz p-wartość."}
 plots <- lapply(
-  seq_along(tables),
-  function(i, data) {
-    returns <- data[[i]]
-    label <- tables_full_names[names(data)[i]]
+  tables,
+  function(table_name, i) {
+    returns <- returns_split[[table_name]]
+    label <- tables_full_names[table_name]
 
     shapiro <- shapiro.test(returns)
-    test_results <-
-      paste("W:", round(shapiro$statistic, 2), "p:", round(shapiro$p.value, 4))
+    test_results <- paste(
+      "W:", round(shapiro$statistic, 2),
+      "p:", c_format_pval(shapiro$p.value)
+    )
     returns %>%
       as_tibble() %>%
       na.omit() %>%
@@ -160,8 +165,7 @@ plots <- lapply(
           x = NULL,
           y = NULL,
         )
-  },
-  data = returns_split
+  }
 )
 
 grid.arrange(
@@ -193,12 +197,7 @@ W celu dopasowania modelu średniej warunkowej do badanych danych,
 przygotowano korelogramy ilustrujące funkcje ACF i PACF, przedstawione na Rysunku \@ref(fig:arma-acfs).
 Posłużyły one do wskazania istotnych opóźnień autokorelacji w badanych szeregach czasowych i pozwoliły na określenie zakresu testowanych parametrów.
 Połowa badanych szeregów czasowych przejawia brak autokorelacji w pierwszych opóźnieniach szeregu,
-natomiast dla trzech z nich testy przyniosły wynik pozytywny:
-
-- 11 bit studios -- wyraźna autokorelacja w opóźnieniach 1., 2., 5., 7. i 8.,
-- PKN Orlen -- istotna autokorelacja w opóźnieniu 4.,
-- PKO BP -- autokorelacja w opóźnieniach 1. i 5..
-
+natomiast dla trzech z nich testy przyniosły wynik pozytywny.
 Na tej podstawie podczas testów dopasowania zbadano dopasowanie modeli ARMA do rzędów opóźnień równych `r arma_max_lag`.
 Modele zostały wybrane na podstawie kryteriów informacyjnych Akaike i Schwarza.
 Do tego celu wykorzystano pakiet `forecast` [@packageForecast1;@packageForecast2].
@@ -206,31 +205,19 @@ Do tego celu wykorzystano pakiet `forecast` [@packageForecast1;@packageForecast2
 ```{r arma-fitting}
 table <- tibble(series = tables_full_names)
 
-arma <- c_read_rds("arma_aic")
-aic <- map(arma, ~ .x %>% AIC %>% round)
-bic <- map(arma, ~ .x %>% BIC %>% round)
 
+arma <- c_read_rds("arma_aic")
 table <- table %>% mutate(
-  aic_model = c(
-    "biały szum",
-    "ARMA(2, 2)",
-    "ARMA(2, 1)",
-    "MA(2)",
-    "biały szum",
-    "biały szum"
-  ),
-  aic_aic = aic,
-  aic_bic = bic
+  aic_model = map(arma, c_get_arma_name),
+  aic_aic = map(arma, ~ .x %>% AIC %>% round),
+  aic_bic = map(arma, ~ .x %>% BIC %>% round)
 )
 
 arma <- c_read_rds("arma_bic")
-aic <- map(arma, ~ .x %>% AIC %>% round)
-bic <- map(arma, ~ .x %>% BIC %>% round)
-
 table <- table %>% mutate(
-  bic_model = rep("biały szum", 6),
-  aic = aic,
-  bic = bic
+  bic_model = map(arma, c_get_arma_name),
+  bic_aic = map(arma, ~ .x %>% AIC %>% round),
+  bic_bic = map(arma, ~ .x %>% BIC %>% round)
 )
 
 table %>%
@@ -277,22 +264,14 @@ których specyfikację przedstawia Tabela \@ref(tab:arma-fitting-choice).
 
 ```{r arma-fitting-choice}
 arma <- c_read_rds("arma_aic")
-coefs <- map(arma, coef)
 
 tibble(
   series = tables_full_names,
-  aic_model = c(
-    "biały szum",
-    "ARMA(2, 2)",
-    "ARMA(2, 1)",
-    "MA(2)",
-    "biały szum",
-    "biały szum"
-  ),
-  ar1 = c(NA, coefs$pkn["ar1"], coefs$pko["ar1"], NA, NA, NA),
-  ar2 = c(NA, coefs$pkn["ar2"], coefs$pko["ar2"], NA, NA, NA),
-  ma1 = c(NA, coefs$pkn["ma1"], coefs$pko["ma1"], coefs$ebs["ma1"], NA, NA),
-  ma2 = c(NA, coefs$pkn["ma2"], NA, coefs$ebs["ma2"], NA, NA)
+  aic_model = map(arma, c_get_arma_name),
+  ar1 = map_dbl(arma, ~ coef(.x)["ar1"]),
+  ar2 = map_dbl(arma, ~ coef(.x)["ar2"]),
+  ma1 = map_dbl(arma, ~ coef(.x)["ma1"]),
+  ma2 = map_dbl(arma, ~ coef(.x)["ma2"])
 ) %>%
   c_kable(
     "Zestawienie modeli średniej warunkowej,
@@ -377,6 +356,7 @@ map(
 ) %>%
   bind_rows() %>%
   mutate(
+    p.value = if_else(p.value == 0.1, "> 0.1000", c_format_pval(p.value)),
     statistic = round(statistic, 2)
   ) %>%
   c_kable(
@@ -385,14 +365,10 @@ map(
       "Test",
       "Opóźnienie",
       "Wart. stat. test.",
-      "p-wartość*"
+      "p-wartość"
     )
   ) %>%
-  pack_rows(index = group_names) %>%
-  add_footnote(
-    "Dla testów KPSS wartość 0.1 w kolumnie p-wartość oznacza, że rzeczywista p-wartość jest wyższa od wskazanej.",
-    notation = "symbol"
-  )
+  pack_rows(index = group_names)
 ```
 
 Test McLeoda-Li, który został przedstawiony na korelogramach na Rysunku \@ref(fig:arma-arch-acf), wskazuje na istotną autokorelację w szeregach kwadratów reszt z modelu,
@@ -501,7 +477,7 @@ seq_along(stats) %>%
 Tabela \@ref(tab:markov-models) zawiera informacje na temat modeli dopasowanych do badanych szeregów czasowych,
 m.in. wartości ich kryteriów informacyjnych, a także prawdopodobieństwa, że szereg czasowy utrzyma się w reżimie nr 1 $p_{11}$ oraz że powróci do niego z reżimu nr 2 $p_{21}$.
 Najlepsze z modeli zostały wyłonione na podstawie kryterium informacyjnego Akaike, konsekwentnie z wyborem poczynionym w poprzednim rozdziale.
-Można zauważyć, że optymalne wyniki wykazuje model EGARCH (`eGARCH`), uwzględniający asymetrię wartości szeregu czasowego.
+Można zauważyć, że optymalne wyniki wykazuje model EGARCH, uwzględniający asymetrię wartości szeregu czasowego.
 Badanie wykazało też brak konsensusu dotyczącego przyjętego rozkładu innowacji -- każdy z testowanych rozkładów pojawia się na liście co najmniej raz.
 
 ```{r markov-re-fit}
@@ -584,7 +560,7 @@ a wizualizację prawdopodobieństw zachodzenia poszczególnych reżimów dla ka�
 group_names <- rep(2, length(tables))
 names(group_names) <- tables_full_names
 
-map(
+table <- map(
   tables,
   function(table_name) {
     markov[[table_name]] %>%
@@ -602,35 +578,33 @@ map(
     names_from = param,
     values_from = Estimate
   ) %>%
+  mutate(regime = as.numeric(regime)) %>%
   relocate(regime, .before = alpha0) %>%
-  select(-series) %>%
+  select(-series)
+
+table %>%
   c_kable(
     "Parametry modeli Markowa dopasowanych do stóp zwrotu badanych spółek",
-    col.names = c(
-      "Model",
-      "Reżim",
-      "$\\omega$",
-      "$\\alpha$",
-      "$\\gamma$",
-      "$\\beta$",
-      "$\\nu$",
-      "$\\xi$"
-    ),
+    col.names = model_params[colnames(.)],
     digits = 2
   ) %>%
   pack_rows(index = group_names) %>%
   add_header_above(c(
     " " = 2,
-    "Parametry modelu" = 4,
-    "Par. rozkł. inn." = 2
+    "Parametry modelu" = length(colnames(table)[colnames(table) %in% c(
+      "alpha0", "alpha1", "alpha2", "beta"
+    )]),
+    "Par. rozkł. inn." = length(colnames(table)[colnames(table) %in% c(
+      "nu", "xi"
+    )])
   ))
 ```
 
-```{r markov-plots, fig.cap="Prawdopodobieństwa obecności szeregów czasowych w odpowiednich reżimach dla modelu Markowa", fig.height=8, fig.width=6.5}
+```{r markov-plots, fig.cap="Prawdopodobieństwa obecności szeregów czasowych w odpowiednich reżimach dla modelu Markowa na tle modelowanej zmienności warunkowej", fig.height=8, fig.width=6.5}
 map(
   tables,
   function(table_name) {
-    get(table_name) %>%
+    data_split[[table_name]] %>%
       select(Data, return) %>%
       mutate(
         return = abs(return) / max(abs(return), na.rm = TRUE),
@@ -663,29 +637,16 @@ Wielkość interwałów czasowych została określona w oparciu o Rysunki \@ref(
 Wyróżnionymi okresami są:
 
 ```{r garchx-externals, results='asis'}
-periods <- list(
-  c("1.03.2017", "1.05.2017", "powstanie Krajowej Administracji Skarbowej w Polsce"),
-  c("4.03.2020", "1.06.2020", "wybuch pandemii koronawirusa w Polsce"),
-  c("1.10.2020", "15.02.2021", "???"),
-  c("1.4.2021", "31.05.2021", "???"),
-  c("24.02.2022", "1.05.2022", "początek inwazji rosyjskiej na Ukrainie")
-)
-
-garchx_externals <-
-  wig20 %>%
-  as_tibble() %>%
-  mutate(
-    is_crisis = Reduce(
-      `|`,
-      map(periods, ~ Data %within% interval(dmy(.x[1]), dmy(.x[2])))
-    )
-  ) %>%
-  pull(is_crisis) %>%
-  as.numeric()
-
-# rozpisz
 cat("\\begin{itemize}\n\\tightlist\n")
-walk(periods, ~ cat(paste("\\item", .x[1], "-", .x[2], "r.:", .x[3], "\n")))
+walk(garchx_periods, ~ cat(paste(
+  "\\item",
+  .x[1],
+  "-",
+  .x[2],
+  "r.:",
+  .x[3],
+  "\n"
+)))
 cat("\\end{itemize}")
 ```
 
@@ -774,7 +735,7 @@ garchx <-
         variance.model = list(
           model = models_for_testing[best[[table_name]], ]$volatility,
           garchOrder = c(1, 1),
-          external.regressors = as.matrix(garchx_externals)
+          external.regressors = as.matrix(garchx_externals[[table_name]])
         ),
         mean.model = list(
           armaOrder = arma[[table_name]]$arma[1:2],
@@ -789,7 +750,7 @@ garchx <-
 ```
 
 ```{r garchx-post-optimizing}
-map(
+table <- map(
   tables,
   function(table_name) {
     garchx[[table_name]] %>%
@@ -806,27 +767,23 @@ map(
     names_from = param,
     values_from = Estimate
   ) %>%
-  select(-ar1, -ar2, -ma1, -ma2) %>%
+  select(-starts_with(c("ar", "ma")))
+
+table %>%
   c_kable(
     "Parametry modeli GARCHX dopasowanych do stóp zwrotu badanych spółek",
-    col.names = c(
-      "Szer. czas.",
-      "Model",
-      "$\\omega$",
-      "$\\alpha$",
-      "$\\beta$",
-      "$\\gamma$",
-      "$\\lambda$",
-      "$\\nu$",
-      "$\\xi$"
-    ),
+    col.names = model_params[colnames(.)],
     digits = 2,
     linesep = ""
   ) %>%
   add_header_above(c(
     " " = 2,
-    "Parametry modelu" = 5,
-    "Par. rozkł. inn." = 2
+    "Parametry modelu" = length(colnames(table)[colnames(table) %in% c(
+      "omega", "alpha1", "beta1", "gamma1", "vxreg1"
+    )]),
+    "Par. rozkł. inn." = length(colnames(table)[colnames(table) %in% c(
+      "skew", "shape"
+    )])
   ))
 ```
 

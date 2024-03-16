@@ -31,6 +31,7 @@ primary_color <- "#005322"
 calculations_path <- "includes/calculations/"
 round_digits <- 4
 arma_max_lag <- 9
+data_range <- c("1.02.2019", "1.10.2022")
 
 ################# custom functions #################
 c_acf_plot <- function(returns_split) {
@@ -80,6 +81,25 @@ c_auto_arima <- function(ts, ...) {
     max.p = arma_max_lag,
     max.q = arma_max_lag,
     ...
+  )
+}
+
+c_format_pval <- function(pval) {
+  format.pval(pval, eps = 1e-4)
+}
+
+c_get_arma_name <- function(model) {
+  coefs <- model$arma[c(1, 2)]
+
+  if (Reduce(`&`, coefs == c(0, 0)))
+    return("biały szum")
+
+  c_paste_tight(
+    if_else(coefs[1] > 0, "AR", ""),
+    if_else(coefs[2] > 0, "MA", ""),
+    "(",
+    paste(coefs[coefs > 0], collapse = ", "),
+    ")"
   )
 }
 
@@ -274,5 +294,26 @@ update_geom_defaults(
 
 # tables
 options(
-  knitr.kable.NA = "–"
+  knitr.kable.NA = "–",
+  digits = 4,
+  scipen = 1
+)
+
+# dictionaries
+model_params <- c(
+  series = "Szer. czas.",
+  model = "Model",
+  regime = "Reżim",
+  omega = "$\\omega$",
+  alpha0 = "$\\omega$",
+  alpha1 = "$\\alpha$",
+  beta = "$\\beta$",
+  beta1 = "$\\beta$",
+  gamma1 = "$\\gamma$",
+  alpha2 = "$\\gamma$",
+  vxreg1 = "$\\lambda$",
+  shape = "$\\nu$",
+  nu = "$\\nu$",
+  skew = "$\\xi$",
+  xi = "$\\xi$"
 )

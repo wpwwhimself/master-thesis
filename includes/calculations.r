@@ -1,8 +1,5 @@
-#### setup ####
-source("includes/setup.r")
-source("includes/data.r")
-
 #### ARMA ####
+message("Fitting ARMA...")
 map(
   returns_split,
   ~ c_auto_arima(.x)
@@ -17,11 +14,10 @@ map(
 arma <- c_read_rds("arma_aic")
 
 #### markov ####
-
-# fitting
+message("Fitting markov...")
 for (table_name in tables) {
   pb <- c_progress_setup(
-    paste("Fitting", table_name),
+    paste("-", table_name),
     nrow(models_for_testing)
   )
 
@@ -53,12 +49,11 @@ for (table_name in tables) {
 }
 
 #### GARCHX ####
-
-# fitting
+message("Fitting GARCHX...")
 tables %>%
-  map(function(table_name) {
+  walk(function(table_name) {
     pb <- c_progress_setup(
-      paste("Fitting", table_name),
+      paste("-", table_name),
       nrow(models_for_testing)
     )
 
@@ -70,7 +65,7 @@ tables %>%
           variance.model = list(
             model = volatility,
             garchOrder = c(1, 1),
-            external.regressors = as.matrix(garchx_externals)
+            external.regressors = as.matrix(garchx_externals[[table_name]])
           ),
           mean.model = list(
             armaOrder = arma[[table_name]]$arma[1:2],
