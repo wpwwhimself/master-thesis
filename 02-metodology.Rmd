@@ -96,7 +96,7 @@ data_split %>%
     geom_line() +
     ylab("Wartość stopy zwrotu") +
     scale_x_date(
-      date_breaks = "6 months",
+      date_breaks = "3 months",
       date_labels = "%m.%y"
     ) +
     facet_wrap(index ~ ., ncol = 1)
@@ -244,7 +244,7 @@ table %>%
 
 Tabela \@ref(tab:arma-fitting) pokazuje wyniki przeprowadzonego dopasowania modeli średniej warunkowej do badanych szeregów czasowych na podstawie kryteriów informacyjnego Akaike oraz Schwarza.
 Próby dopasowania różnych modeli ARMA w dużej mierze pokrywają się z obserwacjami poczynionymi na podstawie korelogramów na Rysunku \@ref(fig:arma-acfs):
-dla danych spółek _PKN Orlen_, _PKO BP_ oraz _11 bit studios_ autokorelacja została uwzględniona w modelach ARMA oraz MA,
+dla danych spółek _11 bit studios_ oraz _Synthaverse_ autokorelacja została uwzględniona w modelach ARMA,
 z opóźnieniami w dużej mierze zgodnymi z oczekiwaniami.
 Dla pozostałych szeregów czasowych model białego szumu jest również adekwatny do braku zaobserwowanej autokorelacji.
 
@@ -265,31 +265,28 @@ których specyfikację przedstawia Tabela \@ref(tab:arma-fitting-choice).
 ```{r arma-fitting-choice}
 arma <- c_read_rds("arma_aic")
 
-tibble(
+table <- tibble(
   series = tables_full_names,
-  aic_model = map(arma, c_get_arma_name),
+  model = map(arma, c_get_arma_name),
   ar1 = map_dbl(arma, ~ coef(.x)["ar1"]),
   ar2 = map_dbl(arma, ~ coef(.x)["ar2"]),
+  ar3 = map_dbl(arma, ~ coef(.x)["ar3"]),
   ma1 = map_dbl(arma, ~ coef(.x)["ma1"]),
-  ma2 = map_dbl(arma, ~ coef(.x)["ma2"])
-) %>%
+  ma2 = map_dbl(arma, ~ coef(.x)["ma2"]),
+  ma3 = map_dbl(arma, ~ coef(.x)["ma3"])
+)
+
+table %>%
   c_kable(
     "Zestawienie modeli średniej warunkowej,
     wybranych na podstawie kryterium informacyjnego Akaike,
     wraz z wyestymowanymi wartościami poszczególnych parametrów",
-    col.names = c(
-      "Szereg czasowy",
-      "Model",
-      "$a_1$",
-      "$a_2$",
-      "$b_1$",
-      "$b_2$"
-    ),
+    col.names = model_params[colnames(.)],
     linesep = ""
   ) %>%
   add_header_above(c(
     " " = 2,
-    "Parametry modelu" = 4
+    "Parametry modelu" = length(colnames(table)) - 2
   ))
 ```
 
@@ -622,7 +619,7 @@ map(
       y = "Prawdopodobieństwo reżimu 2"
     ) +
       scale_x_date(
-      date_breaks = "6 months",
+      date_breaks = "3 months",
       date_labels = "%m.%y"
     ) +
 facet_wrap(vars(series), ncol = 1)

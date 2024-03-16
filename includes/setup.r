@@ -31,7 +31,7 @@ primary_color <- "#005322"
 calculations_path <- "includes/calculations/"
 round_digits <- 4
 arma_max_lag <- 9
-data_range <- c("1.02.2019", "1.10.2022")
+data_range <- c("1.01.2019", "1.06.2022")
 
 ################# custom functions #################
 c_acf_plot <- function(returns_split) {
@@ -304,6 +304,12 @@ model_params <- c(
   series = "Szer. czas.",
   model = "Model",
   regime = "Reżim",
+  ar1 = "$a_1$",
+  ar2 = "$a_2$",
+  ar3 = "$a_3$",
+  ma1 = "$b_1$",
+  ma2 = "$b_2$",
+  ma3 = "$b_3$",
   omega = "$\\omega$",
   alpha0 = "$\\omega$",
   alpha1 = "$\\alpha$",
