@@ -8,8 +8,8 @@ lang: pl
 output:
   pdf_document:
     citation_package: biblatex
-bibliography: ["book.bib"]
-biblio-style: "apalike"
+bibliography: book.bib
+csl: https://www.zotero.org/styles/apa-6th-edition-no-ampersand
 link-citations: true
 ---
 
