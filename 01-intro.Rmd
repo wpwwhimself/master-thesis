@@ -127,15 +127,35 @@ Określa się wiele rodzajów błędów \AAA{na pewno?}, ale do najczęściej wy
 \AAA{istotność parametrów}
 
 Oczywiście do każdych danych istnieje możliwość dopasowania kilku różnych modeli, wobec czego zachodzi potrzeba porównania jakości wykorzystanych modeli.
-W tym celu stosuje się _kryteria informacyjne_ -- wskaźniki opierające się na \AAA{czymś}, które pozwalają na wyłonienie optymalnego modelu, który najwierniej opisuje dane zjawisko.
-Podobnie jak w przypadku różnych rodzajów błędów \AAA{o ile tak jest}, istnieje kilka kryteriów informacyjnych, stosowanych przy modelowaniu danych:
-
-- kryterium informacyjne Akaike: $AIC =$ \AAA{wzory},
-- kryterium informacyjne Schwarza (najpopularniejszy): $BIC =$,
-- \AAA{jeszcze 2 były}.
-
-Wszystkie kryteria informacyjne opierają się na tej samej zasadzie -- na zadany model nakładają _karę za ???_ \AAA{jak to się nazywało?}, która rośnie wraz z liczbą parametrów modelu.
+W tym celu stosuje się _kryteria informacyjne_ -- wskaźniki opierające się na wartości funkcji wiarogodności $L$, które pozwalają na wyłonienie optymalnego modelu, który najwierniej opisuje dane zjawisko.
+Podobnie jak w przypadku różnych rodzajów błędów \AAA{o ile tak jest}, istnieje kilka kryteriów informacyjnych, stosowanych przy modelowaniu danych.
+Wszystkie kryteria informacyjne opierają się na tej samej zasadzie
+-- na zadany model nakładają karę za skomplikowanie modelu, która rośnie wraz z liczbą parametrów modelu $k$,
+a rzadziej z wielkością próby $n$.
 Wartości kryterium bliższe 0 informują o lepszej jakości dopasowania modelu.
+Do najpopularniejszych kryteriów informacyjnych należą [@zhangKryteriaInformacyjne]:
+
+- kryterium Akaike [@akaikeAIC]:
+$$
+AIC = 2k - 2 \ln L
+$$
+Do obliczenia tego kryterium informacyjnego wymagana jest jedynie wiedza na temat liczby parametrów modelu $k$ oraz wartość funkcji wiarogodności $L$.
+Stały współczynnik kary równy 2 sprawia, że jest to najbardziej penalizujące kryterium pod względem liczby parametrów.
+\AAA{Kiedy się go preferuje?},
+
+- kryterium Schwarza [@schwarzBIC]:
+$$
+BIC = k \ln n - 2 \ln L
+$$
+Rozwinięcie kryterium informacyjnego Akaike, gdzie dodatkowo karą za złożoność modelu obarczana jest wielkość próby $n$.
+\AAA{Kiedy się go preferuje?},
+
+- kryterium Hannana-Quinna [@hannanHQC]:
+$$
+HQC = 2k \ln(\ln n) - 2 \ln L
+$$
+Rzadziej stosowane kryterium, które w stosunku do BIC umniejsza karę za wielkość próby $n$.
+\AAA{Kiedy się go preferuje?},
 
 ### Modele średniej i wariancji warunkowej
 

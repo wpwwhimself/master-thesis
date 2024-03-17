@@ -99,7 +99,7 @@ data_split %>%
       date_breaks = "3 months",
       date_labels = "%m.%y"
     ) +
-    facet_wrap(index ~ ., ncol = 1)
+    facet_wrap(index ~ ., ncol = 1, scales = "free")
 ```
 
 Na Rysunku \@ref(fig:returns-plot) opracowane są wykresy logarytmicznych stóp zwrotu dla spółek wykorzystanych w badaniu.
