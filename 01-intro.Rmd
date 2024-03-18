@@ -81,7 +81,7 @@ Transakcje te zawierane są za pomocą **instrumentów finansowych**, które poz
 Pełna lista istniejących instrumentów jest długa i można ją podzielić według różnych kryteriów [@ifirmaInstrumenty;@krzywda2005klasyfikacja].
 Na potrzeby niniejszej pracy istotnymi instrumentami finansowymi są *akcje* oraz *indeksy giełdowe*.
 
-**Akcja** jest papierem wartośiowym dającym prawo jej posiadaczowi do udziału w spółce akcyjnej, która jest jej emitentem.
+**Akcja** jest papierem wartościowym dającym prawo jej posiadaczowi do udziału w spółce akcyjnej, która jest jej emitentem.
 Nabywca akcji staje się _akcjonariuszem_ tej spółki, wobec czego jest współwłaścicielem jej majątku i otrzymuje prawa do:
 
 - podziału wypracowanego przez spółkę zysku -- dywidendy,
@@ -114,8 +114,177 @@ Na giełdzie warszawskiej funkcjonuje kilka indeksów, a największymi z nich s�
 Pod pojęciem __modelowania__ zazwyczaj kryje się ogół narzędzi teoretycznych, mających na celu ustalić tendencje wpływające na wartość danego instrumentu na rynku finansowym,
 a w konsekwencji przewidzieć jego przyszłą wartość.
 Aby ten cel osiągnąć, stosuje się wiele różnych modeli matematycznych, o różnych stopniach skomplikowania i liczbach parametrów.
+Aby sensownie usystematyzować dane finansowe wykorzystuje się pojęcie **szeregu czasowego** -- ciągu obserwacji ilustrującego przebieg zjawiska w czasie.
+Dane w szeregu czasowym są mogą reprezentować pomiary dzienne, miesięczne, roczne lub dowolny inny interwał czasowy.
 
-\AAA{błądzenie losowe, ruch Browna?}
+Dane przedstawiające zmienność zjawiska w czasie są zazwyczaj zbudowane z kilku składowych jako następstw różnych czynników zewnętrznych.
+Można tu wyróżnić [@gusSzeregCzas]:
+
+- trend (tendencję rozwojową) --
+skłonność do jednokierunkowych zmian obserwowanych w długim okresie czasu.
+Wzrost średniej ceny towaru na przestrzeni wielu lat pomimo jej wahań w interwale miesięcznym jest przykładem trendu,
+
+- wahania cykliczne --
+związane zazwyczaj z cyklem koniunkturalnym gospodarki, reprezentują długookresowe, powtarzające się wahania wartości wokół trendu,
+
+- sezonowość --
+podobnie jak wahania cykliczne, są przejawem oscylacji wartości szeregu czasowego wokół trendu.
+Wahania sezonowe jednak dotyczą zmian w horyzoncie czasowym do jednego roku.
+Za przykład może tu posłużyć wpływ pór roku na wysokość sprzedaży produktu,
+
+- część przypadkową --
+komponent szeregu czasowego niemożliwy do wyjaśnienia przez powyższe.
+Zawiera losowe wahania szeregu wokół pewnego ustalonego poziomu.
+
+Modele matematyczne i ekonometryczne mają na celu wyjaśnienie wpływu czynników systematycznych w badanych szeregach czasowych,
+co pozwala na prognozowanie dalszego przebiegu zjawiska lub analizę jego sezonowości.
+Dla danych finansowych szczególnie istotne jest modelowanie takich wielkości, jak:
+
+1. wartości (ceny) akcji,
+2. indeksy giełdowe,
+3. obligacje,
+4. kursy walut,
+5. ceny surowców,
+6. stopy procentowe rynku międzybankowego.
+
+Dane dla punktów 1. i 2. są dostępne na stronach internetowych instytucji giełd oraz innych organizacji/osób i są głównym tematem tej pracy.
+Katalogowane są one w odstępach dziennych, uwzględniając dni sesyjne, tj. dni, w których giełda jest otwarta.
+Dla szeregów czasowych reprezentujących dane finansowe częstą praktyką jest konstruowanie szeregu **logarytmicznych stóp zwrotu** z inwestycji z wykorzystaniem Wzoru \@ref(eq:return):
+
+\begin{equation} (\#eq:return)
+r_{t} = \ln\nz{\frac{x_{t}}{x_{t-1}}} \cdot 100
+\end{equation}
+gdzie $x_i$ jest wartością szeregu czasowego $(x)$ w momencie $t$.
+Zabieg ten znajduje swoje zastosowanie ze względu na kilka czynników [@wzrSzeregiCzas]:
+
+- ujednolicenie danych -- zastosowanie logarytmu pozwala na znormalizowanie wartości, usuwając zaburzenia wynikające ze skali szeregu,
+- stabilność statystyczna -- transformacja ta nadaje szeregowi czasowemu odporności na wahania krótkoterminowe, co pomaga w prognozach na dłuższe okresy,
+- modelowanie zmienności -- analiza stóp zwrotu jest przydatna na potrzeby modeli poruszanych w badaniu, które są skoncentrowane na badaniu zmienności zjawiska zamiast jego rzeczywistych wartości.
+
+Ze względu na te wnioski, obliczenia w niniejszej pracy będą się odbywały w odniesieniu do szeregów logarytmicznych stóp zwrotu badanych spółek i indeksów.
+
+### Modele średniej i wariancji warunkowej
+
+W obrębie niniejszego badania rozważane będą dwa rodzaje modeli szeregów czasowych: modele średniej warunkowej oraz wariancji warunkowej.
+Dodatkowym elementem tego typu równań jest również czynnik losowy $\epsilon$, zwany **innowacją**, reprezentujący część przypadkową danych.
+Dla danych finansowych poruszanych na łamach tej pracy zmienną objaśnianą jest **wartość szeregu** logarytmicznych stóp zwrotu **w danym momencie** $r_t$.
+
+**Model średniej warunkowej** ma na celu wyjaśnienie zmienności szeregu czasowego za pomocą równania liniowego,
+uzależniając średni poziom szeregu czasowego od sumy iloczynów pewnych parametrów oraz zmiennych objaśniających.
+Klasa modeli przybliżona w dalszej części badania korzysta ze zjawiska **autoregresji** szeregu czasowego,
+tj. uzależnienia wartości obecnej szeregu od jego wartości w wybranych momentach przeszłych.
+Ma to swoje zastosowanie w klasie modeli ARMA (_autoregressive - moving average_), którego budowę przedstawia Wzór \@ref(eq:arma).
+
+\begin{equation} (\#eq:arma)
+x_t =
+  \sum_{i=1}^{p} a_i x_{t-i}
+  + \sum_{j=1}^{q} b_i \epsilon_{t-i}
+  + \epsilon_{t}
+\end{equation}
+
+Model składa się z dwóch komponentów:
+
+- część autoregresyjna (AR): model uzależnia wartość obecną szeregu czasowego od jego kolejnych $p$ przeszłych wartości,
+- część średniej ruchomej (MA): wartość szeregu w danym momencie jest zależna od kolejnych $q$ wartości przeszłych innowacji.
+
+Model ARMA sprawdza się szczególnie dobrze w zagadnieniach związanych z modelowaniem stóp procentowych \AAA{citation needed}.
+
+**Modele wariancji warunkowej** pomagają w interpretacji zależności długookresowych szeregu czasowego,
+a w ich implementacji korzystają z równań kwadratowych.
+Jak wskazuje nazwa, modele tej klasy mają na celu modelowanie wariancji szeregu czasowego.
+Dokonuje się tego z wykorzystaniem reszt z modelu liniowego (np. ARMA), a w ogólności model taki można opisać Wzorem \@ref(eq:arch-base).
+Uzależnia on wartość stopy zwrotu $r_t$ od modelowanej średniej $\mu_t$ oraz reszty z modelu $y_t$.
+
+\begin{equation} (\#eq:arch-base)
+r_t = \mu_t + y_t, 
+\quad
+y_t = \sigma_t \epsilon_t,
+\quad
+\epsilon_t \sim IID(0, 1)
+\end{equation}
+
+Historycznie pierwszym z modeli należących do tej klasy jest model ARCH(q) (_autoregressive conditional heteroskedasticity_) [@engleARCH],
+w którym wariancja warunkowa modelu jest opisywana przez kwadraty reszt z modelu (Wzór \@ref(eq:arch)).
+
+\begin{equation} (\#eq:arch)
+\sigma_t^2 =
+  \omega
+  + \sum_{i=1}^{q} \alpha_i y^2_{t-i}
+\end{equation}
+
+Wadą tego modelu w kontekście rynków finansowych jest konieczność stosowania wysokiej liczby opóźnień $q$,
+co prowadzi do skomplikowanego modelu i wymaga dłuższych horyzontów czasowych \AAA{citation needed}.
+Naprzeciw temu problemowi występuje model GARCH(q, p) [@bollerslevGARCH], w którym w modelowaniu wariancji warunkowej biorą udział również przeszłe wartości wariancji,
+co reprezentuje Wzór \@ref(eq:garch).
+
+\begin{equation} (\#eq:garch)
+\sigma_t^2 =
+  \omega
+  + \sum_{i=1}^{q}
+    \alpha_i y^2_{t-i}
+  + \sum_{j=1}^{p}
+    \beta_j \sigma^2_{t-j}
+\end{equation}
+
+Istotnym czynnikiem, jaki pojawia się przy modelowaniu danych finansowych jest **efekt dźwigni**.
+Model GARCH zakłada, że dodatnie i ujemne stopy zwrotu mają taki sam wpływ na decyzje podejmowane przez inwestora.
+Nie jest to jednak realne założenie, ponieważ spadki cen instrumentów finansowych są zwykle bardziej nagłaśniane aniżeli ich wzrosty.
+\AAA{citation needed}
+Za ilustrację tych zachowań odpowiada koncept **krzywej wpływu informacji**, która jest elementem dwóch kolejnych rozpatrywanych w tej pracy modeli.
+Model GJR-GARCH(q, p) [@glostenGJR] (Wzór \@ref(eq:gjr-garch)) jest rozbudowaniem modelu GARCH,
+przy czym uwzględnia on dodatkowo asymetrię informacji w części równania odpowiedzialnej za wpływ kwadratów reszt.
+Powoduje to, że negatywne wartości tego szeregu mają większy wpływ na modelowaną zmienność.
+
+\begin{equation} (\#eq:gjr-garch)
+\sigma_t^2 =
+  \omega
+  + \sum_{i=1}^{q} \nz{
+    \alpha_i y^2_{t-i} + \gamma_i y^2_{t-i} \doubleI(y_{t-i} < 0)
+  }
+  + \sum_{j=1}^{p}
+    \beta_j \sigma^2_{t-j}
+\end{equation}
+
+Podobną aplikację krzywej wpływu informacji wykorzystuje model EGARCH(q, p) [@nelsonEGARCH].
+Rozwiązuje on problemy modelu GARCH, takie jak uproszczenie interpretacji persystencji szoków i monitorowanie korelacji pomiędzy zwrotami a innowacjami zmienności.
+Jak wskazuje Wzór \@ref(eq:egarch), modyfikacja opiera się na modelowaniu logarytmu wariancji.
+
+\begin{equation} (\#eq:egarch)
+\ln \sigma_t^2 =
+  \omega
+  + \sum_{i=1}^{q}
+    \alpha_i \nz{
+      \abs{y_{t-i}} - \doubleE \abs{y_{t-i}}
+    } + \gamma_i y_{t-i}
+  + \sum_{j=1}^{p}
+    \beta_j \sigma^2_{t-j}
+\end{equation}
+
+Innym podejściem będącym rozwinięciem idei modeli heteroskedastyczności warunkowej jest uwzględnienie w modelu wpływu czynników zewnętrznych,
+takich jak sezonowość lub zmienność innych szeregów czasowych (np. innych instrumentów finansowych).
+W tym celu opracowany został model GARCH-X [@hwangGARCHX], w równaniu którego (Wzór \@ref(eq:garchx)) pojawia się składnik odpowiedzialny za siłę tychże zależności.
+
+\begin{equation} (\#eq:garchx)
+\sigma_t^2 =
+  \omega
+  + \sum_{i=1}^{q}
+    \alpha_i y^2_{t-i}
+  + \sum_{j=1}^{p}
+    \beta_j \sigma^2_{t-j}
+  + \sum_{k=1}^{r}
+    \lambda_k w^2_{t-k}
+\end{equation}
+
+We wszystkich powyższych modelach rozkład innowacji $\epsilon_t$ jest przyjmowany jako rozkład IID (szereg niezależnych zmiennych losowych o jednakowym rozkładzie).
+W klasycznych rozważaniach rolę tę spełnia rozkład normalny, jednak do zastosowań finansowych wykorzystuje się również inne, uwzględniające dodatkowe czynniki, jakie jak leptokurtoza rozkładu.
+Poniżej przedstawiono rozkłady innowacji najczęściej stosowane w modelowaniu szeregów finansowych, wraz z ich parametrami:
+
+- rozkład normalny -- średnia $\mu$, wariancja $\sigma^2$,
+- rozkłąd t Studenta -- liczba stopni swobody (kształt) $\nu$,
+- rozkład skośny t Studenta -- liczba stopni swobody $\nu$, skośność $\xi = \exp(\lambda)$
+- rozkład GED [@nelsonEGARCH, str. 352] -- kształt $\nu$.
+
+\AAA{Parę słów o Markowie}
 
 Proces __dopasowania__ modelu teoretycznego do danych rzeczywistych polega na znalezieniu jego parametrów tak, aby zminimalizować _błąd dopasowania_, tj. absolutną różnicę pomiędzy wartością teoretyczną a wartością rzeczywistą.
 Określa się wiele rodzajów błędów \AAA{na pewno?}, ale do najczęściej wyróżniach w badaniach zalicza się:
@@ -156,71 +325,6 @@ HQC = 2k \ln(\ln n) - 2 \ln L
 $$
 Rzadziej stosowane kryterium, które w stosunku do BIC umniejsza karę za wielkość próby $n$.
 \AAA{Kiedy się go preferuje?},
-
-### Modele średniej i wariancji warunkowej
-
-\AAA{do dokończenia}
-
-\begin{gather*}
-ARMA(p, q):
-  x_t =
-    \sum_{i=1}^{p} a_i x_{t-i}
-    + \sum_{j=1}^{q} b_i \epsilon_{t-i}
-    + \epsilon_{t}
-\\
-ARCH(q):
-  \sigma_t^2 =
-    \omega
-    + \sum_{i=1}^{q} \alpha_i y^2_{t-i}
-\\
-GARCH(p, q):
-  \sigma_t^2 =
-    \omega
-    + \sum_{i=1}^{q}
-      \alpha_i y^2_{t-i}
-    + \sum_{j=1}^{p}
-      \beta_j \sigma^2_{t-j}
-\\
-GARCH-X(p, q, r):
-  \sigma_t^2 =
-    \omega
-    + \sum_{i=1}^{q}
-      \alpha_i y^2_{t-i}
-    + \sum_{j=1}^{p}
-      \beta_j \sigma^2_{t-j}
-    + \sum_{k=1}^{r}
-      \lambda_k w^2_{t-k}
-\\
-GJR-GARCH(p, q):
-  \sigma_t^2 =
-    \omega
-    + \sum_{i=1}^{q} \left(
-      \alpha_i y^2_{t-i} + \gamma_i y^2_{t-i} \mathbb{I}(y_{t-i} < 0)
-    \right)
-    + \sum_{j=1}^{p}
-      \beta_j \sigma^2_{t-j}
-\\
-EGARCH(p, q):
-  \ln \sigma_t^2 =
-    \omega
-    + \sum_{i=1}^{q}
-      \alpha_i \left(
-        \left| y_{t-i} \right| - \mathbb{E}(\left| y_{t-i} \right|)
-      \right) + \gamma_i y_{t-i}
-    + \sum_{j=1}^{p}
-      \beta_j \sigma^2_{t-j}
-\end{gather*}
-
-### Model przełącznikowy Markowa
-
-\AAA{do ustalenia, czy taka budowa podrozdziałów ma sens}
-
-### Rozważane rozkłady innowacji
-
-> - normalny -- $\mu$ średnia, $\sigma^2$ wariancja
-> - t Studenta -- $\nu$ stopnie swobody
-> - skośny t Studenta -- $\nu$ stopnie swobody, $\xi = \exp(\lambda)$ skośność
-> - GED -- $\nu$ kształt
 
 ## Przegląd literatury
 

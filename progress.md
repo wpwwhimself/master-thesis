@@ -18,7 +18,6 @@
 - [x] podział rynku?
 #### modelowanie rynków finansowych
 - [ ] co to jest dopasowanie
-- [ ] opisanie błądzenia losowego
 - [ ] metoda najmniejszych kwadratów
 - [ ] istotność parametrów
 - [ ] kryteria informacyjne
@@ -62,6 +61,7 @@
 - [x] porównanie kryteriów
 - [x] wybór modeli
 - [x] showcase parametrów modeli
+- [ ] ==czy miałoby sens wziąć zmienność WIG20 (garch np.) i wrzucić to jako zmienną objaśniającą?==
 ### predykcje
 - [ ] ==horyzont predykcji==
 - [x] wykonać predykcje

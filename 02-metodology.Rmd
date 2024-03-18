@@ -59,14 +59,11 @@ Do przeprowadzania badania wykorzystane zostaną dane o cenach akcji zebrane z s
 Jest to jeden z najbardziej znanych serwisów internetowych zbierających dane finansowe spółek notowanych nie tylko na _Giełdzie Papierów Wartościowych_, ale również na innych giełdach światowych, m.in. amerykański indeks _S&P US_.
 Można tam znaleźć również informacje o kursach walut, cenach towarów i inne dane finansowe.
 Usługi serwisu są skierowane głównie do osób biegłych w rynkach finansowych, poszukujących atrakcyjnych form lokowania kapitału, ale także menadżerów, biznesmenów oraz właścicieli firm [@stooq].
-Na potrzeby badania pobrano dane giełdowe z okresu `r data_range[1]` - `r data_range[2]` r.
+Na potrzeby badania pobrano dane giełdowe z okresu `r data_range[1]` - `r data_range[2]`,
+co daje `r length(tables)` `r length(na.omit(returns_split[[1]]))`-elementowych szeregów czasowych.
 
-Punktem wyjścia do prowadzenia badań będzie utworzenie szeregu czasowego cen zamknięcia akcji.
-Aby zapewnić stacjonarność tego szeregu czasowego, obliczane są **logarytmiczne stopy zwrotu** według wzoru:
-$$
-r_{i} = \ln\left(\frac{x_{i}}{x_{i-1}}\right) \cdot 100
-$$
-gdzie $x_i$ oznacza cenę zamknięcia w momencie $i$.
+Punktem wyjścia do prowadzenia badań będzie wybranie szeregu czasowego cen zamknięcia akcji.
+Aby zapewnić stacjonarność tego szeregu czasowego, obliczane są logarytmiczne stopy zwrotu według wzoru \@ref(eq:return).
 Tak utworzony szereg czasowy spełnia założenia stacjonarności i można go wykorzystać do dalszych badań.
 W celach poglądowych w Tabeli \@ref(tab:showcase) zamieszczone zostały przykładowe dane dotyczące indeksu WIG20 wraz z obliczonymi stopami zwrotu.
 
