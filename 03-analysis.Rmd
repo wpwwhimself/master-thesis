@@ -12,6 +12,23 @@
 
 ## Analiza wpływu pandemii i wojny na notowania giełdowe
 
+```{r stock-prices-plot, fig.cap="Ceny zamknięcia akcji oraz wartości indeksu dla badanych spółek", fig.height=8, fig.width=6.5}
+data_split %>%
+  bind_rows(.id = "index") %>%
+  mutate(index = tables_full_names[index]) %>%
+  ggplot(aes(Data, Zamkniecie)) +
+    geom_line() +
+    ylab("Wartość stopy zwrotu") +
+    scale_x_date(
+      date_breaks = "3 months",
+      date_labels = "%m.%y"
+    ) +
+    facet_wrap(index ~ ., ncol = 1, scales = "free")
+```
+
+Jak widać na Rysunkach \@ref(fig:stock-prices-plot), \@ref(fig:returns-plot) i \@ref(fig:markov-plots), wydarzenia ostatnich lat wyraźnie wstrząsnęły polską giełdą.
+Każde z nich ma swoje odzwierciedlenie w stopach zwrotu rozpatrywanych spółek.
+
 > - dogłębne spojrzenie na te momenty zwiększonej wahliwości
 > - jakie straty na rynku w tym czasie się stały
 
