@@ -11,16 +11,17 @@
 
 ## Po co nam to wszystko?
 
-Wyniki niniejszej pracy koncentrują się jedynie na małej części rynku oraz stosunkowo krótkim horyzoncie czasowym.
-Jednak modele zbudowane w przedstawiony sposób i odpowiednio usprawnione mogą mieć zastosowanie w różnych sytuacjach i mogą służyć do prognozowania zróżnicowanych szeregów czasowych.
+Wyniki niniejszej pracy koncentrują się jedynie na obserwacji małej części rynku oraz stosunkowo krótkiego horyzontu czasowego.
+Jednak odpowiednio usprawnione modele zbudowane w przedstawiony tutaj sposób mogą mieć zastosowanie w różnych sytuacjach i mogą służyć do prognozowania zróżnicowanych szeregów czasowych.
+Obecna sytuacja geopolityczna i eskalacja napięć na scenie międzynarodowej, podobnie jak pogłębiający się kryzys klimatyczny i wyczerpujące się złoża surowców naturalnych,
+niechybnie doprowadzą do kolejnych wstrząsów gospodarczych.
+Zmiany te są nieodzownym elementem ludzkiej historii i prawdopodobnie będziemy odczuwać ich wpływ na niemal wszystkie sfery naszego życia przez długi czas.
+Z tego też powodu warto odpowiednio przygotowywać się na sytuacje podobne do przedstawionych w ramach tej pracy.
+Symulacje wartości instrumentów finansowych pozwalają na maksymalizację zysków oraz minimalizację strat z podjętych inwestycji w obliczu nagłego zachwiania się cyklu koniunkturalnego.
+Mogą one pomóc w podejmowaniu lukratywnych decyzji i dać ugruntowane argumenty przeciw pozornie korzystnym wyborom.
 
-Sytuacja na świecie zmienia się bardzo dynamicznie.
-Zmiany na tle politycznym, ekonomicznym, a nawet klimatycznym, są nieodzownym jej elementem i będziemy odczuwać ich wpływ przez długi czas.
-Z tego też powodu warto odpowiednio przygotowywać się na takie sytuacje, jak te przedstawione w ramach tej pracy.
-Symulacje indeksów giełdowych pozwalają na maksymalizację zysków oraz minimalizację strat z podjętych inwestycji w obliczu nagłego zachwiania się cyklu koniunkturalnego.
-
-Warto też wspomnieć, że modelowanie szeregów czasowych nie jest wyłącznie domeną ekonomii:
-tego typu dane mogą być również użyte w naukach takich jak:
+Warto też wspomnieć, że modelowanie szeregów czasowych nie jest wyłącznie domeną ekonomii.
+Tego typu dane mogą być również użyte w pokrewnych dziedzinach nauki takich jak:
 
 - meteorologia i klimatologia -- analiza danych meteorologicznych, np. zmian temperatury, intensywności opadów lub ciśnienia atmosferycznego,
 pozwala na lepsze zrozumienie i prognozowanie zmian klimatycznych oraz opracowywanie sprawniejszych modeli pogodowych.
