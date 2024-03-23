@@ -23,14 +23,14 @@
 - [ ] kryteria informacyjne
 - [ ] ustandaryzowanie pogrubień i pochyleń
 - [ ] testy statystyczne
-- [ ] ==wszystko, czego używam w pracy, muszę rozpisać wzorem?==
+- [x] wszystko, czego używam w pracy, muszę rozpisać wzorem? *najważniejsze*
 ### przegląd literatury
-- [ ] ==ile pozycji w literaturze?
-- [ ] ==czy linki do artykułów są w porządku?
-- [ ] kilka słów o pozycjach
-- [ ] ==czy tę sekcję będę mógł zastąpić opisem modeli użytych, czy to wyżej?==
+- [x] ile pozycji w literaturze? -- *tyle ile teraz jest OK*
+- [x] czy linki do artykułów są w porządku? *tak, są*
+- [x] czy tę sekcję będę mógł zastąpić opisem modeli użytych, czy to wyżej? *tak*
+- [ ] usunąć tę sekcję
 ### pakiety
-- [ ] ==czy wszystkie pakiety opisywać?
+- [x] czy wszystkie pakiety opisywać? -- *najważniejsze*
 - [x] rugarch
 - [x] msgarch
 ## Metodologia badawcza
@@ -41,7 +41,7 @@
 - [x] statystyki opisowe
 - [x] testy normalności
 ### wybór odpowiedniego modelu
-- [ ] ==czy praca ma być podsumowaniem badań czy ilustrować ich przebieg?==
+- [x] czy praca ma być podsumowaniem badań czy ilustrować ich przebieg? *preferowalnie podsumowanie, ale ważne decyzje też można opisać*
 #### dopasowanie modelu średniej warunkowej
 - [x] pierwsze korelogramy
 - [x] dopasowanie różnych arma
@@ -52,7 +52,7 @@
 - [x] dopasowanie różnych GARCH
 - [x] porównanie kryteriów
 - [x] wybór modeli
-- [x] ==jak to jest z tą wymagalnością parametrów?==
+- [x] jak to jest z tą wymagalnością parametrów? *można pominąć*
 - [x] wykresy reżimów
 - [x] showcase parametrów modeli
 #### garchx
@@ -61,20 +61,21 @@
 - [x] porównanie kryteriów
 - [x] wybór modeli
 - [x] showcase parametrów modeli
-- [ ] ==czy miałoby sens wziąć zmienność WIG20 (garch np.) i wrzucić to jako zmienną objaśniającą?==
+- [x] czy miałoby sens wziąć zmienność WIG20 (garch np.) i wrzucić to jako zmienną objaśniającą? *tak się robi*
+- [ ] pokombinować z innymi zmiennymi objaśniającymi (WIG20)
 ### predykcje
-- [ ] ==horyzont predykcji==
+- [x] horyzont predykcji *7 dni jest w porządku*
 - [x] wykonać predykcje
-- [ ] przeliczyć na wartości akcji/indeksu ==czy ma to sens?==
 ## Analiza wyników
 ### ocena jakości predykcji
-- [ ] porównanie prognoz z faktycznymi wartościami indeksu
+- [x] porównanie prognoz z faktycznymi wartościami indeksu -- *nie prognozuję wartości*
+- [ ] błędy prognoz (RMSE, MAPE?)
 ### analiza wpływu na notowania
 - [ ] dogłębne spojrzenie na te momenty zwiększonej wahliwości
 - [ ] jakie straty na rynku w tym czasie się stały
 ### porównanie z innymi modelami
 - [ ] zastanowić się nad sensem tego rozdziału
-- [ ] z jakimi innymi modelami?
+- [ ] modele stochastyczne -- może są jakieś pakiety -- jeśli nie, to wywalić sekcję
 ## Wnioski
 ### podsumowanie wyników analizy
 - [ ] streszczenie tego wszystkiego, co się wydarzyło do tej pory
