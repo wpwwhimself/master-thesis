@@ -23,10 +23,9 @@ data <-
   bind_rows()
 
 garchx_periods <- list(
-  c("1.03.2017", "1.05.2017", "powstanie Krajowej Administracji Skarbowej w Polsce"),
-  c("4.03.2020", "1.06.2020", "wybuch pandemii koronawirusa w Polsce"),
-  c("15.10.2020", "15.02.2021", "???"),
-  c("24.02.2022", "1.04.2022", "początek inwazji rosyjskiej na Ukrainie")
+  c("4.03.2020", "1.07.2020", "wybuch pandemii koronawirusa w Polsce"),
+  c("15.10.2020", "15.02.2021", "początek drugiego lockdownu w Polsce"),
+  c("24.02.2022", "15.04.2022", "początek inwazji rosyjskiej na Ukrainie")
 ) %>%
   Filter(function(v) {
     dmy(v[1]) >= dmy(data_range[1]) && dmy(v[2]) <= dmy(data_range[2])

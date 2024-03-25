@@ -350,7 +350,7 @@ map(
 ) %>%
   bind_rows() %>%
   mutate(
-    p.value = if_else(p.value == 0.1, "> 0.1000", c_format_pval(p.value)),
+    p.value = if_else(p.value == 0.1, ">0.1000", c_format_pval(p.value)),
     statistic = round(statistic, 2)
   ) %>%
   c_kable(
@@ -710,7 +710,8 @@ seq_along(stats) %>%
       "Model",
       "AIC",
       "BIC"
-    )
+    ),
+    linesep = ""
   ) %>%
   add_header_above(
     c(" " = 2, "Kryterium informacyjne" = 2)
