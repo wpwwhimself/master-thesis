@@ -55,4 +55,11 @@ data_split <-
 returns_split <- data_split %>%
   map(~ pull(.x, return))
 garchx_externals <- data_split %>%
-  map(~ pull(.x, is_crisis) %>% as.numeric)
+  map(function(.x) {
+    cols <- list(
+      pull(.x, is_crisis) %>% as.numeric,
+      returns_split$wig %>% coalesce(0)
+    )
+
+    matrix(unlist(cols), ncol = length(cols))
+  })
