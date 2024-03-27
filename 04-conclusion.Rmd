@@ -9,6 +9,39 @@
 
 ## Ograniczenia i potencjalne usprawnienia analizy
 
+Przeprowadzony proces modelowania i prognozowania zmienności dla badanych szeregów czasowych jest wrażliwy na szereg czynników,
+które zaważyły na ostatecznych jego wynikach.
+Wiele z nich bezpośrednio wpłynęły na ciąg decyzji podjętych w niniejszej pracy.
+
+Niewątpliwie istotnym aspektem modelowania za pomocą modeli przełącznikowych Markowa jest **złożoność**.
+Celem przeprowadzonego badania było kompleksowe przetestowanie jak największej liczby kombinacji modeli wariancji warunkowej (za pomocą modeli z rodziny GARCH),
+a także rozkładów innowacji.
+W ostatecznej wersji badania doprowadziło to do wykonania `r nrow(models_for_testing)` dopasowań dla każdego z badanych szeregów czasowych.
+Z uwagi na budowę modelu Markowa (patrz Wzór \@ref(eq:markov)), estymacja każdego wariantu jest bardzo kosztowna obliczeniowo,
+szczególnie w przypadku modeli posiadających większą liczbę parametrów.
+Bardziej dogłębna analiza wymaga zatem większych nakładów mocy obliczeniowej,
+co ze względu na charakter niniejszej pracy zostało pominięte na rzecz ograniczenia liczby badanych modeli.
+
+Wyniki estymacji modeli Markowa, której wyniki przedstawia Rysunek \@ref(fig:markov-plots), zostały osiągnięte w wyniku odpowiedniego dobrania długości badanych szeregów czasowych.
+Przed rozpoczęciem procesu modelowania przyjęto horyzont czasowy pięciu lat dla wybranych danych giełdowych, co poskutkowało szeregami czasowymi długości 1500.
+Jednak dla modeli dopasowanych do tych danych, wybranych analogicznie jak w finalnych wynikach badania,
+prawdopodobieństwa przebywania szeregu w danym reżimie osiągały bardzo wysokie poziomy ($p_{11}, p_{21} > 0.85$),
+skutkiem czego podział badanego okresu czasu na okresy mniejszej oraz większej zmienności okazał się być bezcelowy.
+Głównym zabiegiem, jaki pozwolił na redukcję prawdopodobieństwa $p_{21}$ w estymowanych modelach,
+było skrócenie horyzontu czasowego badania do obecnego,
+zmniejszając ilość danych o około połowę.
+Doprowadziło to do o wiele lepszych wizualnie wyników w przypadku pięciu z badanych szeregów czasowych.
+Prawdopodobnym jest, że **dalsze modyfikacje horyzontu czasowego** badania pozwoliłyby na jeszcze lepsze dopasowania modeli Markowa,
+szczególnie w przypadku danych spółki _11 bit studios_, gdzie prawdopodobieństwo $p_{21}$ nadal dość wysokie.
+Te same czynniki można przypisać jakości dopasowania modeli GARCH-X,
+które również są wrażliwe na długość szeregu czasowego przyjętego do modelowania.
+
+Z kolei czynnikiem, który w subiektywnym odczuciu autora najbardziej wpływająca na właściwe dopasowanie modeli GARCH-X,
+jest **właściwy wybór zmiennych reprezentujących czynniki zewnętrzne**.
+Jest to kluczowy aspekt tej klasy modeli i niepoprawna selekcja danych na tym etapie może obniżyć wiarygodność wyników badań.
+Potencjalnym polem do usprawnień w tym zakresie jest znalezienie większej liczby szeregów czasowych związanych z danymi giełdowymi badanych spółek
+-- tym sposobem bardziej prawdopodobne byłoby wykrycie dodatkowych zależności i wyjaśnienie obecnie niewyjaśnionych wahań zmienności analizowanych szeregów czasowych.
+
 ## Po co nam to wszystko?
 
 Wyniki niniejszej pracy koncentrują się jedynie na obserwacji małej części rynku oraz stosunkowo krótkiego horyzontu czasowego.
