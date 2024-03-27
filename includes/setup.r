@@ -226,7 +226,7 @@ c_pred_plot <- function(pred_vol, past_vol) {
     unlist(recursive = FALSE) %>%
     c_plot(
       tables_full_names,
-      c("m. Markowa", "GARCHX")
+      c("m. Markowa", "GARCH-X")
     )
 }
 

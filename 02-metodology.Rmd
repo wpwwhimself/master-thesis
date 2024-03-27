@@ -622,9 +622,9 @@ map(
 facet_wrap(vars(series), ncol = 1)
 ```
 
-### GARCHX
+### GARCH-X
 
-W celu dopasowania modelu GARCHX koniecznym jest przygotowanie dodatkowych zmiennych, mających na celu objaśnienie **wpływu czynników zewnętrznych** na zmienność wariancji warunkowej.
+W celu dopasowania modelu GARCH-X koniecznym jest przygotowanie dodatkowych zmiennych, mających na celu objaśnienie **wpływu czynników zewnętrznych** na zmienność wariancji warunkowej.
 Ponieważ badanie rozważa wpływ dwóch konkretnych wydarzeń na arenie międzynarodowej na polską gospodarkę, za zmienną objaśniającą została przyjęta zmienna indykatorowa,
 wyróżniająca istotne związane z tymi, a także innymi wydarzeniami na scenie ekonomicznej Polski.
 Wielkość interwałów czasowych została określona w oparciu o Rysunki \@ref(fig:returns-plot) oraz \@ref(fig:markov-plots).
@@ -703,7 +703,7 @@ seq_along(stats) %>%
   }) %>%
   bind_rows() %>%
   c_kable(
-    "Najlepsze wartości kryteriów informacyjnych dla modeli GARCHX
+    "Najlepsze wartości kryteriów informacyjnych dla modeli GARCH-X
     dopasowanych do stóp zwrotu badanych spółek",
     col.names = c(
       "Szereg czasowy",
@@ -766,7 +766,7 @@ table <- map(
 
 table %>%
   c_kable(
-    "Parametry modeli GARCHX dopasowanych do stóp zwrotu badanych spółek",
+    "Parametry modeli GARCH-X dopasowanych do stóp zwrotu badanych spółek",
     col.names = model_params[colnames(.)],
     digits = 2,
     linesep = ""
@@ -782,7 +782,7 @@ table %>%
   ))
 ```
 
-Tabela \@ref(tab:garchx-models) przedstawia modele GARCHX dopasowane do danych badanych spółek, wybrane na podstawie kryterium informacyjnego Akaike.
+Tabela \@ref(tab:garchx-models) przedstawia modele GARCH-X dopasowane do danych badanych spółek, wybrane na podstawie kryterium informacyjnego Akaike.
 Można zauważyć, że każdy z modeli uwzględnia asymetrię modelu, ponieważ wyłonione zostały modele EGARCH oraz GJR.
 Rozkłady innowacji dobrane do każdego z tych modeli stanowią zamienniki rozkładu normalnego, przy czym najczęściej w rankingu pojawia się rozkład GED.
 Tabela \@ref(tab:garchx-post-optimizing) zawiera z kolei wartości parametrów wyestymowane dla tych modeli.
