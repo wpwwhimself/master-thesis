@@ -11,7 +11,7 @@
 
 Przeprowadzony proces modelowania i prognozowania zmienności dla badanych szeregów czasowych jest wrażliwy na szereg czynników,
 które zaważyły na ostatecznych jego wynikach.
-Wiele z nich bezpośrednio wpłynęły na ciąg decyzji podjętych w niniejszej pracy.
+Wiele z nich bezpośrednio wpłynęło na ciąg decyzji podjętych w niniejszej pracy.
 
 Niewątpliwie istotnym aspektem modelowania za pomocą modeli przełącznikowych Markowa jest **złożoność**.
 Celem przeprowadzonego badania było kompleksowe przetestowanie jak największej liczby kombinacji modeli wariancji warunkowej (za pomocą modeli z rodziny GARCH),
@@ -39,6 +39,7 @@ które również są wrażliwe na długość szeregu czasowego przyjętego do mo
 Z kolei czynnikiem, który w subiektywnym odczuciu autora najbardziej wpływająca na właściwe dopasowanie modeli GARCH-X,
 jest **właściwy wybór zmiennych reprezentujących czynniki zewnętrzne**.
 Jest to kluczowy aspekt tej klasy modeli i niepoprawna selekcja danych na tym etapie może obniżyć wiarygodność wyników badań.
+Zastosowana w obecnej pracy decyzja wyboru zmiennych z pewnością nie wyjaśnia wszystkich wpływów czynników zewnętrznych na kreowanie się zmienności danych.
 Potencjalnym polem do usprawnień w tym zakresie jest znalezienie większej liczby szeregów czasowych związanych z danymi giełdowymi badanych spółek
 -- tym sposobem bardziej prawdopodobne byłoby wykrycie dodatkowych zależności i wyjaśnienie obecnie niewyjaśnionych wahań zmienności analizowanych szeregów czasowych.
 
