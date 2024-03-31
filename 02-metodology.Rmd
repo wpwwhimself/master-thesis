@@ -38,7 +38,8 @@ Wykonuje projekty budowlane w największych miastach Polski: Warszawie, Wrocław
 W ciągu ponad 25 lat działalności firma oddała do użytku ponad 46 tys. lokali [@domSelf].
 
 1. **Synthaverse** -- polska spółka akcyjna dostarczająca wiodące na rynku rozwiązania **farmaceutyczne** z niemal stuletnią tradycją.
-Rozpoczęła działalność jako _Laboratorium Produkcji Szczepionki przeciwko Durowi Plamistemu_ oraz _Zakład Produkcji Surowic i Szczepionek przy Filii PZH w Lublinie_.
+Rozpoczęła działalność jako _Laboratorium Produkcji Szczepionki przeciwko Durowi Plamistemu_ oraz _Zakład Produkcji Surowic i Szczepionek przy Filii PZH w Lublinie_,
+a na giełdzie przez długi czas notowana była jako _Biomed Lublin S.A._.
 Dostarcza swoje produkty do 50 krajów świata, a swoją działalność koncentruje na rozwijaniu immunoterapii.
 Do jej szczególnych osiągnięć należy status producenta jednego z nielicznych leków stosowanych w terapii raka pęcherza moczowego, a także powszechnie stosowana szczepionka przeciwgruźlicza.
 Opracowała również _Lakcid_ -- probiotyk, będący jednym z niewielu tego rodzaju leków dostępnych na świecie.

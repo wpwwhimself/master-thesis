@@ -18,7 +18,7 @@ data_split %>%
   mutate(index = tables_full_names[index]) %>%
   ggplot(aes(Data, Zamkniecie)) +
     geom_line() +
-    ylab("Wartość stopy zwrotu") +
+    ylab("Wartość instrumentu") +
     scale_x_date(
       date_breaks = "3 months",
       date_minor_breaks = "1 month",
@@ -30,8 +30,31 @@ data_split %>%
 Jak widać na Rysunkach \@ref(fig:stock-prices-plot), \@ref(fig:returns-plot) i \@ref(fig:markov-plots), wydarzenia ostatnich lat wyraźnie wstrząsnęły polską giełdą.
 Każde z nich ma swoje odzwierciedlenie w stopach zwrotu rozpatrywanych spółek oraz indeksów giełdowych.
 
-> - dogłębne spojrzenie na te momenty zwiększonej wahliwości
-> - jakie straty na rynku w tym czasie się stały
+Pierwszym wyraźnym momentem zawahania był wybuch pandemii koronawirusa w Polsce, czego konsekwencją było wprowadzenie tzw. _lockdownu_,
+czyli zaleconych przez rząd ograniczeń i zakazów przemieszczania się, mających na celu ograniczenie rozprzestrzeniania się wirusa.
+Oddziaływanie tego wydarzenia na rynek można zauważyć w danych giełdowych od marca 2020 roku.
+W tym okresie indeks *WIG20* zanotował spadek o ponad 500 punktów w ciągu dwóch miesięcy (1.03 - 30.04), co stanowi stratę wartości indeksu o ponad 30\%.
+Podobne straty widoczne są w cenach akcji spółek wchodzących w skład indeksu *WIG20* -- *PKN Orlen* oraz *PKO BP*.
+Dla tych firm straty w tym samym okresie również wyniosły około 30\%.
+Ten okres bessy utrzymywał się do listopada 2020 roku, co widać w notowaniach wszystkich 3 wymienionych instrumentów.
+Czas ten był szczególnie trudny dla *PKN Orlen*, której notowania akcji do dnia 1.11 spały poniżej poziomu 40 zł, tj. niżej niż w marcu tego samego roku.
+Słabe wyniki największych polskich spółek można w tym okresie atrybuować długotrwałym restrykcjom związanym z koronawirusem:
+
+- obniżona liczba nowych inwestycji w związku z obostrzeniami sanitarnymi z pewnością negatywnie wpłynęła na liczbę udzielonych kredytów w sektorze bankowym.
+*PKO BP*, jako przedstawiciel tego sektora, ilustruje dotkliwość tej stagnacji na przykładzie cen akcji swojej spółki.
+- wprowadzenie ograniczeń w przemieszczaniu się i zmniejszone zapotrzebowanie na produkty paliwowe niewątpliwie przyczyniły się do strat finansowych tego sektora.
+Tu ponownie, na przykładzie *PKN Orlen*, widać, że ta tendencja utrzymała się praktycznie przez cały okres _lockdownu_.
+
+Na uwagę zasługuje jednak fakt, że pozostałe rozpatrywane sektory rynku, pomimo istotnych strat w tym samym okresie,
+przejawiły zdecydowanie lepszy potencjał na odbudowanie, czy nawet polepszenie swojej pozycji.
+*11 bit studios* na początku pandemii w Polsce straciła blisko połowę wartości,
+jednak w ciągu kolejnych trzech miesięcy osiągnęła rekordowe dla siebie wyniki, odzyskując z sowitą nawiązką straty poniesione na początku marca.
+Tę zmianę można po części przypisywać popularyzacji pracy zdalnej w branży IT,
+ale też serii nowo zawartych umów na produkcję gier przez tę firmę, co w połączeniu z otrzymaniu funduszy z programów motywacyjnych [@11bitReports] pomogło osiągnąć większą wartość na rynku.
+Szczególnie wysoki wzrost zanotowała spółka *Synthaverse*,
+która przez cały omawiany tutaj okres doprowadziła do 30-krotnego wzrostu wartości akcji swojej spółki w ciągu pół roku od wybuchu pandemii.
+Jest to związane z zawarciem wielu umów na produkcję i dystrybucję produktów tej spółki przez inwestorów,
+a także wkład firmy w opracowywanie szczepionki przeciwko koronawirusowi [@synthaverseCovidInfo].
 
 ## Porównanie wyników z innymi modelami
 
