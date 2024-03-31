@@ -28,7 +28,7 @@ garchx_periods <- list(
   c("24.02.2022", "15.04.2022", "początek inwazji rosyjskiej na Ukrainie")
 ) %>%
   Filter(function(v) {
-    dmy(v[1]) >= dmy(data_range[1]) && dmy(v[2]) <= dmy(data_range[2])
+    dmy(v[1]) %within% interval(dmy(data_range[1]), dmy(data_range[2]))
   }, .)
 
 data_split <-

@@ -21,6 +21,7 @@ data_split %>%
     ylab("Wartość stopy zwrotu") +
     scale_x_date(
       date_breaks = "3 months",
+      date_minor_breaks = "1 month",
       date_labels = "%m.%y"
     ) +
     facet_wrap(index ~ ., ncol = 1, scales = "free")
