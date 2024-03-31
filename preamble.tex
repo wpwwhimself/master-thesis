@@ -25,6 +25,14 @@
 	\renewcommand{\epsilon}{\varepsilon}
 \usepackage[nottoc]{tocbibind}
 
+% numeracja figur
+\counterwithin{figure}{chapter}
+\counterwithout{figure}{section}
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+\counterwithin{table}{chapter}
+\counterwithout{table}{section}
+\renewcommand{\thetable}{\thechapter.\arabic{table}}
+
 %technikalia
 % interlinia 1.5
 \usepackage{setspace}
