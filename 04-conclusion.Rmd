@@ -7,6 +7,23 @@
 
 ## Podsumowanie wyników analizy
 
+Wyniki przeprowadzonego badania w dużej mierze pokrywają się z wysnutymi oczekiwaniami.
+**Okres pandemii i inwazja rosyjska na Ukrainę spowodowały czasowe wzrosty wahań cen badanych instrumentów finansowych na Polskiej giełdzie.**
+Bazując na danych finansowych z okresu `r paste(data_range, sep = " - ")` udało się wyestymować dobrze dopasowane modele wariancji warunkowej
+-- GARCH-X oraz model przełącznikowy Markowa oparty na modelach z rodziny GARCH
+-- i z ich pomocą wysnuto prognozy dotyczące dalszego kształtowania się wariancji warunkowej.
+\AAA{Czy te prognozy były OK? Do uzupełnienia po wyciągnięciu błędów}
+
+Na podstawie opracowanych modeli udało się potwierdzić istotną zmianę w zachowaniu się badanych szeregów w wyróżnionych okresach.
+Konsekwencją tego były gwałtowne zmiany wartości instrumentów finansowych,
+które w kilku przypadkach doprowadziły do długotrwałej bessy na rynku, utrzymując ceny na rekordowo niskim poziomie.
+Zaobserwowano również wymiernie większy efekt działań związanych z pandemią koronawirusa w Polsce w porównaniu z wpływem działań wojennych na wschodzie kraju:
+w drugim z tych okresów podwyższona zmienność szeregów czasowych nie zaowocowała wielkimi zmianami cen akcji badanych spółek.
+
+Wpływ globalnych zmian i konfliktów na rynek krajowy jest zatem wyraźnie odczuwalny,
+a dzięki wykorzystanym narzędziom możliwa jest jego kwantyfikacja i przedstawienie prognoz pozwalających przewidzieć dalszy horyzont zmian.
+Badania tego typu mogą niewątpliwie pomóc w zamortyzowaniu negatywnych skutków tych wydarzeń i rzetelnie wskazać ich związek z kształtowaniem się całego rynku.
+
 ## Ograniczenia i potencjalne usprawnienia analizy
 
 Przeprowadzony proces modelowania i prognozowania zmienności dla badanych szeregów czasowych jest wrażliwy na szereg czynników,
