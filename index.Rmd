@@ -9,7 +9,7 @@ output:
   pdf_document:
     citation_package: biblatex
 bibliography: book.bib
-csl: https://www.zotero.org/styles/apa-6th-edition-no-ampersand
+csl: config/apa-modified.csl
 link-citations: true
 ---
 
