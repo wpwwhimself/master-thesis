@@ -260,12 +260,12 @@
     <choose>
       <if type="song">
         <names variable="composer" delimiter=", ">
-          <name name-as-sort-order="all" and="text" sort-separator=", " initialize-with=". " delimiter=", " delimiter-precedes-last="always"/>
+          <name name-as-sort-order="all" and="text" sort-separator=", " initialize-with=". " delimiter=", " delimiter-precedes-last="never"/>
           <substitute>
             <names variable="original-author"/>
             <names variable="author"/>
             <names variable="translator">
-              <name name-as-sort-order="all" and="text" sort-separator=", " initialize-with=". " delimiter=", " delimiter-precedes-last="always"/>
+              <name name-as-sort-order="all" and="text" sort-separator=", " initialize-with=". " delimiter=", " delimiter-precedes-last="never"/>
               <label form="short" prefix=" (" suffix=")" text-case="title"/>
             </names>
             <group delimiter=" ">
@@ -393,7 +393,7 @@
       </else-if>
       <else>
         <names variable="author" delimiter=", ">
-          <name form="short" and="text" delimiter=", " initialize-with=". "/>
+          <name form="short" and="text" delimiter=", " initialize-with=". " delimiter-precedes-last="never"/>
           <substitute>
             <names variable="illustrator"/>
             <names variable="composer"/>
