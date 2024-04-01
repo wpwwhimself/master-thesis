@@ -86,6 +86,21 @@ data_split$wig %>%
   )
 ```
 
+```{r stock-prices-plot, fig.cap="Ceny zamknięcia akcji oraz wartości indeksu dla badanych spółek", fig.height=8, fig.width=6.5}
+data_split %>%
+  bind_rows(.id = "index") %>%
+  mutate(index = tables_full_names[index]) %>%
+  ggplot(aes(Data, Zamkniecie)) +
+    geom_line() +
+    ylab("Wartość instrumentu") +
+    scale_x_date(
+      date_breaks = "3 months",
+      date_minor_breaks = "1 month",
+      date_labels = "%m.%y"
+    ) +
+    facet_wrap(index ~ ., ncol = 1, scales = "free")
+```
+
 ```{r returns-plot, fig.cap="Logarytmiczne stopy zwrotu dla badanych spółek", fig.height=8, fig.width=6.5}
 data_split %>%
   bind_rows(.id = "index") %>%
