@@ -842,7 +842,7 @@ pred_vol <-
       ),
     garchx = garchx %>%
       map(~ .x %>%
-        ugarchforecast(n_ahead = n_ahead) %>%
+        ugarchforecast(n.ahead = n_ahead) %>%
         sigma() %>%
         tibble(pred_val = as.numeric(.)) %>%
         pull(pred_val) %>%
