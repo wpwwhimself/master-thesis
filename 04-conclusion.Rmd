@@ -34,7 +34,7 @@ Niewątpliwie istotnym aspektem modelowania za pomocą modeli przełącznikowych
 Celem przeprowadzonego badania było kompleksowe przetestowanie jak największej liczby kombinacji modeli wariancji warunkowej (za pomocą modeli z rodziny GARCH),
 a także rozkładów innowacji.
 W ostatecznej wersji badania doprowadziło to do wykonania `r nrow(models_for_testing)` dopasowań dla każdego z badanych szeregów czasowych.
-Z uwagi na budowę modelu Markowa (patrz Wzór \@ref(eq:markov)), estymacja każdego wariantu jest bardzo kosztowna obliczeniowo,
+Z uwagi na budowę modelu Markowa (m.in. do dwukrotnie dłuższa estymacja parametrów modeli), estymacja każdego wariantu jest bardzo kosztowna obliczeniowo,
 szczególnie w przypadku modeli posiadających większą liczbę parametrów.
 Bardziej dogłębna analiza wymaga zatem większych nakładów mocy obliczeniowej,
 co ze względu na charakter niniejszej pracy zostało pominięte na rzecz ograniczenia liczby badanych modeli.

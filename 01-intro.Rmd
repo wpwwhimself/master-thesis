@@ -287,7 +287,12 @@ Poniżej przedstawiono rozkłady innowacji najczęściej stosowane w modelowaniu
 - rozkład skośny t Studenta -- liczba stopni swobody $\nu$, skośność $\xi = \exp(\lambda)$
 - rozkład GED [@nelsonEGARCH, str. 352] -- kształt $\nu$.
 
-\AAA{Parę słów o Markowie}
+Intuicyjnym zagadnieniem podczas modelowania wariancji warunkowej jest identyfikacja okresów zwiększonej i zmniejszonej zmienności w badanym horyzoncie czaowym.
+Naprzeciw temu problemowi wychodzi idea *modeli przełącznikowych*, a w szczególności rozważany na łamach tej pracy model przełącznikowy Markowa [@packageMSGARCH].
+Opierają się one na połączeniu wielu modeli takich, jak te opisane powyżej, i implementację mechanizmu wyboru, który z tych modeli jest stosowany w którym momencie czasowym.
+Tę rolę pełni *proces Markowa*, za pomocą którego można zdefiniować proces stanu (reżimu) $s_t$, identyfikujący wybrany model w momencie $t$.
+W modelu przełącznikowym Markowa ARMA-GARCH parametry modelu są uzależnione od obecnego reżimu.
+Oznacza to, że w wariancie dwóch reżimów estymowane są dwa zestawy parametrów, po jednym dla każdego z rozpatrywanych modeli.
 
 Proces __dopasowania__ modelu teoretycznego do danych rzeczywistych polega na znalezieniu jego parametrów tak, aby zminimalizować _błąd dopasowania_, tj. absolutną różnicę pomiędzy wartością teoretyczną a wartością rzeczywistą.
 Określa się wiele rodzajów błędów, ale do najczęściej wyróżniach w badaniach zalicza się te opisane poniżej.
