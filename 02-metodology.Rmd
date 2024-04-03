@@ -857,3 +857,5 @@ Posiadając odpowiednie modele dopasowane do danych, możliwym jest wykonanie pr
 Przebieg prognozowanych szeregów czasowych ilustruje Rysunek \@ref(fig:predictions).
 Zilustrowano na nim wariancję warunkową wynikającą z modelu dla ostatnich `r n_behind` dni estymacji,
 a także prognozy, jakie zostały wykonane na `r n_ahead` dni naprzód.
+
+### Ocena jakości predykcji

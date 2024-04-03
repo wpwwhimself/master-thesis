@@ -326,11 +326,6 @@ $$
 Rzadziej stosowane kryterium, które w stosunku do BIC umniejsza karę za wielkość próby $n$.
 \AAA{Kiedy się go preferuje?},
 
-## Przegląd literatury
-
-> - literatura modeli, ale też literatura na temat innych dopasowań modeli do wahających się danych;
-> - do ustalenia, czy ten rozdział ma sens
-
 ## Zastosowane pakiety środowiska R
 
 Do przeprowadzenia wszelkich obliczeń i symulacji w niniejszej pracy wykorzystano środowisko **R**.
@@ -352,4 +347,3 @@ Jest skoncentrowany na modelowaniu wariancji warunkowej, wobec czego nie impleme
 Podczas badania wykorzystano również różne inne pakiety pozwalające na generowanie wykresów i tabel, a także płynnego przetwarzania danych
 [@packageGgplot2;@packageKnitr].
 
-\AAQ{cytować wszystko, z czego korzystam? pewnie tak}

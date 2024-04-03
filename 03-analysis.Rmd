@@ -5,11 +5,6 @@
 \renewcommand{\headrulewidth}{0.5pt}
 ```
 
-## Ocena jakości predykcji
-
-> - porównanie prognoz z faktycznymi wartościami indeksu
-> - ...
-
 ## Analiza wpływu pandemii i wojny na notowania giełdowe
 
 Jak widać na Rysunkach \@ref(fig:stock-prices-plot), \@ref(fig:returns-plot) i \@ref(fig:markov-plots), wydarzenia ostatnich lat wyraźnie wstrząsnęły polską giełdą.
@@ -70,5 +65,3 @@ jak widać na przykładzie cen akcji *11 bit studios*, która w tym okresie po r
 
 
 ## Porównanie wyników z innymi modelami
-
-\AAQ{jakimi modelami?}

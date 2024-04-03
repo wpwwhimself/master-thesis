@@ -1,7 +1,7 @@
 # Całość
 - [ ] tytuł
-- [ ] synopsis
-- [ ] bibliografia
+- [ ] synopsis i keywords
+- [x] bibliografia
 ## Wstęp
 ### cel i znaczenie pracy
 - [x] rys historyczny
@@ -14,25 +14,30 @@
 - [x] definicja instrumentów finansowych
 - [x] co to są akcje
 - [x] co to są indeksy giełdowe
-- [ ] opis tego, co się dzieje na rynku finansowym
+- [x] opis tego, co się dzieje na rynku finansowym
 - [x] podział rynku?
 #### modelowanie rynków finansowych
-- [ ] co to jest dopasowanie
-- [ ] metoda najmniejszych kwadratów
+- [x] co to jest dopasowanie
+- [ ] arma a stopy procentowe (zacytować)
+- [ ] arch a długości opóźnień dla danych finansowych
+- [ ] przykład, czemu spadki są bardziej nagłaśniane niż wzrosty
+- [ ] wypisać błędy dopasowania
 - [ ] istotność parametrów
-- [ ] kryteria informacyjne
-- [ ] ustandaryzowanie pogrubień i pochyleń
+- [x] kryteria informacyjne
+- [ ] preferencje stosowania testów statystycznych
+- [x] ustandaryzowanie pogrubień i pochyleń
 - [ ] testy statystyczne
 - [x] wszystko, czego używam w pracy, muszę rozpisać wzorem? *najważniejsze*
 ### przegląd literatury
 - [x] ile pozycji w literaturze? -- *tyle ile teraz jest OK*
 - [x] czy linki do artykułów są w porządku? *tak, są*
 - [x] czy tę sekcję będę mógł zastąpić opisem modeli użytych, czy to wyżej? *tak*
-- [ ] usunąć tę sekcję
+- [x] usunąć tę sekcję
 ### pakiety
 - [x] czy wszystkie pakiety opisywać? -- *najważniejsze*
 - [x] rugarch
 - [x] msgarch
+- [ ] jeszcze 2 strony
 ## Metodologia badawcza
 ### wybór danych
 - [x] opisanie, co wybrałem
@@ -66,26 +71,28 @@
 ### predykcje
 - [x] horyzont predykcji *7 dni jest w porządku*
 - [x] wykonać predykcje
-## Analiza wyników
-### ocena jakości predykcji
 - [x] porównanie prognoz z faktycznymi wartościami indeksu -- *nie prognozuję wartości*
 - [ ] błędy prognoz (RMSE, MAPE?)
+## Analiza wyników
 ### analiza wpływu na notowania
 - [ ] dogłębne spojrzenie na te momenty zwiększonej wahliwości
-- [ ] jakie straty na rynku w tym czasie się stały
+- [x] jakie straty na rynku w tym czasie się stały
+- [ ] 
 ### porównanie z innymi modelami
 - [ ] zastanowić się nad sensem tego rozdziału
 - [ ] modele stochastyczne -- może są jakieś pakiety -- jeśli nie, to wywalić sekcję
 ## Wnioski
 ### podsumowanie wyników analizy
 - [ ] streszczenie tego wszystkiego, co się wydarzyło do tej pory
+- [ ] uzupełnić o prognozy
+- [ ] więcej!
 ### ograniczenia i usprawnienia
-- [ ] analiza horyzontu czasowego
-- [ ] analiza zakresu wybieranych modeli
+- [x] analiza horyzontu czasowego
+- [x] analiza zakresu wybieranych modeli
 - [ ] analiza wyboru danych
-- [ ] wybór regresorów w GARCHX
+- [x] wybór regresorów w GARCHX
 ### po co to
 - [ ] ogólnie po co prognozować
-- [ ] do czego można to wykorzystać
-- [ ] na co trzeba uważać
+- [ ] do czego można to wykorzystać -- więcej
+- [ ] na co trzeba uważać -- więcej
 - [ ] morał
