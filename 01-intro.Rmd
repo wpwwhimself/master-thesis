@@ -187,7 +187,9 @@ Model składa się z dwóch komponentów:
 - część autoregresyjna (AR): model uzależnia wartość obecną szeregu czasowego od jego kolejnych $p$ przeszłych wartości,
 - część średniej ruchomej (MA): wartość szeregu w danym momencie jest zależna od kolejnych $q$ wartości przeszłych innowacji.
 
-Model ARMA sprawdza się szczególnie dobrze w zagadnieniach związanych z modelowaniem stóp procentowych \AAA{citation needed}.
+Model ARMA w postaci takiej, jak przedstawiono za pomocą Wzoru \@ref(eq:arma), sprawdza się w przypadku stacjonarnych szeregów czasowych,
+gdzie _pamięć szeregu_, tj. możliwość zaobserwowania wpływu danych historycznych na obecne, obejmuje względnie niskie opóźnienia i jest krótkotrwała.
+W przeciwnym przypadku można domniemać istnienie zależności długotrwałych i nieliniowych.
 
 **Modele wariancji warunkowej** pomagają w interpretacji zależności długookresowych szeregu czasowego,
 a w ich implementacji korzystają z równań kwadratowych.
@@ -213,7 +215,7 @@ w którym wariancja warunkowa modelu jest opisywana przez kwadraty reszt z model
 \end{equation}
 
 Wadą tego modelu w kontekście rynków finansowych jest konieczność stosowania wysokiej liczby opóźnień $q$,
-co prowadzi do skomplikowanego modelu i wymaga dłuższych horyzontów czasowych \AAA{citation needed}.
+co prowadzi do skomplikowanego modelu i wymaga dłuższych horyzontów czasowych.
 Naprzeciw temu problemowi występuje model GARCH(q, p) [@bollerslevGARCH], w którym w modelowaniu wariancji warunkowej biorą udział również przeszłe wartości wariancji,
 co reprezentuje Wzór \@ref(eq:garch).
 
@@ -229,7 +231,8 @@ co reprezentuje Wzór \@ref(eq:garch).
 Istotnym czynnikiem, jaki pojawia się przy modelowaniu danych finansowych jest **efekt dźwigni**.
 Model GARCH zakłada, że dodatnie i ujemne stopy zwrotu mają taki sam wpływ na decyzje podejmowane przez inwestora.
 Nie jest to jednak realne założenie, ponieważ spadki cen instrumentów finansowych są zwykle bardziej nagłaśniane aniżeli ich wzrosty.
-\AAA{citation needed}
+Jest to naturalne dla człowieka zachowanie i występuje jako domena ostrożnych inwestorów,
+bardziej skłonnych do wczesnej likwidacji inwestycji.
 Za ilustrację tych zachowań odpowiada koncept **krzywej wpływu informacji**, która jest elementem dwóch kolejnych rozpatrywanych w tej pracy modeli.
 Model GJR-GARCH(q, p) [@glostenGJR] (Wzór \@ref(eq:gjr-garch)) jest rozbudowaniem modelu GARCH,
 przy czym uwzględnia on dodatkowo asymetrię informacji w części równania odpowiedzialnej za wpływ kwadratów reszt.
@@ -280,51 +283,53 @@ W klasycznych rozważaniach rolę tę spełnia rozkład normalny, jednak do zast
 Poniżej przedstawiono rozkłady innowacji najczęściej stosowane w modelowaniu szeregów finansowych, wraz z ich parametrami:
 
 - rozkład normalny -- średnia $\mu$, wariancja $\sigma^2$,
-- rozkłąd t Studenta -- liczba stopni swobody (kształt) $\nu$,
+- rozkład t Studenta -- liczba stopni swobody (kształt) $\nu$,
 - rozkład skośny t Studenta -- liczba stopni swobody $\nu$, skośność $\xi = \exp(\lambda)$
 - rozkład GED [@nelsonEGARCH, str. 352] -- kształt $\nu$.
 
 \AAA{Parę słów o Markowie}
 
 Proces __dopasowania__ modelu teoretycznego do danych rzeczywistych polega na znalezieniu jego parametrów tak, aby zminimalizować _błąd dopasowania_, tj. absolutną różnicę pomiędzy wartością teoretyczną a wartością rzeczywistą.
-Określa się wiele rodzajów błędów \AAA{na pewno?}, ale do najczęściej wyróżniach w badaniach zalicza się:
+Określa się wiele rodzajów błędów, ale do najczęściej wyróżniach w badaniach zalicza się te opisane poniżej.
+Dla szeregu wartości modelowanych $(\hat{y}_i)$ formułuje się:
 
-- błąd średniokwadratowy \AAA{tak to się nazywało?}
-- \AAA{jakie inne?}
+- $RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} \abs{\frac{y_i - \hat{y}_i}{y_i}}}$,
+- $MAPE = \frac{1}{n} \sum_{i=1}^{n} \abs{\frac{y_i - \hat{y}_i}{y_i}}$.
 
 \AAA{metoda najmniejszych kwadratów}
 \AAA{istotność parametrów}
 
 Oczywiście do każdych danych istnieje możliwość dopasowania kilku różnych modeli, wobec czego zachodzi potrzeba porównania jakości wykorzystanych modeli.
-W tym celu stosuje się _kryteria informacyjne_ -- wskaźniki opierające się na wartości funkcji wiarogodności $L$, które pozwalają na wyłonienie optymalnego modelu, który najwierniej opisuje dane zjawisko.
-Podobnie jak w przypadku różnych rodzajów błędów \AAA{o ile tak jest}, istnieje kilka kryteriów informacyjnych, stosowanych przy modelowaniu danych.
+W tym celu stosuje się __kryteria informacyjne__ -- wskaźniki opierające się na wartości funkcji wiarogodności $L$, które pozwalają na wyłonienie optymalnego modelu, który najwierniej opisuje dane zjawisko.
+Podobnie jak w przypadku różnych rodzajów błędów, istnieje kilka kryteriów informacyjnych, stosowanych przy modelowaniu danych.
 Wszystkie kryteria informacyjne opierają się na tej samej zasadzie
 -- na zadany model nakładają karę za skomplikowanie modelu, która rośnie wraz z liczbą parametrów modelu $k$,
 a rzadziej z wielkością próby $n$.
 Wartości kryterium bliższe 0 informują o lepszej jakości dopasowania modelu.
-Do najpopularniejszych kryteriów informacyjnych należą [@zhangKryteriaInformacyjne]:
+Do najpopularniejszych kryteriów informacyjnych należą:
 
 - kryterium Akaike [@akaikeAIC]:
 $$
 AIC = 2k - 2 \ln L
 $$
 Do obliczenia tego kryterium informacyjnego wymagana jest jedynie wiedza na temat liczby parametrów modelu $k$ oraz wartość funkcji wiarogodności $L$.
-Stały współczynnik kary równy 2 sprawia, że jest to najbardziej penalizujące kryterium pod względem liczby parametrów.
-\AAA{Kiedy się go preferuje?},
+Stały współczynnik kary równy 2 sprawia, że jest to najbardziej penalizujące kryterium pod względem liczby parametrów,
 
 - kryterium Schwarza [@schwarzBIC]:
 $$
 BIC = k \ln n - 2 \ln L
 $$
-Rozwinięcie kryterium informacyjnego Akaike, gdzie dodatkowo karą za złożoność modelu obarczana jest wielkość próby $n$.
-\AAA{Kiedy się go preferuje?},
+Rozwinięcie kryterium informacyjnego Akaike, gdzie dodatkowo karą za złożoność modelu obarczana jest wielkość próby $n$,
 
 - kryterium Hannana-Quinna [@hannanHQC]:
 $$
 HQC = 2k \ln(\ln n) - 2 \ln L
 $$
 Rzadziej stosowane kryterium, które w stosunku do BIC umniejsza karę za wielkość próby $n$.
-\AAA{Kiedy się go preferuje?},
+
+Każde z powyższych kryteriów ma swoje zalety i środowiska naukowe preferują wykorzystanie konkretnego z nich częściej niż innych.
+Powoduje to również uproszczenia w edukowaniu o istnieniu tychże kryteriów i prowadzi do nadmiernie zlaicyzowanego przeświadczenia o bezwzględnych korzyściach pewnych kryteriów nad pozostałymi.
+Te przesłanki są przedmiotem badań ekspertów i, chociaż mają one pewne podłoże naukowe, ostatecznie nie są sztywnymi regułami [@zhangKryteriaInformacyjne].
 
 ## Zastosowane pakiety środowiska R
 

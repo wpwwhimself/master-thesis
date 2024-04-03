@@ -18,13 +18,14 @@
 - [x] podział rynku?
 #### modelowanie rynków finansowych
 - [x] co to jest dopasowanie
-- [ ] arma a stopy procentowe (zacytować)
-- [ ] arch a długości opóźnień dla danych finansowych
-- [ ] przykład, czemu spadki są bardziej nagłaśniane niż wzrosty
-- [ ] wypisać błędy dopasowania
+- [x] arma a stopy procentowe (zacytować)
+- [x] arch a długości opóźnień dla danych finansowych
+- [x] przykład, czemu spadki są bardziej nagłaśniane niż wzrosty
+- [x] wypisać błędy dopasowania
+- [ ] metoda najmniejszych kwadratów
 - [ ] istotność parametrów
 - [x] kryteria informacyjne
-- [ ] preferencje stosowania testów statystycznych
+- [x] preferencje stosowania kryteriów informacyjnych
 - [x] ustandaryzowanie pogrubień i pochyleń
 - [ ] testy statystyczne
 - [x] wszystko, czego używam w pracy, muszę rozpisać wzorem? *najważniejsze*
