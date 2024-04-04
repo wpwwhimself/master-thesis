@@ -336,24 +336,34 @@ Każde z powyższych kryteriów ma swoje zalety i środowiska naukowe preferują
 Powoduje to również uproszczenia w edukowaniu o istnieniu tychże kryteriów i prowadzi do nadmiernie zlaicyzowanego przeświadczenia o bezwzględnych korzyściach pewnych kryteriów nad pozostałymi.
 Te przesłanki są przedmiotem badań ekspertów i, chociaż mają one pewne podłoże naukowe, ostatecznie nie są sztywnymi regułami [@zhangKryteriaInformacyjne].
 
-## Zastosowane pakiety środowiska R
+## Przegląd pakietów obliczeniowych
 
 Do przeprowadzenia wszelkich obliczeń i symulacji w niniejszej pracy wykorzystano środowisko **R**.
 Jest to otwartoźródłowy język programowania i środowisko do analizy danych oraz tworzenia grafik,
 powszechnie używane w statystyce, analizie danych, uczeniu maszynowych oraz badaniach operacyjnych.
 Charakteryzuje się bogatym zestawem bibliotek (pakietów), które umożliwiają wykonywanie różnorodnych analiz i wizualizacji danych [@R].
 
-Na potrzeby tej pracy użyte zostały pakiety zaprojektowane do pracy z szeregami czasowymi oraz modelami ekonometrycznymi, w szczególności:
+Na potrzeby tej pracy użyte zostały pakiety zaprojektowane do pracy z szeregami czasowymi oraz modelami ekonometrycznymi.
+Do pracy z modelami GARCH zastosowano dwie z najpopularniejszych bibliotek zaprojektowanych do tego celu:
 
 - `rugarch` -- pakiet, którego celem jest zapewnienie elastycznego i bogatego środowiska do modelowania i testowania modeli GARCH.
 Implementuje różnego rodzaju testy statystyczne i metody tworzące wykresy, a także narzędzia do prognozowania i symulowania wartości modeli
-[@packageRugarch, s. 3],
+[@packageRugarch, s. 3].
+Zastosowany został do modelowania modeli z zastosowaniem zewnętrznych regresorów, oferując subiektywnie najbardziej przystępny sposób przekazania tych danych do programu spośród innych oferowanych rozwiązań.
 - `MSGARCH` -- implementacja kompleksowego zestawu funkcjonalności na potrzeby modelu przełącznikowego Markowa z zastosowaniem modeli GARCH,
 w szczególności dopasowywania, filtrowania, prognoz i symulacji.
-Udostępnia również funkcje związane z obliczaniem wartości zagrożonej $VaR$ oraz _Expected Shortfall_.
+Udostępnia również funkcje związane z obliczaniem wartości zagrożonej oraz _Expected Shortfall_.
 Jest skoncentrowany na modelowaniu wariancji warunkowej, wobec czego nie implementuje równania średniej warunkowej
 [@packageMSGARCHDocs, s. 2].
+W niniejszej pracy spełnia oczywiście zadanie estymacji modeli przełącznikowych Markowa.
+Oferuje przejrzystą dokumentację i potężne narzędzia, pozwalające na potencjalne rozszerzenie modeli,
+co z dodatkową mocą obliczeniową może prowadzić do porównania większej liczby odpowiadających modeli.
 
 Podczas badania wykorzystano również różne inne pakiety pozwalające na generowanie wykresów i tabel, a także płynnego przetwarzania danych
 [@packageGgplot2;@packageKnitr].
 
+Chociaż język R jest popularnym narzędziem w wielu środowiskach naukowych,
+jest to jednak jedna z wielu technologii wykorzystywanych do modelowania danych statystycznych.
+W kręgach nauk ekonomicznych znanym narzędziem do analizy finansowych szeregów czasowych jest program **OxMetrics** [@packageOxMetrics].
+Składa się na niego rodzina pakietów, które dostarczają zintegrowane rozwiązania na potrzeby analizy, prognoz i modelowania danych przekrojowych i panelowych,
+takich jak *PcGive*, *G@RCH* i *STAMP*.
