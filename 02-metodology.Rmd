@@ -148,7 +148,7 @@ data_split %>%
   )
 ```
 
-```{r histograms-plot, fig.cap = "Wyniki testu Shapiro-Wilka na normalność rozkładu stóp zwrotu. W tytułach podano wartości statystyki testowej oraz p-wartość."}
+```{r histograms-plot, fig.cap = "Wyniki testu Shapiro-Wilka na normalność rozkładu stóp zwrotu"}
 plots <- lapply(
   tables,
   function(table_name, i) {
