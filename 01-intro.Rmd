@@ -74,7 +74,7 @@ Pojęcie **rynku finansowego** nie jest jednoznacznie określone i w różnych �
 Według jednej z nich rynek finansowy jest "miejscem zawierania transakcji mających za przedmiot szeroko rozumiany kapitał finansowy".
 Z uwagi jednak na globalną naturę gospodarki we współczesnym świecie, trudno powiązać rynek finansowy z konkretnym miejscem.
 Z tego też względu można powiedzieć o rynku finansowym, że jest to "ogół transakcji papierami wartościowymi"
-[@wisla2008, str. 33]
+[@wisla2008, s. 33]
 .
 
 Transakcje te zawierane są za pomocą **instrumentów finansowych**, które pozwalają na transfer, wymianę lub przechowywanie środków pieniężnych.
@@ -285,7 +285,7 @@ Poniżej przedstawiono rozkłady innowacji najczęściej stosowane w modelowaniu
 - rozkład normalny -- średnia $\mu$, wariancja $\sigma^2$,
 - rozkład t Studenta -- liczba stopni swobody (kształt) $\nu$,
 - rozkład skośny t Studenta -- liczba stopni swobody $\nu$, skośność $\xi = \exp(\lambda)$
-- rozkład GED [@nelsonEGARCH, str. 352] -- kształt $\nu$.
+- rozkład GED [@nelsonEGARCH, s. 352] -- kształt $\nu$.
 
 Intuicyjnym zagadnieniem podczas modelowania wariancji warunkowej jest identyfikacja okresów zwiększonej i zmniejszonej zmienności w badanym horyzoncie czaowym.
 Naprzeciw temu problemowi wychodzi idea *modeli przełącznikowych*, a w szczególności rozważany na łamach tej pracy model przełącznikowy Markowa [@packageMSGARCH].
@@ -347,12 +347,12 @@ Na potrzeby tej pracy użyte zostały pakiety zaprojektowane do pracy z szeregam
 
 - `rugarch` -- pakiet, którego celem jest zapewnienie elastycznego i bogatego środowiska do modelowania i testowania modeli GARCH.
 Implementuje różnego rodzaju testy statystyczne i metody tworzące wykresy, a także narzędzia do prognozowania i symulowania wartości modeli
-[@packageRugarch, str. 3],
+[@packageRugarch, s. 3],
 - `MSGARCH` -- implementacja kompleksowego zestawu funkcjonalności na potrzeby modelu przełącznikowego Markowa z zastosowaniem modeli GARCH,
 w szczególności dopasowywania, filtrowania, prognoz i symulacji.
 Udostępnia również funkcje związane z obliczaniem wartości zagrożonej $VaR$ oraz _Expected Shortfall_.
 Jest skoncentrowany na modelowaniu wariancji warunkowej, wobec czego nie implementuje równania średniej warunkowej
-[@packageMSGARCHDocs, str. 2].
+[@packageMSGARCHDocs, s. 2].
 
 Podczas badania wykorzystano również różne inne pakiety pozwalające na generowanie wykresów i tabel, a także płynnego przetwarzania danych
 [@packageGgplot2;@packageKnitr].

@@ -401,7 +401,7 @@ W celu dopasowania modelu Markowa do danych zastosowano pakiet `MSGARCH` [@packa
 
 Istotnym problemem, jaki należy rozwiązać w przypadku bieżącego badania i wykorzystania wyżej wymienionego pakietu, jest fakt,
 że nie obsługuje on specyfikacji modelu średniej warunkowej.
-Aby zastosować model przełącznikowy do tego typu danych, konieczne jest dodatkowe ich przetworzenie [@packageMSGARCHDocs, str. 2].
+Aby zastosować model przełącznikowy do tego typu danych, konieczne jest dodatkowe ich przetworzenie [@packageMSGARCHDocs, s. 2].
 Wobec tego szeregami czasowymi wykorzystywanymi do modelowania wariancji warunkowej są **szeregi czasowe reszt z modelu** średniej warunkowej.
 
 ```{r markov-models}
