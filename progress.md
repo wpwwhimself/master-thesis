@@ -42,6 +42,7 @@
 ## Metodologia badawcza
 ### wybór danych
 - [x] opisanie, co wybrałem
+- [ ] jeszcze 1 strona
 ### analiza danych
 - [x] przedstawienie szeregów
 - [x] statystyki opisowe
@@ -74,6 +75,7 @@
 - [x] wykonać predykcje
 - [x] porównanie prognoz z faktycznymi wartościami indeksu -- *nie prognozuję wartości*
 - [ ] błędy prognoz (RMSE, MAPE?)
+- [ ] wnioski
 ## Analiza wyników
 ### analiza wpływu na notowania
 - [ ] dogłębne spojrzenie na te momenty zwiększonej wahliwości
