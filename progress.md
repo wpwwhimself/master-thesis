@@ -38,11 +38,15 @@
 - [x] czy wszystkie pakiety opisywać? -- *najważniejsze*
 - [x] rugarch
 - [x] msgarch
-- [ ] jeszcze 2 strony
+- [ ] coś o oxmetrics
+- [ ] coś o tsm
+- [ ] coś o pythonie
+- [ ] coś o julii
 ## Metodologia badawcza
 ### wybór danych
 - [x] opisanie, co wybrałem
-- [ ] jeszcze 1 strona
+- [ ] czemu akurat te, a nie inne spółki? dopasowanie modelu markowa nie wypaliło
+- [ ] wig20 vs "nie wszyscy należą do wig20"
 ### analiza danych
 - [x] przedstawienie szeregów
 - [x] statystyki opisowe
