@@ -365,5 +365,12 @@ Podczas badania wykorzystano również różne inne pakiety pozwalające na gene
 Chociaż język R jest popularnym narzędziem w wielu środowiskach naukowych,
 jest to jednak jedna z wielu technologii wykorzystywanych do modelowania danych statystycznych.
 W kręgach nauk ekonomicznych znanym narzędziem do analizy finansowych szeregów czasowych jest program **OxMetrics** [@packageOxMetrics].
-Składa się na niego rodzina pakietów, które dostarczają zintegrowane rozwiązania na potrzeby analizy, prognoz i modelowania danych przekrojowych i panelowych,
-takich jak *PcGive*, *G@RCH* i *STAMP*.
+Składa się na niego rodzina pakietów, które dostarczają zintegrowane rozwiązania na potrzeby analizy, prognoz i modelowania danych przekrojowych i panelowych.
+Samo środowisko pakietu OxMetrics jest oparte o język *Ox*.
+Jest to obiektowy, macierzowy język programowania, zawierający szeroki wachlarz funkcji matematycznych i statystycznych.
+Jego głównymi cechami są szybkość obliczeń, bogaty zestaw pakietów i dobrze zaprojektowana składnia, upraszczająca pracę z kodem.
+W skład środowiska OxMetrics wchodzą pakiety pozwalające m.in. na:
+
+- konstruowanie modeli ekonometrycznych (pakiet *PcGive*),
+- estymację i prognozowanie modeli klasy GARCH (pakiet *G@RCH*),
+- statystyczną/ekonometryczną analizę szeregów czasowych, a także ich modelowanie i predykcję (pakiet *STAMP*) [@packageOx].
