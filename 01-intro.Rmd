@@ -338,6 +338,13 @@ Te przesłanki są przedmiotem badań ekspertów i, chociaż mają one pewne pod
 
 ## Przegląd pakietów statystycznych
 
+Do zagadnienia estymacji modeli szeregów czasowych można wykorzystać różne narzędzia, pozwalające na przeprowadzanie wielu skomplikowanych kalkulacji.
+Najczęstszymi wyborami badaczy zajmującymi się tymi zagadnieniami są języki wspierające budowę skomplikowanych równań,
+a także pozwalające na usystematyzowanie wyników swoich obliczeń.
+W dalszej części tego rozdziału omówione zostaną popularne pakiety statystyczne, z jakimi można się spotkać przy okazji poruszania problemu analizy szeregów czasowych.
+
+### R
+
 Do przeprowadzenia wszelkich obliczeń i symulacji w niniejszej pracy wykorzystano środowisko **R**.
 Jest to otwartoźródłowy język programowania i środowisko do analizy danych oraz tworzenia grafik,
 powszechnie używane w statystyce, analizie danych, uczeniu maszynowych oraz badaniach operacyjnych.
@@ -363,6 +370,8 @@ Podczas badania wykorzystano również różne inne pakiety pozwalające na gene
 m.in. `ggplot2` [@packageGgplot2] oraz `knitr` [@packageKnitr].
 Dodatkowo warto wspomnieć o pakiecie `bookdown` [@packageBookdown], który pozwolił na doprowadzenie niniejszej pracy do jej obecnej postaci.
 
+### Ox
+
 Chociaż język R jest popularnym narzędziem w wielu środowiskach naukowych,
 jest to jednak jedna z wielu technologii wykorzystywanych do modelowania danych statystycznych.
 W kręgach nauk ekonomicznych znanym narzędziem do analizy finansowych szeregów czasowych jest program **OxMetrics** [@packageOxMetrics].
@@ -385,12 +394,14 @@ System równań można również rozszerzyć o analizę wartości zagrożonej.
 Oprogramowanie posiada także obszerne możliwości graficzne, pozwalające na tworzenie wykresów przebiegów szeregów czasowych, analizy ich rozkładów oraz innych, np. korelogramów
 [@packageTSM].
 
+### Python
+
 Dla użytkowników z bardziej obszerną wiedzą programistyczną dostępne są również narzędzia w innych językach.
-Skutkiem wysokiej popularności języka **python**, znanego z posiadania szerokiego zestawu bibliotek rozszerzających jego działanie,
+Skutkiem wysokiej popularności języka **Python**, znanego z posiadania szerokiego zestawu bibliotek rozszerzających jego działanie,
 jest rozwój pakietów do tego języka skoncentrowanych na analizie modeli szeregów czasowych.
 
 - Na potrzeby analizy modeli ARIMA jest to m.in. pakiet `pmdarima`.
-Jego celem jest implementacja funkcji `auto.arima` z języka R w środowisku python,
+Jego celem jest implementacja funkcji `auto.arima` z języka R w środowisku Python,
 dzięki czemu aspirujący analitycy danych mają możliwość przeprowadzania analiz bez potrzeby nauki nowego języka.
 Zainspirowany biblioteką `scikit-learn`, skupiającą się na rozwiązaniach z dziedziny uczenia maszynowego,
 wykorzystuje znany użytkownikom model programistyczny pozwalający na przejrzystą i kompleksową analizę [@packagePythonPmdarima].
@@ -405,6 +416,8 @@ pozwalając na przeprowadzanie testów oraz eksploracji danych.
 Nazewnictwo funkcji jest tutaj bardziej zainspirowane językiem R,
 na co składa się m.in. sposób formułowania zależności między zmiennymi czy przywoływanie podsumowań.
 Implementuje także budowę modeli przełącznikowych, takich jak model Markowa [@packagePythonStatsmodels].
+
+### Julia
 
 Ostatnim z języków programowania, o jakich warto wspomnieć na łamach niniejszej pracy, jest **Julia**.
 Jest to otwartoźródłowy język zaprojektowany w 2017 roku z myślą o wysokiej wydajności,
