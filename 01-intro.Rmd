@@ -361,6 +361,7 @@ co z dodatkową mocą obliczeniową może prowadzić do porównania większej li
 
 Podczas badania wykorzystano również różne inne pakiety pozwalające na generowanie wykresów i tabel, a także płynnego przetwarzania danych,
 m.in. `ggplot2` [@packageGgplot2] oraz `knitr` [@packageKnitr].
+Dodatkowo warto wspomnieć o pakiecie `bookdown` [@packageBookdown], który pozwolił na doprowadzenie niniejszej pracy do jej obecnej postaci.
 
 Chociaż język R jest popularnym narzędziem w wielu środowiskach naukowych,
 jest to jednak jedna z wielu technologii wykorzystywanych do modelowania danych statystycznych.
@@ -405,3 +406,26 @@ Nazewnictwo funkcji jest tutaj bardziej zainspirowane językiem R,
 na co składa się m.in. sposób formułowania zależności między zmiennymi czy przywoływanie podsumowań.
 Implementuje także budowę modeli przełącznikowych, takich jak model Markowa [@packagePythonStatsmodels].
 
+Ostatnim z języków programowania, o jakich warto wspomnieć na łamach niniejszej pracy, jest **Julia**.
+Jest to otwartoźródłowy język zaprojektowany w 2017 roku z myślą o wysokiej wydajności,
+jaką osiąga za pomocą kompilacji programów do kodu maszynowego.
+Jako język programowania cechuje się dynamiczną obsługą typów oraz pozwala na redeklarację funkcji z różnymi typami parametrów.
+Jego ekosystem składa się między innymi z potężnych narzędzi do analizy i wizualizacji danych, a także uczenia maszynowego.
+Zaskarbia sobie rosnące zainteresowanie w różnych dziedzinach nauki, np. biologii, fizyce czy astronomii [@packageJulia].
+
+Z uwagi na dojrzewającą bazę bibliotek tego języka,
+możliwośći pracy w zakresie modeli GARCH oraz przełącznikowych są stosunkowo ograniczone.
+Wiele z oferowanych pakietów nie posiada kompletu funkcji potrzebnych do przeprowadzenia badań zawartych w bieżącej pracy.
+Popularnością w tej dziedzinie cieszą się pakiety:
+
+- `ARCHModels.jl` --
+pozwala na budowanie modeli ARCH, GARCH, TGARCH oraz EGARCH.
+Umożliwia także specyfikację modelu ARMA, a nawet implementuje różne rozkłady innowacji
+[@packageJuliaARCHModels],
+
+- `MarSwitching.jl` --
+implementacja modeli przełącznikowych Markowa.
+Pozwala na tworzenie i przewidywanie przebiegu modeli oraz definicję zmiennych zewnętrznych.
+W przyszłości, w zależności od zainteresowania,
+twórca planuje implementację modeli GARCH oraz różnych rozkładów innowacji
+[@packageJuliaMarSwitching].
