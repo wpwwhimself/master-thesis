@@ -336,7 +336,7 @@ Każde z powyższych kryteriów ma swoje zalety i środowiska naukowe preferują
 Powoduje to również uproszczenia w edukowaniu o istnieniu tychże kryteriów i prowadzi do nadmiernie zlaicyzowanego przeświadczenia o bezwzględnych korzyściach pewnych kryteriów nad pozostałymi.
 Te przesłanki są przedmiotem badań ekspertów i, chociaż mają one pewne podłoże naukowe, ostatecznie nie są sztywnymi regułami [@zhangKryteriaInformacyjne].
 
-## Przegląd pakietów obliczeniowych
+## Przegląd pakietów statystycznych
 
 Do przeprowadzenia wszelkich obliczeń i symulacji w niniejszej pracy wykorzystano środowisko **R**.
 Jest to otwartoźródłowy język programowania i środowisko do analizy danych oraz tworzenia grafik,
@@ -359,8 +359,8 @@ W niniejszej pracy spełnia oczywiście zadanie estymacji modeli przełącznikow
 Oferuje przejrzystą dokumentację i potężne narzędzia, pozwalające na potencjalne rozszerzenie modeli,
 co z dodatkową mocą obliczeniową może prowadzić do porównania większej liczby odpowiadających modeli.
 
-Podczas badania wykorzystano również różne inne pakiety pozwalające na generowanie wykresów i tabel, a także płynnego przetwarzania danych
-[@packageGgplot2;@packageKnitr].
+Podczas badania wykorzystano również różne inne pakiety pozwalające na generowanie wykresów i tabel, a także płynnego przetwarzania danych,
+m.in. `ggplot2` [@packageGgplot2] oraz `knitr` [@packageKnitr].
 
 Chociaż język R jest popularnym narzędziem w wielu środowiskach naukowych,
 jest to jednak jedna z wielu technologii wykorzystywanych do modelowania danych statystycznych.
@@ -387,12 +387,21 @@ Oprogramowanie posiada także obszerne możliwości graficzne, pozwalające na t
 Dla użytkowników z bardziej obszerną wiedzą programistyczną dostępne są również narzędzia w innych językach.
 Skutkiem wysokiej popularności języka **python**, znanego z posiadania szerokiego zestawu bibliotek rozszerzających jego działanie,
 jest rozwój pakietów do tego języka skoncentrowanych na analizie modeli szeregów czasowych.
-Na potrzeby analizy modeli ARIMA jest to m.in. pakiet `pmdarima`.
+
+- Na potrzeby analizy modeli ARIMA jest to m.in. pakiet `pmdarima`.
 Jego celem jest implementacja funkcji `auto.arima` z języka R w środowisku python,
 dzięki czemu aspirujący analitycy danych mają możliwość przeprowadzania analiz bez potrzeby nauki nowego języka.
 Zainspirowany biblioteką `scikit-learn`, skupiającą się na rozwiązaniach z dziedziny uczenia maszynowego,
 wykorzystuje znany użytkownikom model programistyczny pozwalający na przejrzystą i kompleksową analizę [@packagePythonPmdarima].
-Do budowania modeli GARCH popularną biblioteką jest `arch`.
+
+- Do budowania modeli GARCH popularną biblioteką jest `arch`.
 Jest on zaprojektowany do modelowania zmienności warunkowej za pomocą różnych modeli klasy GARCH (GARCH, GJR, TARCH, EGARCH)
-a także na prognozowanie zmienności warunkowej oraz analizę wartości zagrożonej.
-Na analizę modeli przełącznikowych Markowa natomiast pozwala pakiet `statsmodels` [@packagePythonStatsmodels].
+a także na prognozowanie zmienności warunkowej oraz analizę wartości zagrożonej [@packagePythonArch].
+
+- Na analizę modeli przełącznikowych Markowa natomiast pozwala pakiet `statsmodels`.
+Jest to biblioteka pozwalająca na pracę z wieloma różnymi modelami statystycznymi,
+pozwalając na przeprowadzanie testów oraz eksploracji danych.
+Nazewnictwo funkcji jest tutaj bardziej zainspirowane językiem R,
+na co składa się m.in. sposób formułowania zależności między zmiennymi czy przywoływanie podsumowań.
+Implementuje także budowę modeli przełącznikowych, takich jak model Markowa [@packagePythonStatsmodels].
+
