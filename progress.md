@@ -38,10 +38,10 @@
 - [x] czy wszystkie pakiety opisywać? -- *najważniejsze*
 - [x] rugarch
 - [x] msgarch
-- [ ] coś o oxmetrics
-- [ ] coś o tsm
-- [ ] coś o pythonie
-- [ ] coś o julii
+- [x] coś o oxmetrics
+- [x] coś o tsm
+- [x] coś o pythonie
+- [x] coś o julii
 ## Metodologia badawcza
 ### wybór danych
 - [x] opisanie, co wybrałem
