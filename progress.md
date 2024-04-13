@@ -22,8 +22,6 @@
 - [x] arch a długości opóźnień dla danych finansowych
 - [x] przykład, czemu spadki są bardziej nagłaśniane niż wzrosty
 - [x] wypisać błędy dopasowania
-- [ ] metoda najmniejszych kwadratów
-- [ ] istotność parametrów
 - [x] kryteria informacyjne
 - [x] preferencje stosowania kryteriów informacyjnych
 - [x] ustandaryzowanie pogrubień i pochyleń
@@ -78,8 +76,8 @@
 - [x] horyzont predykcji *7 dni jest w porządku*
 - [x] wykonać predykcje
 - [x] porównanie prognoz z faktycznymi wartościami indeksu -- *nie prognozuję wartości*
-- [ ] błędy prognoz (RMSE, MAPE?)
-- [ ] wnioski
+- [x] błędy prognoz (RMSE, MAPE?)
+- [x] wnioski
 ## Analiza wyników
 ### analiza wpływu na notowania
 - [x] dogłębne spojrzenie na te momenty zwiększonej wahliwości

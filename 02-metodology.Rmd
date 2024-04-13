@@ -804,30 +804,31 @@ Można zauważyć, że każdy z modeli uwzględnia asymetrię modelu, ponieważ 
 Rozkłady innowacji dobrane do każdego z tych modeli stanowią zamienniki rozkładu normalnego, przy czym najczęściej w rankingu pojawia się rozkład GED.
 Tabela \@ref(tab:garchx-post-optimizing) zawiera z kolei wartości parametrów wyestymowane dla tych modeli.
 
-## Predykcje
+### Predykcje
 
 ```{r predictions-setup}
 n_behind <- 10 * forecast_horizon
 ```
 
 ```{r predictions, fig.cap="Zestawienie prognoz wariancji warunkowej dla rozważanych modeli", fig.height=8}
-past_vol <-
+sigmas <-
   list(
     markov = markov %>%
       map(function(model) {
         model %>%
           Volatility() %>%
-          as.numeric() %>%
-          tail(n_behind)
+          as.numeric()
       }),
     garchx = garchx %>%
       map(function(model) {
         model %>%
           sigma() %>%
-          as.numeric() %>%
-          tail(n_behind)
+          as.numeric()
       })
   )
+
+past_vol <- sigmas %>%
+  map(~ map(.x, function(x) tail(x, n_behind)))
 
 pred_vol <-
   list(
@@ -856,4 +857,132 @@ Przebieg prognozowanych szeregów czasowych ilustruje Rysunek \@ref(fig:predicti
 Zilustrowano na nim wariancję warunkową wynikającą z modelu dla ostatnich `r n_behind` dni estymacji,
 a także prognozy, jakie zostały wykonane na `r forecast_horizon` dni naprzód.
 
-### Ocena jakości predykcji
+## Ocena jakości dopasowania
+
+Do oceny jakości dopasowania modeli do danych można posłużyć się znanymi w zagadnieniach ekonometrycznych miarami błędu dopasowania opisanymi w Równaniu \@ref(eq:errors): *RMSE* oraz *MAPE*.
+Korzystają one z różnicy pomiędzy estymowaną a rzeczywistą wartością modelowanej wielkości (w tym przypadku zmienności) do pokazania bliskości wartości teoretycznych do empirycznych.
+
+Przeszkodą w obliczeniu błędów dopasowania dla modeli zmienności warunkowej jest właśnie sama zmienność, która jest nieobserwowalna bezpośrednio.
+Można ją jednak szacować i w tym celu wykorzystana została idea **zmienności zrealizowanej** z uwzględnieniem zwrotów nocnych oraz mikrostruktury rynku [@garmanZmiennosc].
+Wówczas za pomocą cen otwarcia, maksymalnej, minimalnej i zamknięcia danego instrumentu finansowego w momencie $t$ (ozn. kolejno: $O_t, H_t, L_t, C_t$)
+możliwym jest zdefiniowanie zmienności zrealizowanej na moment $t$ za pomocą wzoru:
+
+\begin{equation} (\#eq:realized-volatility)
+\hat{\sigma}^2_t =
+  0.12 \frac{\nz{O_t - C_{t-1}}^2}{f}
+  + 0.88 \frac{
+    \frac{1}{2} \nz{H_t - L_t}^2
+    - (2 \ln 2 - 1) \nz{C_t - O_t}^2
+  }{1 - f}
+\end{equation}
+
+gdzie przez $f \in [0, 1]$ oznacza się część dnia, w jakiej giełda nie przeprowadza transakcji
+-- w przypadku GPW, na której sesja trwa od godziny 9:00 do 17:00 wartość ta wynosi $f = \frac{2}{3}$.
+
+```{r prediction-volatilities, fig.height=8, fig.cap="Porównanie zmienności zrealizowanej danych badanych spółek oraz zmienności estymowanej przez badane modele"}
+volatilities <- map(
+  tables,
+  function(table_name) {
+    data_split[[table_name]] %>%
+      mutate(
+        realized_volatility = sqrt(
+          0.12 / stock_closed_per_day * (Otwarcie - lag(Zamkniecie))^2
+          + 0.88 / (1 - stock_closed_per_day) * (
+            0.5 * (Najwyzszy - Najnizszy)^2
+            - (2 * log(2) - 1) * (Zamkniecie - Otwarcie)^2
+          )
+        )
+      ) %>%
+      select(Data, realized_volatility) %>%
+      mutate(
+        volatility_markov = c(NA, sigmas$markov[[table_name]]),
+        volatility_garchx = c(NA, sigmas$garchx[[table_name]])
+      )
+  }) %>%
+    setNames(tables)
+
+volatilities %>%
+  bind_rows(.id = "index") %>%
+  pivot_longer(
+    contains("volatility"),
+    names_to = "type",
+    names_transform = ~case_match(
+      .x,
+      "realized_volatility" ~ "zrealizowana",
+      "volatility_markov" ~ "wg m. Markowa",
+      "volatility_garchx" ~ "wg m. GARCH-X",
+    )
+  ) %>%
+  mutate(
+    index = tables_full_names[index]
+  ) %>%
+  ggplot(aes(Data, value, color = type)) +
+    geom_line() +
+    labs(
+      x = "Data",
+      y = "Odchylenie standardowe"
+    ) +
+    scale_color_discrete(name = "Zmienność") +
+    scale_x_date(
+      date_breaks = "4 months",
+      date_minor_breaks = "1 month",
+      date_labels = "%m.%y"
+    ) +
+    theme(
+      panel.grid.major.x = element_line(color = "gray", size = 0.25),
+      legend.position = "top"
+    ) +
+    facet_wrap(~index, ncol = 1, scales = "free")
+```
+
+```{r prediction-errors}
+volatilities %>%
+  bind_rows(.id = "index") %>%
+  pivot_longer(
+    starts_with("volatility"),
+    names_to = "model",
+    names_transform = ~str_replace(.x, "volatility_([a-z]*)", "\\1"),
+    values_to = "conditional_volatility"
+  ) %>%
+  group_by(index, model) %>%
+  na.omit() %>%
+  summarise(
+    rmse = sqrt(mean(
+      (conditional_volatility - realized_volatility)^2
+    )),
+    mape = mean(
+      na_if(
+        abs(conditional_volatility - realized_volatility) / realized_volatility,
+        Inf
+      ),
+      na.rm = TRUE
+    )
+  ) %>%
+  pivot_wider(
+    names_from = model,
+    values_from = rmse:mape
+  ) %>%
+  relocate(contains("garchx"), .after = mape_markov) %>%
+  mutate(
+    index = tables_full_names[index]
+  ) %>%
+  c_kable(
+    "Zestawienie błędów dopasowania modeli zmienności warunkowej do danych",
+    col.names = c(
+      "Szer. czas.",
+      rep(c("RMSE", "MAPE"), 2)
+    ),
+    linesep = ""
+  ) %>%
+  add_header_above(c(
+    " " = 1,
+    "model Markowa" = 2,
+    "GARCH-X" = 2
+  ))
+```
+
+Wartości zmienności zrealizowanej zostały wykorzystane w miejsce zmienności rzeczywistej w celu obliczenia błędów dopasowania.
+Wyniki tych obliczeń przedstawia Tabela \@ref(tab:prediction-errors).
+Wartości osiągnięte przez wskaźniki nie różnią się w dużym stopniu pomiędzy modelami.
+W wybranych przypadkach można zauważyć bardzo wysokie wskazania błędów dla modelu GARCH-X,
+głównie z uwagi na niski poziom zmienności zrealizowanej.

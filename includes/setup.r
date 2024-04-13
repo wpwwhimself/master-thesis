@@ -33,6 +33,7 @@ round_digits <- 4
 arma_max_lag <- 9
 data_range <- c("1.01.2019", "1.06.2022")
 forecast_horizon <- 7
+stock_closed_per_day <- 2 / 3
 
 ################# custom functions #################
 c_acf_plot <- function(returns_split) {
@@ -208,7 +209,7 @@ c_pred_plot <- function(pred_vol, past_vol) {
     else c(.x, .y)
   }
 
-  t <- -(n_behind - 1):(n_ahead)
+  t <- -(n_behind - 1):(forecast_horizon)
 
   lapply(
     join_lists(

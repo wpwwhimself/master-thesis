@@ -298,13 +298,17 @@ Oznacza to, że w wariancie dwóch reżimów estymowane są dwa zestawy parametr
 
 Proces __dopasowania__ modelu teoretycznego do danych rzeczywistych polega na znalezieniu jego parametrów tak, aby zminimalizować _błąd dopasowania_, tj. absolutną różnicę pomiędzy wartością teoretyczną a wartością rzeczywistą.
 Określa się wiele rodzajów błędów, ale do najczęściej wyróżniach w badaniach zalicza się te opisane poniżej.
-Dla szeregu wartości modelowanych $(\hat{y}_i)$ formułuje się:
+Dla szeregu wartości modelowanych $(\hat{y}_i)$ formułuje się miary takie, jak **RMSE** (_Root Mean Square Error_) oraz **MAPE** (_Mean Absolute Percentage Error_) o następujących wzorach:
 
-- $RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} \abs{\frac{y_i - \hat{y}_i}{y_i}}}$,
-- $MAPE = \frac{1}{n} \sum_{i=1}^{n} \abs{\frac{y_i - \hat{y}_i}{y_i}}$.
-
-\AAA{metoda najmniejszych kwadratów}
-\AAA{istotność parametrów}
+\begin{equation} (\#eq:errors)
+RMSE = \sqrt{
+  \frac{1}{n} \sum_{i=1}^{n}
+    \nz{\hat{y}_i - y_i}^2
+}
+\qquad
+MAPE = \frac{1}{n} \sum_{i=1}^{n}
+  \frac{\abs{\hat{y}_i - y_i}}{y_i}
+\end{equation}
 
 Oczywiście do każdych danych istnieje możliwość dopasowania kilku różnych modeli, wobec czego zachodzi potrzeba porównania jakości wykorzystanych modeli.
 W tym celu stosuje się __kryteria informacyjne__ -- wskaźniki opierające się na wartości funkcji wiarogodności $L$, które pozwalają na wyłonienie optymalnego modelu, który najwierniej opisuje dane zjawisko.
