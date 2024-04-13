@@ -46,9 +46,19 @@ Opracowała również _Lakcid_ -- probiotyk, będący jednym z niewielu tego rod
 Obecnie _Synthaverse_ jest krajowym liderem w produkcji i dystrybucji tego typu leków [@synthaverseSelf].
 
 Jak można zauważyć w powyższym zestawieniu, spółki objęte badaniem istotnie obejmują różne sektory rynku, co ma pomóc w porównaniu wpływu wydarzeń na świecie na każdą z dziedzin gospodarki.
-Dodatkowo, jako że mowa o krajowych liderach w swoich branżach, wyniki finansowe objętych badaniem firm są dobrym wyznacznikiem kondycji całego polskiego rynku.
-Celem zróżnicowania badania, procedura badawcza zostanie zastosowana również dla **indeksu giełdowego WIG20**.
+Dodatkowo, jako że mowa o krajowych liderach w swoich branżach, wyniki finansowe objętych badaniem firm są prawdopodobnie dobrym wyznacznikiem kondycji całego polskiego rynku.
+Skala prowadzonego badania niestety nie pozwoliła na wybranie większej liczby sektorów rynku, ograniczając się jedynie do pięciu.
+Możliwym ryzykiem takiego podejścia jest błąd we wnioskowaniu o stanie całej gospodarki Polski na podstawie tak ograniczonej puli firm, których dane są brane pod uwagę.
+W tym celu, aby dodatkowo zobrazować reakcję rynku na zmiany globalne, procedurę badawczą zastosowano również dla **indeksu giełdowego WIG20**.
 Indeks ten jest indeksem cenowym 20 największych spółek na _Giełdzie Papierów Wartościowych_, obliczanym na podstawie ich obrotów i cen akcji [@wig20stat].
+Do tego indeksu należą dwie z badanych spółek: _PKN Orlen_ oraz _PKO BP_.
+Pozostałe trzy natomiast konstytuują skład dwóch innych indeksów giełdowych:
+kolejno _mWIG40_ dla _11 bit studios_ i _Dom Development_ oraz __sWIG80_ dla _Synthaverse_.
+Na jednym z etapów badania, logarytmiczne stopy zwrotu indeksu *WIG20* zostały wykorzystane jako dodatkowa zmienna objaśniająca na potrzeby modeli GARCH-X,
+celem próby objaśnienia zmienności stóp zwrotu zmianami na całym rynku.
+Zgodnie z powyższymi dywagacjami, to podejście może przynieść nieoczekiwane rezultaty, z uwagi na brak udziału trzech z pięciu spółek w składzie tego indeksu.
+Niemniej prawdopodobnym jest, że skala zmian ogólnoświatowych jest wystarczająco duża, że swoim wpływem pokrywa również mniejsze przedsiębiorstwa.
+Niewątpliwie tak było w przypadku pandemii koronawirusa, jednak dalsze badania są konieczne w celu potwierdzenia tej tezy.
 
 ## Analiza danych
 

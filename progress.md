@@ -45,8 +45,8 @@
 ## Metodologia badawcza
 ### wybór danych
 - [x] opisanie, co wybrałem
-- [ ] czemu akurat te, a nie inne spółki? dopasowanie modelu markowa nie wypaliło
-- [ ] wig20 vs "nie wszyscy należą do wig20"
+- [x] czemu akurat te, a nie inne spółki? dopasowanie modelu markowa nie wypaliło
+- [x] wig20 vs "nie wszyscy należą do wig20"
 ### analiza danych
 - [x] przedstawienie szeregów
 - [x] statystyki opisowe
