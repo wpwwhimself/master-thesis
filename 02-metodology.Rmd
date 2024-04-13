@@ -90,30 +90,16 @@ data_split$wig %>%
 data_split %>%
   bind_rows(.id = "index") %>%
   mutate(index = tables_full_names[index]) %>%
-  ggplot(aes(Data, Zamkniecie)) +
-    geom_line() +
-    ylab("Wartość instrumentu") +
-    scale_x_date(
-      date_breaks = "3 months",
-      date_minor_breaks = "1 month",
-      date_labels = "%m.%y"
-    ) +
-    facet_wrap(index ~ ., ncol = 1, scales = "free")
+  select(dates = Data, values = Zamkniecie, index) %>%
+  c_line_plot_multi("Wartość instrumentu")
 ```
 
 ```{r returns-plot, fig.cap="Logarytmiczne stopy zwrotu dla badanych spółek", fig.height=8, fig.width=6.5}
 data_split %>%
   bind_rows(.id = "index") %>%
   mutate(index = tables_full_names[index]) %>%
-  ggplot(aes(Data, return)) +
-    geom_line() +
-    ylab("Wartość stopy zwrotu") +
-    scale_x_date(
-      date_breaks = "3 months",
-      date_minor_breaks = "1 month",
-      date_labels = "%m.%y"
-    ) +
-    facet_wrap(index ~ ., ncol = 1, scales = "free")
+  select(dates = Data, values = return, index) %>%
+  c_line_plot_multi("Wartość stopy zwrotu")
 ```
 
 Na Rysunku \@ref(fig:returns-plot) opracowane są wykresy logarytmicznych stóp zwrotu dla spółek wykorzystanych w badaniu.
@@ -633,9 +619,12 @@ map(
       y = "Prawdopodobieństwo reżimu 2"
     ) +
       scale_x_date(
-      date_breaks = "3 months",
+      date_breaks = "4 months",
       date_minor_breaks = "1 month",
       date_labels = "%m.%y"
+    ) +
+    theme(
+      panel.grid.major.x = element_line(color = "gray", size = 0.25)
     ) +
 facet_wrap(vars(series), ncol = 1)
 ```

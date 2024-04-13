@@ -120,6 +120,22 @@ c_kable <- function(
     kable_styling()
 }
 
+c_line_plot_multi <- function(data, values_label) {
+  data %>%
+    ggplot(aes(dates, values)) +
+      geom_line() +
+      ylab(values_label) +
+      scale_x_date(
+        date_breaks = "4 months",
+        date_minor_breaks = "1 month",
+        date_labels = "%m.%y"
+      ) +
+      theme(
+        panel.grid.major.x = element_line(color = "gray", size = 0.25)
+      ) +
+      facet_wrap(index ~ ., ncol = 1, scales = "free")
+}
+
 c_list_with_names <- function(names, values) {
   setNames(
     as.list(values),
