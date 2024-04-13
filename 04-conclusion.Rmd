@@ -10,8 +10,18 @@
 Wyniki przeprowadzonego badania w dużej mierze pokrywają się z wysnutymi oczekiwaniami.
 **Okres pandemii i inwazja rosyjska na Ukrainę spowodowały czasowe wzrosty wahań cen badanych instrumentów finansowych na Polskiej giełdzie.**
 Bazując na danych finansowych z okresu `r paste(data_range, sep = " - ")` udało się wyestymować dobrze dopasowane modele wariancji warunkowej
--- GARCH-X oraz model przełącznikowy Markowa oparty na modelach z rodziny GARCH
--- i z ich pomocą wysnuto prognozy dotyczące dalszego kształtowania się wariancji warunkowej.
+(GARCH-X oraz model przełącznikowy Markowa oparty na modelach z rodziny GARCH)
+i wysnuto prognozy dotyczące dalszego kształtowania się wariancji warunkowej.
+
+Z pomocą modelu przełącznikowego Markowa udało się wyłonić dwa istotne okresy wzmożonej zmienności notowań badanych spółek (Rys. \@ref(fig:markov-plots)):
+
+- 02.2020 - 02.2021 r.: okres _lockdownu_ spowodowanego pandemią koronawirusa w Polsce,
+  - w niektórych przypadkach wyróżnione zostały dwa osobne horyzonty czasowe dla tego okresu: 02.2020 - 07.2020 r. oraz 11.2020 - 02.2021 r.
+    Odpowiadają one kolejno pierwszej i drugiej fali obostrzeń sanitarnych na terenie Polski.
+- 02.2022 - 04.2022 r.: początek inwazji rosyjskiej na terytorium Ukrainy.
+
+Wspomniane prognozy natomiast jednomyślnie wskazują na niski poziom zmienności w kolejnych dniach od badanego horyzontu czasowego.
+Sugeruje to zakończenie okresu wysokich wahań na rynku wraz z końcem eksperymentu.
 \AAA{Czy te prognozy były OK? Do uzupełnienia po wyciągnięciu błędów}
 
 Na podstawie opracowanych modeli udało się potwierdzić istotną zmianę w zachowaniu się badanych szeregów w wyróżnionych okresach.
