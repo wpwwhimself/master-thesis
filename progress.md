@@ -82,9 +82,8 @@
 - [ ] wnioski
 ## Analiza wyników
 ### analiza wpływu na notowania
-- [ ] dogłębne spojrzenie na te momenty zwiększonej wahliwości
+- [x] dogłębne spojrzenie na te momenty zwiększonej wahliwości
 - [x] jakie straty na rynku w tym czasie się stały
-- [ ] 
 ### podsumowanie wyników analizy
 - [ ] streszczenie tego wszystkiego, co się wydarzyło do tej pory
 - [ ] uzupełnić o prognozy
