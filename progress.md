@@ -73,7 +73,7 @@
 - [x] wybór modeli
 - [x] showcase parametrów modeli
 - [x] czy miałoby sens wziąć zmienność WIG20 (garch np.) i wrzucić to jako zmienną objaśniającą? *tak się robi*
-- [ ] pokombinować z innymi zmiennymi objaśniającymi (WIG20)
+- [x] pokombinować z innymi zmiennymi objaśniającymi (WIG20)
 ### predykcje
 - [x] horyzont predykcji *7 dni jest w porządku*
 - [x] wykonać predykcje

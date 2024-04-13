@@ -266,6 +266,7 @@ Jak wskazuje Wzór \@ref(eq:egarch), modyfikacja opiera się na modelowaniu loga
 Innym podejściem będącym rozwinięciem idei modeli heteroskedastyczności warunkowej jest uwzględnienie w modelu wpływu czynników zewnętrznych,
 takich jak sezonowość lub zmienność innych szeregów czasowych (np. innych instrumentów finansowych).
 W tym celu opracowany został model GARCH-X [@hwangGARCHX], w równaniu którego (Wzór \@ref(eq:garchx)) pojawia się składnik odpowiedzialny za siłę tychże zależności.
+Owa siła sterowana jest niezależnie dla każdej z $L$ dodatkowych zmiennych.
 
 \begin{equation} (\#eq:garchx)
 \sigma_t^2 =
@@ -274,8 +275,9 @@ W tym celu opracowany został model GARCH-X [@hwangGARCHX], w równaniu którego
     \alpha_i y^2_{t-i}
   + \sum_{j=1}^{p}
     \beta_j \sigma^2_{t-j}
-  + \sum_{k=1}^{r}
-    \lambda_k w^2_{t-k}
+  + \sum_{l=1}^{L}
+    \sum_{k=1}^{r}
+    \lambda_{l, k} w^2_{t-k}
 \end{equation}
 
 We wszystkich powyższych modelach rozkład innowacji $\epsilon_t$ jest przyjmowany jako rozkład IID (szereg niezależnych zmiennych losowych o jednakowym rozkładzie).
