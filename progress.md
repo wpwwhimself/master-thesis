@@ -85,10 +85,6 @@
 - [ ] dogłębne spojrzenie na te momenty zwiększonej wahliwości
 - [x] jakie straty na rynku w tym czasie się stały
 - [ ] 
-### porównanie z innymi modelami
-- [ ] zastanowić się nad sensem tego rozdziału
-- [ ] modele stochastyczne -- może są jakieś pakiety -- jeśli nie, to wywalić sekcję
-## Wnioski
 ### podsumowanie wyników analizy
 - [ ] streszczenie tego wszystkiego, co się wydarzyło do tej pory
 - [ ] uzupełnić o prognozy

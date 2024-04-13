@@ -73,7 +73,10 @@ tables %>%
           ),
           distribution.model = distribution
         ) %>%
-          ugarchfit(returns_split[[table_name]] %>% na.omit())
+          ugarchfit(
+            returns_split[[table_name]] %>% na.omit(),
+            out.sample = forecast_horizon
+          )
       }) %>%
         c_save_rds(
           c_paste_tight(
