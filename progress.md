@@ -1,6 +1,6 @@
 # Całość
-- [ ] tytuł
-- [ ] synopsis i keywords
+- [x] tytuł
+- [x] synopsis i keywords
 - [x] bibliografia
 ## Wstęp
 ### cel i znaczenie pracy
@@ -83,9 +83,8 @@
 - [x] dogłębne spojrzenie na te momenty zwiększonej wahliwości
 - [x] jakie straty na rynku w tym czasie się stały
 ### podsumowanie wyników analizy
-- [ ] streszczenie tego wszystkiego, co się wydarzyło do tej pory
-- [ ] uzupełnić o prognozy
-- [ ] więcej!
+- [x] streszczenie tego wszystkiego, co się wydarzyło do tej pory
+- [x] uzupełnić o prognozy
 ### ograniczenia i usprawnienia
 - [x] analiza horyzontu czasowego
 - [x] analiza zakresu wybieranych modeli

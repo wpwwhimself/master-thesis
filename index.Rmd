@@ -48,9 +48,13 @@ opts_chunk$set(warning = FALSE)
 \vspace{30pt}
 ```
 
-\AAA{STRESZCZENIE}
+W pracy podjęto próbę identyfikacji okresów wzmożonej zmienności dla danych finansowych Giełdy Papierów Wartościowych w Warszawie,
+związanych z dwoma kryzysami gospodarczymi na świecie: wybuchem pandemii koronawirusa w 2019 r. oraz eskalacją konfliktu pomiędzy Rosją a Ukrainą w 2022 r.
+Wykorzystano dwie klasy modeli zmienności warunkowej: model przełącznikowy Markowa operujący na modelach z rodziny GARCH, a także model GARCH-X.
+Z ich pomocą wyestymowano modele dla danych finansowych sześciu instrumentów finansowych dostępnych na polskiej giełdzie, mających reprezentować kondycję gospodarczą całego rynku.
+Zobrazowano różnice w poziomach zmienności pomiędzy różnymi okresami i wykonano ich prognozy na kolejne dni.
 
-**Słowa kluczowe**: \AAA{KEYWORDS}
+**Słowa kluczowe**: ceny akcji, indeksy giełdowe, kryzysy gospodarcze, GARCH, model przełącznikowy Markowa
 
 ```{=latex}
 \vspace{40pt}
@@ -62,9 +66,13 @@ opts_chunk$set(warning = FALSE)
 \vspace{30pt}
 ```
 
-\AAA{STRESZCZENIE ENG}
+In the thesis, an identification of periods of increased volatility for financial data of Warsaw Stock Exchange has been attempted,
+due to two of global economic crises: the coronavirus pandemic of 2019 and the escalation of Russian-Ukrainian conflict of 2022.
+Two classes of conditional volatility models have been utilized: the Markov switching model which uses GARCH-family models, as well as the GARCH-X model.
+With them, models for financial data of six financial instruments available on the Polish stock exchange have been estimated, which are to represent the economic condition of the whole market.
+Differences between the levels of volatility between different time periods have been visualised and forecasts for the following days have been computed.
 
-**Key words**: \AAA{KEYWORDS ENG}
+**Key words**: economic crises, GARCH, Markov switching model, share prices, stock indices
 
 \newpage
 
