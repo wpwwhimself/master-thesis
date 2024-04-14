@@ -950,7 +950,7 @@ volatilities %>%
     rmse = sqrt(mean(
       (conditional_volatility - realized_volatility)^2
     )),
-    mape = mean(
+    mape = 100 * mean(
       na_if(
         abs(conditional_volatility - realized_volatility) / realized_volatility,
         Inf

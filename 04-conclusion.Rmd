@@ -22,7 +22,7 @@ Z pomocą modelu przełącznikowego Markowa udało się wyłonić dwa istotne ok
 
 Wspomniane prognozy natomiast jednomyślnie wskazują na niski poziom zmienności w kolejnych dniach od badanego horyzontu czasowego.
 Sugeruje to zakończenie okresu wysokich wahań na rynku wraz z końcem eksperymentu.
-\AAA{Czy te prognozy były OK? Do uzupełnienia po wyciągnięciu błędów}
+Przyjęte modele cechują się dość niskim poziomem błędu.
 
 Na podstawie opracowanych modeli udało się potwierdzić istotną zmianę w zachowaniu się badanych szeregów w wyróżnionych okresach.
 Konsekwencją tego były gwałtowne zmiany wartości instrumentów finansowych,
