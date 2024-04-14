@@ -89,7 +89,7 @@
 ### ograniczenia i usprawnienia
 - [x] analiza horyzontu czasowego
 - [x] analiza zakresu wybieranych modeli
-- [ ] analiza wyboru danych
+- [x] analiza wyboru danych
 - [x] wybór regresorów w GARCHX
 ### po co to
 - [ ] ogólnie po co prognozować

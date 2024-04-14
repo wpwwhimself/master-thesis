@@ -49,6 +49,14 @@ szczególnie w przypadku modeli posiadających większą liczbę parametrów.
 Bardziej dogłębna analiza wymaga zatem większych nakładów mocy obliczeniowej,
 co ze względu na charakter niniejszej pracy zostało pominięte na rzecz ograniczenia liczby badanych modeli.
 
+Aby móc estymować parametry finansowych szeregów czasowych, w oczywisty sposób potrzebne są do tego właściwe dane.
+Niniejsza praca stara się zidentyfikować zmiany, które zaszły w całości polskiej giełdy,
+a do tego celu wymagany jest dobór instrumentów, których dane historyczne wspólnie dają całkowity obraz gospodarki krajowej.
+W badaniu przyjęto dane pięciu spółek, które są liderami w swoich sektorach rynku;
+nie znaczy to jednak, że na podstawie tychże pięciu sektorów można ekstrapolować zmiany globalne.
+Możliwym jest więc, że w przypadku doboru **innego zestawu danych finansowych** można by wykryć zmiany i zjawiska niezaobserwowane na łamach tej pracy.
+Choć jej wyniki w obecnej formie wydają się być obiecujące, nie należy traktować ich jako definitywną diagnozę kondycji rynku jako całości.
+
 Wyniki estymacji modeli Markowa, której wyniki przedstawia Rysunek \@ref(fig:markov-plots), zostały osiągnięte w wyniku odpowiedniego dobrania długości badanych szeregów czasowych.
 Przed rozpoczęciem procesu modelowania przyjęto horyzont czasowy pięciu lat dla wybranych danych giełdowych, co poskutkowało szeregami czasowymi długości 1500.
 Jednak dla modeli dopasowanych do tych danych, wybranych analogicznie jak w finalnych wynikach badania,
@@ -69,6 +77,13 @@ Jest to kluczowy aspekt tej klasy modeli i niepoprawna selekcja danych na tym et
 Zastosowana w obecnej pracy decyzja wyboru zmiennych z pewnością nie wyjaśnia wszystkich wpływów czynników zewnętrznych na kreowanie się zmienności danych.
 Potencjalnym polem do usprawnień w tym zakresie jest znalezienie większej liczby szeregów czasowych związanych z danymi giełdowymi badanych spółek
 -- tym sposobem bardziej prawdopodobne byłoby wykrycie dodatkowych zależności i wyjaśnienie obecnie niewyjaśnionych wahań zmienności analizowanych szeregów czasowych.
+
+Godnym uwagi jest fakt, że modelowanie zmienności warunkowej szeregów czasowych **nie pozwala na prognozowanie poziomu cen** powiązanych instrumentów finansowych.
+Jest to istotne ograniczenie, szczególnie dla inwestorów, dla których ważne są rzeczywiste wartości akcji.
+Informacja o zmienności i jej przebiegu jest wówczas jedynie częściową odpowiedzią na próbę przewidywania kierunku, w jakim podąży giełda.
+Chociaż rozważane równania modeli GARCH uwzględniają również model średniej warunkowej ARMA,
+to w brak możliwości estymacji cen badanych instrumentów finansowych szczególnie godzi brak wykrytych zależności liniowych w większości przyjętych danych.
+Sprawia to, że prognozowanie średniej staje się nieużyteczne, ograniczając badacza do polegania na zmienności i identyfikacji okresów wysokiej i niskiej aktywności na rynku.
 
 ## Analiza wpływu pandemii i wojny na notowania giełdowe
 
