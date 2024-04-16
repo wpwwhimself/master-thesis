@@ -83,6 +83,7 @@
 ### analiza wpływu na notowania
 - [x] dogłębne spojrzenie na te momenty zwiększonej wahliwości
 - [x] jakie straty na rynku w tym czasie się stały
+- [ ] jeszcze jedna strona
 ### podsumowanie wyników analizy
 - [x] streszczenie tego wszystkiego, co się wydarzyło do tej pory
 - [x] uzupełnić o prognozy
@@ -96,3 +97,4 @@
 - [x] do czego można to wykorzystać -- więcej
 - [x] na co trzeba uważać -- więcej
 - [x] morał
+- [ ] jeszcze półtorej strony
