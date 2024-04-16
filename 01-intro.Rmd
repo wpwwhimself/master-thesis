@@ -303,7 +303,7 @@ Tę rolę pełni *proces Markowa*, za pomocą którego można zdefiniować proce
 W modelu przełącznikowym Markowa ARMA-GARCH parametry modelu są uzależnione od obecnego reżimu.
 Oznacza to, że w wariancie dwóch reżimów estymowane są dwa zestawy parametrów, po jednym dla każdego z rozpatrywanych modeli.
 
-### Kwantyfikacja poprawności dopasowania modelu
+### Kwantyfikacja poprawności modelu
 
 Proces __dopasowania__ modelu teoretycznego do danych rzeczywistych polega na znalezieniu jego parametrów tak, aby zminimalizować _błąd dopasowania_, tj. absolutną różnicę pomiędzy wartością teoretyczną a wartością rzeczywistą.
 Określa się wiele rodzajów błędów, ale do najczęściej wyróżniach w badaniach zalicza się te opisane poniżej.
@@ -354,11 +354,55 @@ Te przesłanki są przedmiotem badań ekspertów i, chociaż mają one pewne pod
 Zasadność zastosowania modeli ARMA oraz GARCH może zostać potwierdzona przez liczne **testy statystyczne**.
 Testem statystycznym nazywamy formułę, która pozwala na określenie prawdopodobieństwa wystąpienia określonej hipotezy
 i jest on narzędziem dającym argumenty za jej odrzuceniem.
-W obrębie tej pracy stosowane są testy statystyczne, mające weryfikować następujące zagadnienia:
+Na budowę testu statystycznego składają się:
 
-- normalność rozkładu zmiennej losowej -- test Shapiro-Wilka [@shapiroTest],
-- istotność autokorelacji rzędu $l$ w obrębie szeregu czasowego -- test Ljung-Boxa [@boxTest],
-- występowanie efektu ARCH w szeregu czasowym -- test McLeoda-Li [@mcLeodLiTest], test Engle'a [@engleARCH] oraz test KPSS [@KPSSTest].
+- weryfikowana *hipoteza statystyczna*, która może zostać odrzucona tudzież nie,
+- *statystyka testowa*, służąca do pomiaru sprawdzanego zjawiska w oparciu o dane z próby,
+- *poziom istotności*, poniżej którego hipotezę można uznać za fałszywą.
+
+W obrębie badania poziom istotności wszystkich testów statystycznych został przyjęty jako $\alpha = 0.05$,
+a spośród dostępnych testów wykorzystane zostały testy opisane poniżej. Do każdego z nich podano wzór oraz rozkład statystyki testowej przy prawdziwości hipotezy zerowej.
+Informacje te nie są kompleksowe, a po więcej szczegółów czytelnika odsyła się do opracowań źródłowych.
+
+- Test normalności rozkładu zmiennej losowej -- test Shapiro-Wilka [@shapiroTest], którego $H_0$ zakłada, że dane cechują się rozkładem normalnym:
+\begin{equation}
+W = \frac{
+  \nz{\sum_{i=1}^n a_i y_{(i)}}^2
+}{
+  \sum_{i=1}^n \nz{y_i - \bar{y}}^2
+}
+\end{equation}
+Dla klarowności zapisu pominięto definicję wartości $a_i$ oraz $y_{(i)}$.
+Rozkład statystyki $W$ nie ma nazwy, a jego wartości brzegowe są obliczane za pomocą symulacji metodą Monte Carlo;
+
+- Test autokorelacji rzędu $l$ w obrębie szeregu czasowego -- test Ljung-Boxa [@boxTest], którego $H_0$ zakłada brak autokorelacji w szeregu czasowym:
+\begin{equation}
+Q = n(n+2) \sum_{k=1}^{l} \frac{\hat{\rho}^2_k}{n-k}
+\qquad
+Q \sim \chi^2(l)
+\end{equation}
+gdzie $n$ jest wielkością próby, $l$ stopniem testowanego opóźnienia, a $\hat{\rho}_k$ autokorelacją próby przy opóźnieniu $k$;
+
+- Testy na występowanie efektu ARCH w resztach z modelu liniowego dla szeregu czasowego
+  - test McLeoda-Li [@mcLeodLiTest], zakładający brak efektu ARCH przy $H_0$ poprzez brak autokorelacji pomiędzy szeregami kwadratów reszt z modelu liniowego.
+    Test ten jest tożsamy z testem Ljung-Boxa, z jedyną różnicą w danych wykorzystanych do obliczenia statystyki testowej;
+
+  - test Engle'a [@engleARCH] przeprowadzany dla opóźnienia $l$ bada hipotezę zerową mówiącą o braku autokorelacji w kwadratach reszt z modelu liniowego:
+    \begin{equation}
+    LM = (n - l) R^2
+    \qquad
+    LM \sim \chi^2(l)
+    \end{equation}
+    Wzór na statystykę testową wykorzystuje $R^2$ -- współczynnik determinacji dopasowania regresji liniowej do modelu;
+
+  - test KPSS [@KPSSTest], którego $H_0$, przeciwnie do powyższych testów, zakłada pierwszy stopień integracji szeregu czasowego, tj. obecność efektu ARCH:
+    \begin{equation}
+    KPSS = \frac{1}{n^2} \sum_{i=1}^n \frac{S_i^2}{\hat{\sigma}^2}
+    \qquad
+    S_i = \sum_{j=1}^i e_j
+    \end{equation}
+    gdzie $\hat{\sigma}^2$ jest estymatorem wariancji modelu. Rozkład tej statystyki również jest obliczany symulacyjnie.
+
 
 ## Przegląd pakietów statystycznych
 
