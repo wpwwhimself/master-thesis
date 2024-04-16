@@ -265,7 +265,7 @@ Najprawdopodobniej powodem takiego wyniku jest bardziej konserwatywne zachowanie
 które to przypisuje modelowi mniejszą karę za jego skomplikowanie, będące konsekwencją liczby jego parametrów.
 Może to sugerować, że modele wyłonione pod kątem kryterium Akaike są bliskie swojej skuteczności modelom wyłonionym przez kryterium Schwarza.
 
-Mimo to przeprowadzenie testów Ljunga-Boxa na występowanie autokorelacji w szeregach czasowych reszt z modelu dla tych wybranych na podstawie BIC wykazało fakt,
+Mimo to przeprowadzenie testów Ljung-Boxa na występowanie autokorelacji w szeregach czasowych reszt z modelu dla tych wybranych na podstawie BIC wykazało fakt,
 że nie wszystkie zależności liniowe są wyjaśniane przez model białego szumu,
 na co wskazuje nadal występująca autokorelacja dla spółek wspomnianych na początku tego rozdziału, związana z tymi samymi opóźnieniami.
 Wobec tych obserwacji, stawiając sobie za cel spójność wyników każdego z przeprowadzonych w obrębie tego badania eksperymentów,
@@ -303,8 +303,8 @@ table %>%
 Aby potwierdzić zasadność wykorzystania modeli GARCH, przeprowadzone zostały testy na występowanie efektu ARCH.
 Należą do nich testy:
 
-- McLeoda-Li (test Ljunga-Boxa dla kwadratów reszt z modelu) [@mcLeodLiTest],
-- Engle'a [@engleTest],
+- McLeoda-Li (test Ljung-Boxa dla kwadratów reszt z modelu) [@mcLeodLiTest],
+- Engle'a [@engleARCH],
 - KPSS [@KPSSTest].
 
 Obliczenia odpowiednich testów zostały wykonane m.in. za pomocą pakietów `rugarch` [@packageRugarch] oraz `tseries` [@packageTseries].

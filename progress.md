@@ -25,7 +25,7 @@
 - [x] kryteria informacyjne
 - [x] preferencje stosowania kryteriów informacyjnych
 - [x] ustandaryzowanie pogrubień i pochyleń
-- [ ] testy statystyczne
+- [x] testy statystyczne
 - [x] wszystko, czego używam w pracy, muszę rozpisać wzorem? *najważniejsze*
 ### przegląd literatury
 - [x] ile pozycji w literaturze? -- *tyle ile teraz jest OK*

@@ -296,6 +296,8 @@ Tę rolę pełni *proces Markowa*, za pomocą którego można zdefiniować proce
 W modelu przełącznikowym Markowa ARMA-GARCH parametry modelu są uzależnione od obecnego reżimu.
 Oznacza to, że w wariancie dwóch reżimów estymowane są dwa zestawy parametrów, po jednym dla każdego z rozpatrywanych modeli.
 
+### Kwantyfikacja poprawności dopasowania modelu
+
 Proces __dopasowania__ modelu teoretycznego do danych rzeczywistych polega na znalezieniu jego parametrów tak, aby zminimalizować _błąd dopasowania_, tj. absolutną różnicę pomiędzy wartością teoretyczną a wartością rzeczywistą.
 Określa się wiele rodzajów błędów, ale do najczęściej wyróżniach w badaniach zalicza się te opisane poniżej.
 Dla szeregu wartości modelowanych $(\hat{y}_i)$ formułuje się miary takie, jak **RMSE** (_Root Mean Square Error_) oraz **MAPE** (_Mean Absolute Percentage Error_) o następujących wzorach:
@@ -341,6 +343,15 @@ Rzadziej stosowane kryterium, które w stosunku do BIC umniejsza karę za wielko
 Każde z powyższych kryteriów ma swoje zalety i środowiska naukowe preferują wykorzystanie konkretnego z nich częściej niż innych.
 Powoduje to również uproszczenia w edukowaniu o istnieniu tychże kryteriów i prowadzi do nadmiernie zlaicyzowanego przeświadczenia o bezwzględnych korzyściach pewnych kryteriów nad pozostałymi.
 Te przesłanki są przedmiotem badań ekspertów i, chociaż mają one pewne podłoże naukowe, ostatecznie nie są sztywnymi regułami [@zhangKryteriaInformacyjne].
+
+Zasadność zastosowania modeli ARMA oraz GARCH może zostać potwierdzona przez liczne **testy statystyczne**.
+Testem statystycznym nazywamy formułę, która pozwala na określenie prawdopodobieństwa wystąpienia określonej hipotezy
+i jest on narzędziem dającym argumenty za jej odrzuceniem.
+W obrębie tej pracy stosowane są testy statystyczne, mające weryfikować następujące zagadnienia:
+
+- normalność rozkładu zmiennej losowej -- test Shapiro-Wilka [@shapiroTest],
+- istotność autokorelacji rzędu $l$ w obrębie szeregu czasowego -- test Ljung-Boxa [@boxTest],
+- występowanie efektu ARCH w szeregu czasowym -- test McLeoda-Li [@mcLeodLiTest], test Engle'a [@engleARCH] oraz test KPSS [@KPSSTest].
 
 ## Przegląd pakietów statystycznych
 
