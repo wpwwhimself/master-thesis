@@ -2,6 +2,7 @@
 - [x] tytuł
 - [x] synopsis i keywords
 - [x] bibliografia
+- [ ] wypełnić do 60 stron
 ## Wstęp
 ### cel i znaczenie pracy
 - [x] rys historyczny

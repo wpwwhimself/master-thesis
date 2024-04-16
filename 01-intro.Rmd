@@ -61,10 +61,17 @@ Wyniki ich prac zostały opublikowane na łamach różnego rodzaju czasopism i p
 .
 
 Celem niniejszej pracy magisterskiej jest, podobnie jak w wyżej wspomnianych badaniach, analiza reakcji rynku polskiego na owe kryzysowe wydarzenia.
-Autor wykorzysta znane metody z obszaru modelowania finansowego.
-Idealnym narzędziem zdają się tu być modele przełącznikowe, za pomocą których możliwe będzie dopasowanie teoretycznych wartości do danych rynkowych, a także wykonanie prognozy ex-post celem sprawdzenia dopasowania tych modeli.
-Po przeprowadzeniu badań podsumowane zostaną ich wyniki oraz wyłoniona zostanie optymalna metoda predykcji wartości wskaźników rynkowych.
+Wykorzystane zostaną znane metody z obszaru modelowania finansowego.
+Idealnym narzędziem zdają się tu być modele przełącznikowe, za pomocą których możliwe będzie dopasowanie teoretycznych wartości do danych rynkowych,
+a także wykonanie prognozy celem sprawdzenia dopasowania tych modeli.
+Po przeprowadzeniu badań podsumowane zostaną ich wyniki oraz opisana zostanie siła wpływu, jaki globalne zmiany wywierają na rodzimą gospodarkę.
 Informacje te mogą posłużyć do dalszego konstruowania modeli mających za zadanie negować skutki globalnych kryzysów i zapobiegać ich finansowym efektom.
+
+Oczywiście analiza ta nie jest wyczerpująca
+-- ze względu na różnorakie ograniczenia (czasowe i komputacyjne) ograniczony został zakres badania,
+co może ostatecznie nie dawać pełnego obrazu sytuacji panującej na warszawskiej giełdzie.
+Mimo to obrany horyzont czasowy, wraz z przyjętym wolumenem badanych i zakresem weryfikowanych modeli ekonometrycznych,
+pozwalają przypuszczać, że wyniki niniejszego badania są wiarygodne i wnioski z niego wyciągnięte mają swoje uzasadnienie w rzeczywistości.
 
 ## Modele rynków finansowych
 
