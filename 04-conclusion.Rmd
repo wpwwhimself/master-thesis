@@ -170,17 +170,26 @@ Symulacje wartości instrumentów finansowych pozwalają na maksymalizację zysk
 Mogą one pomóc w podejmowaniu lukratywnych decyzji i dać ugruntowane argumenty przeciw pozornie korzystnym wyborom.
 
 Warto też wspomnieć, że modelowanie szeregów czasowych nie jest wyłącznie domeną ekonomii.
-Tego typu dane mogą być również użyte w pokrewnych dziedzinach nauki takich jak:
+W obecnych czasach zdobycze naukowe różnych dziedzin nieustannie przeplatają się ze sobą i pomagają w rozwoju innych obszarów.
+Metody pracy z danymi, jakie zostały przedstawione na łamach tej pracy, mogą być również użyte w pokrewnych dziedzinach nauki, takich jak:
 
 - meteorologia i klimatologia -- analiza danych meteorologicznych, np. zmian temperatury, intensywności opadów lub ciśnienia atmosferycznego,
 pozwala na lepsze zrozumienie i prognozowanie zmian klimatycznych oraz opracowywanie sprawniejszych modeli pogodowych.
 Jest to pomocne m.in. w rolnictwie, w celu optymalizacji plonów i zapobieganiu klęskom żywiołowym,
+
 - medycyna i epidemiologia -- jednym z poruszonych w niniejszej pracy tematów jest pandemia wysoce zaraźliwego wirusa i jej wpływ na polski rynek.
 Jednakże można na tego typu wydarzenia spojrzeć również od strony samej epidemii:
-mierzenie liczby zachorowań oraz prognozowanie trendów zdrowotnych pozwala na monitorowanie rozprzestrzeniania się chorób zakaźnych oraz przewidywanie ich przebiegu,
-- inżynieria -- zbieranie danych o stanach maszyn pozwala na przewidywanie ich awaryjności, co pozwala na ulepszanie ich konstrukcji,
+mierzenie liczby zachorowań oraz prognozowanie trendów zdrowotnych pozwala na monitorowanie rozprzestrzeniania się chorób zakaźnych oraz przewidywanie ich przebiegu.
+Prowadzi to jedocześnie do lepszych technik zapobiegania eskalacji liczby zarażeń i ogólnie pojąwszy zdrowszego społeczeństwa,
+
+- inżynieria -- zbieranie danych o stanach maszyn, np. osiągana wydajność lub stopień zużycia komponentów,
+pozwala na przewidywanie ich awaryjności, co pozwala na ulepszanie ich konstrukcji.
+Wysokiej jakości urządzenia, z których korzysta ludzkość, bezpośrednio przekłada się na osiągnięcia człowieka i pozwala pewniej i sprawniej do nich dążyć,
+
 - biologia -- prognozowanie populacji różnych gatunków zwierząt i roślin może być bardziej skuteczne dzięki dokładniejszym narzędziom modelującym ich obecną liczbę.
 Może to pomóc w kontrolowaniu liczebności zagrożonych, ale także inwazyjnych gatunków.
+Wspomoże to również ekologów w dostosowaniu odpowiednich technik ochrony zwierząt,
+co w niektórych przypadkach przekłada się również na rolnictwo oraz prognozowanie szkód w uprawach, związanych ze zwierzyną.
 
 Wszystko to jest oparte na dokładnych i rzetelnych modelach danych.
 Z tego względu rozwój narzędzi służących do dopasowywania modeli, opracowywanie nowych rozwiązań matematycznych i technicznych, a także kształcenie specjalistów w tych dziedzinach,

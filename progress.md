@@ -91,7 +91,7 @@
 - [x] analiza wyboru danych
 - [x] wybór regresorów w GARCHX
 ### po co to
-- [ ] ogólnie po co prognozować
-- [ ] do czego można to wykorzystać -- więcej
-- [ ] na co trzeba uważać -- więcej
-- [ ] morał
+- [x] ogólnie po co prognozować
+- [x] do czego można to wykorzystać -- więcej
+- [x] na co trzeba uważać -- więcej
+- [x] morał
