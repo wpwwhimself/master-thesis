@@ -116,7 +116,7 @@ Na giełdzie warszawskiej funkcjonuje kilka indeksów, a największymi z nich s�
 
 [@indeksBI;@wigGpwBenchmark]
 
-### Modelowanie rynków finansowych
+### Szeregi czasowe danych finansowych
 
 Pod pojęciem __modelowania__ zazwyczaj kryje się ogół narzędzi teoretycznych, mających na celu ustalić tendencje wpływające na wartość danego instrumentu na rynku finansowym,
 a w konsekwencji przewidzieć jego przyszłą wartość.
