@@ -126,7 +126,10 @@ c_line_plot_multi <- function(data, values_label) {
   data %>%
     ggplot(aes(dates, values)) +
       geom_line() +
-      ylab(values_label) +
+      labs(
+        x = "Data",
+        y = values_label
+      ) +
       scale_x_date(
         date_breaks = "4 months",
         date_minor_breaks = "1 month",

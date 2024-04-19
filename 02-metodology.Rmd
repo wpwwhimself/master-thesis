@@ -7,60 +7,60 @@
 
 ## Wybór danych
 
-Za przedmiot badań obrane zostały dane pięciu polskich spółek notowanych na Giełdzie Papierów Wartościowych.
+Za przedmiot badań obrane zostały dane pięciu polskich spółek notowanych na&nbsp;Giełdzie Papierów Wartościowych.
 Spółki te zostały wybrane tak, aby reprezentowały one różne sektory rynku.
 Poddano badaniu następujące firmy:
 
 1. **PKN Orlen** -- Polski Koncern Naftowy Orlen Spółka Akcyjna -- polska spółka z ponad sześćdziesięcioletnią historią w **branży paliwowej**.
-Opisywana jako koncern wielobranżowy, opiera swoją działalność na poszukiwaniu, wydobyciu, logistyce oraz dystrybucji i sprzedaży różnego rodzaju paliw, m.in. ropy naftowej, gazu ziemnego oraz biopaliw.
-Ponadto spółka udziela się na rynkach energii elektrycznej i cieplnej, produkcji nawozów sztucznych, petrochemii, a&nbsp;także na rynku prasowym.
-Pod szyldem _Orlen_ działa 7 rafinerii w Polsce, Czechach&nbsp;oraz na Litwie, które przerabiają rocznie ponad 30 mln ton ropy naftowej.
+Opisywana jako koncern wielobranżowy, opiera swoją działalność na&nbsp;poszukiwaniu, wydobyciu, logistyce oraz dystrybucji i sprzedaży różnego rodzaju paliw, m.in. ropy naftowej, gazu ziemnego oraz biopaliw.
+Ponadto spółka udziela się na&nbsp;rynkach energii elektrycznej i cieplnej, produkcji nawozów sztucznych, petrochemii, a&nbsp;także na&nbsp;rynku prasowym.
+Pod szyldem _Orlen_ działa 7 rafinerii w Polsce, Czechach oraz&nbsp;na&nbsp;Litwie, które przerabiają rocznie ponad 30 mln ton ropy naftowej.
 Spółka posiada ponad 3000 stacji benzynowych w Europie i sprzedaje 40 produktów petrochemicznych [@orlenWiki;@orlenSelf].
 
 2. **PKO BP** -- Powszechna Kasa Oszczędności Bank Polski Spółka Akcyjna -- największy bank uniwersalny w Polsce, reprezentujący **branżę finansową**.
 Utworzona 7.02.2019 r. jako _Pocztowa Kasa Oszczędności_, która przyczyniła się m.in. do wprowadzenia złotego polskiego do obiegu w Polsce.
 Po 1948 r. zlikwidowana i powołana ponownie, tym razem jako bank państwowy (już pod obecną nazwą), a z dniem 1.07.1975 r. włączona w struktury _Narodowego Banku Polskiego_.
-Jako bank uniwersalny obsługuje różne podmioty, od osób fizycznych, poprzez małe i średnie przedsiębiorstwa, skończywszy na wielkich korporacjach.
-Misją banku jest pozytywny wpływ na Polskę, tj. ludzi, firmy, kulturę i środowisko. Określany jako jeden z największych banków w Europie Środkowej i Wschodniej.
+Jako bank uniwersalny obsługuje różne podmioty, od osób fizycznych, poprzez małe i średnie przedsiębiorstwa, skończywszy na&nbsp;wielkich korporacjach.
+Misją banku jest pozytywny wpływ na&nbsp;Polskę, tj. ludzi, firmy, kulturę i środowisko. Określany jako jeden z największych banków w Europie Środkowej i Wschodniej.
 W posiadaniu spółki jest również kolekcja różnego rodzaju dzieł sztuki, a pod jej szyldem funkcjonuje również _Fundacja_, realizująca m.in. projekty lokalne i indywidualne [@pkoWiki;@pkoSelf].
 
 3. **11 bit studios** -- polskie przedsiębiorstwo założone w 2009 roku z siedzibą w Warszawie, zajmującą się produkcją i wydawaniem **gier komputerowych**.
-Założone w większości przez byłych pracowników _Metropolis Software_, innego polskiego producenta gier, który w wyniku braku sukcesów na rynku zmuszony był zakończyć swoją działalność.
-Nowo utworzone studio wydało kilka produkcji, z czego szczególnym sukcesem cieszy się gra strategiczna z gatunku _city builder_: _Frostpunk_.
-Będąc laureatem wielu wyróżnień, m.in. na najlepszą grę strategiczną podczas _Video Game Awards_ oraz najlepszą grę polską od _Digital Dragons_, studio stale rozszerza swój dorobek, pracując obecnie nad kontynuacją swojej hitowej produkcji.
-Produkcję gier traktują na równi z twórczością artystyczną, chcąc konstruować "uniwersa pełne prowokujących do myślenia powieści" [@11bitWiki;@11bitSelf].
+Założone w większości przez byłych pracowników _Metropolis Software_, innego polskiego producenta gier, który w wyniku braku sukcesów na&nbsp;rynku zmuszony był zakończyć swoją działalność.
+Nowo utworzone studio wydało kilka produkcji, z czego szczególnym sukcesem cieszy się gra strategiczna z&nbsp;gatunku _city builder_: _Frostpunk_.
+Będąc laureatem wielu wyróżnień, m.in. na&nbsp;najlepszą grę strategiczną podczas _Video Game Awards_ oraz najlepszą grę polską od _Digital Dragons_, studio stale rozszerza swój dorobek, pracując obecnie nad kontynuacją swojej hitowej produkcji.
+Produkcję gier traktują na&nbsp;równi z twórczością artystyczną, chcąc konstruować ,,uniwersa pełne prowokujących do&nbsp;myślenia powieści" [@11bitWiki;@11bitSelf].
 
 4. **Dom Development** -- spółka akcyjna działająca od 1996 roku, zajmująca się nabywaniem gruntów i budowaniem, sprzedażą oraz najmem **nieruchomości** o przeznaczeniu mieszkaniowym.
-Spółka jest notowana od 2006 r. na Warszawskiej Giełdzie Papierów Wartościowych.
+Spółka jest notowana od 2006 r. na&nbsp;warszawskiej Giełdzie Papierów Wartościowych.
 Jest laureatem wielu nagród i wyróżnień, m.in. _Perła Polskiej Gospodarki 2008_, _Diament Forbesa 2007_ oraz _Top 100 Najefektywniejszych Firm 2006 r_.
 W 2018 r. powołała do życia spółkę _Dom Construction Sp. z o.o._ o charakterze generalnego wykonawcy swoich inwestycji.
 Wykonuje projekty budowlane w największych miastach Polski: Warszawie, Wrocławiu, Gdańsku i Krakowie.
 W ciągu ponad 25 lat działalności firma oddała do użytku ponad 46 tys. lokali [@domSelf].
 
-1. **Synthaverse** -- polska spółka akcyjna dostarczająca wiodące na rynku rozwiązania **farmaceutyczne** z niemal stuletnią tradycją.
-Rozpoczęła działalność jako _Laboratorium Produkcji Szczepionki przeciwko Durowi Plamistemu_ oraz _Zakład Produkcji Surowic i Szczepionek przy Filii PZH w Lublinie_,
-a na giełdzie przez długi czas notowana była jako _Biomed Lublin S.A._.
-Dostarcza swoje produkty do 50 krajów świata, a swoją działalność koncentruje na rozwijaniu immunoterapii.
+1. **Synthaverse** -- polska spółka akcyjna dostarczająca wiodące na&nbsp;rynku rozwiązania **farmaceutyczne** z niemal stuletnią tradycją.
+Rozpoczęła działalność jako _Laboratorium Produkcji Szczepionki przeciwko Durowi Plamistemu_ oraz _Zakład Produkcji Surowic i Szczepionek przy&nbsp;Filii PZH w Lublinie_,
+a na&nbsp;giełdzie przez długi czas notowana była jako _Biomed Lublin S.A._.
+Dostarcza swoje produkty do 50 krajów świata, a swoją działalność koncentruje na&nbsp;rozwijaniu immunoterapii.
 Do jej szczególnych osiągnięć należy status producenta jednego z nielicznych leków stosowanych w terapii raka pęcherza moczowego, a także powszechnie stosowana szczepionka przeciwgruźlicza.
-Opracowała również _Lakcid_ -- probiotyk, będący jednym z niewielu tego rodzaju leków dostępnych na świecie.
+Opracowała również _Lakcid_ -- probiotyk, będący jednym z niewielu tego rodzaju leków dostępnych na&nbsp;świecie.
 Obecnie _Synthaverse_ jest krajowym liderem w produkcji i dystrybucji tego typu leków [@synthaverseSelf].
 
 ### Zasadność wyboru
 
-Jak można zauważyć w powyższym zestawieniu, spółki objęte badaniem istotnie obejmują różne sektory rynku, co ma pomóc w porównaniu wpływu wydarzeń na świecie na każdą z dziedzin gospodarki.
+Jak można zauważyć w powyższym zestawieniu, spółki objęte badaniem istotnie obejmują różne sektory rynku, co ma pomóc w porównaniu wpływu wydarzeń na&nbsp;świecie na&nbsp;każdą z dziedzin gospodarki.
 Dodatkowo, jako że mowa o krajowych liderach w swoich branżach, wyniki finansowe objętych badaniem firm są prawdopodobnie dobrym wyznacznikiem kondycji całego polskiego rynku.
-Skala prowadzonego badania niestety nie pozwoliła na wybranie większej liczby sektorów rynku, ograniczając się jedynie do pięciu.
-Możliwym ryzykiem takiego podejścia jest błąd we wnioskowaniu o stanie całej gospodarki Polski na podstawie tak ograniczonej puli firm, których dane są brane pod uwagę.
+Skala prowadzonego badania niestety nie pozwoliła na&nbsp;wybranie większej liczby sektorów rynku, ograniczając się jedynie do pięciu.
+Możliwym ryzykiem takiego podejścia jest błąd we wnioskowaniu o stanie całej gospodarki Polski na&nbsp;podstawie tak ograniczonej puli firm, których dane są brane pod&nbsp;uwagę.
 
-W tym celu, aby dodatkowo zobrazować reakcję rynku na zmiany globalne, procedurę badawczą zastosowano również dla **indeksu giełdowego WIG20**.
-Indeks ten jest indeksem cenowym 20 największych spółek na _Giełdzie Papierów Wartościowych_, obliczanym na podstawie ich obrotów i cen akcji [@wig20stat].
-Do tego indeksu należą dwie z badanych spółek: _PKN Orlen_ oraz _PKO BP_.
+W tym celu, aby dodatkowo zobrazować reakcję rynku na&nbsp;zmiany globalne, procedurę badawczą zastosowano również dla **indeksu giełdowego WIG20**.
+Indeks ten jest indeksem cenowym 20&nbsp;największych spółek na&nbsp;_Giełdzie Papierów Wartościowych_, obliczanym na&nbsp;podstawie ich obrotów i&nbsp;cen akcji [@wig20stat].
+Do tego indeksu należą dwie z badanych spółek: _PKN&nbsp;Orlen_ oraz _PKO BP_.
 Pozostałe trzy natomiast konstytuują skład dwóch innych indeksów giełdowych:
 kolejno _mWIG40_ dla _11 bit studios_ i _Dom Development_ oraz _sWIG80_ dla _Synthaverse_.
-Na jednym z etapów badania, logarytmiczne stopy zwrotu indeksu *WIG20* zostały wykorzystane jako dodatkowa zmienna objaśniająca na potrzeby modeli GARCH-X,
-celem próby objaśnienia zmienności stóp zwrotu zmianami na całym rynku.
+Na&nbsp;jednym z&nbsp;etapów badania, logarytmiczne stopy zwrotu indeksu *WIG20* zostały wykorzystane jako dodatkowa zmienna objaśniająca na&nbsp;potrzeby modeli GARCH-X,
+celem próby objaśnienia zmienności stóp zwrotu zmianami na&nbsp;całym rynku.
 
-Zgodnie z powyższymi dywagacjami, to podejście może przynieść nieoczekiwane rezultaty, z uwagi na brak udziału trzech z pięciu spółek w składzie tego indeksu.
+Zgodnie z powyższymi dywagacjami, to podejście może przynieść nieoczekiwane rezultaty, z&nbsp;uwagi na&nbsp;brak udziału trzech z pięciu spółek w składzie tego indeksu.
 Niemniej prawdopodobnym jest, że skala zmian ogólnoświatowych jest wystarczająco duża, że swoim wpływem pokrywa również mniejsze przedsiębiorstwa.
 Niewątpliwie tak było w przypadku pandemii koronawirusa, jednak dalsze badania są konieczne w celu potwierdzenia tej tezy.
 
@@ -71,14 +71,14 @@ source("includes/data.r")
 ```
 
 Do przeprowadzania badania wykorzystane zostaną dane o cenach akcji zebrane z serwisu _[Stooq.pl](https://stooq.pl/)_.
-Jest to jeden z najbardziej znanych serwisów internetowych zbierających dane finansowe spółek notowanych nie tylko na _Giełdzie Papierów Wartościowych_, ale również na innych giełdach światowych, m.in. amerykański indeks _S&P US_.
+Jest to jeden z najbardziej znanych serwisów internetowych zbierających dane finansowe spółek notowanych nie tylko na&nbsp;_Giełdzie Papierów Wartościowych_, ale również na&nbsp;innych giełdach światowych, m.in. amerykański indeks _S&P US_.
 Można tam znaleźć również informacje o kursach walut, cenach towarów i inne dane finansowe.
 Usługi serwisu są skierowane głównie do osób biegłych w rynkach finansowych, poszukujących atrakcyjnych form lokowania kapitału, ale także menadżerów, biznesmenów oraz właścicieli firm [@stooq].
-Na potrzeby badania pobrano dane giełdowe z okresu `r data_range[1]` - `r data_range[2]`,
+Na&nbsp;potrzeby badania pobrano dane giełdowe z okresu `r data_range[1]` - `r data_range[2]`,
 co daje `r length(tables)` `r length(na.omit(returns_split[[1]]))`-elementowych szeregów czasowych.
 
 Punktem wyjścia do prowadzenia badań będzie wybranie szeregu czasowego cen zamknięcia akcji.
-Aby zapewnić stacjonarność tego szeregu czasowego, obliczane są logarytmiczne stopy zwrotu według wzoru \@ref(eq:return).
+Aby zapewnić stacjonarność tego szeregu czasowego, obliczane są logarytmiczne stopy zwrotu według Wzoru \@ref(eq:return).
 Tak utworzony szereg czasowy spełnia założenia stacjonarności i można go wykorzystać do dalszych badań.
 W celach poglądowych w Tabeli \@ref(tab:showcase) zamieszczone zostały przykładowe dane dotyczące indeksu WIG20 wraz z obliczonymi stopami zwrotu.
 
@@ -116,10 +116,10 @@ data_split %>%
   c_line_plot_multi("Wartość stopy zwrotu")
 ```
 
-Na Rysunku \@ref(fig:returns-plot) opracowane są wykresy logarytmicznych stóp zwrotu dla spółek wykorzystanych w badaniu.
-Można zauważyć wyraźnie podwyższoną zmienność w marcu 2020 r., a także na końcu lutego 2022 r.
+Na&nbsp;Rysunku \@ref(fig:returns-plot) opracowane są wykresy logarytmicznych stóp zwrotu dla spółek wykorzystanych w badaniu.
+Można zauważyć wyraźnie podwyższoną zmienność w marcu 2020 r., a także na&nbsp;końcu lutego 2022 r.
 Pierwszy z tych wstrząsów bez wątpienia można przypisać początkowi pandemii koronawirusa w Polsce i pierwszym wprowadzonym restrykcjom sanitarnym.
-Drugi z kolei jest związany z początkiem agresji rosyjskiej na Ukrainie, kiedy to 24.02 agresor rozpoczął swoją ofensywę [@covidBeginnings;@ukraineWiki].
+Drugi z kolei jest związany z początkiem agresji rosyjskiej na&nbsp;Ukrainie, kiedy to 24.02 agresor rozpoczął swoją ofensywę [@covidBeginnings;@ukraineWiki].
 
 ```{r desc-stats-table}
 data_split %>%
@@ -189,16 +189,16 @@ grid.arrange(
 ```
 
 W dalszej kolejności dane giełdowe zostały zbadane pod kątem ich podobieństwa do rozkładu normalnego.
-W tym celu obliczone zostały statystyki opisowe szeregów czasowych, a także przeprowadzono test Shapiro-Wilka na normalność rozkładu zmiennej losowej.
-Wyniki tych działań przedstawiono w Tabeli \@ref(tab:desc-stats-table) oraz na Rysunku \@ref(fig:histograms-plot).
-Na podstawie tak przeprowadzonych testów można stwierdzić, że wzięte w badaniu dane **nie cechują się normalnością**, o czym świadczy niska (bliska wartości 0) p-wartość testów.
+W tym celu obliczone zostały statystyki opisowe szeregów czasowych, a także przeprowadzono test Shapiro-Wilka na&nbsp;normalność rozkładu zmiennej losowej.
+Wyniki tych działań przedstawiono w Tabeli \@ref(tab:desc-stats-table) oraz na&nbsp;Rysunku \@ref(fig:histograms-plot).
+Na&nbsp;podstawie tak przeprowadzonych testów można stwierdzić, że wzięte w badaniu dane **nie wykazują cech rozkładu normalnego**, o czym świadczy niska (bliska wartości 0) p-wartość testów.
 Uzasadnia to zastosowanie modeli rozważanych w badaniach.
 
 ## Wybór odpowiedniego modelu
 
 W myśl badania, do omawianych danych finansowych zostały dopasowane różne modele wariancji warunkowej.
 Zanim jednak wykonano ten proces, aby zapewnić sobie modele w pełni objaśniające dane rzeczywiste,
-do danych szeregów czasowych dopasowano właściwy model średniej warunkowej ARMA oraz przetestowano je na obecność efektu ARCH.
+do danych szeregów czasowych dopasowano właściwy model średniej warunkowej ARMA oraz przetestowano je na&nbsp;obecność efektu ARCH.
 W kolejnych podrozdziałach znajduje się opis przeprowadzonych badań oraz zestawienie ich wyników.
 
 ### Dopasowanie modelu średniej warunkowej ARMA
@@ -208,12 +208,12 @@ c_acf_plot(returns_split)
 ```
 
 W celu dopasowania modelu średniej warunkowej do badanych danych,
-przygotowano korelogramy ilustrujące funkcje ACF i PACF, przedstawione na Rysunku \@ref(fig:arma-acfs).
-Posłużyły one do wskazania istotnych opóźnień autokorelacji w badanych szeregach czasowych i pozwoliły na określenie zakresu testowanych parametrów.
-Połowa badanych szeregów czasowych przejawia brak autokorelacji w pierwszych opóźnieniach szeregu,
+przygotowano korelogramy ilustrujące funkcje ACF i PACF, przedstawione na&nbsp;Rysunku \@ref(fig:arma-acfs).
+Posłużyły one do wskazania istotnych opóźnień autokorelacji w badanych szeregach czasowych i pozwoliły na&nbsp;określenie zakresu testowanych parametrów.
+Połowa badanych szeregów czasowych przejawia brak autokorelacji w&nbsp;pierwszych opóźnieniach szeregu,
 natomiast dla trzech z nich testy przyniosły wynik pozytywny.
-Na tej podstawie podczas testów dopasowania zbadano dopasowanie modeli ARMA do rzędów opóźnień równych `r arma_max_lag`.
-Modele zostały wybrane na podstawie kryteriów informacyjnych Akaike i Schwarza.
+Na&nbsp;tej podstawie podczas testów dopasowania zbadano dopasowanie modeli ARMA do maksymalnego opóźnienia rzędu `r arma_max_lag`.
+Modele zostały wybrane na&nbsp;podstawie kryteriów informacyjnych Akaike i&nbsp;Schwarza.
 Do tego celu wykorzystano pakiet `forecast` [@packageForecast1;@packageForecast2].
 
 ```{r arma-fitting}
@@ -256,24 +256,24 @@ table %>%
   ))
 ```
 
-Tabela \@ref(tab:arma-fitting) pokazuje wyniki przeprowadzonego dopasowania modeli średniej warunkowej do badanych szeregów czasowych na podstawie kryteriów informacyjnego Akaike oraz Schwarza.
-Próby dopasowania różnych modeli ARMA w dużej mierze pokrywają się z obserwacjami poczynionymi na podstawie korelogramów na Rysunku \@ref(fig:arma-acfs):
+Tabela \@ref(tab:arma-fitting) pokazuje wyniki przeprowadzonego dopasowania modeli średniej warunkowej do badanych szeregów czasowych na&nbsp;podstawie kryteriów informacyjnego Akaike oraz Schwarza.
+Próby dopasowania różnych modeli ARMA w dużej mierze pokrywają się z obserwacjami poczynionymi na&nbsp;podstawie korelogramów na&nbsp;Rysunku \@ref(fig:arma-acfs):
 dla danych spółek _11 bit studios_ oraz _Synthaverse_ autokorelacja została uwzględniona w modelach ARMA,
-z opóźnieniami w dużej mierze zgodnymi z oczekiwaniami.
+z opóźnieniami w dużej mierze zgodnymi z&nbsp;oczekiwaniami.
 Dla pozostałych szeregów czasowych model białego szumu jest również adekwatny do braku zaobserwowanej autokorelacji.
 
 Interesującym wynikiem badań jest fakt, że pomimo istotnej autokorelacji występującej w niektórych z badanych szeregów,
 jeśli by brać pod uwagę kryterium informacyjne Schwarza do wyłonienia najlepiej dopasowanego modelu,
-każdemu z szeregów przypisany został model białego szumu, tj. czysto losowych innowacji.
+każdemu z szeregów przypisany został model białego szumu, tj.&nbsp;czysto losowych innowacji.
 Najprawdopodobniej powodem takiego wyniku jest bardziej konserwatywne zachowanie się tego kryterium w stosunku do AIC,
 które to przypisuje modelowi mniejszą karę za jego skomplikowanie, będące konsekwencją liczby jego parametrów.
-Może to sugerować, że modele wyłonione pod kątem kryterium Akaike są bliskie swojej skuteczności modelom wyłonionym przez kryterium Schwarza.
+Może to sugerować, że&nbsp;modele wyłonione pod kątem kryterium Akaike są bliskie swojej skuteczności modelom wyłonionym przez kryterium Schwarza.
 
-Mimo to przeprowadzenie testów Ljung-Boxa na występowanie autokorelacji w szeregach czasowych reszt z modelu dla tych wybranych na podstawie BIC wykazało fakt,
+Mimo to przeprowadzenie testów Ljung-Boxa na&nbsp;występowanie autokorelacji w szeregach czasowych reszt z modelu dla tych wybranych na&nbsp;podstawie BIC wykazało fakt,
 że nie wszystkie zależności liniowe są wyjaśniane przez model białego szumu,
-na co wskazuje nadal występująca autokorelacja dla spółek wspomnianych na początku tego rozdziału, związana z tymi samymi opóźnieniami.
-Wobec tych obserwacji, stawiając sobie za cel spójność wyników każdego z przeprowadzonych w obrębie tego badania eksperymentów,
-do dalszych rozważań wybrane zostały modele na podstawie kryterium informacyjnego Akaike,
+na&nbsp;co wskazuje nadal występująca autokorelacja dla spółek wspomnianych na&nbsp;początku tego rozdziału, związana z tymi samymi opóźnieniami.
+Wobec tych obserwacji, stawiając sobie za cel spójność wyników każdego z przeprowadzonych w&nbsp;obrębie tego badania eksperymentów,
+do dalszych rozważań wybrane zostały modele na&nbsp;podstawie kryterium informacyjnego Akaike,
 których specyfikację przedstawia Tabela \@ref(tab:arma-fitting-choice).
 
 ```{r arma-fitting-choice}
@@ -304,7 +304,7 @@ table %>%
   ))
 ```
 
-Aby potwierdzić zasadność wykorzystania modeli GARCH, przeprowadzone zostały testy na występowanie efektu ARCH.
+Aby potwierdzić zasadność wykorzystania modeli GARCH, przeprowadzone zostały testy na&nbsp;występowanie efektu ARCH.
 Należą do nich testy:
 
 - McLeoda-Li (test Ljung-Boxa dla kwadratów reszt z modelu) [@mcLeodLiTest],
@@ -382,7 +382,8 @@ map(
   pack_rows(index = group_names)
 ```
 
-Test McLeoda-Li, który został przedstawiony na korelogramach na Rysunku \@ref(fig:arma-arch-acf), wskazuje na istotną autokorelację w szeregach kwadratów reszt z modelu,
+Test McLeoda-Li, który został przedstawiony na&nbsp;korelogramach na&nbsp;Rysunku \@ref(fig:arma-arch-acf),
+wskazuje na&nbsp;istotną autokorelację w szeregach kwadratów reszt z modelu,
 wobec czego można wnioskować o zachodzeniu efektu ARCH w rozważanych danych.
 Wyniki testów Engle'a oraz KPSS również sprzyjają dalszym rozważaniom -- niskie p-wartości dla pierwszego z nich nakazują odrzucenie hipotezy o braku autokorelacji w kwadratach reszt,
 natomiast wysokie (tj. $p>0.1$) p-wartości testu KPSS nie negują hipotezy o heteroskedastyczności zachodzącej w szeregach czasowych.
@@ -485,11 +486,11 @@ seq_along(stats) %>%
   )
 ```
 
-Tabela \@ref(tab:markov-models) zawiera informacje na temat modeli dopasowanych do badanych szeregów czasowych,
+Tabela \@ref(tab:markov-models) zawiera informacje na&nbsp;temat modeli dopasowanych do badanych szeregów czasowych,
 m.in. wartości ich kryteriów informacyjnych, a także prawdopodobieństwa, że szereg czasowy utrzyma się w reżimie nr 1 $p_{11}$ oraz że powróci do niego z reżimu nr 2 $p_{21}$.
-Najlepsze z modeli zostały wyłonione na podstawie kryterium informacyjnego Akaike, konsekwentnie z wyborem poczynionym w poprzednim rozdziale.
+Najlepsze z modeli zostały wyłonione na&nbsp;podstawie kryterium informacyjnego Akaike, konsekwentnie z wyborem poczynionym w poprzednim rozdziale.
 Można zauważyć, że optymalne wyniki wykazuje model EGARCH, uwzględniający asymetrię wartości szeregu czasowego.
-Badanie wykazało też brak konsensusu dotyczącego przyjętego rozkładu innowacji -- każdy z testowanych rozkładów pojawia się na liście co najmniej raz.
+Badanie wykazało też brak konsensusu dotyczącego przyjętego rozkładu innowacji -- każdy z testowanych rozkładów pojawia się na&nbsp;liście co najmniej raz.
 
 ```{r markov-re-fit}
 # ze względu na błąd przy odczycie .rds, muszę ponownie fitować szeregi
@@ -645,9 +646,11 @@ map(
 
 ### GARCH-X
 
-W celu dopasowania modelu GARCH-X koniecznym jest przygotowanie dodatkowych zmiennych, mających na celu objaśnienie **wpływu czynników zewnętrznych** na zmienność wariancji warunkowej.
-Ponieważ badanie rozważa wpływ dwóch konkretnych wydarzeń na arenie międzynarodowej na polską gospodarkę, za zmienną objaśniającą została przyjęta zmienna indykatorowa,
-wyróżniająca istotne związane z tymi, a także innymi wydarzeniami na scenie ekonomicznej Polski.
+W celu dopasowania modelu GARCH-X koniecznym jest przygotowanie dodatkowych zmiennych, mających na&nbsp;celu objaśnienie **wpływu czynników zewnętrznych** na&nbsp;zmienność wariancji warunkowej.
+Ponieważ badanie rozważa wpływ dwóch konkretnych wydarzeń na&nbsp;arenie międzynarodowej na&nbsp;polską gospodarkę,
+za zmienne objaśniające przyjęte zostały 2 szeregi czasowe.
+Pierwszym z nich jest zmienna indykatorowa,
+wyróżniająca istotne okresy czasu, związane z tymi, wydarzeniami na&nbsp;scenie ekonomicznej Polski.
 Wielkość interwałów czasowych została określona w oparciu o Rysunki \@ref(fig:returns-plot) oraz \@ref(fig:markov-plots).
 Wyróżnionymi okresami są:
 
@@ -665,9 +668,14 @@ walk(garchx_periods, ~ cat(paste(
 cat("\\end{itemize}")
 ```
 
+Drugą z przyjętych zmiennych jest szereg logarytmicznych stóp zwrotu indeksu WIG20.
+Idea tej decyzji mówi, że nawet jeśli dana spółka nie jest składową tego indeksu,
+to za pomocą jego wartości możliwym jest wpłynięcie na&nbsp;model danych w taki sam sposób, w jaki na&nbsp;kondycję większych przedsiębiorstw wpłynęły wydarzenia kryzysowe.
+Zaobserwowane wahania zmienności WIG20 będą wówczas emulowały czynniki zewnętrzne dla każdej z analizowanych firm.
+
 Podobnie jak w poprzednim podrozdziale, dla każdego z badanych szeregów czasowych dopasowano model GARCH z uwzględnieniem dodatkowych zmiennych objaśniających
 -- pod uwagę zostały wzięte te same modele, jak w poprzednim etapie badania, tj. GARCH, EGARCH oraz GJR, z różnymi rozkładami innowacji: normalnym, GED, Studenta i skośnym Studenta.
-Następnie, na podstawie kryteriów informacyjnych Akaike i Schwarza wyłonione zostały te najlepiej dopasowane.
+Następnie, na&nbsp;podstawie kryteriów informacyjnych Akaike i Schwarza wyłonione zostały te najlepiej dopasowane.
 Pakietem wykorzystanym do tej części badań jest pakiet `rugarch` [@packageRugarch].
 
 ```{r garchx-models}
@@ -803,7 +811,7 @@ table %>%
   ))
 ```
 
-Tabela \@ref(tab:garchx-models) przedstawia modele GARCH-X dopasowane do danych badanych spółek, wybrane na podstawie kryterium informacyjnego Akaike.
+Tabela \@ref(tab:garchx-models) przedstawia modele GARCH-X dopasowane do danych badanych spółek, wybrane na&nbsp;podstawie kryterium informacyjnego Akaike.
 Można zauważyć, że każdy z modeli uwzględnia asymetrię modelu, ponieważ wyłonione zostały modele EGARCH oraz GJR.
 Rozkłady innowacji dobrane do każdego z tych modeli stanowią zamienniki rozkładu normalnego, przy czym najczęściej w rankingu pojawia się rozkład GED.
 Tabela \@ref(tab:garchx-post-optimizing) zawiera z kolei wartości parametrów wyestymowane dla tych modeli.
@@ -858,18 +866,18 @@ c_pred_plot(pred_vol, past_vol)
 
 Posiadając odpowiednie modele dopasowane do danych, możliwym jest wykonanie prognoz ex-post i porównanie ich z rzeczywistym kształtowaniem się wartości odpowiadających indeksów giełdowych.
 Przebieg prognozowanych szeregów czasowych ilustruje Rysunek \@ref(fig:predictions).
-Zilustrowano na nim wariancję warunkową wynikającą z modelu dla ostatnich `r n_behind` dni estymacji,
-a także prognozy, jakie zostały wykonane na `r forecast_horizon` dni naprzód.
+Zilustrowano na&nbsp;nim wariancję warunkową wynikającą z modelu dla ostatnich `r n_behind` dni estymacji,
+a także prognozy, jakie zostały wykonane na&nbsp;`r forecast_horizon` dni naprzód.
 
 ## Ocena jakości dopasowania
 
 Do oceny jakości dopasowania modeli do danych można posłużyć się znanymi w zagadnieniach ekonometrycznych miarami błędu dopasowania opisanymi w Równaniu \@ref(eq:errors): *RMSE* oraz *MAPE*.
-Korzystają one z różnicy pomiędzy estymowaną a rzeczywistą wartością modelowanej wielkości (w tym przypadku zmienności) do pokazania bliskości wartości teoretycznych do empirycznych.
+Korzystają one z różnicy pomiędzy estymowaną a rzeczywistą wartością modelowanej wielkości (w&nbsp;tym przypadku zmienności) do pokazania bliskości wartości teoretycznych do empirycznych.
 
 Przeszkodą w obliczeniu błędów dopasowania dla modeli zmienności warunkowej jest właśnie sama zmienność, która jest nieobserwowalna bezpośrednio.
-Można ją jednak szacować i w tym celu wykorzystana została idea **zmienności zrealizowanej** z uwzględnieniem zwrotów nocnych oraz mikrostruktury rynku [@garmanZmiennosc].
+Można ją jednak szacować i w tym celu wykorzystana została idea **zmienności zrealizowanej** z uwzględnieniem zwrotów nocnych oraz&nbsp;mikrostruktury rynku [@garmanZmiennosc].
 Wówczas za pomocą cen otwarcia, maksymalnej, minimalnej i zamknięcia danego instrumentu finansowego w momencie $t$ (ozn. kolejno: $O_t, H_t, L_t, C_t$)
-możliwym jest zdefiniowanie zmienności zrealizowanej na moment $t$ za pomocą wzoru:
+możliwym jest zdefiniowanie zmienności zrealizowanej na&nbsp;moment $t$ za pomocą wzoru:
 
 \begin{equation} (\#eq:realized-volatility)
 \hat{\sigma}^2_t =
@@ -881,7 +889,7 @@ możliwym jest zdefiniowanie zmienności zrealizowanej na moment $t$ za pomocą 
 \end{equation}
 
 gdzie przez $f \in [0, 1]$ oznacza się część dnia, w jakiej giełda nie przeprowadza transakcji
--- w przypadku GPW, na której sesja trwa od godziny 9:00 do 17:00 wartość ta wynosi $f = \frac{2}{3}$.
+-- w przypadku GPW, na&nbsp;której sesja trwa od godziny 9:00 do 17:00 wartość ta wynosi $f = \frac{2}{3}$.
 
 ```{r prediction-volatilities, fig.height=8, fig.cap="Porównanie zmienności zrealizowanej danych badanych spółek oraz zmienności estymowanej przez badane modele"}
 volatilities <- map(
@@ -989,4 +997,4 @@ Wartości zmienności zrealizowanej zostały wykorzystane w miejsce zmienności 
 Wyniki tych obliczeń przedstawia Tabela \@ref(tab:prediction-errors).
 Wartości osiągnięte przez wskaźniki nie różnią się w dużym stopniu pomiędzy modelami.
 W wybranych przypadkach można zauważyć bardzo wysokie wskazania błędów dla modelu GARCH-X,
-głównie z uwagi na niski poziom zmienności zrealizowanej.
+głównie z&nbsp;uwagi na&nbsp;niski poziom zmienności zrealizowanej.

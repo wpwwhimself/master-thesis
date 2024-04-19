@@ -8,86 +8,86 @@
 ## Podsumowanie wyników badań
 
 Wyniki przeprowadzonego badania w dużej mierze pokrywają się z wysnutymi oczekiwaniami.
-**Okres pandemii i inwazja rosyjska na Ukrainę spowodowały czasowe wzrosty wahań cen badanych instrumentów finansowych na Polskiej giełdzie.**
-Bazując na danych finansowych z okresu `r paste(data_range, sep = " - ")` udało się wyestymować dobrze dopasowane modele wariancji warunkowej
-(GARCH-X oraz model przełącznikowy Markowa oparty na modelach z rodziny GARCH)
+**Okres pandemii i inwazja rosyjska na&nbsp;Ukrainę spowodowały czasowe wzrosty wahań cen badanych instrumentów finansowych na&nbsp;Polskiej giełdzie.**
+Bazując na&nbsp;danych finansowych z okresu `r paste(data_range, sep = " - ")` udało się wyestymować dobrze dopasowane modele wariancji warunkowej
+(GARCH-X oraz model przełącznikowy Markowa oparty na&nbsp;modelach z rodziny GARCH)
 i wysnuto prognozy dotyczące dalszego kształtowania się wariancji warunkowej.
 
 Z pomocą modelu przełącznikowego Markowa udało się wyłonić dwa istotne okresy wzmożonej zmienności notowań badanych spółek (Rys. \@ref(fig:markov-plots)):
 
 - 02.2020 - 02.2021 r.: okres _lockdownu_ spowodowanego pandemią koronawirusa w Polsce,
   - w niektórych przypadkach wyróżnione zostały dwa osobne horyzonty czasowe dla tego okresu: 02.2020 - 07.2020 r. oraz 11.2020 - 02.2021 r.
-    Odpowiadają one kolejno pierwszej i drugiej fali obostrzeń sanitarnych na terenie Polski.
-- 02.2022 - 04.2022 r.: początek inwazji rosyjskiej na terytorium Ukrainy.
+    Odpowiadają one kolejno pierwszej i drugiej fali obostrzeń sanitarnych na&nbsp;terenie Polski.
+- 02.2022 - 04.2022 r.: początek inwazji rosyjskiej na&nbsp;terytorium Ukrainy.
 
-Wspomniane prognozy natomiast jednomyślnie wskazują na niski poziom zmienności w kolejnych dniach od badanego horyzontu czasowego.
-Sugeruje to zakończenie okresu wysokich wahań na rynku wraz z końcem eksperymentu.
+Wspomniane prognozy natomiast jednomyślnie wskazują na&nbsp;niski poziom zmienności w kolejnych dniach od badanego horyzontu czasowego.
+Sugeruje to zakończenie okresu wysokich wahań na&nbsp;rynku wraz z końcem eksperymentu.
 Przyjęte modele cechują się dość niskim poziomem błędu.
 
-Na podstawie opracowanych modeli udało się potwierdzić istotną zmianę w zachowaniu się badanych szeregów w wyróżnionych okresach.
+Na&nbsp;podstawie opracowanych modeli udało się potwierdzić istotną zmianę w zachowaniu się badanych szeregów w wyróżnionych okresach.
 Konsekwencją tego były gwałtowne zmiany wartości instrumentów finansowych,
-które w kilku przypadkach doprowadziły do długotrwałej bessy na rynku, utrzymując ceny na rekordowo niskim poziomie.
-Zaobserwowano również wymiernie większy efekt działań związanych z pandemią koronawirusa w Polsce w porównaniu z wpływem działań wojennych na wschodzie kraju:
+które w kilku przypadkach doprowadziły do długotrwałej bessy na&nbsp;rynku, utrzymując ceny na&nbsp;rekordowo niskim poziomie.
+Zaobserwowano również wymiernie większy efekt działań związanych z pandemią koronawirusa w Polsce w porównaniu z wpływem działań wojennych na&nbsp;wschodzie kraju:
 w drugim z tych okresów podwyższona zmienność szeregów czasowych nie zaowocowała wielkimi zmianami cen akcji badanych spółek.
 
-Wpływ globalnych zmian i konfliktów na rynek krajowy jest zatem wyraźnie odczuwalny,
+Wpływ globalnych zmian i konfliktów na&nbsp;rynek krajowy jest zatem wyraźnie odczuwalny,
 a dzięki wykorzystanym narzędziom możliwa jest jego kwantyfikacja i przedstawienie prognoz pozwalających przewidzieć dalszy horyzont zmian.
 Badania tego typu mogą niewątpliwie pomóc w zamortyzowaniu negatywnych skutków tych wydarzeń i rzetelnie wskazać ich związek z kształtowaniem się całego rynku.
 
 ### Ograniczenia i potencjalne usprawnienia analizy
 
-Przeprowadzony proces modelowania i prognozowania zmienności dla badanych szeregów czasowych jest wrażliwy na szereg czynników,
-które zaważyły na ostatecznych jego wynikach.
-Wiele z nich bezpośrednio wpłynęło na ciąg decyzji podjętych w niniejszej pracy.
+Przeprowadzony proces modelowania i prognozowania zmienności dla badanych szeregów czasowych jest wrażliwy na&nbsp;szereg czynników,
+które zaważyły na&nbsp;ostatecznych jego wynikach.
+Wiele z nich bezpośrednio wpłynęło na&nbsp;ciąg decyzji podjętych w niniejszej pracy.
 
 Niewątpliwie istotnym aspektem modelowania za pomocą modeli przełącznikowych Markowa jest **złożoność**.
 Celem przeprowadzonego badania było kompleksowe przetestowanie jak największej liczby kombinacji modeli wariancji warunkowej (za pomocą modeli z rodziny GARCH),
 a także rozkładów innowacji.
 W ostatecznej wersji badania doprowadziło to do wykonania `r nrow(models_for_testing)` dopasowań dla każdego z badanych szeregów czasowych.
-Z uwagi na budowę modelu Markowa (m.in. do dwukrotnie dłuższa estymacja parametrów modeli), estymacja każdego wariantu jest bardzo kosztowna obliczeniowo,
+Z uwagi na&nbsp;budowę modelu Markowa (m.in. do dwukrotnie dłuższa estymacja parametrów modeli), estymacja każdego wariantu jest bardzo kosztowna obliczeniowo,
 szczególnie w przypadku modeli posiadających większą liczbę parametrów.
 Bardziej dogłębna analiza wymaga zatem większych nakładów mocy obliczeniowej,
-co ze względu na charakter niniejszej pracy zostało pominięte na rzecz ograniczenia liczby badanych modeli.
+co ze względu na&nbsp;charakter niniejszej pracy zostało pominięte na&nbsp;rzecz ograniczenia liczby badanych modeli.
 
 Aby móc estymować parametry finansowych szeregów czasowych, w oczywisty sposób potrzebne są do tego właściwe dane.
 Niniejsza praca stara się zidentyfikować zmiany, które zaszły w całości polskiej giełdy,
 a do tego celu wymagany jest dobór instrumentów, których dane historyczne wspólnie dają całkowity obraz gospodarki krajowej.
 W badaniu przyjęto dane pięciu spółek, które są liderami w swoich sektorach rynku;
-nie znaczy to jednak, że na podstawie tychże pięciu sektorów można ekstrapolować zmiany globalne.
-Możliwym jest więc, że w przypadku doboru **innego zestawu danych finansowych** można by wykryć zmiany i zjawiska niezaobserwowane na łamach tej pracy.
+nie znaczy to jednak, że na&nbsp;podstawie tychże pięciu sektorów można ekstrapolować zmiany globalne.
+Możliwym jest więc, że w przypadku doboru **innego zestawu danych finansowych** można by wykryć zmiany i zjawiska niezaobserwowane na&nbsp;łamach tej pracy.
 Choć jej wyniki w obecnej formie wydają się być obiecujące, nie należy traktować ich jako definitywną diagnozę kondycji rynku jako całości.
 
 Wyniki estymacji modeli Markowa, której wyniki przedstawia Rysunek \@ref(fig:markov-plots), zostały osiągnięte w wyniku odpowiedniego dobrania długości badanych szeregów czasowych.
 Przed rozpoczęciem procesu modelowania przyjęto horyzont czasowy pięciu lat dla wybranych danych giełdowych, co poskutkowało szeregami czasowymi długości 1500.
 Jednak dla modeli dopasowanych do tych danych, wybranych analogicznie jak w finalnych wynikach badania,
 prawdopodobieństwa przebywania szeregu w danym reżimie osiągały bardzo wysokie poziomy ($p_{11}, p_{21} > 0.85$),
-skutkiem czego podział badanego okresu czasu na okresy mniejszej oraz większej zmienności okazał się być bezcelowy.
-Głównym zabiegiem, jaki pozwolił na redukcję prawdopodobieństwa $p_{21}$ w estymowanych modelach,
+skutkiem czego podział badanego okresu czasu na&nbsp;okresy mniejszej oraz większej zmienności okazał się być bezcelowy.
+Głównym zabiegiem, jaki pozwolił na&nbsp;redukcję prawdopodobieństwa $p_{21}$ w estymowanych modelach,
 było skrócenie horyzontu czasowego badania do obecnego,
 zmniejszając ilość danych o około połowę.
 Doprowadziło to do o wiele lepszych wizualnie wyników w przypadku pięciu z badanych szeregów czasowych.
-Prawdopodobnym jest, że **dalsze modyfikacje horyzontu czasowego** badania pozwoliłyby na jeszcze lepsze dopasowania modeli Markowa,
+Prawdopodobnym jest, że **dalsze modyfikacje horyzontu czasowego** badania pozwoliłyby na&nbsp;jeszcze lepsze dopasowania modeli Markowa,
 szczególnie w przypadku danych spółki _11 bit studios_, gdzie prawdopodobieństwo $p_{21}$ nadal dość wysokie.
-Te same czynniki można przypisać jakości dopasowania modeli GARCH-X,
-które również są wrażliwe na długość szeregu czasowego przyjętego do modelowania.
+Te&nbsp;same czynniki można przypisać jakości dopasowania modeli GARCH-X,
+które również są wrażliwe na&nbsp;długość szeregu czasowego przyjętego do modelowania.
 
-Z kolei czynnikiem, który w subiektywnym odczuciu autora najbardziej wpływająca na właściwe dopasowanie modeli GARCH-X,
+Z kolei czynnikiem, który w subiektywnym odczuciu autora najbardziej wpływająca na&nbsp;właściwe dopasowanie modeli GARCH-X,
 jest **właściwy wybór zmiennych reprezentujących czynniki zewnętrzne**.
-Jest to kluczowy aspekt tej klasy modeli i niepoprawna selekcja danych na tym etapie może obniżyć wiarygodność wyników badań.
-Zastosowana w obecnej pracy decyzja wyboru zmiennych z pewnością nie wyjaśnia wszystkich wpływów czynników zewnętrznych na kreowanie się zmienności danych.
+Jest to kluczowy aspekt tej klasy modeli i niepoprawna selekcja danych na&nbsp;tym etapie może obniżyć wiarygodność wyników badań.
+Zastosowana w obecnej pracy decyzja wyboru zmiennych z pewnością nie wyjaśnia wszystkich wpływów czynników zewnętrznych na&nbsp;kreowanie się zmienności danych.
 Potencjalnym polem do usprawnień w tym zakresie jest znalezienie większej liczby szeregów czasowych związanych z danymi giełdowymi badanych spółek
 -- tym sposobem bardziej prawdopodobne byłoby wykrycie dodatkowych zależności i wyjaśnienie obecnie niewyjaśnionych wahań zmienności analizowanych szeregów czasowych.
 
-Godnym uwagi jest fakt, że modelowanie zmienności warunkowej szeregów czasowych **nie pozwala na prognozowanie poziomu cen** powiązanych instrumentów finansowych.
+Godnym uwagi jest fakt, że modelowanie zmienności warunkowej szeregów czasowych **nie pozwala na&nbsp;prognozowanie poziomu cen** powiązanych instrumentów finansowych.
 Jest to istotne ograniczenie, szczególnie dla inwestorów, dla których ważne są rzeczywiste wartości akcji.
-Informacja o zmienności i jej przebiegu jest wówczas jedynie częściową odpowiedzią na próbę przewidywania kierunku, w jakim podąży giełda.
+Informacja o zmienności i jej przebiegu jest wówczas jedynie częściową odpowiedzią na&nbsp;próbę przewidywania kierunku, w jakim podąży giełda.
 Chociaż rozważane równania modeli GARCH uwzględniają również model średniej warunkowej ARMA,
 to w brak możliwości estymacji cen badanych instrumentów finansowych szczególnie godzi brak wykrytych zależności liniowych w większości przyjętych danych.
-Sprawia to, że prognozowanie średniej staje się nieużyteczne, ograniczając badacza do polegania na zmienności i identyfikacji okresów wysokiej i niskiej aktywności na rynku.
+Sprawia to, że prognozowanie średniej staje się nieużyteczne, ograniczając badacza do polegania na&nbsp;zmienności i identyfikacji okresów wysokiej i niskiej aktywności na&nbsp;rynku.
 
-## Analiza wpływu pandemii i wojny na notowania giełdowe
+## Analiza wpływu pandemii i wojny na&nbsp;notowania giełdowe
 
-Jak widać na Rysunkach \@ref(fig:stock-prices-plot), \@ref(fig:returns-plot) i \@ref(fig:markov-plots), wydarzenia ostatnich lat wyraźnie wstrząsnęły polską giełdą.
+Jak widać na&nbsp;Rysunkach \@ref(fig:stock-prices-plot), \@ref(fig:returns-plot) i \@ref(fig:markov-plots), wydarzenia ostatnich lat wyraźnie wstrząsnęły polską giełdą.
 Każde z nich ma swoje odzwierciedlenie w stopach zwrotu rozpatrywanych spółek oraz indeksów giełdowych.
 
 ```{r hilo-covid}
@@ -100,30 +100,30 @@ hilo_frac <- round(100 - (hilo[1] / hilo[2] * 100), 1)
 ```
 
 Pierwszym wyraźnym momentem zawahania był wybuch pandemii koronawirusa w Polsce, czego konsekwencją było wprowadzenie tzw. _lockdownu_,
-czyli zaleconych przez rząd ograniczeń i zakazów przemieszczania się, mających na celu ograniczenie rozprzestrzeniania się wirusa.
-Oddziaływanie tego wydarzenia na rynek można zauważyć w danych giełdowych od marca 2020 roku.
+czyli zaleconych przez rząd ograniczeń i zakazów przemieszczania się, mających na&nbsp;celu ograniczenie rozprzestrzeniania się wirusa.
+Oddziaływanie tego wydarzenia na&nbsp;rynek można zauważyć w danych giełdowych od marca 2020 roku.
 W tym okresie indeks *WIG20* zanotował spadek o `r hilo[2] - hilo[1]` punktów w ciągu dwóch miesięcy (1.03 - 30.04), co stanowi stratę wartości indeksu o `r hilo_frac`\%.
 Podobne straty widoczne są w cenach akcji spółek wchodzących w skład indeksu *WIG20* -- *PKN Orlen* oraz *PKO BP*.
 Dla tych firm straty w tym samym okresie również wyniosły około 30\%.
-Ten okres bessy utrzymywał się do listopada 2020 roku, co widać w notowaniach wszystkich 3 wymienionych instrumentów.
+Ten okres bessy utrzymywał się do listopada 2020 roku, co&nbsp;widać w notowaniach wszystkich 3 wymienionych instrumentów.
 Czas ten był szczególnie trudny dla *PKN Orlen*, której notowania akcji do dnia 1.11 spały poniżej poziomu 40 zł, tj. niżej niż w marcu tego samego roku.
 Słabe wyniki największych polskich spółek można w tym okresie atrybuować długotrwałym restrykcjom związanym z koronawirusem:
 
-- obniżona liczba nowych inwestycji w związku z obostrzeniami sanitarnymi z pewnością negatywnie wpłynęła na liczbę udzielonych kredytów w sektorze bankowym.
-*PKO BP*, jako przedstawiciel tego sektora, ilustruje dotkliwość tej stagnacji na przykładzie cen akcji swojej spółki.
-- wprowadzenie ograniczeń w przemieszczaniu się i zmniejszone zapotrzebowanie na produkty paliwowe niewątpliwie przyczyniły się do strat finansowych tego sektora.
-Tu ponownie, na przykładzie *PKN Orlen*, widać, że ta tendencja utrzymała się praktycznie przez cały okres _lockdownu_.
+- obniżona liczba nowych inwestycji w związku z obostrzeniami sanitarnymi z pewnością negatywnie wpłynęła na&nbsp;liczbę udzielonych kredytów w sektorze bankowym.
+*PKO BP*, jako przedstawiciel tego sektora, ilustruje dotkliwość tej stagnacji na&nbsp;przykładzie cen akcji swojej spółki.
+- wprowadzenie ograniczeń w przemieszczaniu się i zmniejszone zapotrzebowanie na&nbsp;produkty paliwowe niewątpliwie przyczyniły się do strat finansowych tego sektora.
+Tu ponownie, na&nbsp;przykładzie *PKN Orlen*, widać, że ta tendencja utrzymała się praktycznie przez cały okres _lockdownu_.
 
-Na uwagę zasługuje jednak fakt, że pozostałe rozpatrywane sektory rynku, pomimo istotnych strat w tym samym okresie,
-przejawiły zdecydowanie lepszy potencjał na odbudowanie, czy nawet polepszenie swojej pozycji.
-*11 bit studios* na początku pandemii w Polsce straciła blisko połowę wartości,
-jednak w ciągu kolejnych trzech miesięcy osiągnęła rekordowe dla siebie wyniki, odzyskując z sowitą nawiązką straty poniesione na początku marca.
+Na&nbsp;uwagę zasługuje jednak fakt, że pozostałe rozpatrywane sektory rynku, pomimo istotnych strat w tym samym okresie,
+przejawiły zdecydowanie lepszy potencjał na&nbsp;odbudowanie, czy nawet polepszenie swojej pozycji.
+*11 bit studios* na&nbsp;początku pandemii w Polsce straciła blisko połowę wartości,
+jednak w ciągu kolejnych trzech miesięcy osiągnęła rekordowe dla siebie wyniki, odzyskując z sowitą nawiązką straty poniesione na&nbsp;początku marca.
 Tę zmianę można po części przypisywać popularyzacji pracy zdalnej w branży IT,
-ale też serii nowo zawartych umów na produkcję gier przez tę firmę, co w połączeniu z otrzymaniu funduszy z programów motywacyjnych [@11bitReports] pomogło osiągnąć większą wartość na rynku.
+ale też serii nowo zawartych umów na&nbsp;produkcję gier przez tę firmę, co w połączeniu z otrzymaniu funduszy z programów motywacyjnych [@11bitReports] pomogło osiągnąć większą wartość na&nbsp;rynku.
 Szczególnie wysoki wzrost zanotowała spółka *Synthaverse*,
 która przez cały omawiany tutaj okres doprowadziła do 30-krotnego wzrostu wartości akcji swojej spółki w ciągu pół roku od wybuchu pandemii.
-Jest to związane z zawarciem wielu umów na produkcję i dystrybucję produktów tej spółki przez inwestorów,
-a także wkład firmy w opracowywanie szczepionki przeciwko koronawirusowi [@synthaverseCovidInfo].
+Jest to związane z zawarciem wielu umów na&nbsp;produkcję i dystrybucję produktów tej spółki przez inwestorów,
+a także wkład firmy w&nbsp;opracowywanie szczepionki przeciwko koronawirusowi [@synthaverseCovidInfo].
 
 ```{r hilo-ukraine}
 hilo <-
@@ -135,62 +135,62 @@ hilo_frac <- round(100 - (hilo[1] / hilo[2] * 100), 1)
 ```
 
 Drugi z rozważanych kryzysów, tj. eskalacja konfliktu rosyjsko-ukraińskiego oraz inwazja wojsk rosyjskich,
-miała o wiele słabszy wpływ na notowania cen instrumentów finansowych na polskiej giełdzie.
+miała o wiele słabszy wpływ na&nbsp;notowania cen instrumentów finansowych na&nbsp;polskiej giełdzie.
 Incydent ten spowodował spadek wartości indeksu *WIG20* o `r hilo[2] - hilo[1]` punktów, umniejszając ją o `r hilo_frac`\%.
 Badane spółki-uczestnicy tego indeksu również odczuły tę stratę, jednak w mieszanym stopniu:
 podczas gdy *PKO BP* utraciło znaczną, bo ponaddwudziestoprocentową część wartości akcji swojej spółki,
 dla notowań akcji *PKN Orlen* nie był to znaczący skok.
 Pozostałe ze spółek objętych badaniem albo nie odczuły wpływu tych wahań, albo wręcz wygenerowały zysk w ciągu miesiąca po rozpoczęciu inwazji,
-jak widać na przykładzie cen akcji *11 bit studios*, która w tym okresie po raz kolejny osiągnęła jeden z najwyższych wyników w dotychczasowej historii tego instrumentu.
+jak widać na&nbsp;przykładzie cen akcji *11 bit studios*, która w tym okresie po raz kolejny osiągnęła jeden z najwyższych wyników w dotychczasowej historii tego instrumentu.
 
 Takie wnioskowanie może zostać poparte skalą obu rozważanych wydarzeń.
 Pandemia koronawirusa (zgodnie z nadaną nazwą) objęła swoim zakresem cały świat i wzburzyła gospodarkami praktycznie wszystkich państw świata.
-W konsekwencji ucierpiał rynek Polski, tracąc na przerwanych łańcuchach dostaw, ograniczeniach w sprzedaży, stratach materiałów i personelu, a także z wielu innych powodów.
+W konsekwencji ucierpiał rynek Polski, tracąc na&nbsp;przerwanych łańcuchach dostaw, ograniczeniach w sprzedaży, stratach materiałów i personelu, a także z wielu innych powodów.
 Lockdown wstrzymał też współpracę międzynarodową, powodując poważne zmiany w sytuacji importu i eksportu towarów.
-Skala tych zmian była na tyle pokaźna, że dotknęła niemal każdego sektora rynku na bardzo długi czas, czego dowodem są rozpatrywane tutaj dane giełdowe.
+Skala tych zmian była na&nbsp;tyle pokaźna, że dotknęła niemal każdego sektora rynku na&nbsp;bardzo długi czas, czego dowodem są rozpatrywane tutaj dane giełdowe.
 
-Z kolei konflikt rosyjsko-ukraiński, choć dotkliwy w skutkach dla stron walczących, na rynek światowy wpłynął o wiele słabiej.
+Z kolei konflikt rosyjsko-ukraiński, choć dotkliwy w skutkach dla stron walczących, na&nbsp;rynek światowy wpłynął o wiele słabiej.
 Masowa migracja obywateli Ukrainy i Rosji pociągnęła za sobą ciąg różnych reakcji gospodarki.
-Z jednej strony potrzebna była pomoc socjalna i medyczna dla uchodźców, w wyniku czego należało przekierować na nią środki z innych inicjatyw.
-Z drugiej natomiast migranci zaadoptowali się do pracy na terytorium Polski, zakładając własne firmy lub rekrutując się do polskich przedsiębiorstw
+Z jednej strony potrzebna była pomoc socjalna i medyczna dla uchodźców, w wyniku czego należało przekierować na&nbsp;nią środki z innych inicjatyw.
+Z drugiej natomiast migranci zaadoptowali się do pracy na&nbsp;terytorium Polski, zakładając własne firmy lub rekrutując się do polskich przedsiębiorstw
 i tym samym przyczyniając do wzmocnienia dostępnej siły roboczej.
 W subiektywnym odczuciu sprawiło to, że równowaga korzyści i zagrożeń tych wydarzeń została zachowana.
 Oczywiście omawiany konflikt przyczynił się też do problemów z importem i eksportem pomiędzy Polską a zwaśnionymi stronami,
-jednak w skali gospodarki europejskiej (czy nawet światowej) nie spowodowało to drastycznej w skutkach recesji dla warszawskiej giełdy i spółek na niej wylistowanych.
+jednak w skali gospodarki europejskiej (czy nawet światowej) nie spowodowało to drastycznej w skutkach recesji dla warszawskiej giełdy i spółek na&nbsp;niej wylistowanych.
 
 ## Po co nam to wszystko?
 
-Wyniki niniejszej pracy koncentrują się jedynie na obserwacji małej części rynku oraz stosunkowo krótkiego horyzontu czasowego.
+Wyniki niniejszej pracy koncentrują się jedynie na&nbsp;obserwacji małej części rynku oraz stosunkowo krótkiego horyzontu czasowego.
 Jednak odpowiednio usprawnione modele zbudowane w przedstawiony tutaj sposób mogą mieć zastosowanie w różnych sytuacjach i mogą służyć do prognozowania zróżnicowanych szeregów czasowych.
-Obecna sytuacja geopolityczna i eskalacja napięć na scenie międzynarodowej, podobnie jak pogłębiający się kryzys klimatyczny i wyczerpujące się złoża surowców naturalnych,
+Obecna sytuacja geopolityczna i eskalacja napięć na&nbsp;scenie międzynarodowej, podobnie jak pogłębiający się kryzys klimatyczny i wyczerpujące się złoża surowców naturalnych,
 niechybnie doprowadzą do kolejnych wstrząsów gospodarczych.
-Zmiany te są nieodzownym elementem ludzkiej historii i prawdopodobnie będziemy odczuwać ich wpływ na niemal wszystkie sfery naszego życia przez długi czas.
-Z tego też powodu warto odpowiednio przygotowywać się na sytuacje podobne do przedstawionych w ramach tej pracy.
-Symulacje wartości instrumentów finansowych pozwalają na maksymalizację zysków oraz minimalizację strat z podjętych inwestycji w obliczu nagłego zachwiania się cyklu koniunkturalnego.
+Zmiany te są nieodzownym elementem ludzkiej historii i prawdopodobnie będziemy odczuwać ich wpływ na&nbsp;niemal wszystkie sfery naszego życia przez długi czas.
+Z tego też powodu warto odpowiednio przygotowywać się na&nbsp;sytuacje podobne do przedstawionych w ramach tej pracy.
+Symulacje wartości instrumentów finansowych pozwalają na&nbsp;maksymalizację zysków oraz minimalizację strat z&nbsp;podjętych inwestycji w obliczu nagłego zachwiania się cyklu koniunkturalnego.
 Mogą one pomóc w podejmowaniu lukratywnych decyzji i dać ugruntowane argumenty przeciw pozornie korzystnym wyborom.
 
 Warto też wspomnieć, że modelowanie szeregów czasowych nie jest wyłącznie domeną ekonomii.
-W obecnych czasach zdobycze naukowe różnych dziedzin nieustannie przeplatają się ze sobą i pomagają w rozwoju innych obszarów.
-Metody pracy z danymi, jakie zostały przedstawione na łamach tej pracy, mogą być również użyte w pokrewnych dziedzinach nauki, takich jak:
+W obecnych czasach zdobycze naukowe różnych dziedzin nieustannie przeplatają się ze&nbsp;sobą i pomagają w rozwoju innych obszarów.
+Metody pracy z danymi, jakie zostały przedstawione na&nbsp;łamach tej pracy, mogą być również użyte w pokrewnych dziedzinach nauki, takich jak:
 
 - meteorologia i klimatologia -- analiza danych meteorologicznych, np. zmian temperatury, intensywności opadów lub ciśnienia atmosferycznego,
-pozwala na lepsze zrozumienie i prognozowanie zmian klimatycznych oraz opracowywanie sprawniejszych modeli pogodowych.
+pozwala na&nbsp;lepsze zrozumienie i prognozowanie zmian klimatycznych oraz opracowywanie sprawniejszych modeli pogodowych.
 Jest to pomocne m.in. w rolnictwie, w celu optymalizacji plonów i zapobieganiu klęskom żywiołowym,
 
-- medycyna i epidemiologia -- jednym z poruszonych w niniejszej pracy tematów jest pandemia wysoce zaraźliwego wirusa i jej wpływ na polski rynek.
-Jednakże można na tego typu wydarzenia spojrzeć również od strony samej epidemii:
-mierzenie liczby zachorowań oraz prognozowanie trendów zdrowotnych pozwala na monitorowanie rozprzestrzeniania się chorób zakaźnych oraz przewidywanie ich przebiegu.
+- medycyna i epidemiologia -- jednym z poruszonych w niniejszej pracy tematów jest pandemia wysoce zaraźliwego wirusa i jej wpływ na&nbsp;polski rynek.
+Jednakże można na&nbsp;tego typu wydarzenia spojrzeć również od strony samej epidemii:
+mierzenie liczby zachorowań oraz prognozowanie trendów zdrowotnych pozwala na&nbsp;monitorowanie rozprzestrzeniania się chorób zakaźnych oraz przewidywanie ich przebiegu.
 Prowadzi to jedocześnie do lepszych technik zapobiegania eskalacji liczby zarażeń i ogólnie pojąwszy zdrowszego społeczeństwa,
 
 - inżynieria -- zbieranie danych o stanach maszyn, np. osiągana wydajność lub stopień zużycia komponentów,
-pozwala na przewidywanie ich awaryjności, co pozwala na ulepszanie ich konstrukcji.
-Wysokiej jakości urządzenia, z których korzysta ludzkość, bezpośrednio przekłada się na osiągnięcia człowieka i pozwala pewniej i sprawniej do nich dążyć,
+pozwala na&nbsp;przewidywanie ich awaryjności, co pozwala na&nbsp;ulepszanie ich konstrukcji.
+Wysokiej jakości urządzenia, z których korzysta ludzkość, bezpośrednio przekłada się na&nbsp;osiągnięcia człowieka i pozwala pewniej i sprawniej do nich dążyć,
 
 - biologia -- prognozowanie populacji różnych gatunków zwierząt i roślin może być bardziej skuteczne dzięki dokładniejszym narzędziom modelującym ich obecną liczbę.
 Może to pomóc w kontrolowaniu liczebności zagrożonych, ale także inwazyjnych gatunków.
 Wspomoże to również ekologów w dostosowaniu odpowiednich technik ochrony zwierząt,
-co w niektórych przypadkach przekłada się również na rolnictwo oraz prognozowanie szkód w uprawach, związanych ze zwierzyną.
+co w niektórych przypadkach przekłada się również na&nbsp;rolnictwo oraz prognozowanie szkód w uprawach, związanych ze zwierzyną.
 
-Wszystko to jest oparte na dokładnych i rzetelnych modelach danych.
+Wszystko to jest oparte na&nbsp;dokładnych i rzetelnych modelach danych.
 Z tego względu rozwój narzędzi służących do dopasowywania modeli, opracowywanie nowych rozwiązań matematycznych i technicznych, a także kształcenie specjalistów w tych dziedzinach,
 przyczyniają się do poprawy jakości życia w różnych jego aspektach, często pozornie niezwiązanych ze sobą.

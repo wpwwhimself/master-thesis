@@ -12,81 +12,80 @@ Wydarzenia te najczęściej miały dotkliwe konsekwencje finansowe, doprowadzaj�
 W annałach historii można się doszukiwać wielu takich sytuacji, a ich przykładami mogą być:
 
 - *tulipanowa gorączka* (1636-1637) -- lokowanie gotówki przez mieszkańców Amsterdamu w&nbsp;tulipanach doprowadziło do wyhodowania wyjątkowej odmiany tego kwiatu.
-Wartość jego jednej cebulki była wówczas wyceniana na równowartość 40-letniego dochodu, przez co wielu kupców zaciągało niebotyczne kredyty.
-Ceny tulipanów jednak zatrzymały się na poziomie, gdzie nikt nie był w stanie ich zakupić, a część handlujących nie wywiązywała się z dostaw.
+Wartość jego jednej cebulki była wówczas wyceniana na&nbsp;równowartość 40-letniego dochodu, przez co wielu kupców zaciągało niebotyczne kredyty.
+Ceny tulipanów jednak zatrzymały się na&nbsp;poziomie, gdzie nikt nie był w stanie ich zakupić, a część handlujących nie wywiązywała się z dostaw.
 To z kolei doprowadziło do końca spekulacji i gwałtownych obniżek cen [@tulips],
 
 - *Great Depression* (1929-1932) -- największy kryzys gospodarczy w dziejach kapitalizmu, który swoim zasięgiem objął cały świat, z wykluczeniem ZSRR.
-Przyjmuje się, że był on konsekwencją tzw. _czarnego czwartku_, kiedy to na nowojorskiej giełdzie gwałtownie spadły ceny niemal wszystkich notowanych akcji.
-Poza finansowymi stratami, ludzie ucierpieli również z powodu niezwykle wysokiego bezrobocia, jak na przykład to na poziomie około 33\%, odnotowane w Stanach Zjednoczonych.
-Kryzys przedłużył się dodatkowo w wyniku możliwości wymiany walut na złoto, co w szybkim tempie redukowało jego rezerwy w bankach centralnych.
-Próbą zapobieżenia utraty kruszca, podniesiono stopy procentowe, co w konsekwewncji znacząco wpłynęło na produkcję przemysłową wielu krajów [@greatDepressionWiki],
+Przyjmuje się, że był on konsekwencją tzw. _czarnego czwartku_, kiedy to na&nbsp;nowojorskiej giełdzie gwałtownie spadły ceny niemal wszystkich notowanych akcji.
+Poza finansowymi stratami, ludzie ucierpieli również z powodu niezwykle wysokiego bezrobocia, jak na&nbsp;przykład to na&nbsp;poziomie około 33\%, odnotowane w Stanach Zjednoczonych.
+Kryzys przedłużył się dodatkowo w wyniku możliwości wymiany walut na&nbsp;złoto, co w szybkim tempie redukowało jego rezerwy w bankach centralnych.
+Próbą zapobieżenia utraty kruszca, podniesiono stopy procentowe, co w konsekwewncji znacząco wpłynęło na&nbsp;produkcję przemysłową wielu krajów [@greatDepressionWiki],
 
 - *upadek Lehman Brothers* (2007-2009) -- firma Lehman Brothers, która swoją wczesną historię wiązała głównie z handlem bawełną, z czasem przekształcona została w bank,
 zajmujący się m.in. udzielaniem kredytów hipotecznych, emisją papierów wartościowych oraz finansowaniem nieruchomości.
-Spółka przez wiele lat osiągała najlepsze wyniki finansowe spośród spółek amerykańskich, zasługując na miano "Najlepszego Banku Inwestycyjnego" w 2005 roku.
+Spółka przez wiele lat osiągała najlepsze wyniki finansowe spośród spółek amerykańskich, zasługując na&nbsp;miano „Najlepszego Banku Inwestycyjnego” w 2005 roku.
 Zbiegło się to z tzw. _kryzysem subprime_ w Stanach Zjednoczonych, który dotyczył kredytów hipotecznych, udzielanych osobom o niskiej zdolności kredytowej.
 Praktyka ta była obarczona dużym ryzykiem, a w wyniku obniżenia stóp procentowych przez amerykański bank centralny, kredyty te znacznie staniały, a przez to wzrosła ich dostępność i sektor prywatny zwiększył swoje zadłużenie o ok. 80 p.proc. w ciągu 7 lat.
-Bank centralny wkrótce zdecydował się na podwyższenie stóp procentowych, co zaowocowało brakiem możliwości spłaty długów przez zadłużonych, oraz spadkiem cen papierów wartościowych, będącym konsekwencją ich masowym wykupywaniem.
+Bank centralny wkrótce zdecydował się na&nbsp;podwyższenie stóp procentowych, co zaowocowało brakiem możliwości spłaty długów przez zadłużonych, oraz spadkiem cen papierów wartościowych, będącym konsekwencją ich masowego wykupowania.
 Tym sposobem największy bank inwestycyjny Stanów Zjednoczonych ogłosił upadłość w 2008 roku, przez co indeksy giełdowe zaczęły błyskawicznie spadać [@lehmanBros].
 
-Na przestrzeni ostatnich lat na światem wstrząsnęły również kolejne dramatyczne wydarzenia, mianowicie:
+Na&nbsp;przestrzeni ostatnich lat światem wstrząsnęły również kolejne dramatyczne wydarzenia, mianowicie:
 
-- __epidemia SARS-CoV-2__ w listopadzie 2019 -- pandemia wywołana chorobą _COVID-19_ jest powodowana przez koronawirusa _SARS-CoV-2_,
-a pierwszy zidentyfikowany przypadek zachorowania na tę chorobę został zidentyfikowany w grudniu 2019 roku w Wuhan (Chiny).
-Z uwagi na wysoką zaraźliwość wirusa i jego wariantów, przypadki zarażeń zaczęły się szybko mnożyć, co doprowadziło do ogłoszenia pandemii tej choroby 30 stycznia 2020 roku.
-Pacjenci z potwierdzonym zakażeniem wirusem doświadczają objawów chorobowych związanych z układem oddechowym, tj. kaszel, duszności.
-Dodatkowo zarażeni wykazywali oznaki osłabienia, nagłej utraty węchu i smaku oraz wielu innych dolegliwości.
-Szczególnie dotkliwie choroba dotyka osoby starsze, o już osłabionym układzie odpornościowym, co jest jednym z istotnych czynników wysokiej jej śmiertelności [@covidMP].
-Pandemia przyniosła znaczne skutki socjoekonomiczne, w tym szczególnie największą recesję od czasów *Great Depression* [@covidIMF].
+- __epidemia SARS-CoV-2__ w listopadzie 2019 r. -- pandemia wywołana chorobą _COVID-19_ jest powodowana przez koronawirusa _SARS-CoV-2_,
+a pierwszy zidentyfikowany przypadek zachorowania na&nbsp;tę chorobę został wykryty w grudniu 2019 roku w Wuhan (Chiny).
+Z&nbsp;uwagi na&nbsp;wysoką zaraźliwość wirusa i jego wariantów, przypadki zarażeń zaczęły się szybko mnożyć, co doprowadziło do ogłoszenia pandemii tej choroby 30 stycznia 2020 roku.
+Pacjenci z potwierdzonym zakażeniem wirusem doświadczają objawów chorobowych związanych z&nbsp;układem oddechowym, tj. kaszel, duszności.
+Dodatkowo zarażeni wykazują oznaki osłabienia, nagłej utraty węchu i smaku oraz wielu innych dolegliwości.
+Szczególnie dotkliwie choroba dotyka osoby starsze, o już osłabionym układzie odpornościowym, co jest jednym z&nbsp;istotnych czynników wysokiej jej śmiertelności [@covidMP].
+Pandemia przyniosła znaczne skutki socjoekonomiczne, w tym też największą recesję od czasów *Great Depression* [@covidIMF].
 Do 12 marca 2024 roku pandemia spowodowała ponad 7 milionów zgonów, będąc piątą co do wielkości najbardziej śmiertelną chorobą w historii.
-[@covidWiki]
-,
+[@covidWiki],
 
-- __inwazja Rosji na Ukrainę__ w lutym 2022 -- eskalacja konfliktu rosyjsko-ukraińskiego, zapoczątkowanego w lutym 2014 roku poprzez aneksję Krymu oraz wojnę w Donbasie [@ukraineGenesisWiki].
-w ciągu kolejnych lat nastąpiła eskalacja wojny, w konsekwencji której Rosja ogłosiła _specjalną operację wojskową_ [@ukraineTASS] mającą na celu wojnę błyskawiczną i przejęcie kontroli nad państwem i rządem ukraińskim.
+- __inwazja Rosji na&nbsp;Ukrainę__ w lutym 2022 -- eskalacja konfliktu rosyjsko-ukraińskiego, zapoczątkowanego w lutym 2014 roku poprzez aneksję Krymu oraz wojnę w Donbasie [@ukraineGenesisWiki].
+W ciągu kolejnych lat nastąpiła eskalacja wojny, w konsekwencji której Rosja ogłosiła _specjalną operację wojskową_ [@ukraineTASS] mającą na&nbsp;celu wojnę błyskawiczną i przejęcie kontroli nad państwem i rządem ukraińskim.
 Operacja w ciągu kolejnych miesięcy przerodziła się w brutalną wojnę dzięki silnemu oporowi wojsk ukraińskich oraz wsparciu państw europejskich oraz NATO.
-W wyniku działań wojskowych Ukrainę opuściło ponad 5 milionów osób, które szukały azylu m.in. w Polsce, Rumunii, Rosji i na Węgrzech.
-Natychmiastowym skutkiem inwazji stały się również sankcje gospodarcze nałożone przez świat na Federację Rosyjską, co spowodowało gwałtowny spadek wartości rubla rosyjskiego [@ukraineMoney].
-Rosja w odpowiedzi zakazała swoim rezydentom przelewów walut obcych na konta zagraniczne, a także wymusiła płatności w rublach za surowce sprowadzane z Rosji, np. gaz.
+W wyniku działań wojskowych Ukrainę opuściło ponad 5 milionów osób, które szukały azylu m.in. w Polsce, Rumunii, Rosji i na&nbsp;Węgrzech.
+Natychmiastowym skutkiem inwazji stały się również sankcje gospodarcze nałożone przez świat na&nbsp;Federację Rosyjską, co&nbsp;spowodowało gwałtowny spadek wartości rubla rosyjskiego [@ukraineMoney].
+Rosja w odpowiedzi zakazała swoim rezydentom przelewów walut obcych na&nbsp;konta zagraniczne, a także wymusiła płatności w rublach za surowce sprowadzane z Rosji, np. gaz ziemny.
 Również gospodarka ogólnoświatowa doświadczyła kryzysu, powodując wzrost cen ropy i przenicy.
-[@ukraineWiki]
-.
+[@ukraineWiki].
 
 Historia pokazuje, że zdarzenia dotykające wielu ludzi nie pozostają obojętne z perspektywy świata ekonomii.
 Już wyżej wspomniane kryzysy miały znaczące podłoże finansowe i nie inaczej jest w przypadku dwóch najnowszych wydarzeń.
 Aby zapobiec ich dotkliwym w skutkach reperkusjom, ekonomiści i naukowcy stosowali różne techniki, co szczegółowo opisane zostanie w dalszej części pracy.
-Wyniki ich prac zostały opublikowane na łamach różnego rodzaju czasopism i publikacji
-[@vanBergeijk2021pandemic;@shah2021mathematical;@fraguela2022moving;@hernandez2023mathematical]
-.
+Wyniki ich badań zostały opublikowane na&nbsp;łamach różnego rodzaju czasopism i publikacji
+[@vanBergeijk2021pandemic;@shah2021mathematical;@fraguela2022moving;@hernandez2023mathematical].
 
-Celem niniejszej pracy magisterskiej jest, podobnie jak w wyżej wspomnianych badaniach, analiza reakcji rynku polskiego na owe kryzysowe wydarzenia.
-Wykorzystane zostaną znane metody z obszaru modelowania finansowego.
+Celem niniejszej pracy magisterskiej jest, podobnie jak w wyżej wspomnianych badaniach, analiza reakcji rynku polskiego na&nbsp;owe kryzysowe wydarzenia.
+Wykorzystane zostaną znane metody z&nbsp;obszaru modelowania finansowego.
 Idealnym narzędziem zdają się tu być modele przełącznikowe, za pomocą których możliwe będzie dopasowanie teoretycznych wartości do danych rynkowych,
 a także wykonanie prognozy celem sprawdzenia dopasowania tych modeli.
-Po przeprowadzeniu badań podsumowane zostaną ich wyniki oraz opisana zostanie siła wpływu, jaki globalne zmiany wywierają na rodzimą gospodarkę.
-Informacje te mogą posłużyć do dalszego konstruowania modeli mających za zadanie negować skutki globalnych kryzysów i zapobiegać ich finansowym efektom.
+Szczególną zaletą modeli przełącznikowych jest możliwość uwzględnienia zmian we względnym poziomie zmienności -- parametru dyktującego intensywność wahań wartości szeregu czasowego.
+Pozwala to wyróżnić okresy wysokiej i niskiej zmienności i oddzielić momenty wysokich wstrząsów od czasów relatywnie spokojnego rynku.
+Po przeprowadzeniu badań podsumowane zostaną ich wyniki oraz opisana zostanie siła wpływu, jaki globalne zmiany wywierają na&nbsp;rodzimą gospodarkę.
+Informacje te mogą posłużyć do dalszego konstruowania modeli mających za zadanie negować skutki globalnych kryzysów i&nbsp;zapobiegać ich finansowym efektom.
 
 Oczywiście analiza ta nie jest wyczerpująca
--- ze względu na różnorakie ograniczenia (czasowe i komputacyjne) ograniczony został zakres badania,
-co może ostatecznie nie dawać pełnego obrazu sytuacji panującej na warszawskiej giełdzie.
-Mimo to obrany horyzont czasowy, wraz z przyjętym wolumenem badanych i zakresem weryfikowanych modeli ekonometrycznych,
-pozwalają przypuszczać, że wyniki niniejszego badania są wiarygodne i wnioski z niego wyciągnięte mają swoje uzasadnienie w rzeczywistości.
+-- ze względu na&nbsp;różnorakie limitacje (czasowe i&nbsp;komputacyjne) ograniczony został zakres badania,
+co może ostatecznie nie dawać pełnego obrazu sytuacji panującej na&nbsp;warszawskiej giełdzie.
+Dokładna analiza tego i innych wad przeprowadzonej analizy została dokładniej omówiona w rozdziale 3.
+Mimo to obrany horyzont czasowy, wraz z przyjętym wolumenem badanych spółek i zakresem weryfikowanych modeli ekonometrycznych,
+pozwalają przypuszczać, że&nbsp;wyniki niniejszego badania są wiarygodne i wnioski z niego wyciągnięte mają swoje ugruntowanie w&nbsp;rzeczywistości.
 
 ## Modele rynków finansowych
 
 ### Rynek finansowy
 
 Pojęcie **rynku finansowego** nie jest jednoznacznie określone i w różnych źródłach można przytoczyć różne jego formy.
-Według jednej z nich rynek finansowy jest "miejscem zawierania transakcji mających za przedmiot szeroko rozumiany kapitał finansowy".
-Z uwagi jednak na globalną naturę gospodarki we współczesnym świecie, trudno powiązać rynek finansowy z konkretnym miejscem.
-Z tego też względu można powiedzieć o rynku finansowym, że jest to "ogół transakcji papierami wartościowymi"
-[@wisla2008, s. 33]
-.
+Według jednej z nich rynek finansowy jest „miejscem zawierania transakcji mających za przedmiot szeroko rozumiany kapitał finansowy”.
+Z uwagi jednak na&nbsp;globalną naturę gospodarki we współczesnym świecie, trudno powiązać rynek finansowy z konkretnym miejscem.
+Z tego też względu można powiedzieć o rynku finansowym, że jest to „ogół transakcji papierami wartościowymi”
+[@wisla2008, s. 33].
 
-Transakcje te zawierane są za pomocą **instrumentów finansowych**, które pozwalają na transfer, wymianę lub przechowywanie środków pieniężnych.
+Transakcje te zawierane są za pomocą **instrumentów finansowych**, które pozwalają na&nbsp;transfer, wymianę lub przechowywanie środków pieniężnych.
 Pełna lista istniejących instrumentów jest długa i można ją podzielić według różnych kryteriów [@ifirmaInstrumenty;@krzywda2005klasyfikacja].
-Na potrzeby niniejszej pracy istotnymi instrumentami finansowymi są *akcje* oraz *indeksy giełdowe*.
+Na&nbsp;potrzeby niniejszej pracy istotnymi instrumentami finansowymi są *akcje* oraz *indeksy giełdowe*.
 
 **Akcja** jest papierem wartościowym dającym prawo jej posiadaczowi do udziału w spółce akcyjnej, która jest jej emitentem.
 Nabywca akcji staje się _akcjonariuszem_ tej spółki, wobec czego jest współwłaścicielem jej majątku i otrzymuje prawa do:
@@ -96,40 +95,38 @@ Nabywca akcji staje się _akcjonariuszem_ tej spółki, wobec czego jest współ
 - uczestnictwa w walnych zgromadzeniach innych akcjonariuszy,
 - majątku spółki, gdyby ta została zlikwidowana.
 
-Akcje mogą być imienne lub na okaziciela, a jako papier wartościowy cechują się ceną nominalną, rynkową oraz emisyjną.
+Akcje mogą być imienne lub na&nbsp;okaziciela, a jako papier wartościowy cechują się ceną nominalną, rynkową oraz emisyjną.
 Mogą być emitowane jedynie przez spółki akcyjne i komandytowo-akcyjne
 [@akcjaEZ].
-Na rynku wtórnym (np. na giełdzie) inwestorzy mają możliwość zakupu i sprzedaży akcji różnych spółek, jakie są na nim notowane.
-W marcu 2024 roku na rynku podstawowym _Giełdy Papierów Wartościowych_ w Warszawie prowadzone są notowania 409 spółek, w tym 367 krajowych,
+Na&nbsp;rynku wtórnym (np. na&nbsp;giełdzie) inwestorzy mają możliwość zakupu i sprzedaży akcji różnych spółek, jakie są na&nbsp;nim notowane.
+W marcu 2024 roku na&nbsp;rynku podstawowym _Giełdy Papierów Wartościowych_ w Warszawie prowadzone są notowania 409 spółek, w tym 367 krajowych,
 o łącznej kapitalizacji 1,5 bln zł [@gpwStat].
 
-**Indeksem giełdowym** nazywa się wskaźnik, który służy do monitorowania przebiegu cen papierów wartościowych spółek notowanych na giełdzie.
-Jest to byt umożliwiający śledzenie trendów panujących na rynkach finansowych, bez konieczności monitorowania dużej liczby cen akcji poszczególnych spółek.
-Do budowy indeksu giełdowego wykorzystuje się takie informacje, jak ceny akcji i ich wartości rynkowe.
-Te wartości są porządkowane za pomocą ustalonych przez giełdę wag oraz uśredniane średnią geometryczną lub arytmetyczną.
-Na giełdzie warszawskiej funkcjonuje kilka indeksów, a największymi z nich są:
+**Indeksem giełdowym** nazywa się wskaźnik, który służy do monitorowania przebiegu cen papierów wartościowych spółek notowanych na&nbsp;giełdzie.
+Jest to byt umożliwiający śledzenie trendów panujących na&nbsp;rynkach finansowych, bez konieczności monitorowania dużej liczby cen akcji poszczególnych spółek.
+Do budowy indeksu giełdowego wykorzystuje się takie informacje, jak ceny akcji i&nbsp;ich wartości rynkowe.
+Te wartości są porządkowane za pomocą ustalonych przez giełdę wag oraz&nbsp;uśredniane średnią geometryczną lub arytmetyczną.
+Na&nbsp;giełdzie warszawskiej funkcjonuje kilka indeksów, a największymi z nich są [@indeksBI;@wigGpwBenchmark]:
 
-- WIG -- pierwszy indeks giełdowy, obliczany od 1991 roku. Obejmuje wszystkie spółki notowane na _Głównym Rynku GPW_, spełniające kryteria uczestnictwa w indeksach,
-- WIG20 -- obliczany od 1994 roku na podstawie wartości portfela akcji 20 największych i najbardziej płynnych spółek z _Głównego Rynku GPW_. Bierze pod uwagę jedynie ceny transakcji, nie uwzględniając wartości dochodów z dywidend,
-- mWIG40 -- kontynuacja indeksu MIDWIG, obliczany od 1997 roku. Obejmuje 40 średnich spółek notowanych na _Głównym Rynku GPW_ i, podobnie jak WIG20, jest indeksem typu cenowego. Wyklucza spółki wchodzace w skład indeksów WIG20,
-- sWIG80 -- kontynuacja indeksu WIRR obliczanego od 1994 roku. W jego skład wchodzi 80 małych spółek notowanych na _Głównym Rynku GPW_. Tak jak WIG20 i mWIG40, jest indeksem typu cenowego i nie bierze pod uwagę spółek należących do tych indeksów.
-
-[@indeksBI;@wigGpwBenchmark]
+- WIG -- pierwszy indeks giełdowy, obliczany od 1991 roku. Obejmuje wszystkie spółki notowane na&nbsp;_Głównym Rynku GPW_, spełniające kryteria uczestnictwa w indeksach,
+- WIG20 -- obliczany od 1994 roku na&nbsp;podstawie wartości portfela akcji 20 największych i&nbsp;najbardziej płynnych spółek z _Głównego Rynku GPW_. Bierze pod uwagę jedynie ceny transakcji, nie uwzględniając wartości dochodów z dywidend,
+- mWIG40 -- kontynuacja indeksu MIDWIG, obliczany od 1997 roku. Obejmuje 40 średnich spółek notowanych na&nbsp;_Głównym Rynku GPW_ i, podobnie jak WIG20, jest indeksem typu cenowego. Wyklucza spółki wchodzace w skład indeksów WIG20,
+- sWIG80 -- kontynuacja indeksu WIRR obliczanego od 1994 roku. W jego skład wchodzi 80&nbsp;małych spółek notowanych na&nbsp;_Głównym Rynku GPW_. Tak jak WIG20 i mWIG40, jest indeksem typu cenowego i nie bierze pod uwagę spółek należących do tych indeksów.
 
 ### Szeregi czasowe danych finansowych
 
-Pod pojęciem __modelowania__ zazwyczaj kryje się ogół narzędzi teoretycznych, mających na celu ustalić tendencje wpływające na wartość danego instrumentu na rynku finansowym,
+Pod pojęciem __modelowania__ zazwyczaj kryje się ogół narzędzi teoretycznych, mających na&nbsp;celu ustalić tendencje wpływające na&nbsp;wartość danego instrumentu na&nbsp;rynku finansowym,
 a w konsekwencji przewidzieć jego przyszłą wartość.
 Aby ten cel osiągnąć, stosuje się wiele różnych modeli matematycznych, o różnych stopniach skomplikowania i liczbach parametrów.
 Aby sensownie usystematyzować dane finansowe wykorzystuje się pojęcie **szeregu czasowego** -- ciągu obserwacji ilustrującego przebieg zjawiska w czasie.
-Dane w szeregu czasowym są mogą reprezentować pomiary dzienne, miesięczne, roczne lub dowolny inny interwał czasowy.
+Dane w szeregu czasowym mogą reprezentować pomiary dzienne, miesięczne, roczne lub dowolny inny interwał czasowy.
 
 Dane przedstawiające zmienność zjawiska w czasie są zazwyczaj zbudowane z kilku składowych jako następstw różnych czynników zewnętrznych.
 Można tu wyróżnić [@gusSzeregCzas]:
 
 - trend (tendencję rozwojową) --
-skłonność do jednokierunkowych zmian obserwowanych w długim okresie czasu.
-Wzrost średniej ceny towaru na przestrzeni wielu lat pomimo jej wahań w interwale miesięcznym jest przykładem trendu,
+skłonność do jednokierunkowych zmian obserwowanych w&nbsp;długim okresie czasu.
+Wzrost średniej ceny towaru na&nbsp;przestrzeni wielu lat pomimo jej wahań w interwale miesięcznym jest przykładem trendu,
 
 - wahania cykliczne --
 związane zazwyczaj z cyklem koniunkturalnym gospodarki, reprezentują długookresowe, powtarzające się wahania wartości wokół trendu,
@@ -137,14 +134,14 @@ związane zazwyczaj z cyklem koniunkturalnym gospodarki, reprezentują długookr
 - sezonowość --
 podobnie jak wahania cykliczne, są przejawem oscylacji wartości szeregu czasowego wokół trendu.
 Wahania sezonowe jednak dotyczą zmian w horyzoncie czasowym do jednego roku.
-Za przykład może tu posłużyć wpływ pór roku na wysokość sprzedaży produktu,
+Za przykład może tu posłużyć wpływ pór roku na&nbsp;wysokość sprzedaży produktu,
 
 - część przypadkową --
 komponent szeregu czasowego niemożliwy do wyjaśnienia przez powyższe.
 Zawiera losowe wahania szeregu wokół pewnego ustalonego poziomu.
 
-Modele matematyczne i ekonometryczne mają na celu wyjaśnienie wpływu czynników systematycznych w badanych szeregach czasowych,
-co pozwala na prognozowanie dalszego przebiegu zjawiska lub analizę jego sezonowości.
+Modele matematyczne i ekonometryczne mają na&nbsp;celu wyjaśnienie wpływu czynników systematycznych w badanych szeregach czasowych,
+co pozwala na&nbsp;prognozowanie dalszego przebiegu zjawiska lub analizę jego sezonowości.
 Dla danych finansowych szczególnie istotne jest modelowanie takich wielkości, jak:
 
 1. wartości (ceny) akcji,
@@ -154,33 +151,33 @@ Dla danych finansowych szczególnie istotne jest modelowanie takich wielkości, 
 5. ceny surowców,
 6. stopy procentowe rynku międzybankowego.
 
-Dane dla punktów 1. i 2. są dostępne na stronach internetowych instytucji giełd oraz innych organizacji/osób i są głównym tematem tej pracy.
+Dane dla punktów 1. i 2. są dostępne na&nbsp;stronach internetowych instytucji giełd oraz innych organizacji/osób i są głównym tematem tej pracy.
 Katalogowane są one w odstępach dziennych, uwzględniając dni sesyjne, tj. dni, w których giełda jest otwarta.
-Dla szeregów czasowych reprezentujących dane finansowe częstą praktyką jest konstruowanie szeregu **logarytmicznych stóp zwrotu** z inwestycji z wykorzystaniem Wzoru \@ref(eq:return):
+Dla szeregów czasowych reprezentujących dane finansowe częstą praktyką jest konstruowanie szeregu **logarytmicznych stóp zwrotu** z inwestycji z wykorzystaniem wzoru:
 
 \begin{equation} (\#eq:return)
 r_{t} = \ln\nz{\frac{x_{t}}{x_{t-1}}} \cdot 100
 \end{equation}
 gdzie $x_i$ jest wartością szeregu czasowego $(x)$ w momencie $t$.
-Zabieg ten znajduje swoje zastosowanie ze względu na kilka czynników [@wzrSzeregiCzas]:
+Zabieg ten znajduje swoje zastosowanie ze względu na&nbsp;kilka czynników [@wzrSzeregiCzas]:
 
-- ujednolicenie danych -- zastosowanie logarytmu pozwala na znormalizowanie wartości, usuwając zaburzenia wynikające ze skali szeregu,
-- stabilność statystyczna -- transformacja ta nadaje szeregowi czasowemu odporności na wahania krótkoterminowe, co pomaga w prognozach na dłuższe okresy,
-- modelowanie zmienności -- analiza stóp zwrotu jest przydatna na potrzeby modeli poruszanych w badaniu, które są skoncentrowane na badaniu zmienności zjawiska zamiast jego rzeczywistych wartości.
+- ujednolicenie danych -- zastosowanie logarytmu pozwala na&nbsp;znormalizowanie wartości, usuwając zaburzenia wynikające ze skali szeregu,
+- stabilność statystyczna -- transformacja ta nadaje szeregowi czasowemu odporności na&nbsp;wahania krótkoterminowe, co pomaga w prognozach na&nbsp;dłuższe okresy,
+- modelowanie zmienności -- analiza stóp zwrotu jest przydatna na&nbsp;potrzeby modeli poruszanych w tym badaniu, które są skoncentrowane na&nbsp;analizie zmienności zjawiska zamiast jego rzeczywistych wartości.
 
-Ze względu na te wnioski, obliczenia w niniejszej pracy będą się odbywały w odniesieniu do szeregów logarytmicznych stóp zwrotu badanych spółek i indeksów.
+Ze względu na&nbsp;te wnioski, obliczenia w niniejszej pracy będą się odbywały w odniesieniu do&nbsp;szeregów logarytmicznych stóp zwrotu badanych spółek i indeksów.
 
 ### Modele średniej i wariancji warunkowej
 
 W obrębie niniejszego badania rozważane będą dwa rodzaje modeli szeregów czasowych: modele średniej warunkowej oraz wariancji warunkowej.
 Dodatkowym elementem tego typu równań jest również czynnik losowy $\epsilon$, zwany **innowacją**, reprezentujący część przypadkową danych.
-Dla danych finansowych poruszanych na łamach tej pracy zmienną objaśnianą jest **wartość szeregu** logarytmicznych stóp zwrotu **w danym momencie** $r_t$.
+Dla&nbsp;danych finansowych poruszanych na&nbsp;łamach tej pracy zmienną objaśnianą jest **wartość szeregu** logarytmicznych stóp zwrotu **w danym momencie** $r_t$.
 
-**Model średniej warunkowej** ma na celu wyjaśnienie zmienności szeregu czasowego za pomocą równania liniowego,
+**Model średniej warunkowej** ma na&nbsp;celu wyjaśnienie zmienności szeregu czasowego za pomocą równania liniowego,
 uzależniając średni poziom szeregu czasowego od sumy iloczynów pewnych parametrów oraz zmiennych objaśniających.
 Klasa modeli przybliżona w dalszej części badania korzysta ze zjawiska **autoregresji** szeregu czasowego,
-tj. uzależnienia wartości obecnej szeregu od jego wartości w wybranych momentach przeszłych.
-Ma to swoje zastosowanie w klasie modeli ARMA (_autoregressive - moving average_), którego budowę przedstawia Wzór \@ref(eq:arma).
+tj. uzależnienia wartości obecnej szeregu od&nbsp;jego wartości w wybranych momentach przeszłych.
+Ma to swoje zastosowanie w klasie modeli **ARMA** (_autoregressive - moving average_), którego budowę przedstawia wzór:
 
 \begin{equation} (\#eq:arma)
 x_t =
@@ -195,12 +192,12 @@ Model składa się z dwóch komponentów:
 - część średniej ruchomej (MA): wartość szeregu w danym momencie jest zależna od kolejnych $q$ wartości przeszłych innowacji.
 
 Model ARMA w postaci takiej, jak przedstawiono za pomocą Wzoru \@ref(eq:arma), sprawdza się w przypadku stacjonarnych szeregów czasowych,
-gdzie _pamięć szeregu_, tj. możliwość zaobserwowania wpływu danych historycznych na obecne, obejmuje względnie niskie opóźnienia i jest krótkotrwała.
+gdzie _pamięć szeregu_, tj. możliwość zaobserwowania wpływu danych historycznych na&nbsp;obecne, obejmuje względnie niskie opóźnienia i jest krótkotrwała.
 W przeciwnym przypadku można domniemać istnienie zależności długotrwałych i nieliniowych.
 
 **Modele wariancji warunkowej** pomagają w interpretacji zależności długookresowych szeregu czasowego,
 a w ich implementacji korzystają z równań kwadratowych.
-Jak wskazuje nazwa, modele tej klasy mają na celu modelowanie wariancji szeregu czasowego.
+Jak wskazuje nazwa, modele tej klasy mają na&nbsp;celu modelowanie wariancji szeregu czasowego.
 Dokonuje się tego z wykorzystaniem reszt z modelu liniowego (np. ARMA), a w ogólności model taki można opisać Wzorem \@ref(eq:arch-base).
 Uzależnia on wartość stopy zwrotu $r_t$ od modelowanej średniej $\mu_t$ oraz reszty z modelu $y_t$.
 
@@ -212,8 +209,8 @@ y_t = \sigma_t \epsilon_t,
 \epsilon_t \sim IID(0, 1)
 \end{equation}
 
-Historycznie pierwszym z modeli należących do tej klasy jest model ARCH(q) (_autoregressive conditional heteroskedasticity_) [@engleARCH],
-w którym wariancja warunkowa modelu jest opisywana przez kwadraty reszt z modelu (Wzór \@ref(eq:arch)).
+Historycznie pierwszym z modeli należących do tej klasy jest model **ARCH(q)** (_autoregressive conditional heteroskedasticity_) [@engleARCH],
+w którym wariancja warunkowa modelu jest opisywana przez kwadraty reszt z modelu:
 
 \begin{equation} (\#eq:arch)
 \sigma_t^2 =
@@ -223,8 +220,8 @@ w którym wariancja warunkowa modelu jest opisywana przez kwadraty reszt z model
 
 Wadą tego modelu w kontekście rynków finansowych jest konieczność stosowania wysokiej liczby opóźnień $q$,
 co prowadzi do skomplikowanego modelu i wymaga dłuższych horyzontów czasowych.
-Naprzeciw temu problemowi występuje model GARCH(q, p) [@bollerslevGARCH], w którym w modelowaniu wariancji warunkowej biorą udział również przeszłe wartości wariancji,
-co reprezentuje Wzór \@ref(eq:garch).
+Naprzeciw temu problemowi występuje model **GARCH(q, p)** [@bollerslevGARCH], w którym w modelowaniu wariancji warunkowej biorą udział również przeszłe wartości wariancji,
+co reprezentuje wzór:
 
 \begin{equation} (\#eq:garch)
 \sigma_t^2 =
@@ -236,14 +233,14 @@ co reprezentuje Wzór \@ref(eq:garch).
 \end{equation}
 
 Istotnym czynnikiem, jaki pojawia się przy modelowaniu danych finansowych jest **efekt dźwigni**.
-Model GARCH zakłada, że dodatnie i ujemne stopy zwrotu mają taki sam wpływ na decyzje podejmowane przez inwestora.
+Model GARCH zakłada, że dodatnie i ujemne stopy zwrotu mają taki sam wpływ na&nbsp;decyzje podejmowane przez inwestora.
 Nie jest to jednak realne założenie, ponieważ spadki cen instrumentów finansowych są zwykle bardziej nagłaśniane aniżeli ich wzrosty.
 Jest to naturalne dla człowieka zachowanie i występuje jako domena ostrożnych inwestorów,
 bardziej skłonnych do wczesnej likwidacji inwestycji.
 Za ilustrację tych zachowań odpowiada koncept **krzywej wpływu informacji**, która jest elementem dwóch kolejnych rozpatrywanych w tej pracy modeli.
-Model GJR-GARCH(q, p) [@glostenGJR] (Wzór \@ref(eq:gjr-garch)) jest rozbudowaniem modelu GARCH,
+Model **GJR-GARCH(q, p)** [@glostenGJR] (Wzór \@ref(eq:gjr-garch)) jest rozbudowaniem modelu GARCH,
 przy czym uwzględnia on dodatkowo asymetrię informacji w części równania odpowiedzialnej za wpływ kwadratów reszt.
-Powoduje to, że negatywne wartości tego szeregu mają większy wpływ na modelowaną zmienność.
+Powoduje to, że negatywne wartości tego szeregu mają większy wpływ na&nbsp;modelowaną zmienność.
 
 \begin{equation} (\#eq:gjr-garch)
 \sigma_t^2 =
@@ -255,9 +252,9 @@ Powoduje to, że negatywne wartości tego szeregu mają większy wpływ na model
     \beta_j \sigma^2_{t-j}
 \end{equation}
 
-Podobną aplikację krzywej wpływu informacji wykorzystuje model EGARCH(q, p) [@nelsonEGARCH].
-Rozwiązuje on problemy modelu GARCH, takie jak uproszczenie interpretacji persystencji szoków i monitorowanie korelacji pomiędzy zwrotami a innowacjami zmienności.
-Jak wskazuje Wzór \@ref(eq:egarch), modyfikacja opiera się na modelowaniu logarytmu wariancji.
+Podobną aplikację krzywej wpływu informacji wykorzystuje model **EGARCH(q, p)** [@nelsonEGARCH].
+Rozwiązuje on problemy modelu GARCH, takie jak uproszczenie interpretacji persystencji szoków i&nbsp;monitorowanie korelacji pomiędzy zwrotami a innowacjami zmienności.
+Jak wskazuje Wzór \@ref(eq:egarch), modyfikacja opiera się na&nbsp;modelowaniu logarytmu wariancji.
 
 \begin{equation} (\#eq:egarch)
 \ln \sigma_t^2 =
@@ -272,8 +269,8 @@ Jak wskazuje Wzór \@ref(eq:egarch), modyfikacja opiera się na modelowaniu loga
 
 Innym podejściem będącym rozwinięciem idei modeli heteroskedastyczności warunkowej jest uwzględnienie w modelu wpływu czynników zewnętrznych,
 takich jak sezonowość lub zmienność innych szeregów czasowych (np. innych instrumentów finansowych).
-W tym celu opracowany został model GARCH-X [@hwangGARCHX], w równaniu którego (Wzór \@ref(eq:garchx)) pojawia się składnik odpowiedzialny za siłę tychże zależności.
-Owa siła sterowana jest niezależnie dla każdej z $L$ dodatkowych zmiennych.
+W tym celu opracowany został model **GARCH-X** [@hwangGARCHX], w równaniu którego (Wzór \@ref(eq:garchx)) pojawia się składnik odpowiedzialny za siłę tychże zależności.
+Owa siła sterowana jest niezależnie dla każdej z&nbsp;$L$ dodatkowych zmiennych.
 
 \begin{equation} (\#eq:garchx)
 \sigma_t^2 =
@@ -297,16 +294,16 @@ Poniżej przedstawiono rozkłady innowacji najczęściej stosowane w modelowaniu
 - rozkład GED [@nelsonEGARCH, s. 352] -- kształt $\nu$.
 
 Intuicyjnym zagadnieniem podczas modelowania wariancji warunkowej jest identyfikacja okresów zwiększonej i zmniejszonej zmienności w badanym horyzoncie czaowym.
-Naprzeciw temu problemowi wychodzi idea *modeli przełącznikowych*, a w szczególności rozważany na łamach tej pracy model przełącznikowy Markowa [@packageMSGARCH].
-Opierają się one na połączeniu wielu modeli takich, jak te opisane powyżej, i implementację mechanizmu wyboru, który z tych modeli jest stosowany w którym momencie czasowym.
+Naprzeciw temu problemowi wychodzi idea *modeli przełącznikowych*, a w szczególności rozważany na&nbsp;łamach tej pracy **model przełącznikowy Markowa** [@packageMSGARCH].
+Opierają się one na&nbsp;połączeniu wielu modeli takich, jak te opisane powyżej, i implementację mechanizmu wyboru, który z tych modeli jest stosowany w którym momencie czasowym.
 Tę rolę pełni *proces Markowa*, za pomocą którego można zdefiniować proces stanu (reżimu) $s_t$, identyfikujący wybrany model w momencie $t$.
 W modelu przełącznikowym Markowa ARMA-GARCH parametry modelu są uzależnione od obecnego reżimu.
 Oznacza to, że w wariancie dwóch reżimów estymowane są dwa zestawy parametrów, po jednym dla każdego z rozpatrywanych modeli.
 
 ### Kwantyfikacja poprawności modelu
 
-Proces __dopasowania__ modelu teoretycznego do danych rzeczywistych polega na znalezieniu jego parametrów tak, aby zminimalizować _błąd dopasowania_, tj. absolutną różnicę pomiędzy wartością teoretyczną a wartością rzeczywistą.
-Określa się wiele rodzajów błędów, ale do najczęściej wyróżniach w badaniach zalicza się te opisane poniżej.
+Proces __dopasowania__ modelu teoretycznego do danych rzeczywistych polega na&nbsp;znalezieniu jego parametrów tak, aby zminimalizować _błąd dopasowania_, tj. absolutną różnicę pomiędzy wartością teoretyczną a wartością rzeczywistą.
+Określa się wiele rodzajów błędów, ale do najczęściej wyróżnianych w badaniach zalicza się te opisane poniżej.
 Dla szeregu wartości modelowanych $(\hat{y}_i)$ formułuje się miary takie, jak **RMSE** (_Root Mean Square Error_) oraz **MAPE** (_Mean Absolute Percentage Error_) o następujących wzorach:
 
 \begin{equation} (\#eq:errors)
@@ -319,49 +316,50 @@ MAPE = \frac{1}{n} \sum_{i=1}^{n}
   \frac{\abs{\hat{y}_i - y_i}}{y_i}
 \end{equation}
 
-Oczywiście do każdych danych istnieje możliwość dopasowania kilku różnych modeli, wobec czego zachodzi potrzeba porównania jakości wykorzystanych modeli.
-W tym celu stosuje się __kryteria informacyjne__ -- wskaźniki opierające się na wartości funkcji wiarogodności $L$, które pozwalają na wyłonienie optymalnego modelu, który najwierniej opisuje dane zjawisko.
+Oczywiście do każdych danych istnieje możliwość dopasowania kilku różnych modeli, wobec czego zachodzi potrzeba porównania ich jakości estymacji.
+W tym celu stosuje się __kryteria informacyjne__ -- wskaźniki opierające się na&nbsp;wartości funkcji wiarogodności $L$, które pozwalają na&nbsp;wyłonienie optymalnego modelu, który najwierniej opisuje dane zjawisko.
 Podobnie jak w przypadku różnych rodzajów błędów, istnieje kilka kryteriów informacyjnych, stosowanych przy modelowaniu danych.
-Wszystkie kryteria informacyjne opierają się na tej samej zasadzie
--- na zadany model nakładają karę za skomplikowanie modelu, która rośnie wraz z liczbą parametrów modelu $k$,
-a rzadziej z wielkością próby $n$.
+Wszystkie kryteria informacyjne opierają się na&nbsp;tej samej zasadzie
+-- na&nbsp;zadany model nakładają karę za skomplikowanie modelu, która rośnie wraz z liczbą parametrów modelu $k$,
+a&nbsp;rzadziej z wielkością próby $n$.
 Wartości kryterium bliższe 0 informują o lepszej jakości dopasowania modelu.
 Do najpopularniejszych kryteriów informacyjnych należą:
 
 - kryterium Akaike [@akaikeAIC]:
-$$
+\begin{equation}
 AIC = 2k - 2 \ln L
-$$
-Do obliczenia tego kryterium informacyjnego wymagana jest jedynie wiedza na temat liczby parametrów modelu $k$ oraz wartość funkcji wiarogodności $L$.
+\end{equation}
+Do obliczenia tego kryterium informacyjnego wymagana jest jedynie wiedza na&nbsp;temat liczby parametrów modelu $k$ oraz wartość funkcji wiarogodności $L$.
 Stały współczynnik kary równy 2 sprawia, że jest to najbardziej penalizujące kryterium pod względem liczby parametrów,
 
 - kryterium Schwarza [@schwarzBIC]:
-$$
+\begin{equation}
 BIC = k \ln n - 2 \ln L
-$$
+\end{equation}
 Rozwinięcie kryterium informacyjnego Akaike, gdzie dodatkowo karą za złożoność modelu obarczana jest wielkość próby $n$,
 
 - kryterium Hannana-Quinna [@hannanHQC]:
-$$
+\begin{equation}
 HQC = 2k \ln(\ln n) - 2 \ln L
-$$
+\end{equation}
 Rzadziej stosowane kryterium, które w stosunku do BIC umniejsza karę za wielkość próby $n$.
 
 Każde z powyższych kryteriów ma swoje zalety i środowiska naukowe preferują wykorzystanie konkretnego z nich częściej niż innych.
-Powoduje to również uproszczenia w edukowaniu o istnieniu tychże kryteriów i prowadzi do nadmiernie zlaicyzowanego przeświadczenia o bezwzględnych korzyściach pewnych kryteriów nad pozostałymi.
+Powoduje to również nadmiernie uproszczenia w edukowaniu o istnieniu tychże kryteriów i prowadzi do zbyt zlaicyzowanego przeświadczenia o bezwzględnych korzyściach pewnych kryteriów nad pozostałymi.
 Te przesłanki są przedmiotem badań ekspertów i, chociaż mają one pewne podłoże naukowe, ostatecznie nie są sztywnymi regułami [@zhangKryteriaInformacyjne].
 
 Zasadność zastosowania modeli ARMA oraz GARCH może zostać potwierdzona przez liczne **testy statystyczne**.
-Testem statystycznym nazywamy formułę, która pozwala na określenie prawdopodobieństwa wystąpienia określonej hipotezy
+Testem statystycznym nazywamy formułę, która pozwala na&nbsp;określenie prawdopodobieństwa wystąpienia określonej hipotezy
 i jest on narzędziem dającym argumenty za jej odrzuceniem.
-Na budowę testu statystycznego składają się:
+Na&nbsp;budowę testu statystycznego składają się:
 
 - weryfikowana *hipoteza statystyczna*, która może zostać odrzucona tudzież nie,
 - *statystyka testowa*, służąca do pomiaru sprawdzanego zjawiska w oparciu o dane z próby,
 - *poziom istotności*, poniżej którego hipotezę można uznać za fałszywą.
 
 W obrębie badania poziom istotności wszystkich testów statystycznych został przyjęty jako $\alpha = 0.05$,
-a spośród dostępnych testów wykorzystane zostały testy opisane poniżej. Do każdego z nich podano wzór oraz rozkład statystyki testowej przy prawdziwości hipotezy zerowej.
+a spośród dostępnych testów wykorzystane zostały testy opisane poniżej.
+Do każdego z&nbsp;nich podano wzór oraz rozkład statystyki testowej przy prawdziwości hipotezy zerowej.
 Informacje te nie są kompleksowe, a po więcej szczegółów czytelnika odsyła się do opracowań źródłowych.
 
 - Test normalności rozkładu zmiennej losowej -- test Shapiro-Wilka [@shapiroTest], którego $H_0$ zakłada, że dane cechują się rozkładem normalnym:
@@ -373,19 +371,19 @@ W = \frac{
 }
 \end{equation}
 Dla klarowności zapisu pominięto definicję wartości $a_i$ oraz $y_{(i)}$.
-Rozkład statystyki $W$ nie ma nazwy, a jego wartości brzegowe są obliczane za pomocą symulacji metodą Monte Carlo;
+Rozkład statystyki $W$ nie&nbsp;ma&nbsp;nazwy, a jego wartości brzegowe są obliczane za pomocą symulacji metodą Monte&nbsp;Carlo;
 
 - Test autokorelacji rzędu $l$ w obrębie szeregu czasowego -- test Ljung-Boxa [@boxTest], którego $H_0$ zakłada brak autokorelacji w szeregu czasowym:
-\begin{equation}
+\begin{equation} (\#eq:ljung)
 Q = n(n+2) \sum_{k=1}^{l} \frac{\hat{\rho}^2_k}{n-k}
 \qquad
 Q \sim \chi^2(l)
 \end{equation}
 gdzie $n$ jest wielkością próby, $l$ stopniem testowanego opóźnienia, a $\hat{\rho}_k$ autokorelacją próby przy opóźnieniu $k$;
 
-- Testy na występowanie efektu ARCH w resztach z modelu liniowego dla szeregu czasowego
-  - test McLeoda-Li [@mcLeodLiTest], zakładający brak efektu ARCH przy $H_0$ poprzez brak autokorelacji pomiędzy szeregami kwadratów reszt z modelu liniowego.
-    Test ten jest tożsamy z testem Ljung-Boxa, z jedyną różnicą w danych wykorzystanych do obliczenia statystyki testowej;
+- Testy na&nbsp;występowanie efektu ARCH w resztach z modelu liniowego dla szeregu czasowego
+  - test McLeoda-Li [@mcLeodLiTest], zakładający brak efektu ARCH przy $H_0$ poprzez brak autokorelacji w szeregu kwadratów reszt z modelu liniowego.
+    Test ten jest tożsamy z testem Ljung-Boxa (Wzór \@ref(eq:ljung)), z jedyną różnicą w danych wykorzystanych do&nbsp;obliczenia statystyki testowej;
 
   - test Engle'a [@engleARCH] przeprowadzany dla opóźnienia $l$ bada hipotezę zerową mówiącą o braku autokorelacji w kwadratach reszt z modelu liniowego:
     \begin{equation}
@@ -393,9 +391,9 @@ gdzie $n$ jest wielkością próby, $l$ stopniem testowanego opóźnienia, a $\h
     \qquad
     LM \sim \chi^2(l)
     \end{equation}
-    Wzór na statystykę testową wykorzystuje $R^2$ -- współczynnik determinacji dopasowania regresji liniowej do modelu;
+    Wzór na&nbsp;statystykę testową wykorzystuje $R^2$ -- współczynnik determinacji dopasowania regresji liniowej do modelu;
 
-  - test KPSS [@KPSSTest], którego $H_0$, przeciwnie do powyższych testów, zakłada pierwszy stopień integracji szeregu czasowego, tj. obecność efektu ARCH:
+  - test KPSS [@KPSSTest], którego $H_0$, przeciwnie do&nbsp;powyższych testów, zakłada pierwszy stopień integracji szeregu czasowego, tj. obecność efektu ARCH:
     \begin{equation}
     KPSS = \frac{1}{n^2} \sum_{i=1}^n \frac{S_i^2}{\hat{\sigma}^2}
     \qquad
@@ -406,107 +404,103 @@ gdzie $n$ jest wielkością próby, $l$ stopniem testowanego opóźnienia, a $\h
 
 ## Przegląd pakietów statystycznych
 
-Do zagadnienia estymacji modeli szeregów czasowych można wykorzystać różne narzędzia, pozwalające na przeprowadzanie wielu skomplikowanych kalkulacji.
-Najczęstszymi wyborami badaczy zajmującymi się tymi zagadnieniami są języki wspierające budowę skomplikowanych równań,
-a także pozwalające na usystematyzowanie wyników swoich obliczeń.
+Do zagadnienia estymacji modeli szeregów czasowych można wykorzystać różne narzędzia, pozwalające na&nbsp;przeprowadzanie wielu skomplikowanych kalkulacji.
+Najczęstszymi wyborami badaczy zajmującymi się tymi zagadnieniami są programy oraz języki wspierające budowę skomplikowanych równań,
+a&nbsp;także pozwalające na&nbsp;usystematyzowanie wyników swoich obliczeń.
 W dalszej części tego rozdziału omówione zostaną popularne pakiety statystyczne, z jakimi można się spotkać przy okazji poruszania problemu analizy szeregów czasowych.
 
 ### R
 
-Do przeprowadzenia wszelkich obliczeń i symulacji w niniejszej pracy wykorzystano środowisko **R**.
+Do przeprowadzenia wszelkich obliczeń i symulacji w niniejszej pracy wykorzystano środowisko **R** [@R].
 Jest to otwartoźródłowy język programowania i środowisko do analizy danych oraz tworzenia grafik,
-powszechnie używane w statystyce, analizie danych, uczeniu maszynowych oraz badaniach operacyjnych.
-Charakteryzuje się bogatym zestawem bibliotek (pakietów), które umożliwiają wykonywanie różnorodnych analiz i wizualizacji danych [@R].
+powszechnie używane w statystyce, analizie danych, uczeniu maszynowym oraz badaniach operacyjnych.
+Charakteryzuje się bogatym zestawem bibliotek (pakietów), które umożliwiają wykonywanie różnorodnych analiz i wizualizacji danych.
 
-Na potrzeby tej pracy użyte zostały pakiety zaprojektowane do pracy z szeregami czasowymi oraz modelami ekonometrycznymi.
+Na&nbsp;potrzeby tego badania użyte zostały pakiety zaprojektowane do pracy z szeregami czasowymi oraz&nbsp;modelami ekonometrycznymi.
 Do pracy z modelami GARCH zastosowano dwie z najpopularniejszych bibliotek zaprojektowanych do tego celu:
 
-- `rugarch` -- pakiet, którego celem jest zapewnienie elastycznego i bogatego środowiska do modelowania i testowania modeli GARCH.
-Implementuje różnego rodzaju testy statystyczne i metody tworzące wykresy, a także narzędzia do prognozowania i symulowania wartości modeli
-[@packageRugarch, s. 3].
-Zastosowany został do modelowania modeli z zastosowaniem zewnętrznych regresorów, oferując subiektywnie najbardziej przystępny sposób przekazania tych danych do programu spośród innych oferowanych rozwiązań.
-- `MSGARCH` -- implementacja kompleksowego zestawu funkcjonalności na potrzeby modelu przełącznikowego Markowa z zastosowaniem modeli GARCH,
+- `rugarch` [@packageRugarch] -- pakiet, którego celem jest zapewnienie elastycznego i bogatego środowiska do&nbsp;modelowania i testowania modeli GARCH.
+Implementuje różnego rodzaju testy statystyczne i metody tworzące wykresy, a także narzędzia do prognozowania i symulowania wartości modeli,
+Zastosowany został do estymacji modeli z zastosowaniem zewnętrznych regresorów, oferując subiektywnie najbardziej przystępny sposób przekazania tych danych do programu (interfejs) spośród innych oferowanych rozwiązań.
+- `MSGARCH` [@packageMSGARCHDocs] -- implementacja kompleksowego zestawu funkcjonalności na&nbsp;potrzeby modelu przełącznikowego Markowa z zastosowaniem modeli GARCH,
 w szczególności dopasowywania, filtrowania, prognoz i symulacji.
 Udostępnia również funkcje związane z obliczaniem wartości zagrożonej oraz _Expected Shortfall_.
-Jest skoncentrowany na modelowaniu wariancji warunkowej, wobec czego nie implementuje równania średniej warunkowej
-[@packageMSGARCHDocs, s. 2].
+Jest skoncentrowany na&nbsp;modelowaniu wariancji warunkowej, wobec czego nie implementuje równania średniej warunkowej.
+
 W niniejszej pracy spełnia oczywiście zadanie estymacji modeli przełącznikowych Markowa.
-Oferuje przejrzystą dokumentację i potężne narzędzia, pozwalające na potencjalne rozszerzenie modeli,
+Oferuje przejrzystą dokumentację i potężne narzędzia, pozwalające na&nbsp;potencjalne rozszerzenie modeli,
 co z dodatkową mocą obliczeniową może prowadzić do porównania większej liczby odpowiadających modeli.
 
-Podczas badania wykorzystano również różne inne pakiety pozwalające na generowanie wykresów i tabel, a także płynnego przetwarzania danych,
+Podczas badania wykorzystano również różne inne pakiety pozwalające na&nbsp;generowanie wykresów i tabel, a także płynnego przetwarzania danych,
 m.in. `ggplot2` [@packageGgplot2] oraz `knitr` [@packageKnitr].
-Dodatkowo warto wspomnieć o pakiecie `bookdown` [@packageBookdown], który pozwolił na doprowadzenie niniejszej pracy do jej obecnej postaci.
+Dodatkowo warto wspomnieć o pakiecie `bookdown` [@packageBookdown], który pozwolił na&nbsp;doprowadzenie niniejszej pracy do jej obecnej postaci.
 
 ### Ox
 
 Chociaż język R jest popularnym narzędziem w wielu środowiskach naukowych,
 jest to jednak jedna z wielu technologii wykorzystywanych do modelowania danych statystycznych.
 W kręgach nauk ekonomicznych znanym narzędziem do analizy finansowych szeregów czasowych jest program **OxMetrics** [@packageOxMetrics].
-Składa się na niego rodzina pakietów, które dostarczają zintegrowane rozwiązania na potrzeby analizy, prognoz i modelowania danych przekrojowych i panelowych.
-Samo środowisko pakietu OxMetrics jest oparte o język Ox.
+Składa się na&nbsp;niego rodzina pakietów, które dostarczają zintegrowane rozwiązania na&nbsp;potrzeby analizy, prognoz i modelowania danych przekrojowych i panelowych.
+Samo środowisko pakietu OxMetrics jest oparte o język **Ox**.
 Jest to obiektowy, macierzowy język programowania, zawierający szeroki wachlarz funkcji matematycznych i statystycznych.
 Jego głównymi cechami są szybkość obliczeń, bogaty zestaw pakietów i dobrze zaprojektowana składnia, upraszczająca pracę z kodem.
-W skład środowiska OxMetrics wchodzą pakiety pozwalające m.in. na:
+W skład środowiska OxMetrics wchodzą pakiety pozwalające m.in. na&nbsp;[@packageOx]:
 
 - konstruowanie modeli ekonometrycznych (pakiet `PcGive`),
 - estymację i prognozowanie modeli klasy GARCH (pakiet `G@RCH`),
-- statystyczną/ekonometryczną analizę szeregów czasowych, a także ich modelowanie i predykcję (pakiet `STAMP`) [@packageOx].
+- statystyczną/ekonometryczną analizę szeregów czasowych, a także ich modelowanie i predykcję (pakiet `STAMP`).
 
-Innym programem pozwalającym na kompleksową analizę szeregów czasowych jest pakiet **Time Series Modelling**.
-Korzystając również z języka Ox, pozwala na estymację i prognozę różnych modeli szeregów czasowych:
+Innym programem pozwalającym na&nbsp;kompleksową analizę szeregów czasowych jest pakiet **Time Series Modelling** [@packageTSM].
+Korzystając również z języka Ox, pozwala na&nbsp;estymację i prognozę różnych modeli szeregów czasowych:
 ARIMA, ARFIMA, różnych wariantów GARCH, FIGARCH, APARCH i EGARCH, modeli dwuliniowych, przełącznikowych Markowa oraz wielu innych.
 Większość z parametrów estymowanych modeli można swobodnie konfigurować za pomocą intuicyjnego interfejsu graficznego,
-co pozwala na zaprojektowanie niemal dowolnego modelu danych.
+co pozwala na&nbsp;zaprojektowanie niemal dowolnego modelu danych.
 System równań można również rozszerzyć o analizę wartości zagrożonej.
-Oprogramowanie posiada także obszerne możliwości graficzne, pozwalające na tworzenie wykresów przebiegów szeregów czasowych, analizy ich rozkładów oraz innych, np. korelogramów
-[@packageTSM].
+Oprogramowanie posiada także obszerne możliwości graficzne, pozwalające na&nbsp;tworzenie wykresów przebiegów szeregów czasowych, analizy ich rozkładów oraz innych, np. korelogramów.
 
 ### Python
 
-Dla użytkowników z bardziej obszerną wiedzą programistyczną dostępne są również narzędzia w innych językach.
-Skutkiem wysokiej popularności języka **Python**, znanego z posiadania szerokiego zestawu bibliotek rozszerzających jego działanie,
-jest rozwój pakietów do tego języka skoncentrowanych na analizie modeli szeregów czasowych.
+Dla użytkowników z bardziej obszerną wiedzą programistyczną dostępne są również narzędzia w&nbsp;innych językach.
+Skutkiem wysokiej popularności języka **Python**, znanego z posiadania szerokiego zestawu bibliotek rozszerzających jego działanie oraz przyjaznej dla początkujących programistów składni,
+jest rozwój pakietów do tego języka skoncentrowanych na&nbsp;analizie modeli szeregów czasowych.
 
-- Na potrzeby analizy modeli ARIMA jest to m.in. pakiet `pmdarima`.
+- Na&nbsp;potrzeby analizy modeli ARIMA jest to m.in. pakiet `pmdarima` [@packagePythonPmdarima].
 Jego celem jest implementacja funkcji `auto.arima` z języka R w środowisku Python,
 dzięki czemu aspirujący analitycy danych mają możliwość przeprowadzania analiz bez potrzeby nauki nowego języka.
-Zainspirowany biblioteką `scikit-learn`, skupiającą się na rozwiązaniach z dziedziny uczenia maszynowego,
-wykorzystuje znany użytkownikom model programistyczny pozwalający na przejrzystą i kompleksową analizę [@packagePythonPmdarima].
+Zainspirowany biblioteką `scikit-learn`, skupiającą się na&nbsp;rozwiązaniach z&nbsp;dziedziny uczenia maszynowego,
+wykorzystuje znany użytkownikom model programistyczny pozwalający na&nbsp;przejrzystą i kompleksową analizę,
 
-- Do budowania modeli GARCH popularną biblioteką jest `arch`.
-Jest on zaprojektowany do modelowania zmienności warunkowej za pomocą różnych modeli klasy GARCH (GARCH, GJR, TARCH, EGARCH)
-a także na prognozowanie zmienności warunkowej oraz analizę wartości zagrożonej [@packagePythonArch].
+- Do budowania modeli GARCH popularną biblioteką jest `arch` [@packagePythonArch].
+Jest ona zaprojektowana do&nbsp;modelowania zmienności warunkowej za pomocą różnych modeli klasy GARCH (GARCH, GJR, TARCH, EGARCH)
+a także na&nbsp;prognozowanie zmienności warunkowej oraz analizę wartości zagrożonej,
 
-- Na analizę modeli przełącznikowych Markowa natomiast pozwala pakiet `statsmodels`.
-Jest to biblioteka pozwalająca na pracę z wieloma różnymi modelami statystycznymi,
-pozwalając na przeprowadzanie testów oraz eksploracji danych.
+- Na&nbsp;analizę modeli przełącznikowych Markowa natomiast pozwala pakiet `statsmodels` [@packagePythonStatsmodels].
+Jest to biblioteka pozwalająca na&nbsp;pracę z wieloma różnymi modelami statystycznymi,
+pozwalając na&nbsp;przeprowadzanie testów oraz eksploracji danych.
 Nazewnictwo funkcji jest tutaj bardziej zainspirowane językiem R,
-na co składa się m.in. sposób formułowania zależności między zmiennymi czy przywoływanie podsumowań.
-Implementuje także budowę modeli przełącznikowych, takich jak model Markowa [@packagePythonStatsmodels].
+na&nbsp;co składa się m.in. sposób formułowania zależności między zmiennymi czy przywoływanie podsumowań.
+Implementuje także budowę modeli przełącznikowych, takich jak model Markowa.
 
 ### Julia
 
-Ostatnim z języków programowania, o jakich warto wspomnieć na łamach niniejszej pracy, jest **Julia**.
+Ostatnim z języków programowania, o jakich warto wspomnieć na&nbsp;łamach niniejszej pracy, jest **Julia** [@packageJulia].
 Jest to otwartoźródłowy język zaprojektowany w 2017 roku z myślą o wysokiej wydajności,
 jaką osiąga za pomocą kompilacji programów do kodu maszynowego.
-Jako język programowania cechuje się dynamiczną obsługą typów oraz pozwala na redeklarację funkcji z różnymi typami parametrów.
-Jego ekosystem składa się między innymi z potężnych narzędzi do analizy i wizualizacji danych, a także uczenia maszynowego.
-Zaskarbia sobie rosnące zainteresowanie w różnych dziedzinach nauki, np. biologii, fizyce czy astronomii [@packageJulia].
+Jako język programowania cechuje się dynamiczną obsługą typów oraz pozwala na&nbsp;redeklarację funkcji z różnymi typami parametrów.
+Jego ekosystem składa się między innymi z&nbsp;potężnych narzędzi do analizy i wizualizacji danych, a&nbsp;także uczenia maszynowego.
+Zaskarbia sobie rosnące zainteresowanie w różnych dziedzinach nauki, np. biologii, fizyce czy astronomii.
 
-Z uwagi na dojrzewającą bazę bibliotek tego języka,
-możliwośći pracy w zakresie modeli GARCH oraz przełącznikowych są stosunkowo ograniczone.
+Z uwagi na&nbsp;dojrzewającą bazę bibliotek tego języka,
+możliwości pracy w zakresie modeli GARCH oraz przełącznikowych są stosunkowo ograniczone.
 Wiele z oferowanych pakietów nie posiada kompletu funkcji potrzebnych do przeprowadzenia badań zawartych w bieżącej pracy.
 Popularnością w tej dziedzinie cieszą się pakiety:
 
-- `ARCHModels.jl` --
-pozwala na budowanie modeli ARCH, GARCH, TGARCH oraz EGARCH.
-Umożliwia także specyfikację modelu ARMA, a nawet implementuje różne rozkłady innowacji
-[@packageJuliaARCHModels],
+- `ARCHModels.jl` [@packageJuliaARCHModels] --
+pozwala na&nbsp;budowanie modeli ARCH, GARCH, TGARCH oraz EGARCH.
+Umożliwia także specyfikację modelu ARMA, a nawet implementuje różne rozkłady innowacji,
 
-- `MarSwitching.jl` --
+- `MarSwitching.jl` [@packageJuliaMarSwitching] --
 implementacja modeli przełącznikowych Markowa.
-Pozwala na tworzenie i przewidywanie przebiegu modeli oraz definicję zmiennych zewnętrznych.
+Pozwala na&nbsp;tworzenie i przewidywanie przebiegu modeli oraz definicję zmiennych zewnętrznych.
 W przyszłości, w zależności od zainteresowania,
-twórca planuje implementację modeli GARCH oraz różnych rozkładów innowacji
-[@packageJuliaMarSwitching].
+twórca planuje implementację modeli GARCH oraz różnych rozkładów innowacji.
