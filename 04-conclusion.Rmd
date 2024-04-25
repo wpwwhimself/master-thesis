@@ -22,9 +22,12 @@ Z pomocą modelu przełącznikowego Markowa udało się wyłonić dwa istotne ok
 
 Wspomniane prognozy natomiast jednomyślnie wskazują na&nbsp;niski poziom zmienności w kolejnych dniach od badanego horyzontu czasowego.
 Sugeruje to zakończenie okresu wysokich wahań na&nbsp;rynku wraz z końcem eksperymentu.
-Przyjęte modele cechują się dość niskim poziomem błędu.
+Przyjęte modele cechują się dość wysokim poziomem błędu, co wpływa na wiarygodność uzyskanych wyników.
+Choć wydają się one być intuicyjne i zgodne z efektami wydarzeń na świecie,
+do ich analizy należy więc podchodzić sceptycznie.
 
-Na&nbsp;podstawie opracowanych modeli udało się potwierdzić istotną zmianę w zachowaniu się badanych szeregów w wyróżnionych okresach.
+Pomimo nieprzychylnych błędów dopasowań modelu,
+na&nbsp;ich podstawie udało się potwierdzić istotną zmianę w zachowaniu się badanych szeregów w wyróżnionych okresach.
 Konsekwencją tego były gwałtowne zmiany wartości instrumentów finansowych,
 które w kilku przypadkach doprowadziły do długotrwałej bessy na&nbsp;rynku, utrzymując ceny na&nbsp;rekordowo niskim poziomie.
 Zaobserwowano również wymiernie większy efekt działań związanych z pandemią koronawirusa w Polsce w porównaniu z wpływem działań wojennych na&nbsp;wschodzie kraju:
@@ -39,6 +42,8 @@ Badania tego typu mogą niewątpliwie pomóc w zamortyzowaniu negatywnych skutk�
 Przeprowadzony proces modelowania i prognozowania zmienności dla badanych szeregów czasowych jest wrażliwy na&nbsp;szereg czynników,
 które zaważyły na&nbsp;ostatecznych jego wynikach.
 Wiele z nich bezpośrednio wpłynęło na&nbsp;ciąg decyzji podjętych w niniejszej pracy.
+Ponadto przeprowadzona prognoza cechuje się wyjątkowo wysokimi poziomami błędu,
+co sugeruje niewłaściwe dopasowanie modelu i jest podstawą do przeanalizowania problemów związanych z przyjętymi danymi i procesem badawczym.
 
 Niewątpliwie istotnym aspektem modelowania za pomocą modeli przełącznikowych Markowa jest **złożoność**.
 Celem przeprowadzonego badania było kompleksowe przetestowanie jak największej liczby kombinacji modeli wariancji warunkowej (za pomocą modeli z rodziny GARCH),

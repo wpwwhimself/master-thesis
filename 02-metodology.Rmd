@@ -889,7 +889,7 @@ możliwym jest zdefiniowanie zmienności zrealizowanej na&nbsp;moment $t$ za pom
 \end{equation}
 
 gdzie przez $f \in [0, 1]$ oznacza się część dnia, w jakiej giełda nie przeprowadza transakcji
--- w przypadku GPW, na&nbsp;której sesja trwa od godziny 9:00 do 17:00 wartość ta wynosi $f = \frac{2}{3}$.
+-- w&nbsp;przypadku GPW, na&nbsp;której sesja trwa od godziny 9:00 do 17:00 wartość ta wynosi $f = \frac{2}{3}$.
 
 ```{r prediction-volatilities, fig.height=8, fig.cap="Porównanie zmienności zrealizowanej danych badanych spółek oraz zmienności estymowanej przez badane modele"}
 volatilities <- map(
@@ -998,3 +998,16 @@ Wyniki tych obliczeń przedstawia Tabela \@ref(tab:prediction-errors).
 Wartości osiągnięte przez wskaźniki nie różnią się w dużym stopniu pomiędzy modelami.
 W wybranych przypadkach można zauważyć bardzo wysokie wskazania błędów dla modelu GARCH-X,
 głównie z&nbsp;uwagi na&nbsp;niski poziom zmienności zrealizowanej.
+
+Przedstawione pomiary błędu dopasowania nie przynoszą optymistycznych rezultatów.
+Pierwszym faktem, na jaki należy zwrócić uwagę, są problemy w obliczeniu zmienności zrealizowanej dla niektórych z badanych szeregów czasowych.
+Jako przykład wyróżnia się tu spółka _PKO BP_, dla której wskazania wyestymowanego odchylenia standardowego nie przekraczają poziomu 10 zł (patrz Rysunek \@ref(fig:prediction-volatilities)).
+Wraz z danymi spółki _Synthaverse_, oba zestawy danych giełdowych cechują&nbsp;się stosunkowo niskimi wartościami instrumentu -- nie przekraczającymi kwoty 50 zł (Rysunek \@ref(fig:stock-prices-plot)).
+Biorąc pod uwagę, że różnice w cenach akcji są głównymi elementami równania estymatora zmienności zrealizowanej,
+przynosi to niewielkie wahania śróddzienne wartości instrumentów, a&nbsp;w&nbsp;konsekwencji niskie wskazania estymatora.
+Z tego też powodu dla owych dwóch spółek wskazania błędu MAPE wyniosły powyżej 150%.
+Wyjątkowo niskie wyniki zmienności zrealizowanej prowadzą do niebotycznych rozbieżności w stosunku do modelowanych wartości.
+
+Dla pozostałych spółek błędy dopasowania plasują się od 40 do 100%, na podstawie wskazań MAPE.
+Wyniki te oznaczają duże pole do poprawy modeli, z racji poziomu MAPE powyżej 50%.
+Jedyną spółką o zadowalającym stopniu dopasowania modelu do danych jest _PKN Orlen_, której to modele wykazują wyjątkowo dobre estymacje zmienności warunkowej oraz prognoz.

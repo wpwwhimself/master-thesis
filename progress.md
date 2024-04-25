@@ -2,7 +2,7 @@
 - [x] tytuł
 - [x] synopsis i keywords
 - [x] bibliografia
-- [ ] wypełnić do 60 stron
+- [x] wypełnić do 60 stron
 ## Wstęp
 ### cel i znaczenie pracy
 - [x] rys historyczny
@@ -83,7 +83,7 @@
 ### analiza wpływu na notowania
 - [x] dogłębne spojrzenie na te momenty zwiększonej wahliwości
 - [x] jakie straty na rynku w tym czasie się stały
-- [ ] jeszcze jedna strona
+- [x] jeszcze jedna strona
 ### podsumowanie wyników analizy
 - [x] streszczenie tego wszystkiego, co się wydarzyło do tej pory
 - [x] uzupełnić o prognozy
@@ -97,4 +97,4 @@
 - [x] do czego można to wykorzystać -- więcej
 - [x] na co trzeba uważać -- więcej
 - [x] morał
-- [ ] jeszcze półtorej strony
+- [x] jeszcze półtorej strony
