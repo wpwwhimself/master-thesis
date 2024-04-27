@@ -98,3 +98,4 @@
 - [x] na co trzeba uważać -- więcej
 - [x] morał
 - [x] jeszcze półtorej strony
+- [ ] zmienić tytuł
