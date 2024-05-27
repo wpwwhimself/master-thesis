@@ -75,10 +75,10 @@ Jest to jeden z najbardziej znanych serwisów internetowych zbierających dane f
 Można tam znaleźć również informacje o kursach walut, cenach towarów i inne dane finansowe.
 Usługi serwisu są skierowane głównie do osób biegłych w rynkach finansowych, poszukujących atrakcyjnych form lokowania kapitału, ale także menadżerów, biznesmenów oraz właścicieli firm [@stooq].
 Na&nbsp;potrzeby badania pobrano dane giełdowe z okresu `r data_range[1]` - `r data_range[2]`,
-co daje `r length(tables)` `r length(na.omit(returns_split[[1]]))`-elementowych szeregów czasowych.
+co daje `r length(tables)` szeregów czasowych, z których każdy zawiera `r length(na.omit(returns_split[[1]]))` obserwacje.
 
 Punktem wyjścia do prowadzenia badań będzie wybranie szeregu czasowego cen zamknięcia akcji.
-Aby zapewnić stacjonarność tego szeregu czasowego, obliczane są logarytmiczne stopy zwrotu według Wzoru \@ref(eq:return).
+Aby zapewnić stacjonarność tego szeregu czasowego, obliczane są logarytmiczne stopy zwrotu według wzoru \@ref(eq:return).
 Tak utworzony szereg czasowy spełnia założenia stacjonarności i można go wykorzystać do dalszych badań.
 W celach poglądowych w Tabeli \@ref(tab:showcase) zamieszczone zostały przykładowe dane dotyczące indeksu WIG20 wraz z obliczonymi stopami zwrotu.
 
@@ -116,7 +116,7 @@ data_split %>%
   c_line_plot_multi("Wartość stopy zwrotu")
 ```
 
-Na&nbsp;Rysunku \@ref(fig:returns-plot) opracowane są wykresy logarytmicznych stóp zwrotu dla spółek wykorzystanych w badaniu.
+Na&nbsp;Rysunku \@ref(fig:returns-plot) przedstawione są wykresy logarytmicznych stóp zwrotu dla spółek wykorzystanych w badaniu.
 Można zauważyć wyraźnie podwyższoną zmienność w marcu 2020 r., a także na&nbsp;końcu lutego 2022 r.
 Pierwszy z tych wstrząsów bez wątpienia można przypisać początkowi pandemii koronawirusa w Polsce i pierwszym wprowadzonym restrykcjom sanitarnym.
 Drugi z kolei jest związany z początkiem agresji rosyjskiej na&nbsp;Ukrainie, kiedy to 24.02 agresor rozpoczął swoją ofensywę [@covidBeginnings;@ukraineWiki].
@@ -260,21 +260,21 @@ Tabela \@ref(tab:arma-fitting) pokazuje wyniki przeprowadzonego dopasowania mode
 Próby dopasowania różnych modeli ARMA w dużej mierze pokrywają się z obserwacjami poczynionymi na&nbsp;podstawie korelogramów na&nbsp;Rysunku \@ref(fig:arma-acfs):
 dla danych spółek _11 bit studios_ oraz _Synthaverse_ autokorelacja została uwzględniona w modelach ARMA,
 z opóźnieniami w dużej mierze zgodnymi z&nbsp;oczekiwaniami.
-Dla pozostałych szeregów czasowych model białego szumu jest również adekwatny do braku zaobserwowanej autokorelacji.
+Dla pozostałych szeregów czasowych model białego szumu również zgadza się z&nbsp;brakiem zaobserwowanej autokorelacji.
 
 Interesującym wynikiem badań jest fakt, że pomimo istotnej autokorelacji występującej w niektórych z badanych szeregów,
 jeśli by brać pod uwagę kryterium informacyjne Schwarza do wyłonienia najlepiej dopasowanego modelu,
 każdemu z szeregów przypisany został model białego szumu, tj.&nbsp;czysto losowych innowacji.
 Najprawdopodobniej powodem takiego wyniku jest bardziej konserwatywne zachowanie się tego kryterium w stosunku do AIC,
 które to przypisuje modelowi mniejszą karę za jego skomplikowanie, będące konsekwencją liczby jego parametrów.
-Może to sugerować, że&nbsp;modele wyłonione pod kątem kryterium Akaike są bliskie swojej skuteczności modelom wyłonionym przez kryterium Schwarza.
+Może to sugerować, że&nbsp;modele wyłonione pod kątem kryterium Akaike są równie dobrze dopasowane do danych, co te wyłonione przez kryterium Schwarza.
 
 Mimo to przeprowadzenie testów Ljung-Boxa na&nbsp;występowanie autokorelacji w szeregach czasowych reszt z modelu dla tych wybranych na&nbsp;podstawie BIC wykazało fakt,
 że nie wszystkie zależności liniowe są wyjaśniane przez model białego szumu,
 na&nbsp;co wskazuje nadal występująca autokorelacja dla spółek wspomnianych na&nbsp;początku tego rozdziału, związana z tymi samymi opóźnieniami.
 Wobec tych obserwacji, stawiając sobie za cel spójność wyników każdego z przeprowadzonych w&nbsp;obrębie tego badania eksperymentów,
 do dalszych rozważań wybrane zostały modele na&nbsp;podstawie kryterium informacyjnego Akaike,
-których specyfikację przedstawia Tabela \@ref(tab:arma-fitting-choice).
+których specyfikację przedstawia Tabela \@ref(tab:arma-fitting-choice)
 
 ```{r arma-fitting-choice}
 arma <- c_read_rds("arma_aic")
@@ -312,7 +312,7 @@ Należą do nich testy:
 - KPSS [@KPSSTest].
 
 Obliczenia odpowiednich testów zostały wykonane m.in. za pomocą pakietów `rugarch` [@packageRugarch] oraz `tseries` [@packageTseries].
-Wyniki tych testów ilustruje Rysunek \@ref(fig:arma-arch-acf) oraz Tabela \@ref(tab:arma-arch-tests).
+Wyniki tych testów ilustruje Rysunek \@ref(fig:arma-arch-acf) oraz Tabela \@ref(tab:arma-arch-tests)
 
 ```{r arma-arch-acf, fig.height=8, fig.cap="Korelogramy ilustrujące testy McLeoda-Li dla rozważanych modeli średniej warunkowej"}
 arma %>%
@@ -382,7 +382,7 @@ map(
   pack_rows(index = group_names)
 ```
 
-Test McLeoda-Li, który został przedstawiony na&nbsp;korelogramach na&nbsp;Rysunku \@ref(fig:arma-arch-acf),
+Test McLeoda-Li, którego wyniki zostały przedstawione na&nbsp;korelogramach na&nbsp;Rysunku \@ref(fig:arma-arch-acf),
 wskazuje na&nbsp;istotną autokorelację w szeregach kwadratów reszt z modelu,
 wobec czego można wnioskować o zachodzeniu efektu ARCH w rozważanych danych.
 Wyniki testów Engle'a oraz KPSS również sprzyjają dalszym rozważaniom -- niskie p-wartości dla pierwszego z nich nakazują odrzucenie hipotezy o braku autokorelacji w kwadratach reszt,
@@ -649,8 +649,8 @@ map(
 W celu dopasowania modelu GARCH-X koniecznym jest przygotowanie dodatkowych zmiennych, mających na&nbsp;celu objaśnienie **wpływu czynników zewnętrznych** na&nbsp;zmienność wariancji warunkowej.
 Ponieważ badanie rozważa wpływ dwóch konkretnych wydarzeń na&nbsp;arenie międzynarodowej na&nbsp;polską gospodarkę,
 za zmienne objaśniające przyjęte zostały 2 szeregi czasowe.
-Pierwszym z nich jest zmienna indykatorowa,
-wyróżniająca istotne okresy czasu, związane z tymi, wydarzeniami na&nbsp;scenie ekonomicznej Polski.
+Pierwszym z nich jest zmienna zero-jedynkowa,
+wyróżniająca istotne okresy czasu, związane z tymi wydarzeniami na&nbsp;scenie ekonomicznej Polski.
 Wielkość interwałów czasowych została określona w oparciu o Rysunki \@ref(fig:returns-plot) oraz \@ref(fig:markov-plots).
 Wyróżnionymi okresami są:
 
@@ -669,9 +669,9 @@ cat("\\end{itemize}")
 ```
 
 Drugą z przyjętych zmiennych jest szereg logarytmicznych stóp zwrotu indeksu WIG20.
-Idea tej decyzji mówi, że nawet jeśli dana spółka nie jest składową tego indeksu,
+Stoi za tym przekonanie, że nawet jeśli dana spółka nie jest składową tego indeksu,
 to za pomocą jego wartości możliwym jest wpłynięcie na&nbsp;model danych w taki sam sposób, w jaki na&nbsp;kondycję większych przedsiębiorstw wpłynęły wydarzenia kryzysowe.
-Zaobserwowane wahania zmienności WIG20 będą wówczas emulowały czynniki zewnętrzne dla każdej z analizowanych firm.
+Zaobserwowane wahania zmienności WIG20 będą wówczas odzwierciedlały wpływ czynników zewnętrznych dla każdej z analizowanych firm.
 
 Podobnie jak w poprzednim podrozdziale, dla każdego z badanych szeregów czasowych dopasowano model GARCH z uwzględnieniem dodatkowych zmiennych objaśniających
 -- pod uwagę zostały wzięte te same modele, jak w poprzednim etapie badania, tj. GARCH, EGARCH oraz GJR, z różnymi rozkładami innowacji: normalnym, GED, Studenta i skośnym Studenta.
@@ -994,7 +994,7 @@ volatilities %>%
 ```
 
 Wartości zmienności zrealizowanej zostały wykorzystane w miejsce zmienności rzeczywistej w celu obliczenia błędów dopasowania.
-Wyniki tych obliczeń przedstawia Tabela \@ref(tab:prediction-errors).
+Wyniki tych obliczeń przedstawia Tabela \@ref(tab:prediction-errors)
 Wartości osiągnięte przez wskaźniki nie różnią się w dużym stopniu pomiędzy modelami.
 W wybranych przypadkach można zauważyć bardzo wysokie wskazania błędów dla modelu GARCH-X,
 głównie z&nbsp;uwagi na&nbsp;niski poziom zmienności zrealizowanej.

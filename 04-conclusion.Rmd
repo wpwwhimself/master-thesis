@@ -163,7 +163,7 @@ W subiektywnym odczuciu sprawiło to, że równowaga korzyści i zagrożeń tych
 Oczywiście omawiany konflikt przyczynił się też do problemów z importem i eksportem pomiędzy Polską a zwaśnionymi stronami,
 jednak w skali gospodarki europejskiej (czy nawet światowej) nie spowodowało to drastycznej w skutkach recesji dla warszawskiej giełdy i spółek na&nbsp;niej wylistowanych.
 
-## Po co nam to wszystko?
+## Zastosowania w innych dziedzinach nauki
 
 Wyniki niniejszej pracy koncentrują się jedynie na&nbsp;obserwacji małej części rynku oraz stosunkowo krótkiego horyzontu czasowego.
 Jednak odpowiednio usprawnione modele zbudowane w przedstawiony tutaj sposób mogą mieć zastosowanie w różnych sytuacjach i mogą służyć do prognozowania zróżnicowanych szeregów czasowych.
