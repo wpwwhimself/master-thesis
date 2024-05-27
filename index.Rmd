@@ -1,5 +1,6 @@
 --- 
 site: bookdown::bookdown_site
+author: "Wojciech Przybyła"
 documentclass: book
 classoption: oneside
 fontsize: 12pt
