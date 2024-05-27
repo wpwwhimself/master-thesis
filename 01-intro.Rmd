@@ -16,11 +16,11 @@ Wartość jego jednej cebulki była wówczas wyceniana na&nbsp;równowartość 4
 Ceny tulipanów jednak zatrzymały się na&nbsp;poziomie, gdzie nikt nie był w stanie ich zakupić, a część handlujących nie wywiązywała się z dostaw.
 To z kolei doprowadziło do końca spekulacji i gwałtownych obniżek cen [@tulips],
 
-- *Great Depression* (1929-1932) -- największy kryzys gospodarczy w dziejach kapitalizmu, który swoim zasięgiem objął cały świat, z wykluczeniem ZSRR.
+- *Wielki Kryzys (Great Depression)* (1929-1932) -- największy kryzys gospodarczy w dziejach kapitalizmu, który swoim zasięgiem objął cały świat, z wykluczeniem ZSRR.
 Przyjmuje się, że był on konsekwencją tzw. _czarnego czwartku_, kiedy to na&nbsp;nowojorskiej giełdzie gwałtownie spadły ceny niemal wszystkich notowanych akcji.
 Poza finansowymi stratami, ludzie ucierpieli również z powodu niezwykle wysokiego bezrobocia, jak na&nbsp;przykład to na&nbsp;poziomie około 33\%, odnotowane w Stanach Zjednoczonych.
 Kryzys przedłużył się dodatkowo w wyniku możliwości wymiany walut na&nbsp;złoto, co w szybkim tempie redukowało jego rezerwy w bankach centralnych.
-Próbą zapobieżenia utraty kruszca, podniesiono stopy procentowe, co w konsekwewncji znacząco wpłynęło na&nbsp;produkcję przemysłową wielu krajów [@greatDepressionWiki],
+Próbując zapobiec utracie kruszca, podniesiono stopy procentowe, co w konsekwewncji znacząco wpłynęło na&nbsp;produkcję przemysłową wielu krajów [@greatDepressionWiki],
 
 - *upadek Lehman Brothers* (2007-2009) -- firma Lehman Brothers, która swoją wczesną historię wiązała głównie z handlem bawełną, z czasem przekształcona została w bank,
 zajmujący się m.in. udzielaniem kredytów hipotecznych, emisją papierów wartościowych oraz finansowaniem nieruchomości.
@@ -32,8 +32,8 @@ Tym sposobem największy bank inwestycyjny Stanów Zjednoczonych ogłosił upad�
 
 Na&nbsp;przestrzeni ostatnich lat światem wstrząsnęły również kolejne dramatyczne wydarzenia, mianowicie:
 
-- __epidemia SARS-CoV-2__ w listopadzie 2019 r. -- pandemia wywołana chorobą _COVID-19_ jest powodowana przez koronawirusa _SARS-CoV-2_,
-a pierwszy zidentyfikowany przypadek zachorowania na&nbsp;tę chorobę został wykryty w grudniu 2019 roku w Wuhan (Chiny).
+- __epidemia SARS-CoV-2__ w listopadzie 2019 r. -- pandemia wywołana chorobą _COVID-19_ (powodowana przez koronawirusa _SARS-CoV-2_),
+gdzie pierwszy zidentyfikowany przypadek zachorowania na&nbsp;tę chorobę został wykryty w grudniu 2019 roku w Wuhan (Chiny).
 Z&nbsp;uwagi na&nbsp;wysoką zaraźliwość wirusa i jego wariantów, przypadki zarażeń zaczęły się szybko mnożyć, co doprowadziło do ogłoszenia pandemii tej choroby 30 stycznia 2020 roku.
 Pacjenci z potwierdzonym zakażeniem wirusem doświadczają objawów chorobowych związanych z&nbsp;układem oddechowym, tj. kaszel, duszności.
 Dodatkowo zarażeni wykazują oznaki osłabienia, nagłej utraty węchu i smaku oraz wielu innych dolegliwości.
@@ -47,7 +47,7 @@ W ciągu kolejnych lat nastąpiła eskalacja wojny, w konsekwencji której Rosja
 Operacja w ciągu kolejnych miesięcy przerodziła się w brutalną wojnę dzięki silnemu oporowi wojsk ukraińskich oraz wsparciu państw europejskich oraz NATO.
 W wyniku działań wojskowych Ukrainę opuściło ponad 5 milionów osób, które szukały azylu m.in. w Polsce, Rumunii, Rosji i na&nbsp;Węgrzech.
 Natychmiastowym skutkiem inwazji stały się również sankcje gospodarcze nałożone przez świat na&nbsp;Federację Rosyjską, co&nbsp;spowodowało gwałtowny spadek wartości rubla rosyjskiego [@ukraineMoney].
-Rosja w odpowiedzi zakazała swoim rezydentom przelewów walut obcych na&nbsp;konta zagraniczne, a także wymusiła płatności w rublach za surowce sprowadzane z Rosji, np. gaz ziemny.
+Rosja w odpowiedzi zakazała swoim rezydentom przelewów walut obcych na&nbsp;konta zagraniczne, a także&nbsp;wymusiła płatności w rublach za surowce sprowadzane z Rosji, np. gaz ziemny.
 Również gospodarka ogólnoświatowa doświadczyła kryzysu, powodując wzrost cen ropy i przenicy.
 [@ukraineWiki].
 
@@ -60,8 +60,8 @@ Wyniki ich badań zostały opublikowane na&nbsp;łamach różnego rodzaju czasop
 Celem niniejszej pracy magisterskiej jest, podobnie jak w wyżej wspomnianych badaniach, analiza reakcji rynku polskiego na&nbsp;owe kryzysowe wydarzenia.
 Wykorzystane zostaną znane metody z&nbsp;obszaru modelowania finansowego.
 Idealnym narzędziem zdają się tu być modele przełącznikowe, za pomocą których możliwe będzie dopasowanie teoretycznych wartości do danych rynkowych,
-a także wykonanie prognozy celem sprawdzenia dopasowania tych modeli.
-Szczególną zaletą modeli przełącznikowych jest możliwość uwzględnienia zmian we względnym poziomie zmienności -- parametru dyktującego intensywność wahań wartości szeregu czasowego.
+a&nbsp;także wykonanie prognozy celem sprawdzenia dopasowania tych modeli.
+Szczególną zaletą modeli przełącznikowych jest możliwość uwzględnienia zmian we względnym poziomie zmienności -- parametru określającego intensywność wahań wartości szeregu czasowego.
 Pozwala to wyróżnić okresy wysokiej i niskiej zmienności i oddzielić momenty wysokich wstrząsów od czasów relatywnie spokojnego rynku.
 Po przeprowadzeniu badań podsumowane zostaną ich wyniki oraz opisana zostanie siła wpływu, jaki globalne zmiany wywierają na&nbsp;rodzimą gospodarkę.
 Informacje te mogą posłużyć do dalszego konstruowania modeli mających za zadanie negować skutki globalnych kryzysów i&nbsp;zapobiegać ich finansowym efektom.
@@ -102,8 +102,8 @@ Na&nbsp;rynku wtórnym (np. na&nbsp;giełdzie) inwestorzy mają możliwość zak
 W marcu 2024 roku na&nbsp;rynku podstawowym _Giełdy Papierów Wartościowych_ w Warszawie prowadzone są notowania 409 spółek, w tym 367 krajowych,
 o łącznej kapitalizacji 1,5 bln zł [@gpwStat].
 
-**Indeksem giełdowym** nazywa się wskaźnik, który służy do monitorowania przebiegu cen papierów wartościowych spółek notowanych na&nbsp;giełdzie.
-Jest to byt umożliwiający śledzenie trendów panujących na&nbsp;rynkach finansowych, bez konieczności monitorowania dużej liczby cen akcji poszczególnych spółek.
+**Indeksem giełdowym** nazywa się wskaźnik, który służy do monitorowania cen papierów wartościowych spółek notowanych na&nbsp;giełdzie.
+Jest to wskaźnik umożliwiający śledzenie trendów panujących na&nbsp;rynkach finansowych, bez konieczności monitorowania dużej liczby cen akcji poszczególnych spółek.
 Do budowy indeksu giełdowego wykorzystuje się takie informacje, jak ceny akcji i&nbsp;ich wartości rynkowe.
 Te wartości są porządkowane za pomocą ustalonych przez giełdę wag oraz&nbsp;uśredniane średnią geometryczną lub arytmetyczną.
 Na&nbsp;giełdzie warszawskiej funkcjonuje kilka indeksów, a największymi z nich są [@indeksBI;@wigGpwBenchmark]:
@@ -191,14 +191,14 @@ Model składa się z dwóch komponentów:
 - część autoregresyjna (AR): model uzależnia wartość obecną szeregu czasowego od jego kolejnych $p$ przeszłych wartości,
 - część średniej ruchomej (MA): wartość szeregu w danym momencie jest zależna od kolejnych $q$ wartości przeszłych innowacji.
 
-Model ARMA w postaci takiej, jak przedstawiono za pomocą Wzoru \@ref(eq:arma), sprawdza się w przypadku stacjonarnych szeregów czasowych,
+Model ARMA w postaci takiej, jak przedstawiono za pomocą wzoru \@ref(eq:arma), sprawdza się w przypadku stacjonarnych szeregów czasowych,
 gdzie _pamięć szeregu_, tj. możliwość zaobserwowania wpływu danych historycznych na&nbsp;obecne, obejmuje względnie niskie opóźnienia i jest krótkotrwała.
 W przeciwnym przypadku można domniemać istnienie zależności długotrwałych i nieliniowych.
 
 **Modele wariancji warunkowej** pomagają w interpretacji zależności długookresowych szeregu czasowego,
 a w ich implementacji korzystają z równań kwadratowych.
 Jak wskazuje nazwa, modele tej klasy mają na&nbsp;celu modelowanie wariancji szeregu czasowego.
-Dokonuje się tego z wykorzystaniem reszt z modelu liniowego (np. ARMA), a w ogólności model taki można opisać Wzorem \@ref(eq:arch-base).
+Dokonuje się tego z wykorzystaniem reszt z modelu liniowego (np. ARMA), a w ogólności model taki można opisać wzorem \@ref(eq:arch-base).
 Uzależnia on wartość stopy zwrotu $r_t$ od modelowanej średniej $\mu_t$ oraz reszty z modelu $y_t$.
 
 \begin{equation} (\#eq:arch-base)
@@ -238,7 +238,7 @@ Nie jest to jednak realne założenie, ponieważ spadki cen instrumentów finans
 Jest to naturalne dla człowieka zachowanie i występuje jako domena ostrożnych inwestorów,
 bardziej skłonnych do wczesnej likwidacji inwestycji.
 Za ilustrację tych zachowań odpowiada koncept **krzywej wpływu informacji**, która jest elementem dwóch kolejnych rozpatrywanych w tej pracy modeli.
-Model **GJR-GARCH(q, p)** [@glostenGJR] (Wzór \@ref(eq:gjr-garch)) jest rozbudowaniem modelu GARCH,
+Model **GJR-GARCH(q, p)** [@glostenGJR] (wzór \@ref(eq:gjr-garch)) jest rozbudowaniem modelu GARCH,
 przy czym uwzględnia on dodatkowo asymetrię informacji w części równania odpowiedzialnej za wpływ kwadratów reszt.
 Powoduje to, że negatywne wartości tego szeregu mają większy wpływ na&nbsp;modelowaną zmienność.
 
@@ -254,7 +254,7 @@ Powoduje to, że negatywne wartości tego szeregu mają większy wpływ na&nbsp;
 
 Podobną aplikację krzywej wpływu informacji wykorzystuje model **EGARCH(q, p)** [@nelsonEGARCH].
 Rozwiązuje on problemy modelu GARCH, takie jak uproszczenie interpretacji persystencji szoków i&nbsp;monitorowanie korelacji pomiędzy zwrotami a innowacjami zmienności.
-Jak wskazuje Wzór \@ref(eq:egarch), modyfikacja opiera się na&nbsp;modelowaniu logarytmu wariancji.
+Jak wskazuje wzór \@ref(eq:egarch), modyfikacja opiera się na&nbsp;modelowaniu logarytmu wariancji.
 
 \begin{equation} (\#eq:egarch)
 \ln \sigma_t^2 =
@@ -269,7 +269,7 @@ Jak wskazuje Wzór \@ref(eq:egarch), modyfikacja opiera się na&nbsp;modelowaniu
 
 Innym podejściem będącym rozwinięciem idei modeli heteroskedastyczności warunkowej jest uwzględnienie w modelu wpływu czynników zewnętrznych,
 takich jak sezonowość lub zmienność innych szeregów czasowych (np. innych instrumentów finansowych).
-W tym celu opracowany został model **GARCH-X** [@hwangGARCHX], w równaniu którego (Wzór \@ref(eq:garchx)) pojawia się składnik odpowiedzialny za siłę tychże zależności.
+W tym celu opracowany został model **GARCH-X** [@hwangGARCHX], w równaniu którego (wzór \@ref(eq:garchx)) pojawia się składnik odpowiedzialny za siłę tychże zależności.
 Owa siła sterowana jest niezależnie dla każdej z&nbsp;$L$ dodatkowych zmiennych.
 
 \begin{equation} (\#eq:garchx)
@@ -288,7 +288,7 @@ We wszystkich powyższych modelach rozkład innowacji $\epsilon_t$ jest przyjmow
 W klasycznych rozważaniach rolę tę spełnia rozkład normalny, jednak do zastosowań finansowych wykorzystuje się również inne, uwzględniające dodatkowe czynniki, jakie jak leptokurtoza rozkładu.
 Poniżej przedstawiono rozkłady innowacji najczęściej stosowane w modelowaniu szeregów finansowych, wraz z ich parametrami:
 
-- rozkład normalny -- średnia $\mu$, wariancja $\sigma^2$,
+- rozkład normalny -- średnia $\mu = 0$, wariancja $\sigma^2$,
 - rozkład t Studenta -- liczba stopni swobody (kształt) $\nu$,
 - rozkład skośny t Studenta -- liczba stopni swobody $\nu$, skośność $\xi = \exp(\lambda)$
 - rozkład GED [@nelsonEGARCH, s. 352] -- kształt $\nu$.
@@ -297,7 +297,7 @@ Intuicyjnym zagadnieniem podczas modelowania wariancji warunkowej jest identyfik
 Naprzeciw temu problemowi wychodzi idea *modeli przełącznikowych*, a w szczególności rozważany na&nbsp;łamach tej pracy **model przełącznikowy Markowa** [@packageMSGARCH].
 Opierają się one na&nbsp;połączeniu wielu modeli takich, jak te opisane powyżej, i implementację mechanizmu wyboru, który z tych modeli jest stosowany w którym momencie czasowym.
 Tę rolę pełni *proces Markowa*, za pomocą którego można zdefiniować proces stanu (reżimu) $s_t$, identyfikujący wybrany model w momencie $t$.
-W modelu przełącznikowym Markowa ARMA-GARCH parametry modelu są uzależnione od obecnego reżimu.
+W modelu przełącznikowym Markowa ARMA-GARCH parametry modelu są&nbsp;uzależnione od obecnego reżimu.
 Oznacza to, że w wariancie dwóch reżimów estymowane są dwa zestawy parametrów, po jednym dla każdego z rozpatrywanych modeli.
 
 ### Kwantyfikacja poprawności modelu
@@ -321,7 +321,7 @@ W tym celu stosuje się __kryteria informacyjne__ -- wskaźniki opierające się
 Podobnie jak w przypadku różnych rodzajów błędów, istnieje kilka kryteriów informacyjnych, stosowanych przy modelowaniu danych.
 Wszystkie kryteria informacyjne opierają się na&nbsp;tej samej zasadzie
 -- na&nbsp;zadany model nakładają karę za skomplikowanie modelu, która rośnie wraz z liczbą parametrów modelu $k$,
-a&nbsp;rzadziej z wielkością próby $n$.
+a&nbsp;rzadziej z&nbsp;wielkością próby $n$.
 Wartości kryterium bliższe 0 informują o lepszej jakości dopasowania modelu.
 Do najpopularniejszych kryteriów informacyjnych należą:
 
@@ -362,7 +362,9 @@ a spośród dostępnych testów wykorzystane zostały testy opisane poniżej.
 Do każdego z&nbsp;nich podano wzór oraz rozkład statystyki testowej przy prawdziwości hipotezy zerowej.
 Informacje te nie są kompleksowe, a po więcej szczegółów czytelnika odsyła się do opracowań źródłowych.
 
-- Test normalności rozkładu zmiennej losowej -- test Shapiro-Wilka [@shapiroTest], którego $H_0$ zakłada, że dane cechują się rozkładem normalnym:
+- Test normalności rozkładu zmiennej losowej
+-- test Shapiro-Wilka [@shapiroTest], którego $H_0$ zakłada, że dane cechują się rozkładem normalnym.
+Statystyka testowa wynosi:
 \begin{equation}
 W = \frac{
   \nz{\sum_{i=1}^n a_i y_{(i)}}^2
@@ -373,7 +375,9 @@ W = \frac{
 Dla klarowności zapisu pominięto definicję wartości $a_i$ oraz $y_{(i)}$.
 Rozkład statystyki $W$ nie&nbsp;ma&nbsp;nazwy, a jego wartości brzegowe są obliczane za pomocą symulacji metodą Monte&nbsp;Carlo;
 
-- Test autokorelacji rzędu $l$ w obrębie szeregu czasowego -- test Ljung-Boxa [@boxTest], którego $H_0$ zakłada brak autokorelacji w szeregu czasowym:
+- Test autokorelacji rzędu $l$ w obrębie szeregu czasowego
+-- test Ljung-Boxa [@boxTest], którego $H_0$ zakłada brak autokorelacji w szeregu czasowym.
+Statystyka testowa dana jest wzorem:
 \begin{equation} (\#eq:ljung)
 Q = n(n+2) \sum_{k=1}^{l} \frac{\hat{\rho}^2_k}{n-k}
 \qquad
@@ -383,9 +387,10 @@ gdzie $n$ jest wielkością próby, $l$ stopniem testowanego opóźnienia, a $\h
 
 - Testy na&nbsp;występowanie efektu ARCH w resztach z modelu liniowego dla szeregu czasowego
   - test McLeoda-Li [@mcLeodLiTest], zakładający brak efektu ARCH przy $H_0$ poprzez brak autokorelacji w szeregu kwadratów reszt z modelu liniowego.
-    Test ten jest tożsamy z testem Ljung-Boxa (Wzór \@ref(eq:ljung)), z jedyną różnicą w danych wykorzystanych do&nbsp;obliczenia statystyki testowej;
+    Test ten jest tożsamy z testem Ljung-Boxa (wzór \@ref(eq:ljung)), z jedyną różnicą w danych wykorzystanych do&nbsp;obliczenia statystyki testowej;
 
-  - test Engle'a [@engleARCH] przeprowadzany dla opóźnienia $l$ bada hipotezę zerową mówiącą o braku autokorelacji w kwadratach reszt z modelu liniowego:
+  - test Engle'a [@engleARCH] przeprowadzany dla opóźnienia $l$ bada hipotezę zerową mówiącą o braku autokorelacji w kwadratach reszt z modelu liniowego.
+    Statystyka testowa to:
     \begin{equation}
     LM = (n - l) R^2
     \qquad
@@ -393,7 +398,8 @@ gdzie $n$ jest wielkością próby, $l$ stopniem testowanego opóźnienia, a $\h
     \end{equation}
     Wzór na&nbsp;statystykę testową wykorzystuje $R^2$ -- współczynnik determinacji dopasowania regresji liniowej do modelu;
 
-  - test KPSS [@KPSSTest], którego $H_0$, przeciwnie do&nbsp;powyższych testów, zakłada pierwszy stopień integracji szeregu czasowego, tj. obecność efektu ARCH:
+  - test KPSS [@KPSSTest], którego $H_0$, przeciwnie do&nbsp;powyższych testów, zakłada pierwszy stopień integracji szeregu czasowego, tj. obecność efektu ARCH.
+    Statystyka testowa dana jest wzorem:
     \begin{equation}
     KPSS = \frac{1}{n^2} \sum_{i=1}^n \frac{S_i^2}{\hat{\sigma}^2}
     \qquad
