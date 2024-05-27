@@ -65,6 +65,7 @@
 - [x] jak to jest z tą wymagalnością parametrów? *można pominąć*
 - [x] wykresy reżimów
 - [x] showcase parametrów modeli
+- [ ] interpretacja modeli - różnice między reżimami
 #### garchx
 - [x] wymyślić jakie szeregi externali wykorzystać
 - [x] dopasowanie GARCH
@@ -73,6 +74,8 @@
 - [x] showcase parametrów modeli
 - [x] czy miałoby sens wziąć zmienność WIG20 (garch np.) i wrzucić to jako zmienną objaśniającą? *tak się robi*
 - [x] pokombinować z innymi zmiennymi objaśniającymi (WIG20)
+- [ ] GARCHX - WIG, S&P, Nasdaq, DAX, kursy walut jako X
+- [ ] interpretacja wyników
 ### predykcje
 - [x] horyzont predykcji *7 dni jest w porządku*
 - [x] wykonać predykcje
@@ -98,4 +101,4 @@
 - [x] na co trzeba uważać -- więcej
 - [x] morał
 - [x] jeszcze półtorej strony
-- [ ] zmienić tytuł
+- [x] zmienić tytuł
