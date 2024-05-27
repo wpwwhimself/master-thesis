@@ -25,13 +25,18 @@
 	\renewcommand{\epsilon}{\varepsilon}
 \usepackage[nottoc]{tocbibind}
 
+% numeracja nagłówków
+\renewcommand{\thechapter}{\arabic{chapter}.}
+\renewcommand{\thesection}{\thechapter\arabic{section}.}
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
+
 % numeracja figur
 \counterwithin{figure}{chapter}
 \counterwithout{figure}{section}
-\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+\renewcommand{\thefigure}{\thechapter\arabic{figure}.}
 \counterwithin{table}{chapter}
 \counterwithout{table}{section}
-\renewcommand{\thetable}{\thechapter.\arabic{table}}
+\renewcommand{\thetable}{\thechapter\arabic{table}.}
 
 %technikalia
 % interlinia 1.5
