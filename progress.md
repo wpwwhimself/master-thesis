@@ -65,7 +65,7 @@
 - [x] jak to jest z tą wymagalnością parametrów? *można pominąć*
 - [x] wykresy reżimów
 - [x] showcase parametrów modeli
-- [ ] interpretacja modeli - różnice między reżimami
+- [x] interpretacja modeli - różnice między reżimami
 #### garchx
 - [x] wymyślić jakie szeregi externali wykorzystać
 - [x] dopasowanie GARCH

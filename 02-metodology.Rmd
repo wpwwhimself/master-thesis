@@ -566,7 +566,14 @@ markov <-
 ```
 
 Ostateczne wartości wyestymowanych parametrów wybranych modeli przedstawia Tabela \@ref(tab:markov-post-optimizing),
-a wizualizację prawdopodobieństw zachodzenia poszczególnych reżimów dla każdego z szeregów czasowych prezentuje Rysunek \@ref(fig:markov-plots).
+a wizualizację prawdopodobieństw zachodzenia poszczególnych reżimów dla każdego z szeregów czasowych prezentuje Rysunek \@ref(fig:markov-plots)
+Wartości parametrów we wszystkich modelach (występujące we wzorach w rozdziale 1.) podkreślają różnice między każdym z reżimów.
+Można zauważyć, że reżim drugi cechuje się wyższą średnią zmiennością (parametr $\omega$),
+a niemal we wszystkich modelach współzależność między opóźnieniami obserwowanej zmienności $\beta$ jest wyraźnie silniejsza od tej związanej z autokorelacją reszt modelu liniowego $\alpha$.
+Uzasadnia to wykorzystanie modeli GARCH(1,1), gdzie zastosowanie niskich opóźnień wystarcza do dobrego objaśnienia trajektorii zmienności.
+Dodatkowe parametry, takie jak $\gamma$ w modelach EGARCH i GJR, a także parametry związane z rozkładem innowacji $\nu$ i $\xi$, wykazują wyraźnie większy udział w reżimie drugim.
+Reżim ten może być więc interpretowany we wszystkich przypadkach jako model starający się wyjaśnić większy chaos związany z kryzysami.
+Prawdziwość tej tezy łatwo zauważyć na Rysunku \@ref(fig:markov-plots), gdzie wyróżniony reżim drugi pokrywa się z analizowanymi przedziałami czasowymi związanymi z okresem pandemii oraz konfliktem na&nbsp;wschodzie.
 
 ```{r markov-post-optimizing}
 group_names <- rep(2, length(tables))
