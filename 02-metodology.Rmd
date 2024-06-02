@@ -83,7 +83,7 @@ Tak utworzony szereg czasowy spełnia założenia stacjonarności i można go wy
 W celach poglądowych w Tabeli \@ref(tab:showcase) zamieszczone zostały przykładowe dane dotyczące indeksu WIG20 wraz z obliczonymi stopami zwrotu.
 
 ```{r showcase}
-data_split$wig %>%
+data_split$wig20 %>%
   head(5) %>%
   select(-is_crisis) %>%
   c_kable(
@@ -569,7 +569,7 @@ Ostateczne wartości wyestymowanych parametrów wybranych modeli przedstawia Tab
 a wizualizację prawdopodobieństw zachodzenia poszczególnych reżimów dla każdego z szeregów czasowych prezentuje Rysunek \@ref(fig:markov-plots)
 Wartości parametrów we wszystkich modelach (występujące we wzorach w rozdziale 1.) podkreślają różnice między każdym z reżimów.
 Można zauważyć, że reżim drugi cechuje się wyższą średnią zmiennością (parametr $\omega$),
-a niemal we wszystkich modelach współzależność między opóźnieniami obserwowanej zmienności $\beta$ jest wyraźnie silniejsza od tej związanej z autokorelacją reszt modelu liniowego $\alpha$.
+a niemal we wszystkich modelach współzależność między obserwowanymi innowacjami $\beta$ jest wyraźnie silniejsza od tej związanej z autokorelacją reszt modelu liniowego $\alpha$.
 Uzasadnia to wykorzystanie modeli GARCH(1,1), gdzie zastosowanie niskich opóźnień wystarcza do dobrego objaśnienia trajektorii zmienności.
 Dodatkowe parametry, takie jak $\gamma$ w modelach EGARCH i GJR, a także parametry związane z rozkładem innowacji $\nu$ i $\xi$, wykazują wyraźnie większy udział w reżimie drugim.
 Reżim ten może być więc interpretowany we wszystkich przypadkach jako model starający się wyjaśnić większy chaos związany z kryzysami.
@@ -655,9 +655,8 @@ map(
 
 W celu dopasowania modelu GARCH-X koniecznym jest przygotowanie dodatkowych zmiennych, mających na&nbsp;celu objaśnienie **wpływu czynników zewnętrznych** na&nbsp;zmienność wariancji warunkowej.
 Ponieważ badanie rozważa wpływ dwóch konkretnych wydarzeń na&nbsp;arenie międzynarodowej na&nbsp;polską gospodarkę,
-za zmienne objaśniające przyjęte zostały 2 szeregi czasowe.
-Pierwszym z nich jest zmienna zero-jedynkowa,
-wyróżniająca istotne okresy czasu, związane z tymi wydarzeniami na&nbsp;scenie ekonomicznej Polski.
+za zmienne objaśniające przyjęte zostały 4 szeregi czasowe.
+Pierwszym z nich jest zmienna zero-jedynkowa, wyróżniająca istotne okresy czasu, związane z tymi wydarzeniami na&nbsp;scenie ekonomicznej Polski.
 Wielkość interwałów czasowych została określona w oparciu o Rysunki \@ref(fig:returns-plot) oraz \@ref(fig:markov-plots).
 Wyróżnionymi okresami są:
 
@@ -675,10 +674,10 @@ walk(garchx_periods, ~ cat(paste(
 cat("\\end{itemize}")
 ```
 
-Drugą z przyjętych zmiennych jest szereg logarytmicznych stóp zwrotu indeksu WIG20.
-Stoi za tym przekonanie, że nawet jeśli dana spółka nie jest składową tego indeksu,
-to za pomocą jego wartości możliwym jest wpłynięcie na&nbsp;model danych w taki sam sposób, w jaki na&nbsp;kondycję większych przedsiębiorstw wpłynęły wydarzenia kryzysowe.
-Zaobserwowane wahania zmienności WIG20 będą wówczas odzwierciedlały wpływ czynników zewnętrznych dla każdej z analizowanych firm.
+Pozostałymi z przyjętych zmiennych są szeregi logarytmicznych stóp zwrotu największych indeksów giełdowych: WIG, S&P oraz DAX.
+Stoi za&nbsp;tym przekonanie, że nawet jeśli dana spółka nie&nbsp;jest składową danego indeksu,
+to za pomocą jego wartości możliwym jest wpłynięcie na&nbsp;model danych w&nbsp;taki&nbsp;sam sposób, w jaki na&nbsp;kondycję większych przedsiębiorstw wpłynęły wydarzenia kryzysowe.
+Zaobserwowane wahania zmienności tych indeksów będą wówczas odzwierciedlały wpływ czynników zewnętrznych dla każdej z analizowanych firm.
 
 Podobnie jak w poprzednim podrozdziale, dla każdego z badanych szeregów czasowych dopasowano model GARCH z uwzględnieniem dodatkowych zmiennych objaśniających
 -- pod uwagę zostały wzięte te same modele, jak w poprzednim etapie badania, tj. GARCH, EGARCH oraz GJR, z różnymi rozkładami innowacji: normalnym, GED, Studenta i skośnym Studenta.
@@ -781,6 +780,9 @@ garchx <-
 ```
 
 ```{r garchx-post-optimizing}
+group_names <- rep(1, length(tables))
+names(group_names) <- tables_full_names
+
 table <- map(
   tables,
   function(table_name) {
@@ -798,7 +800,7 @@ table <- map(
     names_from = param,
     values_from = Estimate
   ) %>%
-  select(-starts_with(c("ar", "ma")))
+  select(-starts_with(c("ar", "ma")), -series)
 
 table %>%
   c_kable(
@@ -807,10 +809,11 @@ table %>%
     digits = 2,
     linesep = ""
   ) %>%
+  pack_rows(index = group_names) %>%
   add_header_above(c(
-    " " = 2,
+    " " = 1,
     "Parametry modelu" = length(colnames(table)[colnames(table) %in% c(
-      "omega", "alpha1", "beta1", "gamma1", "vxreg1", "vxreg2"
+      "omega", "alpha1", "beta1", "gamma1", "vxreg1", "vxreg2", "vxreg3", "vxreg4"
     )]),
     "Par. rozkł. inn." = length(colnames(table)[colnames(table) %in% c(
       "skew", "shape"
@@ -819,9 +822,16 @@ table %>%
 ```
 
 Tabela \@ref(tab:garchx-models) przedstawia modele GARCH-X dopasowane do danych badanych spółek, wybrane na&nbsp;podstawie kryterium informacyjnego Akaike.
-Można zauważyć, że każdy z modeli uwzględnia asymetrię modelu, ponieważ wyłonione zostały modele EGARCH oraz GJR.
-Rozkłady innowacji dobrane do każdego z tych modeli stanowią zamienniki rozkładu normalnego, przy czym najczęściej w rankingu pojawia się rozkład GED.
+Można zauważyć, że każdy z modeli uwzględnia asymetrię modelu, ponieważ często wyłoniony został model EGARCH.
+Rozkłady innowacji dobrane do&nbsp;każdego z tych modeli stanowią zamienniki rozkładu normalnego, przy czym najczęściej w&nbsp;rankingu pojawia się rozkład GED.
 Tabela \@ref(tab:garchx-post-optimizing) zawiera z kolei wartości parametrów wyestymowane dla tych modeli.
+
+Na podstawie tych parametrów widać względnie niski wpływ czynników zewnętrznych na wartość akcji firm.
+Może być to spowodowane liczbą wykorzystanych szeregów, powodując rozproszenie udziału każdego z nich.
+Spośród tych czynników, odgórne wyróżnienie okresów kryzysu $\lambda_1$ osiąga wyższe wartości parametrów w porównaniu z tymi związanymi z indeksami giełdowymi WIG, S&P oraz DAX (kolejno $\lambda_2$, $\lambda_3$ i $\lambda_4$).
+W tym zestawieniu istnieją 2 spółki, gdzie czynniki zewnętrzne mają bardzo znikomy wpływ na kształtowanie się trajektorii szeregów czasowych spółki.
+W kontraście do&nbsp;tego zjawiska, parametry rozkładu innowacji dla tych firm osiągają wyższe wartości w odróżnieniu od pozostałych modeli.
+Dopasowane modele, podobnie jak w przypadku modeli przełącznikowych, charakteryzują się dużym udziałem autoregresji innowacji $\beta$.
 
 ### Predykcje
 

@@ -1,5 +1,5 @@
 #### load ####
-tables <- c("wig", "pkn", "pko", "ebs", "dom", "sve")
+tables <- c("wig20", "pkn", "pko", "ebs", "dom", "sve")
 tables_full_names <- setNames(
   c(
     "WIG20",
@@ -11,10 +11,11 @@ tables_full_names <- setNames(
   ),
   tables
 )
+tables_explainatory <- c("wig", "spx", "dax")
 
 #### gather ####
 data <-
-  map(tables, function(table_name) {
+  map(c(tables, tables_explainatory), function(table_name) {
     read.csv(c_paste_tight("data/", table_name, ".csv"), sep = ";") %>%
       as_tibble() %>%
       mutate(across(matches(c("Data")), as_date)) %>%
@@ -36,8 +37,6 @@ data_split <-
     group_by(index) %>%
     nest() %>%
     mutate(data = map(data, function(d) {
-      # if (index %in% c("pkn", "dvl", "snt"))
-      #   d <- d %>% tail(1000)
       d %>%
         filter(Data %within% interval(
           dmy(data_range[1]), dmy(data_range[2])
@@ -56,10 +55,11 @@ returns_split <- data_split %>%
   map(~ pull(.x, return))
 garchx_externals <- data_split %>%
   map(function(.x) {
-    cols <- list(
-      pull(.x, is_crisis) %>% as.numeric,
-      returns_split$wig %>% coalesce(0)
+    cols <- c(
+      list(pull(.x, is_crisis) %>% as.numeric),
+      returns_split[tables_explainatory] %>% map(coalesce, 0)
     )
 
     matrix(unlist(cols), ncol = length(cols))
   })
+returns_split <- returns_split[tables]

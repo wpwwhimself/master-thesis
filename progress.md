@@ -74,8 +74,8 @@
 - [x] showcase parametrów modeli
 - [x] czy miałoby sens wziąć zmienność WIG20 (garch np.) i wrzucić to jako zmienną objaśniającą? *tak się robi*
 - [x] pokombinować z innymi zmiennymi objaśniającymi (WIG20)
-- [ ] GARCHX - WIG, S&P, Nasdaq, DAX, kursy walut jako X
-- [ ] interpretacja wyników
+- [x] GARCHX - WIG, S&P, Nasdaq, DAX, kursy walut jako X
+- [x] interpretacja wyników
 ### predykcje
 - [x] horyzont predykcji *7 dni jest w porządku*
 - [x] wykonać predykcje

@@ -340,6 +340,8 @@ model_params <- c(
   alpha2 = "$\\gamma$",
   vxreg1 = "$\\lambda_1$",
   vxreg2 = "$\\lambda_2$",
+  vxreg3 = "$\\lambda_3$",
+  vxreg4 = "$\\lambda_4$",
   shape = "$\\nu$",
   nu = "$\\nu$",
   skew = "$\\xi$",

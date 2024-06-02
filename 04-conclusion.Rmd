@@ -97,7 +97,7 @@ Każde z nich ma swoje odzwierciedlenie w stopach zwrotu rozpatrywanych spółek
 
 ```{r hilo-covid}
 hilo <-
-  data_split$wig %>%
+  data_split$wig20 %>%
   filter(Data %within% interval(ymd("2020-03-01"), ymd("2020-04-30"))) %>%
   pull(Zamkniecie) %>%
   range()
@@ -132,7 +132,7 @@ a także wkład firmy w&nbsp;opracowywanie szczepionki przeciwko koronawirusowi 
 
 ```{r hilo-ukraine}
 hilo <-
-  data_split$wig %>%
+  data_split$wig20 %>%
   filter(Data %within% interval(ymd("2022-02-01"), ymd("2022-03-31"))) %>%
   pull(Zamkniecie) %>%
   range()
