@@ -274,7 +274,7 @@ Mimo to przeprowadzenie testów Ljung-Boxa na&nbsp;występowanie autokorelacji w
 na&nbsp;co wskazuje nadal występująca autokorelacja dla spółek wspomnianych na&nbsp;początku tego rozdziału, związana z tymi samymi opóźnieniami.
 Wobec tych obserwacji, stawiając sobie za cel spójność wyników każdego z przeprowadzonych w&nbsp;obrębie tego badania eksperymentów,
 do dalszych rozważań wybrane zostały modele na&nbsp;podstawie kryterium informacyjnego Akaike,
-których specyfikację przedstawia Tabela \@ref(tab:arma-fitting-choice)
+których specyfikację przedstawia Tabela \@ref(tab:arma-fitting-choice).
 
 ```{r arma-fitting-choice}
 arma <- c_read_rds("arma_aic")
@@ -312,7 +312,7 @@ Należą do nich testy:
 - KPSS [@KPSSTest].
 
 Obliczenia odpowiednich testów zostały wykonane m.in. za pomocą pakietów `rugarch` [@packageRugarch] oraz `tseries` [@packageTseries].
-Wyniki tych testów ilustruje Rysunek \@ref(fig:arma-arch-acf) oraz Tabela \@ref(tab:arma-arch-tests)
+Wyniki tych testów ilustruje Rysunek \@ref(fig:arma-arch-acf) oraz Tabela \@ref(tab:arma-arch-tests).
 
 ```{r arma-arch-acf, fig.height=8, fig.cap="Korelogramy ilustrujące testy McLeoda-Li dla rozważanych modeli średniej warunkowej"}
 arma %>%
@@ -566,7 +566,7 @@ markov <-
 ```
 
 Ostateczne wartości wyestymowanych parametrów wybranych modeli przedstawia Tabela \@ref(tab:markov-post-optimizing),
-a wizualizację prawdopodobieństw zachodzenia poszczególnych reżimów dla każdego z szeregów czasowych prezentuje Rysunek \@ref(fig:markov-plots)
+a wizualizację prawdopodobieństw zachodzenia poszczególnych reżimów dla każdego z szeregów czasowych prezentuje Rysunek \@ref(fig:markov-plots).
 Wartości parametrów we wszystkich modelach (występujące we wzorach w rozdziale 1.) podkreślają różnice między każdym z reżimów.
 Można zauważyć, że reżim drugi cechuje się wyższą średnią zmiennością (parametr $\omega$),
 a niemal we wszystkich modelach współzależność między obserwowanymi innowacjami $\beta$ jest wyraźnie silniejsza od tej związanej z autokorelacją reszt modelu liniowego $\alpha$.
@@ -824,7 +824,7 @@ table %>%
 Tabela \@ref(tab:garchx-models) przedstawia modele GARCH-X dopasowane do danych badanych spółek, wybrane na&nbsp;podstawie kryterium informacyjnego Akaike.
 Można zauważyć, że każdy z modeli uwzględnia asymetrię modelu, ponieważ często wyłoniony został model EGARCH.
 Rozkłady innowacji dobrane do&nbsp;każdego z tych modeli stanowią zamienniki rozkładu normalnego, przy czym najczęściej w&nbsp;rankingu pojawia się rozkład GED.
-Tabela \@ref(tab:garchx-post-optimizing) zawiera z kolei wartości parametrów wyestymowane dla tych modeli.
+Tabela \@ref(tab:garchx-post-optimizing) zawiera z kolei wartości parametrów wyestymowane dla&nbsp;tych&nbsp;modeli.
 
 Na podstawie tych parametrów widać względnie niski wpływ czynników zewnętrznych na wartość akcji firm.
 Może być to spowodowane liczbą wykorzystanych szeregów, powodując rozproszenie udziału każdego z nich.
@@ -1011,7 +1011,7 @@ volatilities %>%
 ```
 
 Wartości zmienności zrealizowanej zostały wykorzystane w miejsce zmienności rzeczywistej w celu obliczenia błędów dopasowania.
-Wyniki tych obliczeń przedstawia Tabela \@ref(tab:prediction-errors)
+Wyniki tych obliczeń przedstawia Tabela \@ref(tab:prediction-errors).
 Wartości osiągnięte przez wskaźniki nie różnią się w dużym stopniu pomiędzy modelami.
 W wybranych przypadkach można zauważyć bardzo wysokie wskazania błędów dla modelu GARCH-X,
 głównie z&nbsp;uwagi na&nbsp;niski poziom zmienności zrealizowanej.
