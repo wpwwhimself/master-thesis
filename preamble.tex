@@ -26,9 +26,11 @@
 \usepackage[nottoc]{tocbibind}
 
 % numeracja nagłówków
-\renewcommand{\thechapter}{\arabic{chapter}.}
-\renewcommand{\thesection}{\thechapter\arabic{section}.}
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thesection}{\thechapter.\arabic{section}.}
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
+\usepackage{tocloft}
+	\renewcommand{\cftchapaftersnum}{.}
 
 % numeracja figur
 \counterwithin{figure}{chapter}
